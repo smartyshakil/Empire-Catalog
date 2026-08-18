@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPIRE GLASSWARE - Digital Order Catalog</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Empire Glassware - Top Wholesale Importer of Glassware and Crockery. Explore our digital order catalog and order directly on WhatsApp.">
+    <meta name="keywords" content="Empire Glassware, Glassware Importer, Crockery Wholesaler, Wholesale Glassware Catalog, Glassware Bulk Order, SOWA Glassware">
+    <meta name="author" content="Empire Glassware">
+    
+    <!-- Google Fonts (Poppins & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VSXTN9XXZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7VSXTN9XXZ');
+    </script>
+
+    <style>
+        :root {
+            --bg-main: #f8fafc;
+            --primary-dark: #0f172a;
+            --header-bg: #0b1329;
+            --gold: #d97706;
+            --gold-light: #fef3c7;
+            --accent-green: #10b981;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        body { background-color: var(--bg-main); padding-bottom: 125px; color: var(--text-main); }
+        
+        /* Top Trust Strip */
+        .top-trust-bar {
+            background: #060b18;
+            color: #cbd5e1;
+            font-size: 11px;
+            font-weight: 600;
+            text-align: center;
+            padding: 6px 10px;
+            letter-spacing: 0.5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .top-trust-bar span { color: #f59e0b; }
+
+        /* Premium Header */
+        header { 
+            background: var(--header-bg); 
+            color: white; 
+            padding: 12px 16px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15); 
+        }
+        .header-title h1 { 
+            font-family: 'Poppins', sans-serif;
+            font-size: 17px; 
+            font-weight: 700; 
+            letter-spacing: 0.8px; 
+            color: #ffffff;
+        }
+        .header-title p { font-size: 11px; color: #94a3b8; font-weight: 500; }
+        
+        .access-badge { 
+            background: rgba(255, 255, 255, 0.08); 
+            color: #fbbf24; 
+            border: 1px solid rgba(251, 191, 36, 0.4);
+            padding: 6px 12px; 
+            border-radius: 20px; 
+            font-size: 11px; 
+            font-weight: 600; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            gap: 5px; 
+            transition: all 0.2s ease;
+        }
+        .access-badge.wholesale { 
+            background: var(--accent-green); 
+            color: #ffffff; 
+            border-color: var(--accent-green);
+        }
+
+        /* Controls Section */
+        .controls-wrapper {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 57px;
+            z-index: 90;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .search-and-sort-container {
+            padding: 10px 14px 6px 14px;
+            display: flex;
+            gap: 8px;
+        }
+        .search-box-container {
+            position: relative;
+            flex: 1;
+        }
+        .search-box-container input { 
+            width: 100%; 
+            padding: 10px 36px 10px 14px; 
+            border-radius: 12px; 
+            border: 1.5px solid var(--border-color); 
+            outline: none; 
+            font-size: 13px; 
+            background: #f1f5f9;
+            transition: all 0.2s ease;
+        }
+        .search-box-container input:focus {
+            background: #ffffff;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .search-clear-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+        }
+        .sort-select {
+            padding: 0 10px;
+            border-radius: 12px;
+            border: 1.5px solid var(--border-color);
+            background: #f1f5f9;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* Horizontal Scroll Category Pills */
+        .category-pills-bar {
+            display: flex;
+            gap: 8px;
+            padding: 6px 14px 12px 14px;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+        }
+        .category-pills-bar::-webkit-scrollbar { display: none; }
+        .cat-pill {
+            padding: 6px 14px;
+            background: #f1f5f9;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .cat-pill.active {
+            background: var(--primary-dark);
+            color: #ffffff;
+            border-color: var(--primary-dark);
+        }
+
+        /* Product Grid & Cards */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+            gap: 12px; 
+            padding: 14px; 
+        }
+        .card { 
+            background: #ffffff; 
+            border-radius: 14px; 
+            padding: 10px; 
+            border: 1px solid var(--border-color); 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+            position: relative; 
+            box-shadow: var(--card-shadow);
+            transition: transform 0.15s ease;
+        }
+        .card:active { transform: scale(0.99); }
+        
+        .card-img-wrapper {
+            position: relative;
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 130px;
+        }
+        .card img { 
+            width: 100%; 
+            height: 120px; 
+            object-fit: contain; 
+            border-radius: 6px; 
+            cursor: pointer; 
+        }
+        
+        /* In-Stock Indicator Tag */
+        .stock-tag {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #059669;
+            font-size: 9px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 10px;
+            border: 1px solid #d1fae5;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+        .stock-dot {
+            width: 5px;
+            height: 5px;
+            background: #10b981;
+            border-radius: 50%;
+        }
+
+        .p-code { 
+            font-weight: 700; 
+            font-size: 13px; 
+            color: #0369a1; 
+            margin-top: 6px; 
+            letter-spacing: 0.3px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .p-code:hover { text-decoration: underline; }
+        .p-desc { 
+            font-size: 11px; 
+            color: var(--text-muted); 
+            margin: 4px 0; 
+            height: 28px; 
+            overflow: hidden; 
+            line-height: 1.3;
+        }
+        .p-price { 
+            font-weight: 700; 
+            font-size: 15px; 
+            color: #b91c1c; 
+            margin-bottom: 4px; 
+        }
+        .p-price span { font-size: 10px; color: var(--text-muted); font-weight: 500; }
+        
+        .moq-tag { 
+            font-size: 9.5px; 
+            font-weight: 700; 
+            color: var(--gold); 
+            background: var(--gold-light); 
+            padding: 3px 6px; 
+            border-radius: 6px; 
+            margin-bottom: 8px; 
+            display: inline-block; 
+        }
+
+        /* Dual Counters */
+        .counter-section { display: flex; flex-direction: column; gap: 5px; }
+        .counter-row { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            background: #f8fafc; 
+            border-radius: 8px; 
+            border: 1px solid var(--border-color); 
+            padding: 3px 5px; 
+        }
+        .counter-label { font-size: 11px; font-weight: 700; color: #475569; width: 40px; }
+        .qty-btn { 
+            background: var(--primary-dark); 
+            color: white; 
+            border: none; 
+            width: 26px; 
+            height: 26px; 
+            border-radius: 6px; 
+            font-weight: 700; 
+            font-size: 14px; 
+            cursor: pointer; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .qty-btn:active { background: #334155; }
+        .qty-val { font-size: 13px; font-weight: 700; color: var(--text-main); min-width: 22px; text-align: center; }
+
+        /* PERMANENT FROZEN TRUST BAR */
+        .trust-footer {
+            position: fixed;
+            bottom: 58px;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
+            padding: 6px 14px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            z-index: 98;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
+        }
+        .trust-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 6px;
+        }
+        .trust-item span.icon { font-size: 15px; }
+        .trust-item span.title { font-size: 11px; font-weight: 700; color: var(--primary-dark); }
+        .trust-item span.subtitle { font-size: 9.5px; color: var(--text-muted); }
+
+        /* Floating Modern Cart Bar */
+        .cart-bar { 
+            position: fixed; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            background: #ffffff; 
+            padding: 10px 18px; 
+            border-top: 1px solid var(--border-color); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 -6px 20px rgba(0,0,0,0.06); 
+            z-index: 99; 
+            height: 58px;
+        }
+        .cart-info { display: flex; flex-direction: column; }
+        .cart-info-count { font-size: 11px; font-weight: 600; color: var(--text-muted); }
+        .cart-info-total { font-size: 14.5px; font-weight: 800; color: var(--primary-dark); }
+        .cart-info-total span { color: #b91c1c; }
+
+        .send-btn { 
+            background: #25D366; 
+            color: white; 
+            border: none; 
+            padding: 10px 18px; 
+            border-radius: 30px; 
+            font-weight: 700; 
+            font-size: 13px; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: transform 0.15s ease;
+        }
+        .send-btn:active { transform: scale(0.97); }
+
+        /* ORDER SUMMARY DRAWER */
+        .order-drawer-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(2px);
+            z-index: 200;
+        }
+        .order-drawer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-radius: 20px 20px 0 0;
+            padding: 20px 16px 24px 16px;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
+            z-index: 201;
+            transform: translateY(100%);
+            transition: transform 0.25s ease-out;
+        }
+        .order-drawer.open {
+            transform: translateY(0);
+        }
+        .drawer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .drawer-header-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .drawer-header h3 { font-size: 15px; font-weight: 700; color: var(--primary-dark); }
+        .clear-cart-btn {
+            background: #fee2e2;
+            color: #dc2626;
+            border: 1px solid #fca5a5;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        .drawer-close { font-size: 24px; color: var(--text-muted); cursor: pointer; border: none; background: none; font-weight: bold; }
+        
+        .drawer-items-list {
+            overflow-y: auto;
+            margin: 12px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-height: 50vh;
+        }
+        .drawer-item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            padding: 8px 12px;
+            border-radius: 10px;
+        }
+        .drawer-item-info { display: flex; flex-direction: column; gap: 2px; }
+        .drawer-item-code { font-weight: 700; font-size: 13px; color: var(--primary-dark); }
+        .drawer-item-qty { font-size: 11px; font-weight: 600; color: #0369a1; }
+        .drawer-item-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .drawer-item-price { font-weight: 700; font-size: 13px; color: #b91c1c; text-align: right; }
+        .drawer-trash-btn {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 2px;
+            color: #94a3b8;
+            transition: color 0.15s;
+        }
+        .drawer-trash-btn:hover { color: #ef4444; }
+        
+        .drawer-footer {
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .drawer-total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--primary-dark);
+        }
+        .drawer-confirm-btn {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 75px;
+            left: 50%;
+            transform: translateX(-50%) translateY(30px);
+            background: rgba(15, 23, 42, 0.9);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.25s ease;
+            z-index: 150;
+        }
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Empty State */
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-muted);
+        }
+        .empty-state svg { width: 54px; height: 54px; fill: #cbd5e1; margin-bottom: 12px; }
+
+        /* Lightbox Modal */
+        .lightbox-modal { 
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100vw; 
+            height: 100vh; 
+            background: rgba(15, 23, 42, 0.95); 
+            z-index: 1000; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: column; 
+            overflow: auto; 
+        }
+        .lightbox-modal img { 
+            max-width: 92vw; 
+            max-height: 80vh; 
+            object-fit: contain; 
+            border-radius: 10px; 
+            touch-action: manipulation;
+        }
+        .lightbox-close { 
+            position: absolute; 
+            top: 18px; 
+            right: 22px; 
+            color: white; 
+            font-size: 32px; 
+            cursor: pointer; 
+            font-weight: 300; 
+            z-index: 1001; 
+        }
+        .lightbox-title { 
+            color: #e2e8f0; 
+            font-size: 13px; 
+            margin-top: 12px; 
+            text-align: center; 
+            font-weight: 600; 
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-trust-bar">
+        <span>✨</span> Direct Importers &nbsp;•&nbsp; Wholesale Pricing <span>✨</span>
+    </div>
+
+    <header>
+        <div class="header-title">
+            <h1>EMPIRE GLASSWARE</h1>
+            <p>Digital Order Catalog</p>
+        </div>
+        <button id="accessBadge" class="access-badge" onclick="promptAccessCode()">
+            🔑 Wholesale Access
+        </button>
+    </header>
+
+    <div class="controls-wrapper">
+        <div class="search-and-sort-container">
+            <div class="search-box-container">
+                <input type="text" id="searchInput" placeholder="🔍 Search item code, name..." oninput="onSearchInput()">
+                <span id="searchClearBtn" class="search-clear-btn" onclick="clearSearch()">&times;</span>
+            </div>
+            <select id="sortSelect" class="sort-select" onchange="filterProducts()">
+                <option value="DEFAULT">Sort By</option>
+                <option value="PRICE_LOW">Price: Low to High</option>
+                <option value="PRICE_HIGH">Price: High to Low</option>
+            </select>
+        </div>
+        <div class="category-pills-bar" id="categoryPillsBar">
+            <div class="cat-pill active" onclick="selectCategory('ALL', this)">📁 All Categories</div>
+        </div>
+    </div>
+
+    <div class="grid" id="productGrid"></div>
+
+    <!-- Permanent Frozen Trust Bar -->
+    <div class="trust-footer">
+        <div class="trust-item">
+            <span class="icon">📦</span>
+            <div>
+                <span class="title">Safe Breakage-Free</span>
+                <span class="subtitle">• Carton Packing</span>
+            </div>
+        </div>
+        <div style="width: 1px; height: 18px; background: var(--border-color);"></div>
+        <div class="trust-item">
+            <span class="icon">🚚</span>
+            <div>
+                <span class="title">Pan-India Transport</span>
+                <span class="subtitle">• Fast Dispatch</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Permanent Bottom Cart Bar -->
+    <div class="cart-bar">
+        <div class="cart-info">
+            <span class="cart-info-count">Selected: <b id="totalItems">0</b> Items</span>
+            <span class="cart-info-total">Est. Total: <span id="cartEstTotal">Rs. 0</span></span>
+        </div>
+        <button class="send-btn" onclick="openOrderDrawer()">
+            <span>💬 Review & Order</span>
+        </button>
+    </div>
+
+    <!-- Order Summary Bottom Drawer -->
+    <div id="drawerBackdrop" class="order-drawer-backdrop" onclick="closeOrderDrawer()"></div>
+    <div id="orderDrawer" class="order-drawer">
+        <div class="drawer-header">
+            <div class="drawer-header-left">
+                <h3>📋 Order Summary</h3>
+                <button class="clear-cart-btn" onclick="clearFullCart()">Clear All</button>
+            </div>
+            <button class="drawer-close" onclick="closeOrderDrawer()">&times;</button>
+        </div>
+        <div class="drawer-items-list" id="drawerItemsList"></div>
+        <div class="drawer-footer">
+            <div class="drawer-total-row">
+                <span>Estimated Total:</span>
+                <span id="drawerEstTotal" style="color: #b91c1c;">Rs. 0</span>
+            </div>
+            <button class="drawer-confirm-btn" onclick="sendWhatsAppOrder()">
+                <span>💬 Confirm & Send on WhatsApp</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Code Copied!</div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightboxImg" src="" alt="Full View">
+        <div id="lightboxTitle" class="lightbox-title"></div>
+    </div>
+
+    <script src="products_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
