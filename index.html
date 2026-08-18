@@ -9,10 +9,6 @@
     <meta name="description" content="Empire Glassware - Top Wholesale Importer of Glassware and Crockery. Explore our digital order catalog and order directly on WhatsApp.">
     <meta name="keywords" content="Empire Glassware, Glassware Importer, Crockery Wholesaler, Wholesale Glassware Catalog, Glassware Bulk Order, SOWA Glassware">
     <meta name="author" content="Empire Glassware">
-<!-- SEO Meta Tags -->
-    <meta name="description" content="Empire Glassware - Top Wholesale Importer of Glassware and Crockery. Explore our digital order catalog and order directly on WhatsApp.">
-    <meta name="keywords" content="Empire Glassware, Glassware Importer, Crockery Wholesaler, Wholesale Glassware Catalog, Glassware Bulk Order, SOWA Glassware">
-    <meta name="author" content="Empire Glassware">
 
     <!-- WhatsApp & Social Media Preview Meta Tags -->
     <meta property="og:type" content="website">
@@ -30,8 +26,6 @@
     <meta name="twitter:description" content="Direct Importers & Crockery Wholesalers. Browse live stock and place bulk orders directly on WhatsApp.">
     <meta name="twitter:image" content="https://www.empireglassware.co.in/images/glassware/og-banner.jpg">
 
-    <!-- Google Fonts (Poppins & Inter) -->
-    
     <!-- Google Fonts (Poppins & Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,6 +57,36 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
         body { background-color: var(--bg-main); padding-bottom: 125px; color: var(--text-main); }
         
+        /* Sneak Peek Announcement Top Bar */
+        .sneak-peek-strip {
+            background: linear-gradient(90deg, #0b1329 0%, #1e1b4b 50%, #0b1329 100%);
+            color: #fbbf24;
+            font-size: 11.5px;
+            font-weight: 700;
+            text-align: center;
+            padding: 8px 12px;
+            letter-spacing: 0.4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid #f59e0b;
+        }
+        .sneak-peek-strip a {
+            color: #ffffff;
+            background: rgba(245, 158, 11, 0.2);
+            border: 1px solid #f59e0b;
+            padding: 2px 10px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            transition: all 0.2s ease;
+        }
+        .sneak-peek-strip a:hover {
+            background: #f59e0b;
+            color: #0f172a;
+        }
+
         /* Top Trust Strip */
         .top-trust-bar {
             background: #060b18;
@@ -100,6 +124,26 @@
             color: #ffffff;
         }
         .header-title p { font-size: 11px; color: #94a3b8; font-weight: 500; }
+        
+        .header-right-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sneak-peek-header-btn {
+            background: #f59e0b;
+            color: #0f172a;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 800;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+        }
         
         .access-badge { 
             background: rgba(255, 255, 255, 0.08); 
@@ -190,6 +234,16 @@
             color: #ffffff;
             border-color: var(--primary-dark);
             box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+        }
+        .cat-pill.sneak-peek-link {
+            background: #fef3c7;
+            color: #b45309;
+            border-color: #fcd34d;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .cat-pill.sneak-peek-link:hover {
+            background: #fde68a;
         }
 
         /* Right Content Area */
@@ -690,6 +744,12 @@
 </head>
 <body>
 
+    <!-- Sneak Peek Top Strip Banner -->
+    <div class="sneak-peek-strip">
+        <span>✨</span> <b>Upcoming Shipments & Diwali Special Stock Arriving!</b>
+        <a href="sneak-peek.html">View Sneak Peek ➔</a>
+    </div>
+
     <div class="top-trust-bar">
         <span>✨</span> Direct Importers &nbsp;•&nbsp; Wholesale Pricing <span>✨</span>
     </div>
@@ -699,9 +759,12 @@
             <h1>EMPIRE GLASSWARE</h1>
             <p>Digital Order Catalog</p>
         </div>
-        <button id="accessBadge" class="access-badge" onclick="promptAccessCode()">
-            🔑 Wholesale Access
-        </button>
+        <div class="header-right-actions">
+            <a href="sneak-peek.html" class="sneak-peek-header-btn">🔥 Sneak Peek</a>
+            <button id="accessBadge" class="access-badge" onclick="promptAccessCode()">
+                🔑 Wholesale Access
+            </button>
+        </div>
     </header>
 
     <!-- Main Container: Left Sidebar + Right Catalog Content -->
@@ -713,6 +776,8 @@
                 <span>📁</span> Product Categories
             </div>
             <div class="category-pills-bar" id="categoryPillsBar">
+                <!-- Highlighted Link to Sneak Peek Page -->
+                <a href="sneak-peek.html" class="cat-pill sneak-peek-link">✨ Sneak Peek / Diwali (143)</a>
                 <div class="cat-pill active" onclick="selectCategory('ALL', this)">📁 All Categories</div>
             </div>
         </aside>

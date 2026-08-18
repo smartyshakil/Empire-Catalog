@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Empire Glassware - Sneak Peek & Diwali Stock</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #f59e0b;
+            --bg-light: #f8fafc;
+            --card-border: #e2e8f0;
+            --whatsapp-green: #25D366;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        body { background: var(--bg-light); color: #1e293b; padding-bottom: 100px; overflow-x: hidden; }
+
+        /* Header */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--card-border);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .brand-logo { font-size: 1.2rem; font-weight: 800; color: var(--primary); font-family: 'Poppins', sans-serif; }
+        .brand-logo span { color: var(--accent); }
+        
+        .btn-live-catalog {
+            background: #0f172a;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Hero Banner */
+        .hero-banner {
+            background: linear-gradient(135deg, #0b1329 0%, #1e1b4b 100%);
+            color: white;
+            padding: 22px 16px;
+            text-align: center;
+            border-bottom: 3px solid var(--accent);
+        }
+        .hero-banner h1 { font-size: 1.4rem; font-weight: 800; font-family: 'Poppins', sans-serif; color: #fbbf24; margin-bottom: 4px; }
+        .hero-banner p { font-size: 0.85rem; color: #cbd5e1; }
+
+        /* Layout */
+        .container { max-width: 1300px; margin: 16px auto; padding: 0 14px; display: flex; gap: 18px; }
+        
+        .sidebar {
+            width: 220px;
+            flex-shrink: 0;
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 14px;
+            height: fit-content;
+        }
+        .sidebar h3 { font-size: 0.8rem; font-weight: 800; color: #64748b; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .cat-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 9px 12px;
+            margin-bottom: 5px;
+            border: none;
+            background: transparent;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #334155;
+            cursor: pointer;
+        }
+        .cat-btn.active, .cat-btn:hover { background: #fef3c7; color: #b45309; font-weight: 700; }
+
+        .product-grid {
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        /* Product Card */
+        .sp-card {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        .sp-tag {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: var(--accent);
+            color: #ffffff;
+            padding: 3px 7px;
+            font-size: 0.68rem;
+            font-weight: 800;
+            border-radius: 6px;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+        .sp-img-box {
+            width: 100%;
+            height: 180px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #f1f5f9;
+            padding: 8px;
+            cursor: pointer;
+            position: relative;
+        }
+        .sp-img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .zoom-hint {
+            position: absolute;
+            bottom: 6px;
+            right: 8px;
+            font-size: 0.7rem;
+            color: #94a3b8;
+            background: rgba(255,255,255,0.85);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .sp-details { padding: 12px; display: flex; flex-direction: column; flex-grow: 1; }
+        .sp-title { font-size: 0.85rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; line-height: 1.3; }
+        
+        .sp-packing-info {
+            background: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            padding: 5px 8px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 6px;
+        }
+        .sp-eta { font-size: 0.72rem; color: #d97706; font-weight: 700; margin-bottom: 10px; }
+
+        .sp-qty-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 8px;
+        }
+        .qty-controls { display: flex; align-items: center; gap: 6px; }
+        .qty-btn {
+            width: 28px;
+            height: 28px;
+            background: #f1f5f9;
+            border: 1px solid var(--card-border);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .qty-input { width: 36px; text-align: center; font-weight: 700; border: none; font-size: 0.9rem; background: transparent; }
+
+        /* Sticky Bottom WhatsApp Bar */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-top: 1px solid var(--card-border);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.06);
+            z-index: 100;
+        }
+        .summary-text { font-size: 0.9rem; font-weight: 700; color: var(--primary); }
+        .btn-whatsapp-prebook {
+            background: var(--whatsapp-green);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Image Modal / Full View with Zoom */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.92);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            touch-action: none;
+        }
+        .modal-overlay.active { display: flex; }
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            color: #ffffff;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1010;
+        }
+        .modal-img-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .modal-img {
+            max-width: 92%;
+            max-height: 85%;
+            object-fit: contain;
+            transition: transform 0.15s ease-out;
+            transform-origin: center center;
+            user-select: none;
+        }
+
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .sidebar { width: 100%; display: flex; overflow-x: auto; gap: 6px; padding: 10px; }
+            .sidebar h3 { display: none; }
+            .cat-btn { width: auto; white-space: nowrap; font-size: 0.8rem; padding: 7px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-logo">EMPIRE <span>GLASSWARE</span> <small style="font-size: 0.65rem; color: #64748b; font-weight: 700;">SNEAK PEEK</small></div>
+        <a href="index.html" class="btn-live-catalog"><i class="fa-solid fa-arrow-left"></i> In-Stock Catalog</a>
+    </header>
+
+    <section class="hero-banner">
+        <h1>✨ Upcoming Shipments & Diwali Special Stock</h1>
+        <p>Advance booking open for 143+ upcoming models. Tap photo to zoom & pre-book cartons on WhatsApp.</p>
+    </section>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Filter Stock</h3>
+            <button class="cat-btn active" onclick="filterCategory('All', this)">All Items (143)</button>
+            <button class="cat-btn" onclick="filterCategory('Diwali Gifts', this)">Diwali Gift Sets</button>
+            <button class="cat-btn" onclick="filterCategory('Glasses & Tumblers', this)">Barware & Glasses</button>
+        </aside>
+
+        <main class="product-grid" id="sneakPeekGrid"></main>
+    </div>
+
+    <!-- Bottom WhatsApp Bar -->
+    <footer class="bottom-bar">
+        <div class="summary-text" id="selectedSummary">0 Items (0 Cartons) Selected</div>
+        <button class="btn-whatsapp-prebook" onclick="sendPreBookWhatsApp()">
+            <i class="fa-brands fa-whatsapp fa-xl"></i> Send Pre-Booking Inquiry
+        </button>
+    </footer>
+
+    <!-- Full Image Zoom Modal -->
+    <div class="modal-overlay" id="imageModal" onclick="closeModal(event)">
+        <div class="modal-close" onclick="forceCloseModal()">&times;</div>
+        <div class="modal-img-wrapper" id="modalWrapper">
+            <img src="" alt="Zoom View" class="modal-img" id="modalImage">
+        </div>
+    </div>
+
+    <script src="sneak_peek_data.js"></script>
+    <script>
+        let preBookCart = {};
+        const WHATSAPP_NUMBER = "919601693938"; // Updated Official WhatsApp Number
+
+        function renderProducts(category = 'All') {
+            const grid = document.getElementById('sneakPeekGrid');
+            grid.innerHTML = '';
+
+            if (typeof SNEAK_PEEK_PRODUCTS === 'undefined' || SNEAK_PEEK_PRODUCTS.length === 0) {
+                grid.innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding: 40px;">No upcoming items found.</div>';
+                return;
+            }
+
+            const filtered = (category === 'All') 
+                ? SNEAK_PEEK_PRODUCTS 
+                : SNEAK_PEEK_PRODUCTS.filter(p => p.category === category || (p.tag && p.tag.includes(category)));
+
+            filtered.forEach(p => {
+                const qty = preBookCart[p.id] || 0;
+                grid.innerHTML += `
+                    <div class="sp-card">
+                        <span class="sp-tag">${p.tag || 'Upcoming'}</span>
+                        <div class="sp-img-box" onclick="openModal('${p.image}')">
+                            <img src="${p.image}" alt="${p.name}" onerror="this.src='images/glassware/og-banner.jpg'">
+                            <span class="zoom-hint"><i class="fa-solid fa-expand"></i> Zoom</span>
+                        </div>
+                        <div class="sp-details">
+                            <div class="sp-title">${p.name}</div>
+                            <div class="sp-packing-info"><i class="fa-solid fa-box"></i> ${p.packing}</div>
+                            <div class="sp-eta"><i class="fa-solid fa-truck-fast"></i> ${p.eta}</div>
+                            
+                            <div class="sp-qty-row">
+                                <span style="font-size:0.8rem; font-weight:700; color:#64748b;">Cartons:</span>
+                                <div class="qty-controls">
+                                    <button class="qty-btn" onclick="updateQty('${p.id}', -1)">-</button>
+                                    <input type="text" class="qty-input" id="qty-${p.id}" value="${qty}" readonly>
+                                    <button class="qty-btn" onclick="updateQty('${p.id}', 1)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function updateQty(id, change) {
+            let current = preBookCart[id] || 0;
+            current += change;
+            if (current < 0) current = 0;
+            
+            if (current === 0) {
+                delete preBookCart[id];
+            } else {
+                preBookCart[id] = current;
+            }
+
+            const input = document.getElementById(`qty-${id}`);
+            if (input) input.value = current;
+            updateSummary();
+        }
+
+        function updateSummary() {
+            let totalItems = Object.keys(preBookCart).length;
+            let totalCtns = Object.values(preBookCart).reduce((a, b) => a + b, 0);
+            document.getElementById('selectedSummary').innerText = `${totalItems} Items (${totalCtns} Cartons) Selected`;
+        }
+
+        function filterCategory(cat, btn) {
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            if(btn) btn.classList.add('active');
+            renderProducts(cat);
+        }
+
+        function sendPreBookWhatsApp() {
+            const items = Object.keys(preBookCart);
+            if (items.length === 0) {
+                alert("Please select at least 1 carton to pre-book.");
+                return;
+            }
+
+            let msg = "*🚨 EMPIRE GLASSWARE - SNEAK PEEK PRE-BOOKING INQUIRY*\n";
+            msg += "-----------------------------------------\n";
+
+            items.forEach((id, index) => {
+                const p = SNEAK_PEEK_PRODUCTS.find(x => x.id === id);
+                const ctn = preBookCart[id];
+                msg += `${index + 1}. *${p.name}*\n`;
+                msg += `   📦 Packing: ${p.packing}\n`;
+                msg += `   ⏳ ${p.eta}\n`;
+                msg += `   👉 *Booking Qty: ${ctn} CTN*\n\n`;
+            });
+
+            msg += "-----------------------------------------\n";
+            msg += "Please confirm arrival booking & dispatch schedule.";
+
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+            window.open(url, '_blank');
+        }
+
+        /* Modal Zoom & Gestures */
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        let currentScale = 1;
+        let startDist = 0;
+        let lastTouchEnd = 0;
+
+        function openModal(src) {
+            modalImg.src = src;
+            currentScale = 1;
+            modalImg.style.transform = `scale(1)`;
+            modal.classList.add('active');
+        }
+
+        function forceCloseModal() {
+            modal.classList.remove('active');
+        }
+
+        function closeModal(e) {
+            if (e.target === modal || e.target.id === 'modalWrapper') {
+                modal.classList.remove('active');
+            }
+        }
+
+        /* Double Tap to Zoom */
+        modalImg.addEventListener('touchend', function (e) {
+            let now = new Date().getTime();
+            let delta = now - lastTouchEnd;
+            if (delta < 300 && delta > 0) {
+                currentScale = currentScale > 1 ? 1 : 2.2;
+                modalImg.style.transform = `scale(${currentScale})`;
+                e.preventDefault();
+            }
+            lastTouchEnd = now;
+        });
+
+        /* Pinch Zoom for Mobile */
+        modal.addEventListener('touchmove', function (e) {
+            if (e.touches.length === 2) {
+                let dist = Math.hypot(
+                    e.touches[0].pageX - e.touches[1].pageX,
+                    e.touches[0].pageY - e.touches[1].pageY
+                );
+                if (startDist > 0) {
+                    let diff = dist / startDist;
+                    let newScale = Math.min(Math.max(1, currentScale * diff), 3.5);
+                    modalImg.style.transform = `scale(${newScale})`;
+                }
+            }
+        }, { passive: false });
+
+        modal.addEventListener('touchstart', function (e) {
+            if (e.touches.length === 2) {
+                startDist = Math.hypot(
+                    e.touches[0].pageX - e.touches[1].pageX,
+                    e.touches[0].pageY - e.touches[1].pageY
+                );
+            }
+        });
+
+        /* Swipe Navigation (Left-to-Right Swipe to go Back to In-Stock Catalog) */
+        let touchstartX = 0;
+        let touchendX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX;
+        }, false);
+
+        document.addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX;
+            handleSwipeGesture();
+        }, false);
+
+        function handleSwipeGesture() {
+            if (modal.classList.contains('active')) return; // Ignore when viewing photo
+            // Swipe right from left edge (back to in-stock catalog)
+            if (touchstartX < 60 && (touchendX - touchstartX > 120)) {
+                window.location.href = 'index.html';
+            }
+        }
+
+        renderProducts();
+    </script>
+</body>
+</html>
