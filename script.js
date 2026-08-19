@@ -83,26 +83,34 @@ function getCtnPackingSize(item) {
 // ==========================================
 // 4. DEPARTMENT SWITCHER & CATEGORY PILLS BAR
 // ==========================================
-function switchDepartment(dept, element) {
+function switchDepartment(dept, element = null) {
     currentSelectedDepartment = dept;
     currentSelectedCategory = "ALL";
 
+    // 1. Remove active class from all department buttons
     document.querySelectorAll(".dept-tab-btn").forEach(btn => btn.classList.remove("active"));
+    
+    // 2. Add active class to selected department button
     if (element) {
         element.classList.add("active");
     } else {
         const allBtns = Array.from(document.querySelectorAll('.dept-tab-btn'));
         const matchedBtn = allBtns.find(b => {
-            const txt = b.textContent.toLowerCase();
-            if (dept === 'ALL' && txt.includes('all')) return true;
-            if ((dept === 'vaccum_bottles' || dept === 'bottles') && txt.includes('vaccum')) return true;
-            if ((dept === 'Kitchenware & Other' || dept === 'kitchenware') && txt.includes('kitchenware')) return true;
-            if (dept === 'Glassware' && txt.includes('glassware')) return true;
+            const onclickAttr = (b.getAttribute('onclick') || '').toLowerCase();
+            const textAttr = b.textContent.toLowerCase();
+            
+            if (dept === 'ALL' && (onclickAttr.includes("'all'") || textAttr.includes('all'))) return true;
+            if ((dept.toLowerCase() === 'vaccum_bottles' || dept.toLowerCase() === 'bottles') && 
+                (onclickAttr.includes('vaccum') || textAttr.includes('vaccum'))) return true;
+            if ((dept.toLowerCase() === 'kitchenware & other' || dept.toLowerCase() === 'kitchenware') && 
+                (onclickAttr.includes('kitchenware') || textAttr.includes('kitchenware'))) return true;
+            if (dept.toLowerCase() === 'glassware' && (onclickAttr.includes('glassware') || textAttr.includes('glassware'))) return true;
             return false;
         });
         if (matchedBtn) matchedBtn.classList.add("active");
     }
 
+    // 3. Refresh categories and product grid
     initCategoryPills();
     filterProducts();
 }
@@ -560,6 +568,8 @@ function checkUrlDepartment() {
         switchDepartment('Kitchenware & Other');
     } else if (target === 'glassware') {
         switchDepartment('Glassware');
+    } else {
+        switchDepartment('ALL');
     }
 }
 
@@ -569,8 +579,7 @@ function checkUrlDepartment() {
 document.addEventListener("DOMContentLoaded", () => {
     updateAccessHeader();
     if (typeof PRODUCTS !== 'undefined') {
-        initCategoryPills();
-        renderProducts(PRODUCTS);
+        // Direct deep-link execution
         checkUrlDepartment();
     }
 });
