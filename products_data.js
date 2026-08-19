@@ -3208,6 +3208,14 @@ const PRODUCTS = [
     "department": "vaccum_bottles"
   },
   {
+    "code": "BULLET-500",
+    "desc": "STEEL FLASK 500 ML WITH POUCH COL BOX 50 PCS CTN",
+    "price": "260",
+    "unit": "FOR 1PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles"
+  },
+  {
     "code": "C-1000",
     "desc": "STEEL COLA BOTTLE WITHOUT LOGO 1000 ML WHITE BOX 30 PCS CTN",
     "price": "265",
@@ -3258,6 +3266,14 @@ const PRODUCTS = [
   {
     "code": "HK-1210ML",
     "desc": "STEEL BOTTLE 1200 ML WITH PUSH BUTTON COL BOX 40 PCS CTN",
+    "price": "350",
+    "unit": "FOR 1PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles"
+  },
+  {
+    "code": "BULLET-750",
+    "desc": "STEEL FLASK 750 ML WITH POUCH COL BOX 40 PCS CTN",
     "price": "350",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
