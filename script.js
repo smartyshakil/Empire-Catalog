@@ -88,7 +88,20 @@ function switchDepartment(dept, element) {
     currentSelectedCategory = "ALL";
 
     document.querySelectorAll(".dept-tab-btn").forEach(btn => btn.classList.remove("active"));
-    if (element) element.classList.add("active");
+    if (element) {
+        element.classList.add("active");
+    } else {
+        const allBtns = Array.from(document.querySelectorAll('.dept-tab-btn'));
+        const matchedBtn = allBtns.find(b => {
+            const txt = b.textContent.toLowerCase();
+            if (dept === 'ALL' && txt.includes('all')) return true;
+            if ((dept === 'vaccum_bottles' || dept === 'bottles') && txt.includes('vaccum')) return true;
+            if ((dept === 'Kitchenware & Other' || dept === 'kitchenware') && txt.includes('kitchenware')) return true;
+            if (dept === 'Glassware' && txt.includes('glassware')) return true;
+            return false;
+        });
+        if (matchedBtn) matchedBtn.classList.add("active");
+    }
 
     initCategoryPills();
     filterProducts();
@@ -532,6 +545,25 @@ window.addEventListener("popstate", (e) => {
 });
 
 // ==========================================
+// 9. DEEP-LINKING (Direct URL Navigation Handler)
+// ==========================================
+function checkUrlDepartment() {
+    const hash = window.location.hash.toLowerCase().replace('#', '').trim();
+    const urlParams = new URLSearchParams(window.location.search);
+    const deptParam = (urlParams.get('dept') || '').toLowerCase().trim();
+    
+    const target = hash || deptParam;
+
+    if (target === 'bottles' || target === 'vaccum_bottles' || target === 'vaccum-bottles') {
+        switchDepartment('vaccum_bottles');
+    } else if (target === 'kitchenware' || target === 'kitchen') {
+        switchDepartment('Kitchenware & Other');
+    } else if (target === 'glassware') {
+        switchDepartment('Glassware');
+    }
+}
+
+// ==========================================
 // INIT ON LOAD
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
@@ -539,5 +571,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typeof PRODUCTS !== 'undefined') {
         initCategoryPills();
         renderProducts(PRODUCTS);
+        checkUrlDepartment();
     }
 });
+
+window.addEventListener("hashchange", checkUrlDepartment);
