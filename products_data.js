@@ -3017,7 +3017,7 @@ const PRODUCTS = [
   },
   {
     "code": "PP-900-281",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "PLASTIC  CHARCTER BOTTLE BULK PACKING 100 PCS CTN",
     "price": "55",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3025,7 +3025,7 @@ const PRODUCTS = [
   },
   {
     "code": "PP-900-282",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "PLASTIC  CHARCTER BOTTLE BULK PACKING 100 PCS CTN",
     "price": "55",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3033,7 +3033,7 @@ const PRODUCTS = [
   },
   {
     "code": "PP-900-283",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "PLASTIC  CHARCTER BOTTLE BULK PACKING 100 PCS CTN",
     "price": "55",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3041,7 +3041,7 @@ const PRODUCTS = [
   },
   {
     "code": "PP-900-284",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "PLASTIC  CHARCTER BOTTLE BULK PACKING 100 PCS CTN",
     "price": "55",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3049,7 +3049,7 @@ const PRODUCTS = [
   },
   {
     "code": "PP-900-285",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "PLASTIC  CHARCTER BOTTLE BULK PACKING 100 PCS CTN",
     "price": "55",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3057,7 +3057,7 @@ const PRODUCTS = [
   },
   {
     "code": "PP-900-286",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "PLASTIC  CHARCTER BOTTLE BULK PACKING 100 PCS CTN",
     "price": "55",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3065,7 +3065,7 @@ const PRODUCTS = [
   },
   {
     "code": "HK-420-1",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL POCKET BOTTLE 200 ML COL BOX 100 PCS CTN",
     "price": "133",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3073,7 +3073,7 @@ const PRODUCTS = [
   },
   {
     "code": "HK-420-2",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL POCKET BOTTLE 300 ML COL BOX 100 PCS CTN",
     "price": "152",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3081,7 +3081,7 @@ const PRODUCTS = [
   },
   {
     "code": "DEPKI-PRINTED",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE 350 ML MIX PRINT COL BOX 120 PCS CTN",
     "price": "165",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3089,7 +3089,7 @@ const PRODUCTS = [
   },
   {
     "code": "HK-510ML",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE COFFEE CUP / SIPPER 510 ML COL BOX 50 PCS CTN",
     "price": "175",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3097,7 +3097,7 @@ const PRODUCTS = [
   },
   {
     "code": "8723",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE 500 ML PUSH BUTTON COL BOX MIX CHARACTER 50 PCS CTN",
     "price": "190",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3105,7 +3105,7 @@ const PRODUCTS = [
   },
   {
     "code": "8724",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE 500 ML PUSH BUTTON COL BOX MIX CHARACTER 50 PCS CTN",
     "price": "190",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3113,7 +3113,7 @@ const PRODUCTS = [
   },
   {
     "code": "8725",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE 500 ML PUSH BUTTON COL BOX MIX CHARACTER 50 PCS CTN",
     "price": "190",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3121,7 +3121,7 @@ const PRODUCTS = [
   },
   {
     "code": "HK-001",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE 500 ML COL BOX MIX PRINT 50 PCS CTN",
     "price": "200",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3129,7 +3129,7 @@ const PRODUCTS = [
   },
   {
     "code": "ND-1000",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE  1000 ML COL BOX MIX COLOR 50 PCS CTN",
     "price": "200",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3137,7 +3137,7 @@ const PRODUCTS = [
   },
   {
     "code": "SML CAP 800",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL SMALL CAP BOTTLE 800 ML COLOR BOX MIX COLOR 50 PCS CTN",
     "price": "200",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3145,7 +3145,7 @@ const PRODUCTS = [
   },
   {
     "code": "KND-1000",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE  1000 ML COL BOX MIX COLOR 50 PCS CTN",
     "price": "215",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3153,7 +3153,7 @@ const PRODUCTS = [
   },
   {
     "code": "SD-800",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE  800 ML COL BOX MIX COLOR 50 PCS CTN",
     "price": "215",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3169,7 +3169,7 @@ const PRODUCTS = [
   },
   {
     "code": "HK-900",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL HANDLE  SIPPER 900 ML COLOR BOX 50 PCS CTN",
     "price": "230",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3177,7 +3177,7 @@ const PRODUCTS = [
   },
   {
     "code": "7744",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE 500 ML COL BOX MIX COLOR 50 PCS CTN",
     "price": "240",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3185,7 +3185,7 @@ const PRODUCTS = [
   },
   {
     "code": "SD-1000",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE  1000 ML COL BOX MIX COLOR 50 PCS CTN",
     "price": "245",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3193,7 +3193,7 @@ const PRODUCTS = [
   },
   {
     "code": "HK-750",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE 750 ML BEER SHAPE BOTTLE COL BOX MIX COLOR 50 PCS CTN",
     "price": "250",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3201,7 +3201,7 @@ const PRODUCTS = [
   },
   {
     "code": "HK-420-4",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE 600 ML PUSH BUTTON COL BOX DISNEY CHARACTER 50 PCS CTN",
     "price": "260",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3209,7 +3209,7 @@ const PRODUCTS = [
   },
   {
     "code": "C-1000",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL COLA BOTTLE WITHOUT LOGO 1000 ML WHITE BOX 30 PCS CTN",
     "price": "265",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3217,7 +3217,7 @@ const PRODUCTS = [
   },
   {
     "code": "HK-005",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE 600 ML COL BOX MIX PRINT 50 PCS CTN",
     "price": "280",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3225,7 +3225,7 @@ const PRODUCTS = [
   },
   {
     "code": "ANTLER CUP",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE ANTLER WITH EXTRA CUP 550 ML COL BOX 50 PCS CTN",
     "price": "285",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3233,7 +3233,7 @@ const PRODUCTS = [
   },
   {
     "code": "SP-750",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL COLA BOTTLE SOWA PARIS 750 ML COLOR BOX 40 PCS CTN",
     "price": "295",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3241,7 +3241,7 @@ const PRODUCTS = [
   },
   {
     "code": "1200-TUMBLER-BLK",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL TUMBLER 1200 ML WHITE BOX BLACK COLOR 25 PCS CTN",
     "price": "310",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3249,7 +3249,7 @@ const PRODUCTS = [
   },
   {
     "code": "1200-TUMBLER-MIX",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL TUMBLER 1200 ML WHITE BOX MIX COLOR 25 PCS CTN",
     "price": "310",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3257,7 +3257,7 @@ const PRODUCTS = [
   },
   {
     "code": "HK-1210ML",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL BOTTLE 1200 ML WITH PUSH BUTTON COL BOX 40 PCS CTN",
     "price": "350",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
@@ -3265,7 +3265,7 @@ const PRODUCTS = [
   },
   {
     "code": "BULLET-1000",
-    "desc": "STEEL BOTTLE WITH TEMPRATURE DISPLAY 800 ML COL BOX 50 PCS CTN",
+    "desc": "STEEL FLASK 1000 ML WITH POUCH COL BOX 40 PCS CTN",
     "price": "385",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
