@@ -1,4 +1,5 @@
 let cart = {};
+let currentSelectedDepartment = "ALL";
 let currentSelectedCategory = "ALL";
 
 // ==========================================
@@ -80,13 +81,34 @@ function getCtnPackingSize(item) {
 }
 
 // ==========================================
-// 4. CATEGORY PILLS BAR & RENDER
+// 4. DEPARTMENT SWITCHER & CATEGORY PILLS BAR
 // ==========================================
+function switchDepartment(dept, element) {
+    currentSelectedDepartment = dept;
+    currentSelectedCategory = "ALL";
+
+    document.querySelectorAll(".dept-tab-btn").forEach(btn => btn.classList.remove("active"));
+    if (element) element.classList.add("active");
+
+    initCategoryPills();
+    filterProducts();
+}
+
 function initCategoryPills() {
     const pillsBar = document.getElementById("categoryPillsBar");
     if (!pillsBar || typeof PRODUCTS === 'undefined') return;
 
-    const categoriesInProducts = [...new Set(PRODUCTS.map(p => p.category))];
+    pillsBar.innerHTML = `
+        <a href="sneak-peek.html" class="cat-pill sneak-peek-link">✨ Sneak Peek / Diwali (143)</a>
+        <div class="cat-pill active" onclick="selectCategory('ALL', this)">📁 All Categories</div>
+    `;
+
+    let availableProducts = PRODUCTS;
+    if (currentSelectedDepartment !== "ALL") {
+        availableProducts = PRODUCTS.filter(p => (p.department || '').toLowerCase() === currentSelectedDepartment.toLowerCase());
+    }
+
+    const categoriesInProducts = [...new Set(availableProducts.map(p => p.category).filter(Boolean))];
     
     const sortedCategories = categoriesInProducts.sort((a, b) => {
         if (typeof MASTER_SORT_ORDER === 'undefined') return 0;
@@ -98,13 +120,11 @@ function initCategoryPills() {
     });
 
     sortedCategories.forEach(cat => {
-        if (cat) {
-            const pill = document.createElement("div");
-            pill.className = "cat-pill";
-            pill.innerText = cat;
-            pill.onclick = () => selectCategory(cat, pill);
-            pillsBar.appendChild(pill);
-        }
+        const pill = document.createElement("div");
+        pill.className = "cat-pill";
+        pill.innerText = cat;
+        pill.onclick = () => selectCategory(cat, pill);
+        pillsBar.appendChild(pill);
     });
 }
 
@@ -117,13 +137,34 @@ function selectCategory(cat, element) {
     filterProducts();
 }
 
+function getInitialImagePath(item) {
+    const dept = (item.department || '').toLowerCase();
+    if (dept === 'vaccum_bottles' || dept === 'vaccum bottles' || dept === 'bottles') {
+        return `images/vaccum_bottles/${item.code}.jpg`;
+    } else if (dept === 'kitchenware & other' || dept === 'kitchenware') {
+        return `images/kitchenware/${item.code}.jpg`;
+    }
+    return `images/glassware/${item.code}.jpg`;
+}
+
 function handleImageFallback(imgElem, code) {
-    const extensions = ['.jpeg', '.png', '.jpg', '.JPG', '.JPEG', '.PNG', '.webp'];
+    const fallbackPaths = [
+        `images/glassware/${code}.jpeg`,
+        `images/glassware/${code}.png`,
+        `images/glassware/${code}.JPG`,
+        `images/vaccum_bottles/${code}.jpg`,
+        `images/vaccum_bottles/${code}.jpeg`,
+        `images/vaccum_bottles/${code}.png`,
+        `images/kitchenware/${code}.jpg`,
+        `images/kitchenware/${code}.jpeg`,
+        `images/kitchenware/${code}.png`
+    ];
+
     let currentIndex = parseInt(imgElem.getAttribute('data-err-idx') || '0', 10);
 
-    if (currentIndex < extensions.length) {
+    if (currentIndex < fallbackPaths.length) {
         imgElem.setAttribute('data-err-idx', currentIndex + 1);
-        imgElem.src = `images/glassware/${code}${extensions[currentIndex]}`;
+        imgElem.src = fallbackPaths[currentIndex];
     } else {
         imgElem.onerror = null;
     }
@@ -168,13 +209,14 @@ function renderProducts(items) {
         const itemData = cart[p.code] || { ctn: 0, set: 0 };
         const effectivePrice = Number(p.price) * multiplier;
         const minSet = getMinSetLimit(effectivePrice);
+        const imgSrc = getInitialImagePath(p);
 
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
             <div class="card-img-wrapper">
                 <span class="stock-tag"><span class="stock-dot"></span> In Stock</span>
-                <img src="images/glassware/${p.code}.jpg" 
+                <img src="${imgSrc}" 
                      loading="lazy"
                      data-err-idx="0"
                      onerror="handleImageFallback(this, '${p.code}')" 
@@ -396,9 +438,11 @@ function filterProducts() {
     const sortVal = document.getElementById("sortSelect").value;
 
     let filtered = PRODUCTS.filter(p => {
+        const itemDept = (p.department || '').toLowerCase();
+        const matchesDept = (currentSelectedDepartment === "ALL") || (itemDept === currentSelectedDepartment.toLowerCase());
         const matchesCat = (currentSelectedCategory === "ALL") || (p.category === currentSelectedCategory);
         const matchesQuery = p.code.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query);
-        return matchesCat && matchesQuery;
+        return matchesDept && matchesCat && matchesQuery;
     });
 
     if (sortVal === "PRICE_LOW") {
