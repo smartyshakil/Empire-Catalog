@@ -2424,7 +2424,7 @@ const PRODUCTS = [
     "department": "Glassware"
   },
   {
-    "code": "SP-220-L3",
+    "code": "SP-320A-L6",
     "desc": "SOWA PARIS BOROSILICATE JAR WDN LID 220 ML ROUND 3 PC COL BOX 16 SET CTN",
     "price": "130",
     "unit": "FOR 3PCS",
@@ -2864,118 +2864,6 @@ const PRODUCTS = [
     "department": "Glassware"
   },
   {
-    "code": "1321-1",
-    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
-    "price": "125",
-    "unit": "FOR 1 PCS",
-    "category": "ACRYLIC SIPPER",
-    "department": "Glassware"
-  },
-  {
-    "code": "1321-2",
-    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
-    "price": "125",
-    "unit": "FOR 1 PCS",
-    "category": "ACRYLIC SIPPER",
-    "department": "Glassware"
-  },
-  {
-    "code": "1321-3",
-    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
-    "price": "125",
-    "unit": "FOR 1 PCS",
-    "category": "ACRYLIC SIPPER",
-    "department": "Glassware"
-  },
-  {
-    "code": "1321-4",
-    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
-    "price": "125",
-    "unit": "FOR 1 PCS",
-    "category": "ACRYLIC SIPPER",
-    "department": "Glassware"
-  },
-  {
-    "code": "1321-5",
-    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
-    "price": "125",
-    "unit": "FOR 1 PCS",
-    "category": "ACRYLIC SIPPER",
-    "department": "Glassware"
-  },
-  {
-    "code": "1321-6",
-    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
-    "price": "125",
-    "unit": "FOR 1 PCS",
-    "category": "ACRYLIC SIPPER",
-    "department": "Glassware"
-  },
-  {
-    "code": "1321-7",
-    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
-    "price": "145",
-    "unit": "FOR 1 PCS",
-    "category": "ACRYLIC SIPPER",
-    "department": "Glassware"
-  },
-  {
-    "code": "1321-8",
-    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
-    "price": "145",
-    "unit": "FOR 1 PCS",
-    "category": "ACRYLIC SIPPER",
-    "department": "Glassware"
-  },
-  {
-    "code": "1321-9",
-    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
-    "price": "145",
-    "unit": "FOR 1 PCS",
-    "category": "ACRYLIC SIPPER",
-    "department": "Glassware"
-  },
-  {
-    "code": "1321-10",
-    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
-    "price": "145",
-    "unit": "FOR 1 PCS",
-    "category": "ACRYLIC SIPPER",
-    "department": "Glassware"
-  },
-  {
-    "code": "1321-11",
-    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
-    "price": "145",
-    "unit": "FOR 1 PCS",
-    "category": "ACRYLIC SIPPER",
-    "department": "Glassware"
-  },
-  {
-    "code": "1321-12",
-    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
-    "price": "145",
-    "unit": "FOR 1 PCS",
-    "category": "ACRYLIC SIPPER",
-    "department": "Glassware"
-  },
-  {
-    "code": "1321-13",
-    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
-    "price": "145",
-    "unit": "FOR 1 PCS",
-    "category": "ACRYLIC SIPPER",
-    "department": "Glassware"
-  },
-  {
-    "code": "WDN-3PCS",
-    "desc": "WOODEN MDF TRAY 3 PCS BRISTLE PACK 4 COLOR MIX IN CTN 12 SET CTN",
-    "price": "285",
-    "unit": "FOR 3PCS",
-    "category": "TRAY",
-    "department": "Glassware"
-  },
-  {
     "code": "BW602-320",
     "desc": "HOME FOCUS RECTANGLE BOWL WITH LID 320 ML BULK PACK 48 PCS CTN",
     "price": "70",
@@ -3014,6 +2902,118 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS LUNCH BOX",
     "department": "Glassware"
+  },
+  {
+    "code": "1321-1",
+    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
+    "price": "125",
+    "unit": "FOR 1 PCS",
+    "category": "ACRYLIC SIPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "1321-2",
+    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
+    "price": "125",
+    "unit": "FOR 1 PCS",
+    "category": "ACRYLIC SIPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "1321-3",
+    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
+    "price": "125",
+    "unit": "FOR 1 PCS",
+    "category": "ACRYLIC SIPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "1321-4",
+    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
+    "price": "125",
+    "unit": "FOR 1 PCS",
+    "category": "ACRYLIC SIPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "1321-5",
+    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
+    "price": "125",
+    "unit": "FOR 1 PCS",
+    "category": "ACRYLIC SIPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "1321-6",
+    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
+    "price": "125",
+    "unit": "FOR 1 PCS",
+    "category": "ACRYLIC SIPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "1321-7",
+    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
+    "price": "145",
+    "unit": "FOR 1 PCS",
+    "category": "ACRYLIC SIPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "1321-8",
+    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
+    "price": "145",
+    "unit": "FOR 1 PCS",
+    "category": "ACRYLIC SIPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "1321-9",
+    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
+    "price": "145",
+    "unit": "FOR 1 PCS",
+    "category": "ACRYLIC SIPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "1321-10",
+    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
+    "price": "145",
+    "unit": "FOR 1 PCS",
+    "category": "ACRYLIC SIPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "1321-11",
+    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
+    "price": "145",
+    "unit": "FOR 1 PCS",
+    "category": "ACRYLIC SIPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "1321-12",
+    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
+    "price": "145",
+    "unit": "FOR 1 PCS",
+    "category": "ACRYLIC SIPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "1321-13",
+    "desc": "EMPIRE ACRYLIC SIPPER BOX PACK 60 PCS CTN",
+    "price": "145",
+    "unit": "FOR 1 PCS",
+    "category": "ACRYLIC SIPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "WDN-3PCS",
+    "desc": "WOODEN MDF TRAY 3 PCS BRISTLE PACK 4 COLOR MIX IN CTN 12 SET CTN",
+    "price": "285",
+    "unit": "FOR 3PCS",
+    "category": "TRAY",
+    "department": "Kitchenware"
   },
   {
     "code": "PP-900-281",
