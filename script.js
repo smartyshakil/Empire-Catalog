@@ -1,4 +1,20 @@
-let cart = {};
+// ==========================================
+// CART STORAGE HELPERS
+// ==========================================
+function loadSavedCart() {
+    try {
+        const saved = localStorage.getItem("empire_user_cart");
+        return saved ? JSON.parse(saved) : {};
+    } catch (e) {
+        return {};
+    }
+}
+
+function persistCart() {
+    localStorage.setItem("empire_user_cart", JSON.stringify(cart));
+}
+
+let cart = loadSavedCart();
 let currentSelectedDepartment = "ALL";
 let currentSelectedCategory = "ALL";
 
@@ -319,6 +335,7 @@ function updateItemQty(code, type, change, price, department = 'glassware') {
         if (setElem) setElem.innerText = cart[code].set;
     }
 
+    persistCart();
     updateCartBar();
 }
 
@@ -347,7 +364,8 @@ function calculateCurrentTotal() {
 
 function updateCartBar() {
     const totalCount = Object.keys(cart).length;
-    document.getElementById("totalItems").innerText = totalCount;
+    const itemsElem = document.getElementById("totalItems");
+    if (itemsElem) itemsElem.innerText = totalCount;
 
     const estTotalAmount = calculateCurrentTotal();
     const totalDisplay = document.getElementById("cartEstTotal");
@@ -386,6 +404,8 @@ function renderDrawerItems() {
     keys.forEach(code => {
         const item = PRODUCTS.find(p => p.code === code);
         const orderData = cart[code];
+        if (!item || !orderData) return;
+
         const unitPrice = Number(item.price) * multiplier;
         const packingSize = getCtnPackingSize(item);
 
@@ -429,6 +449,7 @@ function removeSingleItemFromCart(code) {
         if (ctnElem) ctnElem.innerText = 0;
         if (setElem) setElem.innerText = 0;
         
+        persistCart();
         updateCartBar();
         renderDrawerItems();
     }
@@ -437,6 +458,7 @@ function removeSingleItemFromCart(code) {
 function clearFullCart() {
     if (confirm("Kya aap pura Cart reset karna chahte hain?")) {
         cart = {};
+        localStorage.removeItem("empire_user_cart");
         document.querySelectorAll(".qty-val").forEach(el => el.innerText = "0");
         updateCartBar();
         closeOrderDrawer();
@@ -486,7 +508,7 @@ function filterProducts() {
 }
 
 // ==========================================
-// 7. WHATSAPP SENDER (SEPARATE LINES FOR PYTHON PARSER)
+// 7. WHATSAPP SENDER (SEPARATE LINES FOR PYTHON PARSER & AUTO CLEAR)
 // ==========================================
 function sendWhatsAppOrder() {
     const keys = Object.keys(cart);
@@ -518,6 +540,13 @@ function sendWhatsAppOrder() {
     const phone = "919601693938"; 
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
+
+    // Auto-clear cart and storage after dispatch
+    cart = {};
+    localStorage.removeItem("empire_user_cart");
+    document.querySelectorAll(".qty-val").forEach(el => el.innerText = "0");
+    updateCartBar();
+    closeOrderDrawer();
 }
 
 // ==========================================
@@ -591,6 +620,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typeof PRODUCTS !== 'undefined') {
         // Direct deep-link execution
         checkUrlDepartment();
+        updateCartBar();
     }
 });
 
