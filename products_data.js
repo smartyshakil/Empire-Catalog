@@ -1808,7 +1808,7 @@ const PRODUCTS = [
     "department": "Glassware"
   },
   {
-    "code": "SMWH76-L7B",
+    "code": "SMWH82-L7B",
     "desc": "SHINE MAX COLORED 7 PCS LEMON SET COL BOX 6 SET CTN",
     "price": "675",
     "unit": "FOR 7PCS",
