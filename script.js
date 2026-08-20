@@ -52,7 +52,16 @@ function updateAccessHeader() {
 // ==========================================
 // 2. DYNAMIC MOQ RULES (Price-Based Minimums)
 // ==========================================
-function getMinSetLimit(price) {
+function getMinSetLimit(price, department = 'glassware') {
+    const dept = (department || '').toLowerCase();
+
+    // Vacuum Bottles MOQ Rule
+    if (dept === 'vaccum_bottles' || dept === 'vaccum bottles' || dept === 'bottles') {
+        if (price < 100) return 100;
+        return 12;
+    }
+
+    // Glassware & Other Items Default MOQ Rule
     if (price < 150) return 12;
     if (price <= 399) return 4;
     return 2;
@@ -229,7 +238,8 @@ function renderProducts(items) {
     items.forEach(p => {
         const itemData = cart[p.code] || { ctn: 0, set: 0 };
         const effectivePrice = Number(p.price) * multiplier;
-        const minSet = getMinSetLimit(effectivePrice);
+        const itemDept = p.department || 'glassware';
+        const minSet = getMinSetLimit(effectivePrice, itemDept);
         const imgSrc = getInitialImagePath(p);
 
         const card = document.createElement("div");
@@ -255,17 +265,17 @@ function renderProducts(items) {
                 <!-- Carton Counter -->
                 <div class="counter-row">
                     <span class="counter-label">CTN</span>
-                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'ctn', -1, ${effectivePrice})">-</button>
+                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'ctn', -1, ${effectivePrice}, '${itemDept}')">-</button>
                     <span class="qty-val" id="ctn-${p.code}">${itemData.ctn}</span>
-                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'ctn', 1, ${effectivePrice})">+</button>
+                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'ctn', 1, ${effectivePrice}, '${itemDept}')">+</button>
                 </div>
 
                 <!-- Set Counter -->
                 <div class="counter-row">
                     <span class="counter-label">SET</span>
-                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'set', -1, ${effectivePrice})">-</button>
+                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'set', -1, ${effectivePrice}, '${itemDept}')">-</button>
                     <span class="qty-val" id="set-${p.code}">${itemData.set}</span>
-                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'set', 1, ${effectivePrice})">+</button>
+                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'set', 1, ${effectivePrice}, '${itemDept}')">+</button>
                 </div>
             </div>
         `;
@@ -276,12 +286,12 @@ function renderProducts(items) {
 // ==========================================
 // 5. QUANTITY UPDATE & ESTIMATED TOTAL
 // ==========================================
-function updateItemQty(code, type, change, price) {
+function updateItemQty(code, type, change, price, department = 'glassware') {
     if (!cart[code]) {
         cart[code] = { ctn: 0, set: 0 };
     }
 
-    const minSetLimit = getMinSetLimit(price);
+    const minSetLimit = getMinSetLimit(price, department);
 
     if (type === 'ctn') {
         cart[code].ctn += change;
