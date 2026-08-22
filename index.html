@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMPIRE GLASSWARE - Digital Order Catalog</title>
     
+    <!-- PWA Manifest & App Config -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0b1329">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Empire Catalog">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Empire Glassware - Top Wholesale Importer of Glassware and Crockery. Explore our digital order catalog and order directly on WhatsApp.">
     <meta name="keywords" content="Empire Glassware, Glassware Importer, Crockery Wholesaler, Wholesale Glassware Catalog, Glassware Bulk Order, SOWA Glassware">
@@ -38,6 +47,17 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-7VSXTN9XXZ');
+    </script>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then((reg) => console.log('✅ Service Worker Active:', reg.scope))
+            .catch((err) => console.log('❌ Service Worker Error:', err));
+        });
+      }
     </script>
 
     <style>
