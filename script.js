@@ -185,25 +185,32 @@ function selectCategory(cat, element) {
 
 function getInitialImagePath(item) {
     const dept = (item.department || '').toLowerCase();
-    if (dept === 'vaccum_bottles' || dept === 'vaccum bottles' || dept === 'bottles') {
+    if (dept.includes('vaccum') || dept.includes('bottle')) {
         return `images/vaccum_bottles/${item.code}.jpg`;
-    } else if (dept === 'kitchenware & other' || dept === 'kitchenware') {
+    } else if (dept.includes('kitchen')) {
         return `images/kitchenware/${item.code}.jpg`;
     }
     return `images/glassware/${item.code}.jpg`;
 }
 
-function handleImageFallback(imgElem, code) {
+function handleImageFallback(imgElem, code, dept) {
+    let deptFolder = "glassware";
+    if (dept) {
+        let d = dept.toLowerCase();
+        if (d.includes("kitchen")) deptFolder = "kitchenware";
+        else if (d.includes("vaccum") || d.includes("bottle")) deptFolder = "vaccum_bottles";
+    }
+
     const fallbackPaths = [
-        `images/glassware/${code}.jpeg`,
-        `images/glassware/${code}.png`,
+        `images/${deptFolder}/${code}.JPG`,
+        `images/${deptFolder}/${code}.png`,
+        `images/${deptFolder}/${code}.PNG`,
+        `images/${deptFolder}/${code}.jpeg`,
+        `images/${deptFolder}/${code}.JPEG`,
+        `images/glassware/${code}.jpg`,
         `images/glassware/${code}.JPG`,
-        `images/vaccum_bottles/${code}.jpg`,
-        `images/vaccum_bottles/${code}.jpeg`,
-        `images/vaccum_bottles/${code}.png`,
-        `images/kitchenware/${code}.jpg`,
-        `images/kitchenware/${code}.jpeg`,
-        `images/kitchenware/${code}.png`
+        `images/kitchenware/${code}.JPG`,
+        `images/vaccum_bottles/${code}.JPG`
     ];
 
     let currentIndex = parseInt(imgElem.getAttribute('data-err-idx') || '0', 10);
@@ -266,7 +273,7 @@ function renderProducts(items) {
                 <img src="${imgSrc}" 
                      loading="lazy"
                      data-err-idx="0"
-                     onerror="handleImageFallback(this, '${p.code}')" 
+                     onerror="handleImageFallback(this, '${p.code}', '${itemDept}')" 
                      alt="${p.code}" 
                      onclick="openLightbox(this.src, '${p.code} - ${p.desc}')">
             </div>
@@ -508,7 +515,7 @@ function filterProducts() {
 }
 
 // ==========================================
-// 7. WHATSAPP SENDER (SEPARATE LINES FOR PYTHON PARSER & AUTO CLEAR)
+// 7. WHATSAPP SENDER
 // ==========================================
 function sendWhatsAppOrder() {
     const keys = Object.keys(cart);
@@ -604,7 +611,7 @@ function checkUrlDepartment() {
     if (target === 'bottles' || target === 'vaccum_bottles' || target === 'vaccum-bottles') {
         switchDepartment('vaccum_bottles');
     } else if (target === 'kitchenware' || target === 'kitchen') {
-        switchDepartment('Kitchenware & Other');
+        switchDepartment('Kitchenware');
     } else if (target === 'glassware') {
         switchDepartment('Glassware');
     } else {
@@ -618,7 +625,6 @@ function checkUrlDepartment() {
 document.addEventListener("DOMContentLoaded", () => {
     updateAccessHeader();
     if (typeof PRODUCTS !== 'undefined') {
-        // Direct deep-link execution
         checkUrlDepartment();
         updateCartBar();
     }
