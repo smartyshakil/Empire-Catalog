@@ -19,7 +19,7 @@ let currentSelectedDepartment = "ALL";
 let currentSelectedCategory = "ALL";
 
 // ==========================================
-// 1. DUAL ACCESS CODE SYSTEM (Master & Complex Daily Code)
+// 1. TIERED ACCESS CODE SYSTEM (Modal & Dynamic Discount)
 // ==========================================
 const MASTER_CODE = "EMPIRE2026";
 
@@ -31,34 +31,81 @@ function getTodayDailyCode() {
 }
 
 function promptAccessCode() {
-    const userCode = prompt("Enter Wholesale Access Code:");
-    if (!userCode) return;
-    
-    const dailyCode = getTodayDailyCode();
-    const cleanCode = userCode.trim().toUpperCase();
-
-    if (cleanCode === MASTER_CODE || cleanCode === dailyCode) {
-        localStorage.setItem("empire_access_mode", "WHOLESALE");
-        alert("🟢 Wholesale Access Granted!");
-    } else {
-        localStorage.setItem("empire_access_mode", "RETAIL");
-        alert("❌ Invalid Code! Showing Retail Rates.");
+    const modal = document.getElementById("accessModal");
+    const backdrop = document.getElementById("accessModalBackdrop");
+    const input = document.getElementById("accessCodeInput");
+    if (modal && backdrop) {
+        modal.style.display = "block";
+        backdrop.style.display = "block";
+        if (input) {
+            input.value = "";
+            input.focus();
+        }
     }
+}
+
+function closeAccessModal() {
+    const modal = document.getElementById("accessModal");
+    const backdrop = document.getElementById("accessModalBackdrop");
+    if (modal && backdrop) {
+        modal.style.display = "none";
+        backdrop.style.display = "none";
+    }
+}
+
+function applyAccessCodeFromModal() {
+    const input = document.getElementById("accessCodeInput");
+    if (!input) return;
+    const userCode = input.value.trim().toUpperCase();
+    if (!userCode) return;
+
+    const dailyCode = getTodayDailyCode();
+
+    if (userCode === MASTER_CODE || userCode === dailyCode) {
+        localStorage.setItem("empire_access_tier", "50");
+        localStorage.setItem("empire_access_code", userCode);
+        alert("🟢 Wholesale Access (Flat 50% Less) Activated!");
+    } else if (userCode === "EMPIRE45") {
+        localStorage.setItem("empire_access_tier", "45");
+        localStorage.setItem("empire_access_code", userCode);
+        alert("🟢 Dealer Access (45% Less Rate) Activated!");
+    } else if (userCode === "EMPIRE40") {
+        localStorage.setItem("empire_access_tier", "40");
+        localStorage.setItem("empire_access_code", userCode);
+        alert("🟢 Partner Access (40% Less Rate) Activated!");
+    } else {
+        localStorage.setItem("empire_access_tier", "0");
+        localStorage.setItem("empire_access_code", "RETAIL");
+        alert("❌ Invalid Code! Showing Standard Retail Rates.");
+    }
+    
+    closeAccessModal();
     location.reload();
 }
 
 function getAccessMultiplier() {
-    const mode = localStorage.getItem("empire_access_mode");
-    return (mode === "WHOLESALE") ? 1 : 2;
+    const tier = localStorage.getItem("empire_access_tier");
+    if (tier === "50") return 1;       // Flat 50% Less = Base Master Price (1x)
+    if (tier === "45") return 1.1;     // 45% Less on 2x Retail = 1.1x Base Price
+    if (tier === "40") return 1.2;     // 40% Less on 2x Retail = 1.2x Base Price
+    return 2;                          // Standard Retail Mode = 2x Base Price
+}
+
+function getTierLabel() {
+    const tier = localStorage.getItem("empire_access_tier");
+    if (tier === "50") return "Wholesale (50% OFF Rate)";
+    if (tier === "45") return "Dealer (45% OFF Rate)";
+    if (tier === "40") return "Partner (40% OFF Rate)";
+    return "Standard Retail (No Code)";
 }
 
 function updateAccessHeader() {
     const badge = document.getElementById("accessBadge");
     if (!badge) return;
-    const mode = localStorage.getItem("empire_access_mode");
-    if (mode === "WHOLESALE") {
+    const tier = localStorage.getItem("empire_access_tier");
+    if (tier && tier !== "0") {
         badge.className = "access-badge wholesale";
-        badge.innerText = "🟢 Wholesale Active";
+        badge.innerText = `🟢 Tier-${tier}% Active`;
     } else {
         badge.className = "access-badge";
         badge.innerText = "🔑 Wholesale Access";
@@ -112,10 +159,8 @@ function switchDepartment(dept, element = null) {
     currentSelectedDepartment = dept;
     currentSelectedCategory = "ALL";
 
-    // 1. Remove active class from all department buttons
     document.querySelectorAll(".dept-tab-btn").forEach(btn => btn.classList.remove("active"));
     
-    // 2. Add active class to selected department button
     if (element) {
         element.classList.add("active");
     } else {
@@ -135,7 +180,6 @@ function switchDepartment(dept, element = null) {
         if (matchedBtn) matchedBtn.classList.add("active");
     }
 
-    // 3. Refresh categories and product grid
     initCategoryPills();
     filterProducts();
 }
@@ -260,7 +304,7 @@ function renderProducts(items) {
 
     items.forEach(p => {
         const itemData = cart[p.code] || { ctn: 0, set: 0 };
-        const effectivePrice = Number(p.price) * multiplier;
+        const effectivePrice = Math.round(Number(p.price) * multiplier);
         const itemDept = p.department || 'glassware';
         const minSet = getMinSetLimit(effectivePrice, itemDept);
         const imgSrc = getInitialImagePath(p);
@@ -354,7 +398,7 @@ function calculateCurrentTotal() {
     keys.forEach(code => {
         const item = PRODUCTS.find(p => p.code === code);
         if (item) {
-            const unitPrice = Number(item.price) * multiplier;
+            const unitPrice = Math.round(Number(item.price) * multiplier);
             const packingSize = getCtnPackingSize(item);
 
             if (cart[code].set > 0) {
@@ -413,7 +457,7 @@ function renderDrawerItems() {
         const orderData = cart[code];
         if (!item || !orderData) return;
 
-        const unitPrice = Number(item.price) * multiplier;
+        const unitPrice = Math.round(Number(item.price) * multiplier);
         const packingSize = getCtnPackingSize(item);
 
         let itemTotal = 0;
@@ -515,7 +559,7 @@ function filterProducts() {
 }
 
 // ==========================================
-// 7. WHATSAPP SENDER
+// 7. WHATSAPP SENDER (100% Quotation Parser Safe)
 // ==========================================
 function sendWhatsAppOrder() {
     const keys = Object.keys(cart);
@@ -524,7 +568,14 @@ function sendWhatsAppOrder() {
         return;
     }
 
-    let message = "🛍️ *NEW CATALOG ORDER - EMPIRE GLASSWARE*\n\n";
+    const appliedTier = getTierLabel();
+    const appliedCode = localStorage.getItem("empire_access_code") || "RETAIL";
+
+    let message = "🛍️ *NEW CATALOG ORDER - EMPIRE GLASSWARE*\n";
+    message += `🏷️ *Price Tier:* ${appliedTier}\n`;
+    message += `🔑 *Access Code:* \`${appliedCode}\`\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+
     let lineCount = 1;
 
     keys.forEach((code) => {
