@@ -814,3 +814,27 @@ window.addEventListener('keydown', function(e) {
         closeLightbox();
     }
 });
+// --- 📊 PWA INSTALL & USAGE TRACKER ---
+
+// 1. Jab koi customer App "Install / Add to Home Screen" karega
+window.addEventListener('appinstalled', () => {
+  console.log('✅ PWA Installed');
+  if (typeof gtag === 'function') {
+    gtag('event', 'pwa_install_success', {
+      event_category: 'PWA_App',
+      event_label: 'Empire Glassware Installed',
+      device: /Mobi|Android/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop'
+    });
+  }
+});
+
+// 2. Jab koi customer seedha Installed App Icon se catalog kholega
+window.addEventListener('DOMContentLoaded', () => {
+  const isInstalledApp = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  if (isInstalledApp && typeof gtag === 'function') {
+    gtag('event', 'pwa_opened_from_icon', {
+      event_category: 'PWA_App',
+      event_label: 'Direct App Open'
+    });
+  }
+});
