@@ -1187,3 +1187,9 @@ if (typeof originalSendWhatsAppOrder === 'function') {
     return originalSendWhatsAppOrder.apply(this, arguments);
   };
 }
+// Auto-refresh PWA if new version available
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.ready.then(registration => {
+    registration.update();
+  });
+}

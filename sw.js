@@ -1,5 +1,5 @@
-const CACHE_NAME = 'empire-catalog-v2';
-const IMAGE_CACHE_NAME = 'empire-images-v2';
+const CACHE_NAME = 'empire-catalog-v3';
+const IMAGE_CACHE_NAME = 'empire-images-v3';
 
 const ASSETS_TO_CACHE = [
   './',
