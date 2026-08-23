@@ -4,11 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Empire Glassware — Management Desk</title>
-  <link rel="stylesheet" href="style.css">
   <style>
+    :root {
+      --bg-dark: #0b1329;
+      --panel-bg: #ffffff;
+      --border-color: #dcdde1;
+      --primary: #2980b9;
+      --success: #27ae60;
+      --warning: #f39c12;
+      --danger: #c0392b;
+      --purple: #8e44ad;
+      --text-main: #2c3e50;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
-    body { background: #0b1329; color: #fff; min-height: 100vh; display: flex; flex-direction: column; }
-    
+    body { background: #0b1329; color: var(--text-main); min-height: 100vh; }
+
     /* Gatekeeper Login Box */
     #gatekeeperOverlay {
       position: fixed; inset: 0; background: #0b1329; display: flex; align-items: center; justify-content: center; z-index: 99999; padding: 20px;
@@ -16,20 +26,102 @@
     .gate-box {
       background: #111b38; border: 1px solid #1f2e5a; border-radius: 12px; padding: 28px; width: 100%; max-width: 380px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
-    .gate-title { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: 0.5px; }
+    .gate-title { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 6px; }
     .gate-subtitle { font-size: 12px; color: #8a99b5; margin-bottom: 20px; }
     .gate-input {
-      width: 100%; padding: 12px; background: #070d1e; border: 1px solid #293a6b; border-radius: 6px; color: #fff; font-size: 14px; text-align: center; letter-spacing: 2px; margin-bottom: 15px; outline: none; transition: border-color 0.2s;
+      width: 100%; padding: 12px; background: #070d1e; border: 1px solid #293a6b; border-radius: 6px; color: #fff; font-size: 14px; text-align: center; letter-spacing: 2px; margin-bottom: 15px; outline: none;
     }
     .gate-input:focus { border-color: #3498db; }
     .gate-btn {
-      width: 100%; padding: 12px; background: #2980b9; border: none; border-radius: 6px; color: #fff; font-size: 13px; font-weight: 700; cursor: pointer; transition: background 0.2s;
+      width: 100%; padding: 12px; background: #2980b9; border: none; border-radius: 6px; color: #fff; font-size: 13px; font-weight: 700; cursor: pointer;
     }
     .gate-btn:hover { background: #1f6696; }
     .gate-err { font-size: 12px; color: #e74c3c; margin-top: 12px; display: none; font-weight: 600; }
 
-    /* App Host Mount Point */
-    #appHost { display: none; width: 100%; }
+    /* App Workspace Styles */
+    #appHost { display: none; width: 100%; background: #f4f6f9; min-height: 100vh; padding-bottom: 85px; }
+    .desk-header { background: var(--bg-dark); color: #fff; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; }
+    .desk-header h1 { font-size: 14px; font-weight: 700; }
+    .nav-link { color: #f1c40f; text-decoration: none; font-size: 12px; font-weight: bold; }
+
+    .toolbar { background: #ecf0f1; border-bottom: 1px solid #bdc3c7; padding: 8px 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .t-btn { padding: 6px 10px; border: none; border-radius: 4px; font-size: 11px; font-weight: bold; cursor: pointer; color: #fff; transition: opacity 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 4px; }
+    .t-btn:hover { opacity: 0.9; }
+    .btn-reset { background: #e67e22; }
+    .btn-paste { background: var(--purple); }
+    .btn-custom { background: #34495e; }
+    .btn-export { background: #16a085; }
+    .btn-copy-wa { background: #25d366; color: #fff; }
+
+    .mobile-tab-bar { display: none; background: #fff; border-bottom: 1px solid #ddd; padding: 6px 10px; gap: 6px; position: sticky; top: 0; z-index: 50; }
+    .m-tab-btn { flex: 1; padding: 8px 4px; border: 1px solid #bdc3c7; background: #f8f9fa; font-size: 11px; font-weight: bold; border-radius: 4px; color: #555; text-align: center; cursor: pointer; }
+    .m-tab-btn.active { background: var(--bg-dark); color: #fff; border-color: var(--bg-dark); }
+
+    .container { max-width: 1280px; margin: 10px auto; padding: 0 10px; display: grid; grid-template-columns: 310px 1fr; gap: 12px; }
+    .panel { background: var(--panel-bg); border-radius: 6px; border: 1px solid var(--border-color); padding: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
+    .panel-title { font-size: 13px; font-weight: bold; margin-bottom: 8px; border-bottom: 2px solid #ecf0f1; padding-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
+
+    .form-group { margin-bottom: 8px; }
+    .form-group label { display: block; font-size: 11px; font-weight: bold; margin-bottom: 2px; color: #666; }
+    .form-control { width: 100%; padding: 6px 8px; border: 1px solid #bdc3c7; border-radius: 4px; font-size: 12px; }
+
+    .search-box { width: 100%; padding: 6px 8px; border: 1px solid #3498db; border-radius: 4px; margin-bottom: 6px; font-size: 12px; }
+    .prod-mini-list { max-height: 380px; overflow-y: auto; border: 1px solid #eee; border-radius: 4px; }
+    .prod-item { padding: 6px 8px; border-bottom: 1px solid #f1f2f6; display: flex; justify-content: space-between; align-items: center; }
+    .prod-item-code { font-weight: bold; font-size: 11px; color: #2980b9; }
+    .prod-item-desc { font-size: 10.5px; color: #666; max-width: 170px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    .ledger-table-wrap { overflow-x: auto; max-height: 520px; -webkit-overflow-scrolling: touch; border: 1px solid #eee; border-radius: 4px; }
+    .ledger-table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 600px; }
+    .ledger-table th { background: #34495e; color: #fff; padding: 7px 6px; text-align: left; position: sticky; top: 0; z-index: 5; font-size: 11px; }
+    .ledger-table td { padding: 5px 6px; border-bottom: 1px solid #ecf0f1; vertical-align: middle; }
+    
+    .table-input { width: 60px; padding: 4px; border: 1px solid #bdc3c7; border-radius: 3px; font-size: 12px; text-align: center; }
+    .table-input.price { width: 68px; text-align: right; }
+    .btn-row-del { background: transparent; border: none; color: var(--danger); cursor: pointer; font-size: 14px; }
+
+    .summary-card { background: #ecf0f1; padding: 8px 12px; border-radius: 6px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .summary-stats { font-size: 12px; font-weight: 600; }
+    .summary-stats span { margin-right: 8px; }
+    .discount-box { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: bold; }
+    .discount-box input { width: 45px; padding: 3px; text-align: center; font-size: 12px; border: 1px solid #bdc3c7; border-radius: 3px; }
+    .grand-total { font-size: 16px; font-weight: 800; color: #27ae60; }
+
+    .bottom-actions { margin-top: 10px; display: flex; gap: 8px; justify-content: flex-end; }
+
+    .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; z-index: 1000; }
+    .modal-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; border-radius: 8px; width: 92%; max-width: 480px; padding: 14px; z-index: 1001; display: none; color: #2c3e50; }
+    .modal-header { font-size: 13px; font-weight: bold; margin-bottom: 10px; }
+    .modal-actions { margin-top: 10px; display: flex; justify-content: flex-end; gap: 6px; }
+
+    @media (max-width: 768px) {
+      .mobile-tab-bar { display: flex; }
+      .container { grid-template-columns: 1fr; margin: 6px auto; }
+      .tab-section { display: none; }
+      .tab-section.active { display: block; }
+      .toolbar { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+      .toolbar .t-btn { width: 100%; font-size: 11px; padding: 7px 4px; }
+      .toolbar .btn-reset { grid-column: span 2; }
+      .prod-mini-list { max-height: calc(100vh - 220px); }
+      .bottom-actions {
+        position: fixed; bottom: 0; left: 0; right: 0; background: #ffffff; padding: 8px 10px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 99; margin-top: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+      }
+      .bottom-actions .t-btn { padding: 9px; font-size: 12px; }
+    }
+
+    @media print {
+      body * { visibility: hidden; }
+      #printableArea, #printableArea * { visibility: visible; }
+      #printableArea { position: absolute; left: 0; top: 0; width: 100%; padding: 15px; font-size: 11px; color: #000; background: #fff; }
+      .no-print { display: none !important; }
+      .print-doc-header { text-align: center; margin-bottom: 12px; }
+      .print-doc-header h2 { font-size: 20px; font-weight: bold; }
+      .print-doc-header h3 { font-size: 15px; text-decoration: underline; margin: 3px 0; }
+      .print-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+      .print-table th, .print-table td { border: 1px solid #000; padding: 5px 6px; font-size: 10.5px; }
+      .print-table th { background: #e0e0e0 !important; color: #000 !important; }
+      .print-summary-row { font-weight: bold; }
+    }
   </style>
 </head>
 <body>
@@ -46,15 +138,161 @@
     </div>
   </div>
 
-  <!-- Decrypted Application Renders Here -->
-  <div id="appHost"></div>
+  <!-- Main Application Workspace -->
+  <div id="appHost">
+    
+    <!-- Header -->
+    <div class="desk-header no-print">
+      <h1>EMPIRE GLASSWARE — Quotation Desk</h1>
+      <button class="t-btn" style="background:#c0392b; padding:4px 8px;" onclick="lockDesk()">🔒 Lock</button>
+    </div>
+
+    <!-- Mobile View Tabs -->
+    <div class="mobile-tab-bar no-print">
+      <div class="m-tab-btn active" id="tabBtnLedger" onclick="switchMobileTab('ledger')">📝 Ledger (<span id="mTabCount">0</span>)</div>
+      <div class="m-tab-btn" id="tabBtnMaster" onclick="switchMobileTab('master')">➕ Add Items</div>
+      <div class="m-tab-btn" id="tabBtnClient" onclick="switchMobileTab('client')">👤 Client Info</div>
+    </div>
+
+    <!-- Top Action Toolbar -->
+    <div class="toolbar no-print">
+      <button class="t-btn btn-paste" onclick="openWhatsAppModal()">📋 Paste WA Order</button>
+      <button class="t-btn btn-custom" onclick="openCustomItemModal()">➕ Custom Item</button>
+      <button class="t-btn btn-export" onclick="exportCsvForDesktop()">💾 Export CSV</button>
+      <button class="t-btn btn-copy-wa" onclick="copyUpdatedWhatsAppOrder()">📲 Copy WA Text</button>
+      <button class="t-btn btn-reset" onclick="resetDesk()">🔄 Reset Workspace</button>
+    </div>
+
+    <!-- Main Grid Workspace -->
+    <div class="container no-print">
+      
+      <!-- LEFT PANEL -->
+      <div id="leftColumnWrapper">
+        <div class="panel tab-section" id="secClient">
+          <div class="panel-title">👤 Account / Client Details</div>
+          <div class="form-group">
+            <label>Party / Client Name:</label>
+            <input type="text" id="clientName" list="clientSuggestions" class="form-control" placeholder="Search or type Client Name..." value="CASH / COUNTER" oninput="onClientNameSelect(this.value)">
+            <datalist id="clientSuggestions"></datalist>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+            <div class="form-group">
+              <label>City:</label>
+              <input type="text" id="clientCity" class="form-control" placeholder="City">
+            </div>
+            <div class="form-group">
+              <label>Mobile:</label>
+              <input type="text" id="clientMobile" class="form-control" placeholder="Mobile">
+            </div>
+          </div>
+        </div>
+
+        <div class="panel tab-section" id="secMaster" style="margin-top: 10px;">
+          <div class="panel-title">📦 Add From Master Catalog</div>
+          <input type="text" id="prodSearchInput" class="search-box" placeholder="🔍 Search Item / Code..." oninput="filterMasterProducts()">
+          <div class="prod-mini-list" id="prodMiniList"></div>
+        </div>
+      </div>
+
+      <!-- RIGHT PANEL: Ledger -->
+      <div class="panel tab-section active" id="secLedger">
+        <div class="panel-title">
+          <span>📝 Order Ledger (<span id="ledgerItemCount">0</span>)</span>
+          <span style="font-size: 10px; color: #7f8c8d;">Scroll table ➡️ to edit</span>
+        </div>
+
+        <div class="ledger-table-wrap">
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th style="width: 100px;">Code</th>
+                <th>Description</th>
+                <th style="width: 62px; text-align:center;">CTN</th>
+                <th style="width: 62px; text-align:center;">Qty</th>
+                <th style="width: 72px; text-align:right;">Rate (₹)</th>
+                <th style="width: 80px; text-align:right;">Total (₹)</th>
+                <th style="width: 25px;"></th>
+              </tr>
+            </thead>
+            <tbody id="ledgerBody"></tbody>
+          </table>
+        </div>
+
+        <div class="summary-card">
+          <div class="summary-stats">
+            <span>📦 CTN: <b id="statCtn" style="color: #2980b9;">0</b></span>
+            <span>✨ Loose: <b id="statLoose" style="color: #e67e22;">0</b></span>
+          </div>
+          
+          <div class="discount-box">
+            <label>Less %:</label>
+            <input type="number" id="discountPercent" value="0" min="0" max="100" step="0.5" oninput="calculateLiveTotals()">
+          </div>
+
+          <div class="grand-total" id="statGrandTotal">Rs. 0.00</div>
+        </div>
+
+        <div class="bottom-actions">
+          <button class="t-btn" style="background: var(--warning);" onclick="printDocument('QUOTE')">📄 Quotation</button>
+          <button class="t-btn" style="background: var(--success);" onclick="printDocument('DISPATCH')">🚚 Dispatch</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Modals -->
+    <div class="modal-backdrop" id="waModalBackdrop" onclick="closeModal('waModal')"></div>
+    <div class="modal-box" id="waModal">
+      <div class="modal-header">📋 Paste WhatsApp Order</div>
+      <textarea id="waRawInput" rows="7" class="form-control" style="font-family: monospace; font-size: 11px;" placeholder="Paste customer WhatsApp message here..."></textarea>
+      <div class="modal-actions">
+        <button class="t-btn" style="background: #7f8c8d;" onclick="closeModal('waModal')">Cancel</button>
+        <button class="t-btn btn-paste" onclick="parseWhatsAppText()">📥 Import</button>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="customModalBackdrop" onclick="closeModal('customModal')"></div>
+    <div class="modal-box" id="customModal">
+      <div class="modal-header">➕ Add Custom Item</div>
+      <div class="form-group">
+        <label>Description:</label>
+        <input type="text" id="custDesc" class="form-control" placeholder="Item Name">
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+        <div class="form-group">
+          <label>Carton Spec:</label>
+          <input type="number" id="custSpec" class="form-control" value="1">
+        </div>
+        <div class="form-group">
+          <label>CTN Count:</label>
+          <input type="number" id="custCtn" class="form-control" value="0">
+        </div>
+        <div class="form-group">
+          <label>Loose Qty:</label>
+          <input type="number" id="custLoose" class="form-control" value="0">
+        </div>
+        <div class="form-group">
+          <label>Rate (₹):</label>
+          <input type="number" id="custPrice" class="form-control" value="0.00" step="0.01">
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="t-btn" style="background: #7f8c8d;" onclick="closeModal('customModal')">Cancel</button>
+        <button class="t-btn" style="background: var(--danger);" onclick="saveCustomItem()">Add Item</button>
+      </div>
+    </div>
+
+    <div id="printableArea"></div>
+
+  </div>
 
   <!-- Required Data Modules -->
   <script src="clients_data.js"></script>
   <script src="products_data.js"></script>
+  <script src="quotation.js"></script>
 
+  <!-- Gatekeeper & Tab Controls -->
   <script>
-    // Obfuscated Key for Empire@786 (Hidden from plain-text search)
     const _AUTH_KEY = [69, 109, 112, 105, 114, 101, 64, 55, 56, 54].map(c => String.fromCharCode(c)).join('');
 
     function attemptUnlock() {
@@ -65,9 +303,13 @@
         errElem.style.display = "none";
         sessionStorage.setItem("eg_admin_auth", "true");
         document.getElementById("gatekeeperOverlay").style.display = "none";
+        document.getElementById("appHost").style.display = "block";
         document.body.style.background = "#f4f6f9";
-        document.body.style.color = "#2c3e50";
-        loadWorkspace();
+        
+        // Trigger Engine
+        if (typeof initClientAutocomplete === "function") initClientAutocomplete();
+        if (typeof filterMasterProducts === "function") filterMasterProducts();
+        if (typeof renderLedger === "function") renderLedger();
       } else {
         errElem.style.display = "block";
         document.getElementById("gatePass").value = "";
@@ -75,35 +317,35 @@
       }
     }
 
-    function loadWorkspace() {
-      const host = document.getElementById("appHost");
-      host.style.display = "block";
-
-      // Load UI from quotation.html into DOM
-      fetch("quotation.html")
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html");
-          host.innerHTML = doc.body.innerHTML;
-
-          // Dynamically execute quotation.js
-          const script = document.createElement("script");
-          script.src = "quotation.js";
-          document.body.appendChild(script);
-        })
-        .catch(err => {
-          console.error("Error loading desk workspace:", err);
-        });
+    function lockDesk() {
+      sessionStorage.removeItem("eg_admin_auth");
+      location.reload();
     }
 
-    // Auto-login if session already active in current tab
+    function switchMobileTab(tab) {
+      document.querySelectorAll('.m-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+
+      if (tab === 'ledger') {
+        document.getElementById('tabBtnLedger').classList.add('active');
+        document.getElementById('secLedger').classList.add('active');
+      } else if (tab === 'master') {
+        document.getElementById('tabBtnMaster').classList.add('active');
+        document.getElementById('secMaster').classList.add('active');
+      } else if (tab === 'client') {
+        document.getElementById('tabBtnClient').classList.add('active');
+        document.getElementById('secClient').classList.add('active');
+      }
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
       if (sessionStorage.getItem("eg_admin_auth") === "true") {
         document.getElementById("gatekeeperOverlay").style.display = "none";
+        document.getElementById("appHost").style.display = "block";
         document.body.style.background = "#f4f6f9";
-        document.body.style.color = "#2c3e50";
-        loadWorkspace();
+        if (typeof initClientAutocomplete === "function") initClientAutocomplete();
+        if (typeof filterMasterProducts === "function") filterMasterProducts();
+        if (typeof renderLedger === "function") renderLedger();
       }
     });
 
