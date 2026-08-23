@@ -19,9 +19,19 @@ let currentSelectedDepartment = "ALL";
 let currentSelectedCategory = "ALL";
 
 // ==========================================
-// 1. TIERED ACCESS CODE SYSTEM (Modal & Dynamic Discount)
+// 1. TIERED ACCESS CODE SYSTEM (SHA-256 Hashed Security)
 // ==========================================
-const MASTER_CODE = "EMPIRE2026";
+// Pre-computed SHA-256 Hashes
+const HASH_MASTER = "8cb6e3fcf8325a58572b2ff5ee62be8c5bc80377ee13a2839958742cb5cf4596"; // EMPIRE2026
+const HASH_TIER_45 = "b369c09cbe22c83d65b706c9b0e271baedfa6174bb0df294b4cf9ca30ca66213"; // EMPIRE45
+const HASH_TIER_40 = "9478f793daeaae7e7cae844a4aa896fa825c049d5bf1dfbb25d9ee787e6be952"; // EMPIRE40
+
+async function sha256(message) {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
 
 function getTodayDailyCode() {
     const today = new Date();
@@ -53,23 +63,25 @@ function closeAccessModal() {
     }
 }
 
-function applyAccessCodeFromModal() {
+async function applyAccessCodeFromModal() {
     const input = document.getElementById("accessCodeInput");
     if (!input) return;
     const userCode = input.value.trim().toUpperCase();
     if (!userCode) return;
 
+    const userHash = await sha256(userCode);
     const dailyCode = getTodayDailyCode();
+    const dailyHash = await sha256(dailyCode);
 
-    if (userCode === MASTER_CODE || userCode === dailyCode) {
+    if (userHash === HASH_MASTER || userHash === dailyHash) {
         localStorage.setItem("empire_access_tier", "50");
         localStorage.setItem("empire_access_code", userCode);
         alert("🟢 Wholesale Access (Flat 50% Less) Activated!");
-    } else if (userCode === "EMPIRE45") {
+    } else if (userHash === HASH_TIER_45) {
         localStorage.setItem("empire_access_tier", "45");
         localStorage.setItem("empire_access_code", userCode);
         alert("🟢 Dealer Access (45% Less Rate) Activated!");
-    } else if (userCode === "EMPIRE40") {
+    } else if (userHash === HASH_TIER_40) {
         localStorage.setItem("empire_access_tier", "40");
         localStorage.setItem("empire_access_code", userCode);
         alert("🟢 Partner Access (40% Less Rate) Activated!");
@@ -131,7 +143,7 @@ function getMinSetLimit(price, department = 'glassware') {
 }
 
 // ==========================================
-// 3. CARTON PACKING RESOLVER
+// 3. CARTON PACKING RESOLVER & DISPLAY CHIPS
 // ==========================================
 function getCtnPackingSize(item) {
     if (!item) return 1;
@@ -150,6 +162,11 @@ function getCtnPackingSize(item) {
     }
 
     return 1;
+}
+
+function getDisplayPacking(item) {
+    const packing = getCtnPackingSize(item);
+    return `${packing} pcs/CTN`;
 }
 
 // ==========================================
@@ -307,6 +324,7 @@ function renderProducts(items) {
         const effectivePrice = Math.round(Number(p.price) * multiplier);
         const itemDept = p.department || 'glassware';
         const minSet = getMinSetLimit(effectivePrice, itemDept);
+        const packingDesc = getDisplayPacking(p);
         const imgSrc = getInitialImagePath(p);
 
         const card = document.createElement("div");
@@ -324,8 +342,17 @@ function renderProducts(items) {
             <div>
                 <div class="p-code" onclick="copyItemCode('${p.code}')" title="Click to Copy Code">${p.code} 📋</div>
                 <div class="p-desc">${p.desc}</div>
+                
+                <div class="card-chips-row">
+                    <span class="b2b-chip">📦 ${packingDesc}</span>
+                    <span class="b2b-chip gold">MOQ: ${minSet} SET</span>
+                </div>
+
                 <div class="p-price">Rs. ${effectivePrice} <span>${p.unit}</span></div>
-                <div class="moq-tag">Min. SET: ${minSet}</div>
+
+                <div class="card-actions">
+                    <button class="btn-detail" onclick="openProductDetail('${p.code}')">View Details</button>
+                </div>
             </div>
             
             <div class="counter-section">
@@ -351,7 +378,50 @@ function renderProducts(items) {
 }
 
 // ==========================================
-// 5. QUANTITY UPDATE & ESTIMATED TOTAL
+// 5. PRODUCT DETAIL MODAL LOGIC
+// ==========================================
+function openProductDetail(code) {
+    const item = PRODUCTS.find(p => p.code === code);
+    if (!item) return;
+
+    const multiplier = getAccessMultiplier();
+    const effectivePrice = Math.round(Number(item.price) * multiplier);
+    const itemDept = item.department || 'glassware';
+    const minSet = getMinSetLimit(effectivePrice, itemDept);
+    const packing = getDisplayPacking(item);
+
+    document.getElementById("pdetailImg").src = getInitialImagePath(item);
+    document.getElementById("pdetailImg").onerror = function() { handleImageFallback(this, code, itemDept); };
+    document.getElementById("pdetailCode").innerText = `${code} 📋`;
+    document.getElementById("pdetailCode").onclick = () => copyItemCode(code);
+    document.getElementById("pdetailTitle").innerText = item.desc || code;
+    document.getElementById("pdetailPrice").innerText = `Rs. ${effectivePrice} ${item.unit}`;
+    document.getElementById("pdetailPacking").innerText = packing;
+    document.getElementById("pdetailMoq").innerText = `${minSet} SET`;
+    document.getElementById("pdetailDept").innerText = item.department || 'Glassware';
+    document.getElementById("pdetailDesc").innerText = item.desc || '';
+
+    document.getElementById("pdetailAddBtn").onclick = () => {
+        updateItemQty(code, 'set', 1, effectivePrice, itemDept);
+        showToast(`${code} added to cart!`);
+        closeProductDetail();
+    };
+
+    document.getElementById("productDetailBackdrop").style.display = "block";
+    document.getElementById("productDetailModal").style.display = "block";
+    document.body.style.overflow = "hidden";
+}
+
+function closeProductDetail() {
+    const modal = document.getElementById("productDetailModal");
+    const backdrop = document.getElementById("productDetailBackdrop");
+    if (modal) modal.style.display = "none";
+    if (backdrop) backdrop.style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
+// ==========================================
+// 6. QUANTITY UPDATE & ESTIMATED TOTAL
 // ==========================================
 function updateItemQty(code, type, change, price, department = 'glassware') {
     if (!cart[code]) {
@@ -426,7 +496,7 @@ function updateCartBar() {
 }
 
 // ==========================================
-// 6. ORDER SUMMARY DRAWER & CART MANAGEMENT
+// 7. ORDER SUMMARY DRAWER & CART MANAGEMENT
 // ==========================================
 function openOrderDrawer() {
     const keys = Object.keys(cart);
@@ -478,6 +548,15 @@ function renderDrawerItems() {
             <div class="drawer-item-info">
                 <div class="drawer-item-code">${code}</div>
                 <div class="drawer-item-qty">${qtyText.join(" + ")}</div>
+                <div class="drawer-qty-btns">
+                    <button onclick="adjustDrawerQty('${code}', 'ctn', -1)">−</button>
+                    <span>CTN ${orderData.ctn}</span>
+                    <button onclick="adjustDrawerQty('${code}', 'ctn', 1)">+</button>
+                    
+                    <button style="margin-left:6px;" onclick="adjustDrawerQty('${code}', 'set', -1)">−</button>
+                    <span>SET ${orderData.set}</span>
+                    <button onclick="adjustDrawerQty('${code}', 'set', 1)">+</button>
+                </div>
             </div>
             <div class="drawer-item-right">
                 <div class="drawer-item-price">Rs. ${itemTotal.toLocaleString('en-IN')}</div>
@@ -489,6 +568,14 @@ function renderDrawerItems() {
 
     const totalAmount = calculateCurrentTotal();
     document.getElementById("drawerEstTotal").innerText = `Rs. ${totalAmount.toLocaleString('en-IN')}`;
+}
+
+function adjustDrawerQty(code, type, change) {
+    const item = PRODUCTS.find(p => p.code === code);
+    if (!item) return;
+    const price = Math.round(Number(item.price) * getAccessMultiplier());
+    updateItemQty(code, type, change, price, item.department || 'glassware');
+    renderDrawerItems();
 }
 
 function removeSingleItemFromCart(code) {
@@ -559,7 +646,7 @@ function filterProducts() {
 }
 
 // ==========================================
-// 7. WHATSAPP SENDER (100% Quotation Parser Safe)
+// 8. WHATSAPP SENDER (100% Quotation Safe Format)
 // ==========================================
 function sendWhatsAppOrder() {
     const keys = Object.keys(cart);
@@ -608,7 +695,7 @@ function sendWhatsAppOrder() {
 }
 
 // ==========================================
-// 8. PHOTO LIGHTBOX / ZOOM LOGIC
+// 9. PHOTO LIGHTBOX / ZOOM LOGIC
 // ==========================================
 let isLightboxOpen = false;
 
@@ -650,7 +737,7 @@ window.addEventListener("popstate", (e) => {
 });
 
 // ==========================================
-// 9. DEEP-LINKING (Direct URL Navigation Handler)
+// 10. DEEP-LINKING (Direct URL Navigation Handler)
 // ==========================================
 function checkUrlDepartment() {
     const hash = window.location.hash.toLowerCase().replace('#', '').trim();
@@ -671,7 +758,7 @@ function checkUrlDepartment() {
 }
 
 // ==========================================
-// INIT ON LOAD
+// INIT ON LOAD, KEYBOARD & TOUCH SWIPE CLOSE
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
     updateAccessHeader();
@@ -679,6 +766,37 @@ document.addEventListener("DOMContentLoaded", () => {
         checkUrlDepartment();
         updateCartBar();
     }
+
+    // Touch Swipe Gesture for Mobile Access Modal
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    const accessModalElem = document.getElementById("accessModal");
+    if (accessModalElem) {
+        accessModalElem.addEventListener("touchstart", (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        accessModalElem.addEventListener("touchend", (e) => {
+            const touchEndX = e.changedTouches[0].screenX;
+            const touchEndY = e.changedTouches[0].screenY;
+            
+            // Left swipe (50px+) ya downward drag (50px+) par close
+            if ((touchStartX - touchEndX > 50) || (touchEndY - touchStartY > 50)) {
+                closeAccessModal();
+            }
+        }, { passive: true });
+    }
 });
 
 window.addEventListener("hashchange", checkUrlDepartment);
+
+window.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeProductDetail();
+        closeOrderDrawer();
+        closeAccessModal();
+        closeLightbox();
+    }
+});
