@@ -838,3 +838,104 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// ==========================================================
+// 📊 EMPIRE GLASSWARE - GA4 SMART B2B BUSINESS ANALYTICS
+// ==========================================================
+
+// Safe GA4 Event Dispatcher Helper
+function trackGA4(eventName, params = {}) {
+  if (typeof gtag === 'function') {
+    gtag('event', eventName, params);
+  }
+}
+
+// 1. PWA Installation & App-Icon Launch Tracking
+window.addEventListener('appinstalled', () => {
+  trackGA4('pwa_install_success', {
+    event_category: 'PWA',
+    device_type: /Mobi|Android/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop'
+  });
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  const isInstalledApp = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  if (isInstalledApp) {
+    trackGA4('pwa_opened_from_icon', {
+      event_category: 'PWA',
+      event_label: 'Direct Icon Launch'
+    });
+  }
+});
+
+// 2. Search Demand Tracker (Track what buyers are typing)
+let searchDebounceTimer = null;
+const searchBox = document.getElementById('searchInput');
+if (searchBox) {
+  searchBox.addEventListener('input', (e) => {
+    clearTimeout(searchDebounceTimer);
+    const query = (e.target.value || '').trim();
+    if (query.length >= 3) {
+      searchDebounceTimer = setTimeout(() => {
+        trackGA4('catalog_search', {
+          search_term: query.toLowerCase()
+        });
+      }, 1000);
+    }
+  });
+}
+
+// 3. Wholesale Code & WhatsApp Request Tracker
+const originalApplyAccessCode = window.applyAccessCodeFromModal;
+if (typeof originalApplyAccessCode === 'function') {
+  window.applyAccessCodeFromModal = function() {
+    const codeVal = (document.getElementById('accessCodeInput')?.value || '').trim().toUpperCase();
+    if (codeVal) {
+      trackGA4('wholesale_code_entered', {
+        access_code: codeVal
+      });
+    }
+    return originalApplyAccessCode.apply(this, arguments);
+  };
+}
+
+const waReqBtn = document.getElementById('waRequestBtn');
+if (waReqBtn) {
+  waReqBtn.addEventListener('click', () => {
+    trackGA4('request_wholesale_code_click', {
+      source: 'access_modal'
+    });
+  });
+}
+
+// 4. Hot Products & Lightbox Views (Trending items)
+const originalOpenProductDetail = window.openProductDetail;
+if (typeof originalOpenProductDetail === 'function') {
+  window.openProductDetail = function(product) {
+    if (product) {
+      trackGA4('view_item_detail', {
+        item_code: product.code || product.product_code || 'UNKNOWN',
+        item_name: product.desc || product.name || '',
+        department: product.Department || 'General'
+      });
+    }
+    return originalOpenProductDetail.apply(this, arguments);
+  };
+}
+
+// 5. WhatsApp Order Funnel & Conversion Tracker
+const originalSendWhatsAppOrder = window.sendWhatsAppOrder;
+if (typeof originalSendWhatsAppOrder === 'function') {
+  window.sendWhatsAppOrder = function() {
+    const totalItemsCount = document.getElementById('totalItems')?.innerText || '0';
+    const estTotalRaw = document.getElementById('cartEstTotal')?.innerText || '0';
+    const cleanTotalVal = parseFloat(estTotalRaw.replace(/[^0-9.]/g, '')) || 0;
+
+    trackGA4('whatsapp_order_sent', {
+      total_items_count: parseInt(totalItemsCount, 10) || 0,
+      estimated_cart_value: cleanTotalVal,
+      currency: 'INR'
+    });
+
+    return originalSendWhatsAppOrder.apply(this, arguments);
+  };
+}
