@@ -42,7 +42,6 @@
     #appHost { display: none; width: 100%; background: #f4f6f9; min-height: 100vh; padding-bottom: 85px; }
     .desk-header { background: var(--bg-dark); color: #fff; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; }
     .desk-header h1 { font-size: 14px; font-weight: 700; }
-    .nav-link { color: #f1c40f; text-decoration: none; font-size: 12px; font-weight: bold; }
 
     .toolbar { background: #ecf0f1; border-bottom: 1px solid #bdc3c7; padding: 8px 10px; display: flex; flex-wrap: wrap; gap: 6px; }
     .t-btn { padding: 6px 10px; border: none; border-radius: 4px; font-size: 11px; font-weight: bold; cursor: pointer; color: #fff; transition: opacity 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 4px; }
@@ -71,14 +70,27 @@
     .prod-item-code { font-weight: bold; font-size: 11px; color: #2980b9; }
     .prod-item-desc { font-size: 10.5px; color: #666; max-width: 170px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-    .ledger-table-wrap { overflow-x: auto; max-height: 520px; -webkit-overflow-scrolling: touch; border: 1px solid #eee; border-radius: 4px; }
-    .ledger-table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 600px; }
-    .ledger-table th { background: #34495e; color: #fff; padding: 7px 6px; text-align: left; position: sticky; top: 0; z-index: 5; font-size: 11px; }
+    /* Desktop Table Styles */
+    .desktop-table-view { display: block; }
+    .ledger-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .ledger-table th { background: #34495e; color: #fff; padding: 7px 6px; text-align: left; font-size: 11px; }
     .ledger-table td { padding: 5px 6px; border-bottom: 1px solid #ecf0f1; vertical-align: middle; }
-    
     .table-input { width: 60px; padding: 4px; border: 1px solid #bdc3c7; border-radius: 3px; font-size: 12px; text-align: center; }
     .table-input.price { width: 68px; text-align: right; }
-    .btn-row-del { background: transparent; border: none; color: var(--danger); cursor: pointer; font-size: 14px; }
+    .btn-row-del { background: transparent; border: none; color: var(--danger); cursor: pointer; font-size: 15px; }
+
+    /* Mobile Card View Styles (Zero Horizontal Scroll) */
+    .mobile-cards-view { display: none; }
+    .m-ledger-card {
+      background: #fff; border: 1px solid #e1e8ed; border-radius: 6px; padding: 10px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    .m-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+    .m-card-code { font-weight: bold; font-size: 13px; color: #2980b9; }
+    .m-card-total { font-weight: 800; font-size: 13px; color: #27ae60; }
+    .m-card-desc { width: 100%; font-size: 11px; padding: 4px 6px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 8px; }
+    .m-card-grid { display: grid; grid-template-columns: 1fr 1fr 1.2fr auto; gap: 6px; align-items: center; }
+    .m-input-box label { display: block; font-size: 9px; font-weight: bold; color: #888; text-transform: uppercase; margin-bottom: 2px; }
+    .m-input-box input { width: 100%; padding: 5px 4px; border: 1px solid #bdc3c7; border-radius: 4px; font-size: 12px; text-align: center; }
 
     .summary-card { background: #ecf0f1; padding: 8px 12px; border-radius: 6px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
     .summary-stats { font-size: 12px; font-weight: 600; }
@@ -94,6 +106,7 @@
     .modal-header { font-size: 13px; font-weight: bold; margin-bottom: 10px; }
     .modal-actions { margin-top: 10px; display: flex; justify-content: flex-end; gap: 6px; }
 
+    /* MOBILE APP VIEW (< 768px) */
     @media (max-width: 768px) {
       .mobile-tab-bar { display: flex; }
       .container { grid-template-columns: 1fr; margin: 6px auto; }
@@ -103,6 +116,11 @@
       .toolbar .t-btn { width: 100%; font-size: 11px; padding: 7px 4px; }
       .toolbar .btn-reset { grid-column: span 2; }
       .prod-mini-list { max-height: calc(100vh - 220px); }
+
+      /* Switch Desktop Table to Mobile Cards */
+      .desktop-table-view { display: none; }
+      .mobile-cards-view { display: block; }
+
       .bottom-actions {
         position: fixed; bottom: 0; left: 0; right: 0; background: #ffffff; padding: 8px 10px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 99; margin-top: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
       }
@@ -198,26 +216,30 @@
       <div class="panel tab-section active" id="secLedger">
         <div class="panel-title">
           <span>📝 Order Ledger (<span id="ledgerItemCount">0</span>)</span>
-          <span style="font-size: 10px; color: #7f8c8d;">Scroll table ➡️ to edit</span>
         </div>
 
-        <div class="ledger-table-wrap">
+        <!-- 1. Desktop Table View -->
+        <div class="desktop-table-view">
           <table class="ledger-table">
             <thead>
               <tr>
                 <th style="width: 100px;">Code</th>
                 <th>Description</th>
-                <th style="width: 62px; text-align:center;">CTN</th>
-                <th style="width: 62px; text-align:center;">Qty</th>
+                <th style="width: 60px; text-align:center;">CTN</th>
+                <th style="width: 60px; text-align:center;">Qty</th>
                 <th style="width: 72px; text-align:right;">Rate (₹)</th>
                 <th style="width: 80px; text-align:right;">Total (₹)</th>
                 <th style="width: 25px;"></th>
               </tr>
             </thead>
-            <tbody id="ledgerBody"></tbody>
+            <tbody id="ledgerBodyDesktop"></tbody>
           </table>
         </div>
 
+        <!-- 2. Mobile Card View -->
+        <div class="mobile-cards-view" id="ledgerBodyMobile"></div>
+
+        <!-- Live Summary -->
         <div class="summary-card">
           <div class="summary-stats">
             <span>📦 CTN: <b id="statCtn" style="color: #2980b9;">0</b></span>
@@ -306,7 +328,6 @@
         document.getElementById("appHost").style.display = "block";
         document.body.style.background = "#f4f6f9";
         
-        // Trigger Engine
         if (typeof initClientAutocomplete === "function") initClientAutocomplete();
         if (typeof filterMasterProducts === "function") filterMasterProducts();
         if (typeof renderLedger === "function") renderLedger();
