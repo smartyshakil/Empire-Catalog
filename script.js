@@ -180,6 +180,9 @@ function switchDepartment(dept, element = null) {
     
     if (element) {
         element.classList.add("active");
+        if (typeof element.scrollIntoView === "function") {
+            element.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
     } else {
         const allBtns = Array.from(document.querySelectorAll('.dept-tab-btn'));
         const matchedBtn = allBtns.find(b => {
@@ -194,7 +197,12 @@ function switchDepartment(dept, element = null) {
             if (dept.toLowerCase() === 'glassware' && (onclickAttr.includes('glassware') || textAttr.includes('glassware'))) return true;
             return false;
         });
-        if (matchedBtn) matchedBtn.classList.add("active");
+        if (matchedBtn) {
+            matchedBtn.classList.add("active");
+            if (typeof matchedBtn.scrollIntoView === "function") {
+                matchedBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            }
+        }
     }
 
     initCategoryPills();
@@ -205,15 +213,17 @@ function initCategoryPills() {
     const pillsBar = document.getElementById("categoryPillsBar");
     if (!pillsBar || typeof PRODUCTS === 'undefined') return;
 
-    pillsBar.innerHTML = `
-        <a href="sneak-peek.html" class="cat-pill sneak-peek-link">✨ Sneak Peek / Diwali (143)</a>
-        <div class="cat-pill active" onclick="selectCategory('ALL', this)">📁 All Categories</div>
-    `;
-
     let availableProducts = PRODUCTS;
     if (currentSelectedDepartment !== "ALL") {
         availableProducts = PRODUCTS.filter(p => (p.department || '').toLowerCase() === currentSelectedDepartment.toLowerCase());
     }
+
+    const totalAvailableCount = availableProducts.length;
+
+    pillsBar.innerHTML = `
+        <a href="sneak-peek.html" class="cat-pill sneak-peek-link">✨ Sneak Peek / Diwali (143)</a>
+        <div class="cat-pill active" onclick="selectCategory('ALL', this)">📁 All Categories (${totalAvailableCount})</div>
+    `;
 
     const categoriesInProducts = [...new Set(availableProducts.map(p => p.category).filter(Boolean))];
     
@@ -227,9 +237,10 @@ function initCategoryPills() {
     });
 
     sortedCategories.forEach(cat => {
+        const catCount = availableProducts.filter(p => p.category === cat).length;
         const pill = document.createElement("div");
         pill.className = "cat-pill";
-        pill.innerText = cat;
+        pill.innerText = `${cat} (${catCount})`;
         pill.onclick = () => selectCategory(cat, pill);
         pillsBar.appendChild(pill);
     });
@@ -239,9 +250,21 @@ function selectCategory(cat, element) {
     currentSelectedCategory = cat;
     
     document.querySelectorAll(".cat-pill").forEach(p => p.classList.remove("active"));
-    if (element) element.classList.add("active");
+    if (element) {
+        element.classList.add("active");
+        if (typeof element.scrollIntoView === "function") {
+            element.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+    }
     
     filterProducts();
+
+    // Smooth scroll back to top of main catalog grid
+    const mainContent = document.querySelector(".main-catalog-content");
+    if (mainContent) {
+        const topPos = mainContent.getBoundingClientRect().top + window.pageYOffset - 110;
+        window.scrollTo({ top: Math.max(0, topPos), behavior: 'smooth' });
+    }
 }
 
 function getInitialImagePath(item) {

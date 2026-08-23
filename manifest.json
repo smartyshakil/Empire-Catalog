@@ -1,12 +1,14 @@
 {
-  "name": "Empire Glassware - Digital B2B Catalog",
+  "name": "Empire Glassware - Digital Wholesale Catalog",
   "short_name": "Empire Catalog",
-  "description": "Wholesale & B2B Glassware, Vacuum Bottles & Crockery Catalog",
+  "description": "Wholesale Glassware, Vacuum Bottles & Crockery Catalog. Direct Importer Rates & WhatsApp Bulk Ordering.",
+  "id": "/index.html",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#1f538d",
-  "orientation": "portrait",
+  "background_color": "#0b1329",
+  "theme_color": "#0b1329",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "images/icon-192.png",
