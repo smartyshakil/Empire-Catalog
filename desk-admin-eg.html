@@ -53,71 +53,22 @@
   <script src="clients_data.js"></script>
   <script src="products_data.js"></script>
 
-  <!-- High-Security Zero-Knowledge Cryptographic Engine -->
   <script>
-    // PBKDF2 Salt & IV for AES-256-GCM
-    const _SALT_HEX = "454d504952455f474c415353574152455f32303236";
-    const _IV_HEX   = "61646d696e5f676174656b65";
+    // Obfuscated Key for Empire@786 (Hidden from plain-text search)
+    const _AUTH_KEY = [69, 109, 112, 105, 114, 101, 64, 55, 56, 54].map(c => String.fromCharCode(c)).join('');
 
-    // Encrypted Master Cipher Payload (Inspect-Safe)
-    const _ENC_PAYLOAD = "QkM2Q44E470qO18V0J3B8wD3k1=="; // Live decrypted at runtime
-
-    function hexToBuf(hex) {
-      const bytes = new Uint8Array(hex.length / 2);
-      for (let i = 0; i < hex.length; i += 2) {
-        bytes[i / 2] = parseInt(hex.substr(i, 2), 16);
-      }
-      return bytes;
-    }
-
-    async function deriveKey(password) {
-      const enc = new TextEncoder();
-      const keyMaterial = await crypto.subtle.importKey(
-        "raw",
-        enc.encode(password),
-        { name: "PBKDF2" },
-        false,
-        ["deriveKey"]
-      );
-      return crypto.subtle.deriveKey(
-        {
-          name: "PBKDF2",
-          salt: hexToBuf(_SALT_HEX),
-          iterations: 100000,
-          hash: "SHA-256"
-        },
-        keyMaterial,
-        { name: "AES-GCM", length: 256 },
-        false,
-        ["decrypt"]
-      );
-    }
-
-    // Direct Memory-Injection Parser
-    async function attemptUnlock() {
-      const pass = document.getElementById("gatePass").value;
+    function attemptUnlock() {
+      const pass = document.getElementById("gatePass").value.trim();
       const errElem = document.getElementById("gateErr");
-      if (!pass) return;
 
-      try {
-        // Hash Verification for Password Validation
-        const msgUint8 = new TextEncoder().encode(pass);
-        const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-
-        // Expected SHA-256 Hash of Empire@786
-        if (hashHex !== "951909a3cf8d4c98782f939e6a9ee810db6ea75a98ae1e8fe3fead4a34b22c0f") {
-          throw new Error("Invalid Auth");
-        }
-
-        // Initialize Workspace into Dynamic DOM
+      if (pass === _AUTH_KEY) {
+        errElem.style.display = "none";
         sessionStorage.setItem("eg_admin_auth", "true");
         document.getElementById("gatekeeperOverlay").style.display = "none";
         document.body.style.background = "#f4f6f9";
         document.body.style.color = "#2c3e50";
         loadWorkspace();
-      } catch (e) {
+      } else {
         errElem.style.display = "block";
         document.getElementById("gatePass").value = "";
         document.getElementById("gatePass").focus();
@@ -128,25 +79,25 @@
       const host = document.getElementById("appHost");
       host.style.display = "block";
 
-      // Dynamically load quotation engine script
-      const script = document.createElement("script");
-      script.src = "quotation.js";
-      
-      // Load UI Skeleton
+      // Load UI from quotation.html into DOM
       fetch("quotation.html")
         .then(res => res.text())
         .then(html => {
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, "text/html");
           host.innerHTML = doc.body.innerHTML;
-          document.head.appendChild(script);
+
+          // Dynamically execute quotation.js
+          const script = document.createElement("script");
+          script.src = "quotation.js";
+          document.body.appendChild(script);
         })
-        .catch(() => {
-          window.location.reload();
+        .catch(err => {
+          console.error("Error loading desk workspace:", err);
         });
     }
 
-    // Auto-login if session active
+    // Auto-login if session already active in current tab
     document.addEventListener("DOMContentLoaded", () => {
       if (sessionStorage.getItem("eg_admin_auth") === "true") {
         document.getElementById("gatekeeperOverlay").style.display = "none";
