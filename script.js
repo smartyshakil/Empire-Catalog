@@ -511,6 +511,187 @@ function closeProductDetail() {
 }
 
 // ==========================================
+// 5.1 CUSTOM FLYER GENERATOR (TIER-BASED PRICE GUARDRAIL)
+// ==========================================
+function openFlyerModal() {
+    if (!currentViewingProduct) return;
+
+    const modal = document.getElementById("flyerModal");
+    const backdrop = document.getElementById("flyerModalBackdrop");
+    const priceInput = document.getElementById("flyerCustomPrice");
+    const moqInput = document.getElementById("flyerCustomMoq");
+    const firmInput = document.getElementById("flyerCustomFirm");
+
+    // Dealer ka apna active purchase price (based on their entered code/tier)
+    const multiplier = getAccessMultiplier();
+    const dealerPurchasePrice = Math.round(Number(currentViewingProduct.price) * multiplier);
+    const packing = getDisplayPacking(currentViewingProduct);
+
+    priceInput.value = dealerPurchasePrice;
+    priceInput.setAttribute("data-min-price", dealerPurchasePrice);
+    moqInput.value = `MOQ: ${getMinSetLimit(dealerPurchasePrice, currentViewingProduct.department)} SET (${packing})`;
+    firmInput.value = "";
+
+    document.getElementById("flyerPriceErr").style.display = "none";
+    priceInput.style.borderColor = "#cbd5e1";
+
+    modal.style.display = "block";
+    backdrop.style.display = "block";
+}
+
+function closeFlyerModal() {
+    document.getElementById("flyerModal").style.display = "none";
+    document.getElementById("flyerModalBackdrop").style.display = "none";
+}
+
+function onFlyerPriceChange() {
+    const priceInput = document.getElementById("flyerCustomPrice");
+    const errDiv = document.getElementById("flyerPriceErr");
+    const minPrice = parseFloat(priceInput.getAttribute("data-min-price")) || 0;
+    const val = parseFloat(priceInput.value) || 0;
+
+    if (val < minPrice) {
+        errDiv.innerText = `⚠️ Price cannot be less than your dealer rate (₹${minPrice})!`;
+        errDiv.style.display = "block";
+        priceInput.style.borderColor = "#dc2626";
+    } else {
+        errDiv.style.display = "none";
+        priceInput.style.borderColor = "#cbd5e1";
+    }
+}
+
+function generateFlyerCanvas(callback) {
+    if (!currentViewingProduct) return;
+
+    const priceInput = document.getElementById("flyerCustomPrice");
+    const minPrice = parseFloat(priceInput.getAttribute("data-min-price")) || 0;
+    const customPrice = parseFloat(priceInput.value) || 0;
+
+    if (customPrice < minPrice) {
+        alert(`❌ Price cannot be less than your dealer rate (₹${minPrice})!`);
+        return;
+    }
+
+    const customMoq = document.getElementById("flyerCustomMoq").value.trim() || "Wholesale Packing";
+    const customFirm = document.getElementById("flyerCustomFirm").value.trim();
+
+    const canvas = document.getElementById("flyerCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Standard High-Res Card Dimensions
+    canvas.width = 800;
+    canvas.height = 1000;
+
+    // Background Gradient
+    const bgGrad = ctx.createLinearGradient(0, 0, 0, 1000);
+    bgGrad.addColorStop(0, "#f8fafc");
+    bgGrad.addColorStop(1, "#edf2f7");
+    ctx.fillStyle = bgGrad;
+    ctx.fillRect(0, 0, 800, 1000);
+
+    // Outer Decorative Border
+    ctx.strokeStyle = "#cbd5e1";
+    ctx.lineWidth = 10;
+    ctx.strokeRect(20, 20, 760, 960);
+
+    // Header Tag
+    ctx.fillStyle = "#0f172a";
+    ctx.fillRect(40, 40, 720, 70);
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "bold 26px sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText(customFirm || "PREMIUM CROCKERY & GLASSWARE", 400, 85);
+
+    // Product Image Render
+    const imgElem = new Image();
+    imgElem.crossOrigin = "anonymous";
+    imgElem.src = getInitialImagePath(currentViewingProduct);
+
+    imgElem.onload = () => {
+        // Image Container Box
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(60, 140, 680, 500);
+        ctx.strokeStyle = "#e2e8f0";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(60, 140, 680, 500);
+
+        // Aspect fit image
+        const maxW = 640, maxH = 460;
+        let w = imgElem.width, h = imgElem.height;
+        const ratio = Math.min(maxW / w, maxH / h);
+        const nw = w * ratio, nh = h * ratio;
+        const nx = 60 + (680 - nw) / 2;
+        const ny = 140 + (500 - nh) / 2;
+
+        ctx.drawImage(imgElem, nx, ny, nw, nh);
+
+        // Item Code & Name
+        ctx.fillStyle = "#0369a1";
+        ctx.font = "bold 32px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText(currentViewingProduct.code, 400, 685);
+
+        ctx.fillStyle = "#475569";
+        ctx.font = "600 20px sans-serif";
+        ctx.fillText(currentViewingProduct.desc || "", 400, 725);
+
+        // Price Box
+        ctx.fillStyle = "#b91c1c";
+        ctx.font = "800 46px sans-serif";
+        ctx.fillText(`Offer Rate: ₹${customPrice}/-`, 400, 795);
+
+        // MOQ & Specifications Box
+        ctx.fillStyle = "#0f172a";
+        ctx.fillRect(100, 830, 600, 55);
+        ctx.fillStyle = "#fbbf24";
+        ctx.font = "bold 22px sans-serif";
+        ctx.fillText(`📦 ${customMoq}`, 400, 865);
+
+        // Footer Guarantee Badge
+        ctx.fillStyle = "#64748b";
+        ctx.font = "600 16px sans-serif";
+        ctx.fillText("✨ Breakage-Free Carton Packing • Fast Dispatch Guaranteed ✨", 400, 935);
+
+        if (typeof callback === "function") callback(canvas);
+    };
+
+    imgElem.onerror = () => {
+        alert("Flyer generated without external image cache. Downloading card.");
+        if (typeof callback === "function") callback(canvas);
+    };
+}
+
+function downloadFlyerImage() {
+    generateFlyerCanvas((canvas) => {
+        const link = document.createElement("a");
+        link.download = `Flyer_${currentViewingProduct.code}.png`;
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+        closeFlyerModal();
+        showToast("Flyer Downloaded!");
+    });
+}
+
+function shareFlyerDirect() {
+    generateFlyerCanvas((canvas) => {
+        canvas.toBlob((blob) => {
+            if (!blob) return;
+            const file = new File([blob], `Flyer_${currentViewingProduct.code}.png`, { type: "image/png" });
+
+            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                navigator.share({
+                    files: [file],
+                    title: `${currentViewingProduct.code} Offer`,
+                    text: `Check out ${currentViewingProduct.code} - ${currentViewingProduct.desc}`
+                }).catch(() => {});
+            } else {
+                downloadFlyerImage();
+            }
+        });
+    });
+}
+
+// ==========================================
 // 6. QUANTITY UPDATE & ESTIMATED TOTAL
 // ==========================================
 function updateItemQty(code, type, change, price, department = 'glassware') {
@@ -900,6 +1081,7 @@ window.addEventListener('keydown', function(e) {
         closeOrderDrawer();
         closeAccessModal();
         closeLightbox();
+        closeFlyerModal();
     }
 });
 
