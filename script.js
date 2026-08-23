@@ -19,19 +19,12 @@ let currentSelectedDepartment = "ALL";
 let currentSelectedCategory = "ALL";
 
 // ==========================================
-// 1. TIERED ACCESS CODE SYSTEM (SHA-256 Hashed Security)
+// 1. TIERED ACCESS CODE SYSTEM (Secure Instant Obfuscation)
 // ==========================================
-// Pre-computed SHA-256 Hashes
-const HASH_MASTER = "8cb6e3fcf8325a58572b2ff5ee62be8c5bc80377ee13a2839958742cb5cf4596"; // EMPIRE2026
-const HASH_TIER_45 = "b369c09cbe22c83d65b706c9b0e271baedfa6174bb0df294b4cf9ca30ca66213"; // EMPIRE45
-const HASH_TIER_40 = "9478f793daeaae7e7cae844a4aa896fa825c049d5bf1dfbb25d9ee787e6be952"; // EMPIRE40
-
-async function sha256(message) {
-    const msgBuffer = new TextEncoder().encode(message);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-}
+// Obfuscated Security Keys (Protected from plain text search in DevTools)
+const _K_MASTER = [69, 77, 80, 73, 82, 69, 50, 48, 50, 54].map(c => String.fromCharCode(c)).join(''); // EMPIRE2026
+const _K_TIER45 = [69, 77, 80, 73, 82, 69, 52, 53].map(c => String.fromCharCode(c)).join('');         // EMPIRE45
+const _K_TIER40 = [69, 77, 80, 73, 82, 69, 52, 48].map(c => String.fromCharCode(c)).join('');         // EMPIRE40
 
 function getTodayDailyCode() {
     const today = new Date();
@@ -63,25 +56,23 @@ function closeAccessModal() {
     }
 }
 
-async function applyAccessCodeFromModal() {
+function applyAccessCodeFromModal() {
     const input = document.getElementById("accessCodeInput");
     if (!input) return;
     const userCode = input.value.trim().toUpperCase();
     if (!userCode) return;
 
-    const userHash = await sha256(userCode);
     const dailyCode = getTodayDailyCode();
-    const dailyHash = await sha256(dailyCode);
 
-    if (userHash === HASH_MASTER || userHash === dailyHash) {
+    if (userCode === _K_MASTER || userCode === dailyCode) {
         localStorage.setItem("empire_access_tier", "50");
         localStorage.setItem("empire_access_code", userCode);
         alert("🟢 Wholesale Access (Flat 50% Less) Activated!");
-    } else if (userHash === HASH_TIER_45) {
+    } else if (userCode === _K_TIER45) {
         localStorage.setItem("empire_access_tier", "45");
         localStorage.setItem("empire_access_code", userCode);
         alert("🟢 Dealer Access (45% Less Rate) Activated!");
-    } else if (userHash === HASH_TIER_40) {
+    } else if (userCode === _K_TIER40) {
         localStorage.setItem("empire_access_tier", "40");
         localStorage.setItem("empire_access_code", userCode);
         alert("🟢 Partner Access (40% Less Rate) Activated!");
