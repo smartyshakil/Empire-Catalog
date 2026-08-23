@@ -392,11 +392,21 @@ function renderProducts(items) {
 }
 
 // ==========================================
-// 5. PRODUCT DETAIL MODAL LOGIC
+// 5. PRODUCT DETAIL MODAL LOGIC & SIMILAR ITEMS
 // ==========================================
+let currentViewingProduct = null;
+
 function openProductDetail(code) {
-    const item = PRODUCTS.find(p => p.code === code);
+    let item = null;
+    if (typeof code === 'object' && code !== null) {
+        item = code;
+        code = item.code || item.Product_Code || '';
+    } else {
+        item = PRODUCTS.find(p => p.code === code);
+    }
     if (!item) return;
+
+    currentViewingProduct = item;
 
     const multiplier = getAccessMultiplier();
     const effectivePrice = Math.round(Number(item.price) * multiplier);
@@ -421,9 +431,75 @@ function openProductDetail(code) {
         closeProductDetail();
     };
 
+    renderSimilarProducts(item);
+
     document.getElementById("productDetailBackdrop").style.display = "block";
     document.getElementById("productDetailModal").style.display = "block";
     document.body.style.overflow = "hidden";
+}
+
+function renderSimilarProducts(product) {
+    const list = document.getElementById('pdetailSimilarList');
+    if (!list || typeof PRODUCTS === 'undefined' || !product) return;
+
+    list.innerHTML = '';
+    const currentCode = (product.code || product.Product_Code || '').trim();
+    const currentDept = (product.department || product.Department || '').trim();
+    const currentCat = (product.category || product.Category || '').trim();
+
+    const similar = PRODUCTS.filter(p => {
+        const pCode = (p.code || p.Product_Code || '').trim();
+        if (pCode === currentCode) return false;
+        if (currentCat && (p.category || p.Category || '').trim() === currentCat) return true;
+        if (currentDept && (p.department || p.Department || '').trim() === currentDept) return true;
+        return false;
+    }).slice(0, 6);
+
+    if (similar.length === 0) {
+        list.innerHTML = '<span style="font-size:11px; color:#94a3b8;">Browse other departments in main catalog.</span>';
+        return;
+    }
+
+    similar.forEach(item => {
+        const itemCode = item.code || item.Product_Code || '';
+        const itemDesc = item.desc || item.Description || item.name || '';
+        const imgSrc = getInitialImagePath(item);
+        const itemDept = item.department || 'glassware';
+
+        const card = document.createElement('div');
+        card.style.cssText = 'flex-shrink:0; width:110px; background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:6px; cursor:pointer; text-align:center; box-shadow:0 1px 3px rgba(0,0,0,0.04);';
+        card.onclick = () => {
+            openProductDetail(itemCode);
+        };
+
+        card.innerHTML = `
+            <img src="${imgSrc}" data-err-idx="0" onerror="handleImageFallback(this, '${itemCode}', '${itemDept}')" style="width:100%; height:65px; object-fit:contain; border-radius:4px; margin-bottom:4px;">
+            <div style="font-size:10.5px; font-weight:700; color:#0369a1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${itemCode}</div>
+            <div style="font-size:9.5px; color:#64748b; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${itemDesc}</div>
+        `;
+        list.appendChild(card);
+    });
+}
+
+function shareCurrentProduct() {
+    if (!currentViewingProduct) return;
+
+    const code = currentViewingProduct.code || currentViewingProduct.Product_Code || '';
+    const desc = currentViewingProduct.desc || currentViewingProduct.Description || currentViewingProduct.name || '';
+    const shareUrl = `${window.location.origin}${window.location.pathname}?item=${encodeURIComponent(code)}`;
+
+    const text = `📦 *EMPIRE GLASSWARE*\n*Item:* ${code}\n*Desc:* ${desc}\n\n👉 *View Product Photos & Live Stock:* \n${shareUrl}`;
+
+    if (navigator.share && /Mobi|Android/i.test(navigator.userAgent)) {
+        navigator.share({
+            title: `Empire Glassware - ${code}`,
+            text: text,
+            url: shareUrl
+        }).catch(() => {});
+    } else {
+        const waLink = `https://wa.me/?text=${encodeURIComponent(text)}`;
+        window.open(waLink, '_blank');
+    }
 }
 
 function closeProductDetail() {
@@ -757,6 +833,7 @@ function checkUrlDepartment() {
     const hash = window.location.hash.toLowerCase().replace('#', '').trim();
     const urlParams = new URLSearchParams(window.location.search);
     const deptParam = (urlParams.get('dept') || '').toLowerCase().trim();
+    const itemParam = urlParams.get('item');
     
     const target = hash || deptParam;
 
@@ -768,6 +845,17 @@ function checkUrlDepartment() {
         switchDepartment('Glassware');
     } else {
         switchDepartment('ALL');
+    }
+
+    // Direct Product Pop-up Deep-Link Handler
+    if (itemParam && typeof PRODUCTS !== 'undefined') {
+        const targetCode = itemParam.trim().toUpperCase();
+        const found = PRODUCTS.find(p => (p.code || '').trim().toUpperCase() === targetCode);
+        if (found) {
+            setTimeout(() => {
+                openProductDetail(found.code);
+            }, 300);
+        }
     }
 }
 
@@ -814,30 +902,7 @@ window.addEventListener('keydown', function(e) {
         closeLightbox();
     }
 });
-// --- 📊 PWA INSTALL & USAGE TRACKER ---
 
-// 1. Jab koi customer App "Install / Add to Home Screen" karega
-window.addEventListener('appinstalled', () => {
-  console.log('✅ PWA Installed');
-  if (typeof gtag === 'function') {
-    gtag('event', 'pwa_install_success', {
-      event_category: 'PWA_App',
-      event_label: 'Empire Glassware Installed',
-      device: /Mobi|Android/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop'
-    });
-  }
-});
-
-// 2. Jab koi customer seedha Installed App Icon se catalog kholega
-window.addEventListener('DOMContentLoaded', () => {
-  const isInstalledApp = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-  if (isInstalledApp && typeof gtag === 'function') {
-    gtag('event', 'pwa_opened_from_icon', {
-      event_category: 'PWA_App',
-      event_label: 'Direct App Open'
-    });
-  }
-});
 // ==========================================================
 // 📊 EMPIRE GLASSWARE - GA4 SMART B2B BUSINESS ANALYTICS
 // ==========================================================
@@ -912,10 +977,11 @@ const originalOpenProductDetail = window.openProductDetail;
 if (typeof originalOpenProductDetail === 'function') {
   window.openProductDetail = function(product) {
     if (product) {
+      const pObj = (typeof product === 'object') ? product : PRODUCTS.find(x => x.code === product);
       trackGA4('view_item_detail', {
-        item_code: product.code || product.product_code || 'UNKNOWN',
-        item_name: product.desc || product.name || '',
-        department: product.Department || 'General'
+        item_code: pObj?.code || 'UNKNOWN',
+        item_name: pObj?.desc || '',
+        department: pObj?.department || 'General'
       });
     }
     return originalOpenProductDetail.apply(this, arguments);
