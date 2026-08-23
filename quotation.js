@@ -60,7 +60,27 @@ function openCustomItemModal() {
     openModal("customModal");
 }
 
-// --- 3. MASTER PRODUCT QUICK LIST ---
+// --- 3. MASTER PRODUCT EXTRACTION & QUICK LIST ---
+function getProductField(p, keys) {
+    for (const k of keys) {
+        if (p && p[k] !== undefined && p[k] !== null && p[k] !== "") return p[k];
+    }
+    return "";
+}
+
+function getProductSpec(p) {
+    if (!p) return 1;
+    const spec = getProductField(p, ['Carton_Spec', 'carton_spec', 'ctn_spec', 'Box_Qty', 'box_qty', 'spec']);
+    if (spec && !isNaN(Number(spec)) && Number(spec) > 0) return Number(spec);
+
+    const desc = getProductField(p, ['desc', 'Description', 'name', 'Name']);
+    if (desc) {
+        const match = desc.toUpperCase().match(/(\d+)\s*(?:SET|SETS|PC|PCS|PIECES)\s*(?:IN\s*)?(?:CTN|CARTOON|BOX\b)/i);
+        if (match && match[1]) return parseInt(match[1], 10);
+    }
+    return 1;
+}
+
 function filterMasterProducts() {
     const list = document.getElementById("prodMiniList");
     if (!list || typeof PRODUCTS === "undefined") return;
@@ -68,54 +88,80 @@ function filterMasterProducts() {
     const query = (document.getElementById("prodSearchInput").value || "").toLowerCase().trim();
     list.innerHTML = "";
 
-    const filtered = PRODUCTS.filter(p => 
-        (p.code || "").toLowerCase().includes(query) || 
-        (p.desc || "").toLowerCase().includes(query)
-    ).slice(0, 30);
+    const filtered = PRODUCTS.filter(p => {
+        const code = String(getProductField(p, ['code', 'Code', 'product_code', 'Product_Code'])).toLowerCase();
+        const desc = String(getProductField(p, ['desc', 'Description', 'name', 'Name'])).toLowerCase();
+        return code.includes(query) || desc.includes(query);
+    }).slice(0, 40);
 
-    filtered.forEach(p => {
+    filtered.forEach((p, idx) => {
+        const code = String(getProductField(p, ['code', 'Code', 'product_code', 'Product_Code']));
+        const desc = String(getProductField(p, ['desc', 'Description', 'name', 'Name']));
+
         const item = document.createElement("div");
         item.className = "prod-item";
-        item.innerHTML = `
-            <div>
-                <div class="prod-item-code">${p.code}</div>
-                <div class="prod-item-desc">${p.desc}</div>
-            </div>
-            <button class="t-btn" style="background:#2980b9; padding:3px 8px; font-size:11px;" onclick="addFromMaster('${p.code}')">➕ Add</button>
-        `;
+        
+        const infoDiv = document.createElement("div");
+        infoDiv.innerHTML = `<div class="prod-item-code">${code}</div><div class="prod-item-desc">${desc}</div>`;
+        
+        const addBtn = document.createElement("button");
+        addBtn.className = "t-btn";
+        addBtn.style.cssText = "background:#2980b9; padding:4px 10px; font-size:11px;";
+        addBtn.innerText = "➕ Add";
+        addBtn.onclick = () => addFromMasterDirect(p);
+
+        item.appendChild(infoDiv);
+        item.appendChild(addBtn);
         list.appendChild(item);
     });
 }
 
-function getProductSpec(p) {
-    if (!p) return 1;
-    const spec = p.Carton_Spec || p.carton_spec || p.ctn_spec;
-    if (spec && !isNaN(Number(spec)) && Number(spec) > 0) return Number(spec);
-
-    if (p.desc) {
-        const match = p.desc.toUpperCase().match(/(\d+)\s*(?:SET|SETS|PC|PCS|PIECES)\s*(?:IN\s*)?(?:CTN|CARTOON|BOX\b)/i);
-        if (match && match[1]) return parseInt(match[1], 10);
-    }
-    return 1;
-}
-
-function addFromMaster(code) {
-    const p = PRODUCTS.find(x => x.code === code);
+function addFromMasterDirect(p) {
     if (!p) return;
 
+    const code = String(getProductField(p, ['code', 'Code', 'product_code', 'Product_Code']));
+    const desc = String(getProductField(p, ['desc', 'Description', 'name', 'Name']));
     const spec = getProductSpec(p);
-    const price = Number(p.price) || 0;
+    const defaultPrice = parseFloat(String(getProductField(p, ['price', 'Price', 'rate', 'Rate'])).replace(/,/g, '')) || 0;
 
-    ledgerItems.push({
-        code: p.code,
-        desc: p.desc,
-        ctn: 1,
-        qty: spec,
-        price: price,
-        total: Math.round(spec * price * 100) / 100,
-        is_ctn: 1,
-        spec: spec
-    });
+    // Prompt for CTN and Price (Just like Offline Desktop Dialog)
+    const ctnsInput = prompt(`Item: ${code}\nEnter No. of Cartons (CTN):`, "1");
+    if (ctnsInput === null) return; // Cancelled
+
+    const ctnVal = parseInt(ctnsInput, 10) || 0;
+    let looseVal = 0;
+    if (ctnVal === 0) {
+        const looseInput = prompt(`Enter Loose Qty for ${code}:`, "1");
+        if (looseInput === null) return;
+        looseVal = parseInt(looseInput, 10) || 0;
+    }
+
+    const priceInput = prompt(`Rate (₹) for ${code}:`, String(defaultPrice));
+    const priceVal = parseFloat(priceInput) || defaultPrice;
+
+    if (ctnVal > 0) {
+        ledgerItems.push({
+            code: code,
+            desc: desc,
+            ctn: ctnVal,
+            qty: ctnVal * spec,
+            price: priceVal,
+            total: Math.round(ctnVal * spec * priceVal * 100) / 100,
+            is_ctn: 1,
+            spec: spec
+        });
+    } else if (looseVal > 0) {
+        ledgerItems.push({
+            code: code,
+            desc: `${desc} (Loose)`,
+            ctn: 0,
+            qty: looseVal,
+            price: priceVal,
+            total: Math.round(looseVal * priceVal * 100) / 100,
+            is_ctn: 0,
+            spec: spec
+        });
+    }
 
     renderLedger();
     if (window.innerWidth <= 768) {
@@ -170,7 +216,8 @@ function parseWhatsAppText() {
 
     const validCodesMap = {};
     PRODUCTS.forEach(p => {
-        if (p.code) validCodesMap[p.code.trim().toUpperCase()] = p;
+        const code = getProductField(p, ['code', 'Code', 'product_code', 'Product_Code']);
+        if (code) validCodesMap[String(code).trim().toUpperCase()] = p;
     });
 
     const lines = raw.split("\n").map(l => l.trim()).filter(Boolean);
@@ -203,16 +250,18 @@ function parseWhatsAppText() {
             }
 
             if (qtyVal > 0) {
+                const code = String(getProductField(matchedProduct, ['code', 'Code', 'product_code', 'Product_Code']));
+                const desc = String(getProductField(matchedProduct, ['desc', 'Description', 'name', 'Name']));
                 const spec = getProductSpec(matchedProduct);
-                const price = Number(matchedProduct.price) || 0;
+                const price = parseFloat(String(getProductField(matchedProduct, ['price', 'Price', 'rate', 'Rate'])).replace(/,/g, '')) || 0;
 
-                let ctn_qty = 0, total_qty = 0, is_ctn = 1, item_desc = matchedProduct.desc;
+                let ctn_qty = 0, total_qty = 0, is_ctn = 1, item_desc = desc;
 
                 if (unitType.includes("SET") || unitType.includes("BOX") || unitType.includes("LOOSE") || unitType.includes("PC")) {
                     ctn_qty = 0;
                     total_qty = qtyVal;
                     is_ctn = 0;
-                    item_desc = `${matchedProduct.desc} (Loose)`;
+                    item_desc = `${desc} (Loose)`;
                 } else {
                     ctn_qty = qtyVal;
                     total_qty = ctn_qty * spec;
@@ -220,7 +269,7 @@ function parseWhatsAppText() {
                 }
 
                 ledgerItems.push({
-                    code: matchedProduct.code,
+                    code: code,
                     desc: item_desc,
                     ctn: ctn_qty,
                     qty: total_qty,
@@ -239,7 +288,7 @@ function parseWhatsAppText() {
     alert(`🟢 ${imported} items successfully imported into quotation!`);
 }
 
-// --- 5. DUAL RENDER ENGINE (Desktop Table + Mobile Responsive Cards) ---
+// --- 5. DUAL RENDER ENGINE ---
 function renderLedger() {
     const desktopTbody = document.getElementById("ledgerBodyDesktop");
     const mobileCards = document.getElementById("ledgerBodyMobile");
@@ -252,7 +301,7 @@ function renderLedger() {
     if (mCount) mCount.innerText = ledgerItems.length;
 
     ledgerItems.forEach((item, idx) => {
-        // A. Desktop Row
+        // Desktop Row
         if (desktopTbody) {
             const tr = document.createElement("tr");
             tr.innerHTML = `
@@ -267,7 +316,7 @@ function renderLedger() {
             desktopTbody.appendChild(tr);
         }
 
-        // B. Mobile Zero-Scroll Card
+        // Mobile Card
         if (mobileCards) {
             const card = document.createElement("div");
             card.className = "m-ledger-card";
