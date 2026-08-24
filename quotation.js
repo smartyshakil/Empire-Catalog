@@ -331,7 +331,6 @@ function renderLedger() {
     if (mCount) mCount.innerText = ledgerItems.length;
 
     ledgerItems.forEach((item, idx) => {
-        // Desktop Table Row
         if (desktopTbody) {
             const tr = document.createElement("tr");
             tr.innerHTML = `
@@ -346,7 +345,6 @@ function renderLedger() {
             desktopTbody.appendChild(tr);
         }
 
-        // Mobile Card View
         if (mobileCards) {
             const card = document.createElement("div");
             card.className = "m-ledger-card";
@@ -510,7 +508,7 @@ function resumeDraft(key) {
     }
 }
 
-// --- 8. CLOUD HISTORY REPORT VIEWER ---
+// --- 8. CLOUD ARCHIVES & HISTORY VIEWER ---
 async function openHistoryModal() {
     const today = new Date().toISOString().split('T')[0];
     document.getElementById("historyStartDate").value = today;
@@ -521,7 +519,7 @@ async function openHistoryModal() {
 
 async function fetchCloudHistory() {
     const tbody = document.getElementById("historyTableBody");
-    tbody.innerHTML = `<tr><td colspan="4" style="text-align:center; padding:15px;">Loading history from cloud...</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; padding:15px;">Loading archives from cloud...</td></tr>`;
 
     if (typeof window.fetchQuotationsFromCloud === "function") {
         const records = await window.fetchQuotationsFromCloud();
@@ -540,20 +538,21 @@ async function fetchCloudHistory() {
 
                 const tr = document.createElement("tr");
                 tr.innerHTML = `
+                    <td style="font-family:monospace; font-size:11px; color:#2980b9;"><b>${rec.docName || 'QUOTE'}</b></td>
                     <td>${rec.timestamp ? rec.timestamp.replace('T', ' ').substring(0, 19) : ''}</td>
                     <td><b>${rec.clientName}</b></td>
                     <td style="text-align:right; font-weight:bold; color:var(--success);">₹${(rec.finalAmount || 0).toLocaleString('en-IN')}.00</td>
-                    <td style="text-align:center;"><button class="t-btn" style="background:var(--primary); padding:3px 6px; font-size:10px;" onclick='previewCloudOrder(${JSON.stringify(rec.items)})'>View</button></td>
+                    <td style="text-align:center;"><button class="t-btn" style="background:var(--primary); padding:3px 6px; font-size:10px;" onclick='previewCloudOrder(${JSON.stringify(rec.items)})'>Load</button></td>
                 `;
                 tbody.appendChild(tr);
             }
         });
 
         if (count === 0) {
-            tbody.innerHTML = `<tr><td colspan="4" style="text-align:center; padding:15px; color:#7f8c8d;">No quotations found for this date range.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; padding:15px; color:#7f8c8d;">No archives found for this date range.</td></tr>`;
         }
 
-        document.getElementById("historyCountLbl").innerText = `Total Quotations: ${count}`;
+        document.getElementById("historyCountLbl").innerText = `Total Records: ${count}`;
         document.getElementById("historyTotalLbl").innerText = `Grand Total: Rs. ${grandTotal.toLocaleString('en-IN')}.00`;
     }
 }
@@ -563,22 +562,27 @@ function previewCloudOrder(items) {
     ledgerItems = items;
     renderLedger();
     closeModal("historyModal");
-    alert("🟢 Historical quotation loaded into workspace!");
+    alert("🟢 Historical document loaded into workspace!");
 }
 
-// --- 9. PRINT & PDF GENERATION ---
+// --- 9. PRINT & PDF GENERATION WITH AUTOMATIC NAMING ---
 function printDocument(mode = "QUOTE") {
     if (ledgerItems.length === 0) {
         alert("Pehle ledger me items add karein!");
         return;
     }
 
-    const client = document.getElementById("clientName").value.trim() || "CASH / COUNTER";
+    const client = document.getElementById("clientName").value.trim().replace(/[\/\\]/g, "_") || "CASH_COUNTER";
     const city = document.getElementById("clientCity").value.trim();
     const mob = document.getElementById("clientMobile").value.trim();
     
     const now = new Date();
-    const d_date = `${String(now.getDate()).padStart(2, '0')}-${String(now.getMonth() + 1).padStart(2, '0')}-${now.getFullYear()}`;
+    const dateStr = `${String(now.getDate()).padStart(2, '0')}-${String(now.getMonth() + 1).padStart(2, '0')}-${now.getFullYear()}`;
+    const timeStr = `${String(now.getHours()).padStart(2, '0')}-${String(now.getMinutes()).padStart(2, '0')}-${String(now.getSeconds()).padStart(2, '0')}`;
+    
+    // Automatic Naming Generation (Without Prompt)
+    const docPrefix = mode === "QUOTE" ? "QUOTE" : "DISPATCH";
+    const uniqueDocName = `${docPrefix}_${client}_${dateStr}_${timeStr}`;
     const docTitle = mode === "QUOTE" ? "QUOTATION" : "DISPATCH NOTE";
 
     let t_ctn = 0, t_loose = 0, sub = 0;
@@ -592,16 +596,16 @@ function printDocument(mode = "QUOTE") {
     const da = (sub * disc) / 100;
     const gt = Math.round(sub - da);
 
-    // --- FIREBASE CLOUD SYNC TRIGGER ---
-    if (typeof window.logQuotationToCloud === "function" && mode === "QUOTE") {
-        window.logQuotationToCloud(client, gt, ledgerItems);
+    // --- FIREBASE CLOUD SYNC & ARCHIVE TRIGGER ---
+    if (typeof window.logQuotationToCloud === "function") {
+        window.logQuotationToCloud(uniqueDocName, client, gt, ledgerItems, docPrefix);
     }
 
     let html = `
         <div class="print-doc-header">
             <h2>E.G</h2>
             <h3>${docTitle}</h3>
-            <p><b>Account:</b> ${client} ${city ? '(' + city + ')' : ''} ${mob ? '| Mob: ' + mob : ''} | <b>Date:</b> ${d_date}</p>
+            <p><b>Doc ID:</b> ${uniqueDocName} | <b>Account:</b> ${client} ${city ? '(' + city + ')' : ''} ${mob ? '| Mob: ' + mob : ''} | <b>Date:</b> ${dateStr}</p>
         </div>
     `;
 
