@@ -134,7 +134,7 @@
 
   <!-- Header -->
   <div class="desk-header no-print">
-    <h1>EMPIRE GLASSWARE — Quotation Desk</h1>
+    <h1>EMPIRE GLASSWARE — Quotation Desk (Cloud Synced)</h1>
     <a href="index.html" class="nav-link">👈 Catalog</a>
   </div>
 
@@ -280,6 +280,44 @@
   </div>
 
   <div id="printableArea"></div>
+
+  <!-- Modular Firebase Initialization Script -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-analytics.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyC5X4TMCds_atY_wi67b24D6pCT9pq83Z8",
+      authDomain: "empirequotationdesk.firebaseapp.com",
+      projectId: "empirequotationdesk",
+      storageBucket: "empirequotationdesk.firebasestorage.app",
+      messagingSenderId: "165921209421",
+      appId: "1:165921209421:web:7a7088d18aec2ff0dd7004",
+      measurementId: "G-C8D3VSFKE5"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+    // Global function expose taaki quotation.js ise call kar sake
+    window.logQuotationToCloud = async function(clientName, finalAmount, itemsArray) {
+      try {
+        await addDoc(collection(db, "quotations"), {
+          timestamp: new Date().toISOString(),
+          clientName: clientName,
+          finalAmount: finalAmount,
+          items: itemsArray
+        });
+        console.log("Quotation successfully synced to cloud via modular Firestore!");
+      } catch (e) {
+        console.error("Error adding document to cloud: ", e);
+      }
+    };
+
+    console.log("Firebase Modular SDK Connected Successfully!");
+  </script>
 
   <!-- Mobile Tab Switcher Logic -->
   <script>
