@@ -51,6 +51,8 @@
     .btn-custom { background: #34495e; }
     .btn-export { background: #16a085; }
     .btn-copy-wa { background: #25d366; color: #fff; }
+    .btn-history { background: #2980b9; }
+    .btn-draft { background: #d35400; }
 
     .mobile-tab-bar { display: none; background: #fff; border-bottom: 1px solid #ddd; padding: 6px 10px; gap: 6px; position: sticky; top: 0; z-index: 50; }
     .m-tab-btn { flex: 1; padding: 8px 4px; border: 1px solid #bdc3c7; background: #f8f9fa; font-size: 11px; font-weight: bold; border-radius: 4px; color: #555; text-align: center; cursor: pointer; }
@@ -79,7 +81,7 @@
     .table-input.price { width: 68px; text-align: right; }
     .btn-row-del { background: transparent; border: none; color: var(--danger); cursor: pointer; font-size: 15px; }
 
-    /* Mobile Card View Styles (Zero Horizontal Scroll) */
+    /* Mobile Card View Styles */
     .mobile-cards-view { display: none; }
     .m-ledger-card {
       background: #fff; border: 1px solid #e1e8ed; border-radius: 6px; padding: 10px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.03);
@@ -102,8 +104,8 @@
     .bottom-actions { margin-top: 10px; display: flex; gap: 8px; justify-content: flex-end; }
 
     .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; z-index: 1000; }
-    .modal-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; border-radius: 8px; width: 92%; max-width: 480px; padding: 14px; z-index: 1001; display: none; color: #2c3e50; }
-    .modal-header { font-size: 13px; font-weight: bold; margin-bottom: 10px; }
+    .modal-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; border-radius: 8px; width: 92%; max-width: 520px; padding: 14px; z-index: 1001; display: none; color: #2c3e50; max-height: 85vh; overflow-y: auto; }
+    .modal-header { font-size: 13px; font-weight: bold; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
     .modal-actions { margin-top: 10px; display: flex; justify-content: flex-end; gap: 6px; }
 
     /* MOBILE APP VIEW (< 768px) */
@@ -117,7 +119,6 @@
       .toolbar .btn-reset { grid-column: span 2; }
       .prod-mini-list { max-height: calc(100vh - 220px); }
 
-      /* Switch Desktop Table to Mobile Cards */
       .desktop-table-view { display: none; }
       .mobile-cards-view { display: block; }
 
@@ -161,7 +162,7 @@
     
     <!-- Header -->
     <div class="desk-header no-print">
-      <h1>EMPIRE GLASSWARE — Quotation Desk</h1>
+      <h1>EMPIRE GLASSWARE — Management Desk (Cloud Synced)</h1>
       <button class="t-btn" style="background:#c0392b; padding:4px 8px;" onclick="lockDesk()">🔒 Lock</button>
     </div>
 
@@ -176,6 +177,9 @@
     <div class="toolbar no-print">
       <button class="t-btn btn-paste" onclick="openWhatsAppModal()">📋 Paste WA Order</button>
       <button class="t-btn btn-custom" onclick="openCustomItemModal()">➕ Custom Item</button>
+      <button class="t-btn btn-history" onclick="openHistoryModal()">📊 History Report</button>
+      <button class="t-btn btn-draft" onclick="saveCloudDraft()">📌 Hold (Save Draft)</button>
+      <button class="t-btn btn-draft" style="background:#e67e22;" onclick="openDraftModal()">📂 Resume Draft</button>
       <button class="t-btn btn-export" onclick="exportCsvForDesktop()">💾 Export CSV</button>
       <button class="t-btn btn-copy-wa" onclick="copyUpdatedWhatsAppOrder()">📲 Copy WA Text</button>
       <button class="t-btn btn-reset" onclick="resetDesk()">🔄 Reset Workspace</button>
@@ -187,7 +191,10 @@
       <!-- LEFT PANEL -->
       <div id="leftColumnWrapper">
         <div class="panel tab-section" id="secClient">
-          <div class="panel-title">👤 Account / Client Details</div>
+          <div class="panel-title">
+            <span>👤 Account / Client Details</span>
+            <button id="btnUpdateMob" class="t-btn" style="background:var(--danger); padding:2px 6px; font-size:9px; display:none;" onclick="quickUpdateMobile()">⚠️ Update Mobile</button>
+          </div>
           <div class="form-group">
             <label>Party / Client Name:</label>
             <input type="text" id="clientName" list="clientSuggestions" class="form-control" placeholder="Search or type Client Name..." value="CASH / COUNTER" oninput="onClientNameSelect(this.value)">
@@ -304,9 +311,107 @@
       </div>
     </div>
 
+    <!-- History Report Modal -->
+    <div class="modal-backdrop" id="historyModalBackdrop" onclick="closeModal('historyModal')"></div>
+    <div class="modal-box" id="historyModal" style="max-width: 750px;">
+      <div class="modal-header">
+        <span>📊 Cloud Quotation History Report</span>
+        <button class="t-btn" style="background:#7f8c8d; padding:2px 6px;" onclick="closeModal('historyModal')">✕</button>
+      </div>
+      <div style="display: flex; gap: 6px; margin-bottom: 10px; align-items: center;">
+        <input type="date" id="historyStartDate" class="form-control" style="width: 140px;">
+        <span>to</span>
+        <input type="date" id="historyEndDate" class="form-control" style="width: 140px;">
+        <button class="t-btn btn-history" onclick="fetchCloudHistory()">Search</button>
+      </div>
+      <div style="max-height: 300px; overflow-y: auto; border: 1px solid #ddd; border-radius: 4px;">
+        <table class="ledger-table">
+          <thead>
+            <tr>
+              <th>Date & Time</th>
+              <th>Party Name</th>
+              <th style="text-align:right;">Amount (₹)</th>
+              <th style="text-align:center;">Action</th>
+            </tr>
+          </thead>
+          <tbody id="historyTableBody"></tbody>
+        </table>
+      </div>
+      <div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; font-weight: bold;">
+        <span id="historyCountLbl">Total Quotations: 0</span>
+        <span id="historyTotalLbl" style="color: var(--success); font-size: 14px;">Grand Total: Rs. 0.00</span>
+      </div>
+    </div>
+
+    <!-- Resume Draft Modal -->
+    <div class="modal-backdrop" id="draftModalBackdrop" onclick="closeModal('draftModal')"></div>
+    <div class="modal-box" id="draftModal">
+      <div class="modal-header">
+        <span>📂 Resume Pending Drafts</span>
+        <button class="t-btn" style="background:#7f8c8d; padding:2px 6px;" onclick="closeModal('draftModal')">✕</button>
+      </div>
+      <div style="max-height: 250px; overflow-y: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;" id="draftListContainer">
+        <p style="font-size: 11px; color: #7f8c8d; text-align:center; padding: 20px;">No drafts found.</p>
+      </div>
+    </div>
+
     <div id="printableArea"></div>
 
   </div>
+
+  <!-- Modular Firebase Initialization Script -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-analytics.js";
+    import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyC5X4TMCds_atY_wi67b24D6pCT9pq83Z8",
+      authDomain: "empirequotationdesk.firebaseapp.com",
+      projectId: "empirequotationdesk",
+      storageBucket: "empirequotationdesk.firebasestorage.app",
+      messagingSenderId: "165921209421",
+      appId: "1:165921209421:web:7a7088d18aec2ff0dd7004",
+      measurementId: "G-C8D3VSFKE5"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+    // Global Cloud Log Function
+    window.logQuotationToCloud = async function(clientName, finalAmount, itemsArray) {
+      try {
+        await addDoc(collection(db, "quotations"), {
+          timestamp: new Date().toISOString(),
+          clientName: clientName,
+          finalAmount: finalAmount,
+          items: itemsArray
+        });
+        console.log("Quotation successfully synced to cloud!");
+      } catch (e) {
+        console.error("Error adding document to cloud: ", e);
+      }
+    };
+
+    // Global Cloud History Fetcher
+    window.fetchQuotationsFromCloud = async function() {
+      try {
+        const q = query(collection(db, "quotations"), orderBy("timestamp", "desc"));
+        const snapshot = await getDocs(q);
+        const records = [];
+        snapshot.forEach(doc => {
+          records.push({ id: doc.id, ...doc.data() });
+        });
+        return records;
+      } catch (e) {
+        console.error("Error fetching history: ", e);
+        return [];
+      }
+    };
+
+    console.log("Firebase Modular SDK Connected Successfully!");
+  </script>
 
   <!-- Required Data Modules -->
   <script src="clients_data.js"></script>
