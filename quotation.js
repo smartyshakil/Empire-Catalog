@@ -192,7 +192,7 @@ function addFromMasterDirect(p) {
     }
 
     renderLedger();
-    if (window.innerWidth <= 768) {
+    if (typeof switchMobileTab === "function" && window.innerWidth <= 768) {
         switchMobileTab('ledger');
     }
 }
@@ -318,26 +318,64 @@ function parseWhatsAppText() {
 
 // --- 5. DUAL RENDER ENGINE ---
 function renderLedger() {
-    const desktopTbody = document.getElementById("ledgerBody");
-    if (!desktopTbody) return;
+    const desktopTbody = document.getElementById("ledgerBodyDesktop");
+    const mobileCards = document.getElementById("ledgerBodyMobile");
 
-    desktopTbody.innerHTML = "";
-    document.getElementById("ledgerItemCount").innerText = ledgerItems.length;
+    if (desktopTbody) desktopTbody.innerHTML = "";
+    if (mobileCards) mobileCards.innerHTML = "";
+
+    const itemCountElem = document.getElementById("ledgerItemCount");
+    if (itemCountElem) itemCountElem.innerText = ledgerItems.length;
+
     const mCount = document.getElementById("mTabCount");
     if (mCount) mCount.innerText = ledgerItems.length;
 
     ledgerItems.forEach((item, idx) => {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-            <td><b>${item.code}</b></td>
-            <td><input type="text" class="form-control" style="font-size:11px; padding:3px;" value="${item.desc}" onchange="updateItemDesc(${idx}, this.value)"></td>
-            <td><input type="number" class="table-input" value="${item.ctn}" min="0" onchange="updateItemCtn(${idx}, this.value)"></td>
-            <td><input type="number" class="table-input" value="${item.qty}" min="0" onchange="updateItemQtyDirect(${idx}, this.value)"></td>
-            <td><input type="number" class="table-input price" value="${item.price}" step="0.01" onchange="updateItemPrice(${idx}, this.value)"></td>
-            <td style="text-align: right; font-weight: bold;">₹${item.total.toFixed(2)}</td>
-            <td><button class="btn-row-del" onclick="deleteItem(${idx})" title="Delete">🗑️</button></td>
-        `;
-        desktopTbody.appendChild(tr);
+        // Desktop Table Row
+        if (desktopTbody) {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+                <td><b>${item.code}</b></td>
+                <td><input type="text" class="form-control" style="font-size:11px; padding:3px;" value="${item.desc}" onchange="updateItemDesc(${idx}, this.value)"></td>
+                <td><input type="number" class="table-input" value="${item.ctn}" min="0" onchange="updateItemCtn(${idx}, this.value)"></td>
+                <td><input type="number" class="table-input" value="${item.qty}" min="0" onchange="updateItemQtyDirect(${idx}, this.value)"></td>
+                <td><input type="number" class="table-input price" value="${item.price}" step="0.01" onchange="updateItemPrice(${idx}, this.value)"></td>
+                <td style="text-align: right; font-weight: bold;">₹${item.total.toFixed(2)}</td>
+                <td><button class="btn-row-del" onclick="deleteItem(${idx})" title="Delete">🗑️</button></td>
+            `;
+            desktopTbody.appendChild(tr);
+        }
+
+        // Mobile Card View
+        if (mobileCards) {
+            const card = document.createElement("div");
+            card.className = "m-ledger-card";
+            card.innerHTML = `
+                <div class="m-card-header">
+                    <span class="m-card-code">${item.code}</span>
+                    <div>
+                        <span class="m-card-total">₹${item.total.toFixed(2)}</span>
+                        <button class="btn-row-del" style="margin-left: 8px;" onclick="deleteItem(${idx})">🗑️</button>
+                    </div>
+                </div>
+                <input type="text" class="m-card-desc" value="${item.desc}" onchange="updateItemDesc(${idx}, this.value)">
+                <div class="m-card-grid">
+                    <div class="m-input-box">
+                        <label>CTN</label>
+                        <input type="number" value="${item.ctn}" min="0" onchange="updateItemCtn(${idx}, this.value)">
+                    </div>
+                    <div class="m-input-box">
+                        <label>Total Qty</label>
+                        <input type="number" value="${item.qty}" min="0" onchange="updateItemQtyDirect(${idx}, this.value)">
+                    </div>
+                    <div class="m-input-box">
+                        <label>Rate (₹)</label>
+                        <input type="number" value="${item.price}" step="0.01" onchange="updateItemPrice(${idx}, this.value)">
+                    </div>
+                </div>
+            `;
+            mobileCards.appendChild(card);
+        }
     });
 
     calculateLiveTotals();
@@ -409,7 +447,7 @@ function calculateLiveTotals() {
     document.getElementById("statGrandTotal").innerText = `Rs. ${grandTotal.toLocaleString("en-IN")}.00`;
 }
 
-// --- 7. DRAFTS & HOLD ORDERS (LocalStorage / Cloud) ---
+// --- 7. DRAFTS & HOLD ORDERS ---
 function saveCloudDraft() {
     const client = document.getElementById("clientName").value.trim();
     if (!client || ledgerItems.length === 0) {
