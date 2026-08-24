@@ -28,9 +28,38 @@ function onClientNameSelect(val) {
     if (typeof CLIENTS === "undefined") return;
     const cleanVal = val.trim().toUpperCase();
     const matched = CLIENTS.find(c => (c.name || '').toUpperCase() === cleanVal);
+    const btnMob = document.getElementById("btnUpdateMob");
+
     if (matched) {
         if (matched.city) document.getElementById("clientCity").value = matched.city;
         if (matched.mobile) document.getElementById("clientMobile").value = matched.mobile;
+
+        const mob = String(matched.mobile || "").trim();
+        if (!mob || mob === "nan" || mob === "0" || mob === "0.0") {
+            if (btnMob) btnMob.style.display = "inline-block";
+        } else {
+            if (btnMob) btnMob.style.display = "none";
+        }
+    } else {
+        if (btnMob) btnMob.style.display = "inline-block";
+    }
+}
+
+function quickUpdateMobile() {
+    const clientName = document.getElementById("clientName").value.trim();
+    if (!clientName) return;
+
+    const newMob = prompt(`Enter Mobile Number for ${clientName}:`);
+    if (newMob && typeof CLIENTS !== "undefined") {
+        const found = CLIENTS.find(c => c.name.toUpperCase() === clientName.toUpperCase());
+        if (found) {
+            found.mobile = newMob;
+            document.getElementById("clientMobile").value = newMob;
+            document.getElementById("btnUpdateMob").style.display = "none";
+            alert("🟢 Mobile number updated successfully!");
+        } else {
+            alert("Client not found in master list.");
+        }
     }
 }
 
@@ -94,7 +123,7 @@ function filterMasterProducts() {
         return code.includes(query) || desc.includes(query);
     }).slice(0, 40);
 
-    filtered.forEach((p, idx) => {
+    filtered.forEach((p) => {
         const code = String(getProductField(p, ['code', 'Code', 'product_code', 'Product_Code']));
         const desc = String(getProductField(p, ['desc', 'Description', 'name', 'Name']));
 
@@ -289,60 +318,26 @@ function parseWhatsAppText() {
 
 // --- 5. DUAL RENDER ENGINE ---
 function renderLedger() {
-    const desktopTbody = document.getElementById("ledgerBodyDesktop");
-    const mobileCards = document.getElementById("ledgerBodyMobile");
+    const desktopTbody = document.getElementById("ledgerBody");
+    if (!desktopTbody) return;
 
-    if (desktopTbody) desktopTbody.innerHTML = "";
-    if (mobileCards) mobileCards.innerHTML = "";
-
+    desktopTbody.innerHTML = "";
     document.getElementById("ledgerItemCount").innerText = ledgerItems.length;
     const mCount = document.getElementById("mTabCount");
     if (mCount) mCount.innerText = ledgerItems.length;
 
     ledgerItems.forEach((item, idx) => {
-        if (desktopTbody) {
-            const tr = document.createElement("tr");
-            tr.innerHTML = `
-                <td><b>${item.code}</b></td>
-                <td><input type="text" class="form-control" style="font-size:11px; padding:3px;" value="${item.desc}" onchange="updateItemDesc(${idx}, this.value)"></td>
-                <td><input type="number" class="table-input" value="${item.ctn}" min="0" onchange="updateItemCtn(${idx}, this.value)"></td>
-                <td><input type="number" class="table-input" value="${item.qty}" min="0" onchange="updateItemQtyDirect(${idx}, this.value)"></td>
-                <td><input type="number" class="table-input price" value="${item.price}" step="0.01" onchange="updateItemPrice(${idx}, this.value)"></td>
-                <td style="text-align: right; font-weight: bold;">₹${item.total.toFixed(2)}</td>
-                <td><button class="btn-row-del" onclick="deleteItem(${idx})" title="Delete">🗑️</button></td>
-            `;
-            desktopTbody.appendChild(tr);
-        }
-
-        if (mobileCards) {
-            const card = document.createElement("div");
-            card.className = "m-ledger-card";
-            card.innerHTML = `
-                <div class="m-card-header">
-                    <span class="m-card-code">${item.code}</span>
-                    <div>
-                        <span class="m-card-total">₹${item.total.toFixed(2)}</span>
-                        <button class="btn-row-del" style="margin-left: 8px;" onclick="deleteItem(${idx})">🗑️</button>
-                    </div>
-                </div>
-                <input type="text" class="m-card-desc" value="${item.desc}" onchange="updateItemDesc(${idx}, this.value)">
-                <div class="m-card-grid">
-                    <div class="m-input-box">
-                        <label>CTN</label>
-                        <input type="number" value="${item.ctn}" min="0" onchange="updateItemCtn(${idx}, this.value)">
-                    </div>
-                    <div class="m-input-box">
-                        <label>Total Qty</label>
-                        <input type="number" value="${item.qty}" min="0" onchange="updateItemQtyDirect(${idx}, this.value)">
-                    </div>
-                    <div class="m-input-box">
-                        <label>Rate (₹)</label>
-                        <input type="number" value="${item.price}" step="0.01" onchange="updateItemPrice(${idx}, this.value)">
-                    </div>
-                </div>
-            `;
-            mobileCards.appendChild(card);
-        }
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td><b>${item.code}</b></td>
+            <td><input type="text" class="form-control" style="font-size:11px; padding:3px;" value="${item.desc}" onchange="updateItemDesc(${idx}, this.value)"></td>
+            <td><input type="number" class="table-input" value="${item.ctn}" min="0" onchange="updateItemCtn(${idx}, this.value)"></td>
+            <td><input type="number" class="table-input" value="${item.qty}" min="0" onchange="updateItemQtyDirect(${idx}, this.value)"></td>
+            <td><input type="number" class="table-input price" value="${item.price}" step="0.01" onchange="updateItemPrice(${idx}, this.value)"></td>
+            <td style="text-align: right; font-weight: bold;">₹${item.total.toFixed(2)}</td>
+            <td><button class="btn-row-del" onclick="deleteItem(${idx})" title="Delete">🗑️</button></td>
+        `;
+        desktopTbody.appendChild(tr);
     });
 
     calculateLiveTotals();
@@ -414,7 +409,126 @@ function calculateLiveTotals() {
     document.getElementById("statGrandTotal").innerText = `Rs. ${grandTotal.toLocaleString("en-IN")}.00`;
 }
 
-// --- 7. PRINT & PDF GENERATION ---
+// --- 7. DRAFTS & HOLD ORDERS (LocalStorage / Cloud) ---
+function saveCloudDraft() {
+    const client = document.getElementById("clientName").value.trim();
+    if (!client || ledgerItems.length === 0) {
+        alert("Pehle client name aur items add karein!");
+        return;
+    }
+    const draftKey = `draft_${client.replace(/[\/\\]/g, "_")}`;
+    const draftData = {
+        client: client,
+        city: document.getElementById("clientCity").value,
+        mobile: document.getElementById("clientMobile").value,
+        items: ledgerItems,
+        timestamp: new Date().toLocaleString()
+    };
+    localStorage.setItem(draftKey, JSON.stringify(draftData));
+    alert("📌 Order successfully held (Draft saved)!");
+}
+
+function openDraftModal() {
+    const container = document.getElementById("draftListContainer");
+    container.innerHTML = "";
+    
+    const keys = Object.keys(localStorage).filter(k => k.startsWith("draft_"));
+    if (keys.length === 0) {
+        container.innerHTML = `<p style="font-size: 11px; color: #7f8c8d; text-align:center; padding: 20px;">No pending drafts found.</p>`;
+    } else {
+        keys.forEach(k => {
+            try {
+                const data = JSON.parse(localStorage.getItem(k));
+                const itemDiv = document.createElement("div");
+                itemDiv.style.cssText = "padding: 8px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;";
+                itemDiv.innerHTML = `
+                    <div>
+                        <b>${data.client}</b> <span style="font-size:10px; color:#7f8c8d;">(${data.timestamp})</span><br>
+                        <span style="font-size:11px; color:#2980b9;">Items: ${data.items.length}</span>
+                    </div>
+                    <button class="t-btn" style="background:var(--success); padding:4px 8px;" onclick="resumeDraft('${k}')">Resume</button>
+                `;
+                container.appendChild(itemDiv);
+            } catch(e){}
+        });
+    }
+    openModal("draftModal");
+}
+
+function resumeDraft(key) {
+    try {
+        const data = JSON.parse(localStorage.getItem(key));
+        if (data) {
+            document.getElementById("clientName").value = data.client;
+            document.getElementById("clientCity").value = data.city || "";
+            document.getElementById("clientMobile").value = data.mobile || "";
+            ledgerItems = data.items || [];
+            renderLedger();
+            closeModal("draftModal");
+            alert(`🟢 Draft resumed for ${data.client}`);
+        }
+    } catch(e) {
+        alert("Error loading draft!");
+    }
+}
+
+// --- 8. CLOUD HISTORY REPORT VIEWER ---
+async function openHistoryModal() {
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById("historyStartDate").value = today;
+    document.getElementById("historyEndDate").value = today;
+    openModal("historyModal");
+    await fetchCloudHistory();
+}
+
+async function fetchCloudHistory() {
+    const tbody = document.getElementById("historyTableBody");
+    tbody.innerHTML = `<tr><td colspan="4" style="text-align:center; padding:15px;">Loading history from cloud...</td></tr>`;
+
+    if (typeof window.fetchQuotationsFromCloud === "function") {
+        const records = await window.fetchQuotationsFromCloud();
+        const start = document.getElementById("historyStartDate").value;
+        const end = document.getElementById("historyEndDate").value;
+
+        tbody.innerHTML = "";
+        let grandTotal = 0;
+        let count = 0;
+
+        records.forEach(rec => {
+            const recDate = rec.timestamp ? rec.timestamp.split('T')[0] : "";
+            if (recDate >= start && recDate <= end) {
+                count++;
+                grandTotal += (rec.finalAmount || 0);
+
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>${rec.timestamp ? rec.timestamp.replace('T', ' ').substring(0, 19) : ''}</td>
+                    <td><b>${rec.clientName}</b></td>
+                    <td style="text-align:right; font-weight:bold; color:var(--success);">₹${(rec.finalAmount || 0).toLocaleString('en-IN')}.00</td>
+                    <td style="text-align:center;"><button class="t-btn" style="background:var(--primary); padding:3px 6px; font-size:10px;" onclick='previewCloudOrder(${JSON.stringify(rec.items)})'>View</button></td>
+                `;
+                tbody.appendChild(tr);
+            }
+        });
+
+        if (count === 0) {
+            tbody.innerHTML = `<tr><td colspan="4" style="text-align:center; padding:15px; color:#7f8c8d;">No quotations found for this date range.</td></tr>`;
+        }
+
+        document.getElementById("historyCountLbl").innerText = `Total Quotations: ${count}`;
+        document.getElementById("historyTotalLbl").innerText = `Grand Total: Rs. ${grandTotal.toLocaleString('en-IN')}.00`;
+    }
+}
+
+function previewCloudOrder(items) {
+    if (!items || items.length === 0) return;
+    ledgerItems = items;
+    renderLedger();
+    closeModal("historyModal");
+    alert("🟢 Historical quotation loaded into workspace!");
+}
+
+// --- 9. PRINT & PDF GENERATION ---
 function printDocument(mode = "QUOTE") {
     if (ledgerItems.length === 0) {
         alert("Pehle ledger me items add karein!");
@@ -534,7 +648,7 @@ function printDocument(mode = "QUOTE") {
     window.print();
 }
 
-// --- 8. OFFLINE DESKTOP CSV EXPORT ---
+// --- 10. EXPORT & WHATSAPP SHARING ---
 function exportCsvForDesktop() {
     if (ledgerItems.length === 0) {
         alert("No items to export!");
