@@ -641,9 +641,11 @@ async function printDocument(mode = "QUOTE") {
         const records = await window.fetchQuotationsFromCloud();
         const found = records.find(r => {
             const rType = (r.docType || "QUOTE").toUpperCase();
+            // Match both docName pattern or timestamp date + clientName to securely get Firestore document ID
             const rDate = r.timestamp ? r.timestamp.split('T')[0].replace(/-/g, '') : "";
             const rClient = (r.clientName || "").toUpperCase();
-            return rType === docPrefix && rDate === dateKey && rClient === clientClean;
+            const matchesId = r.docName === `${dateKey}_${clientClean}` || (rDate === dateKey && rClient === clientClean);
+            return rType === docPrefix && matchesId;
         });
         if (found) {
             existingDocId = found.id;
@@ -653,10 +655,10 @@ async function printDocument(mode = "QUOTE") {
     if (existingDocId) {
         const choice = prompt(`"${clientRaw}" ka aaj ka quotation pehle se maujood hai.\nType 'Y' to Update/Overwrite, or type 'N' for New Order (_v2 suffix).`, "Y");
         if (choice && choice.toUpperCase() === "Y") {
-            // Overwrite same ID
+            uniqueDocName = `${dateKey}_${clientClean}`;
         } else {
             uniqueDocName = `${dateKey}_${clientClean}_v2_${timeStr}`;
-            existingDocId = null; // Create new document instead of overwriting
+            existingDocId = null; // Do not overwrite, create new document
         }
     } else {
         uniqueDocName = `${dateKey}_${clientClean}`;

@@ -1,101 +1,5 @@
 const PRODUCTS = [
   {
-    "code": "STANLEY LOGO",
-    "desc": "STEEL STANLEY TUMBLER 1200 ML OG BOX MIX PRINT 25 PCS CTN",
-    "price": "430",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles"
-},
-  {
-    "code": "TEMP CUP",
-    "desc": "STEEL TEMPRATURE CUP 510 ML COL BOX MIX PRINT 50 PCS CTN",
-    "price": "200",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles"
-},
-  {
-    "code": "K-1000",
-    "desc": "STEEL KETTLE 1000 ML COL BOX MIX PRINT 40 PCS CTN",
-    "price": "310",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles"
-},
-  {
-    "code": "82018",
-    "desc": "STEEL BOTTLE 500 ML COL BOX MIX PRINT 50 PCS CTN",
-    "price": "240",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles"
-},
-  {
-    "code": "8202",
-    "desc": "STEEL BOTTLE 600 ML COL BOX PUSH BUTTON MIX PRINT 50 PCS CTN",
-    "price": "320",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles"
-},
-  {
-    "code": "8201",
-    "desc": "STEEL BOTTLE 600 ML COL BOX MIX PRINT 50 PCS CTN",
-    "price": "250",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles"
-},
-  {
-    "code": "8193",
-    "desc": "STEEL BOTTLE 600 ML COL BOX SIPPER CAP MIX PRINT 50 PCS CTN",
-    "price": "290",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles"
-},
-  {
-    "code": "8173",
-    "desc": "STEEL BOTTLE 600 ML COL BOX PUSH BUTTON MIX PRINT 50 PCS CTN",
-    "price": "310",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles"
-},
-  {
-    "code": "8172",
-    "desc": "STEEL BOTTLE 800 ML COL BOX MIX PRINT 50 PCS CTN",
-    "price": "320",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles"
-},
-  {
-    "code": "8171",
-    "desc": "STEEL BOTTLE 600 ML COL BOX DOUBE SIPPER  MIX PRINT 60 PCS CTN",
-    "price": "290",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles"
-},
-  {
-    "code": "CHOPPING BOARD",
-    "desc": "CHOPPING BOARD 3 SIZES BULK PACK 12 SET CTN",
-    "price": "250",
-    "unit": "FOR 1 SET",
-    "category": "MISC",
-    "department": "Kitchenware"
-},
-  {
-    "code": "EMP-TP48-SET",
-    "desc": "SALT PEPPER STAND COLOR BOX PACKING 72 SET CTN",
-    "price": "112",
-    "unit": "FOR 1 SET",
-    "category": "SALT PEPPER",
-    "department": "Kitchenware"
-},
-  {
     "code": "LXY1511",
     "desc": "LANGXU WELCOME DRINK GLASS 115ML 6 PC BOX 16 SET CTN",
     "price": "140",
@@ -1072,14 +976,6 @@ const PRODUCTS = [
     "department": "Glassware"
   },
   {
-    "code": "SMIC632-L2",
-    "desc": "SHINE MAX 170 ML ICE CUP 2 PCS COL BOX-36 SET CTN",
-    "price": "85",
-    "unit": "FOR 2PCS",
-    "category": "ICE CREAM BOWL SET",
-    "department": "Glassware"
-  },
-  {
     "code": "SMIC632-L2B",
     "desc": "SHINE MAX 170 ML ICE CUP 2 PCS COL BOX-36 SET CTN",
     "price": "130",
@@ -1101,14 +997,6 @@ const PRODUCTS = [
     "price": "220",
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL SET",
-    "department": "Glassware"
-  },
-  {
-    "code": "SMP011",
-    "desc": "SHINE MAX SNACK PLATE 6\"-6 PCS COL BOX 12 SET CTN",
-    "price": "210",
-    "unit": "FOR 6PCS",
-    "category": "PLATE SET",
     "department": "Glassware"
   },
   {
@@ -1376,14 +1264,6 @@ const PRODUCTS = [
     "department": "Glassware"
   },
   {
-    "code": "GC-116",
-    "desc": "GLACIRA TEA MUG 90 ML 6 PCS COL BOX 24 SET CTN",
-    "price": "110",
-    "unit": "FOR 6 PCS",
-    "category": "TEA MUG",
-    "department": "Glassware"
-  },
-  {
     "code": "SMTC220",
     "desc": "SHINE MAX SMALL TEA MUG 63 ML 6 PC COL BOX 24 SET CTN",
     "price": "110",
@@ -1424,78 +1304,6 @@ const PRODUCTS = [
     "department": "Glassware"
   },
   {
-    "code": "SMTC247-2A",
-    "desc": "SHINEMAX SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
-    "price": "120",
-    "unit": "FOR 6PCS",
-    "category": "TEA MUG",
-    "department": "Glassware"
-  },
-  {
-    "code": "SMTC247-2C",
-    "desc": "SHINEMAX SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
-    "price": "120",
-    "unit": "FOR 6PCS",
-    "category": "TEA MUG",
-    "department": "Glassware"
-  },
-  {
-    "code": "KRZB345A",
-    "desc": "KARBON SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
-    "price": "120",
-    "unit": "FOR 6PCS",
-    "category": "TEA MUG",
-    "department": "Glassware"
-  },
-  {
-    "code": "KRZB345B",
-    "desc": "KARBON SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
-    "price": "120",
-    "unit": "FOR 6PCS",
-    "category": "TEA MUG",
-    "department": "Glassware"
-  },
-  {
-    "code": "KRZB345C",
-    "desc": "KARBON SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
-    "price": "120",
-    "unit": "FOR 6PCS",
-    "category": "TEA MUG",
-    "department": "Glassware"
-  },
-  {
-    "code": "KRZB345D",
-    "desc": "KARBON SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
-    "price": "120",
-    "unit": "FOR 6PCS",
-    "category": "TEA MUG",
-    "department": "Glassware"
-  },
-  {
-    "code": "KRZB345E",
-    "desc": "KARBON SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
-    "price": "120",
-    "unit": "FOR 6PCS",
-    "category": "TEA MUG",
-    "department": "Glassware"
-  },
-  {
-    "code": "GC-114",
-    "desc": "GLACIRA STAND TEA MUG 90 ML 6 PCS COL BOX 24 SET CTN",
-    "price": "130",
-    "unit": "FOR 6 PCS",
-    "category": "TEA MUG",
-    "department": "Glassware"
-  },
-  {
-    "code": "GC-115",
-    "desc": "GLACIRA STAND TEA MUG 90 ML 6 PCS COL BOX 24 SET CTN",
-    "price": "130",
-    "unit": "FOR 6 PCS",
-    "category": "TEA MUG",
-    "department": "Glassware"
-  },
-  {
     "code": "KRZB406",
     "desc": "KARBON TEA MUG 65 ML COL BOX 24 SET CTN",
     "price": "130",
@@ -1505,14 +1313,6 @@ const PRODUCTS = [
   },
   {
     "code": "SMTC217-1",
-    "desc": "SHINE MAX SMALL TEA CUP 95 ML 6 PC COL BOX 24 SET CTN",
-    "price": "135",
-    "unit": "FOR 6PCS",
-    "category": "TEA MUG",
-    "department": "Glassware"
-  },
-  {
-    "code": "SMTC217-2",
     "desc": "SHINE MAX SMALL TEA CUP 95 ML 6 PC COL BOX 24 SET CTN",
     "price": "135",
     "unit": "FOR 6PCS",
@@ -1832,14 +1632,6 @@ const PRODUCTS = [
     "department": "Glassware"
   },
   {
-    "code": "KJG051-L7",
-    "desc": "KARBON LEMON SET 7 PCS COL BOX - 4 SET CTN",
-    "price": "450",
-    "unit": "FOR 7PCS",
-    "category": "LEMON SET",
-    "department": "Glassware"
-  },
-  {
     "code": "SMWH88-L7",
     "desc": "SHINEMAX BOROSILICATE LEMON SET 7 PCS COL BOX 6 SET CTN",
     "price": "550",
@@ -2096,22 +1888,6 @@ const PRODUCTS = [
     "department": "Glassware"
   },
   {
-    "code": "NICE BOTTLE",
-    "desc": "GLASS BOTTLE WITH COVER 380 ML COLOR BOX 80 PCS CTN",
-    "price": "30",
-    "unit": "FOR 1PCS",
-    "category": "GLASS BOTTLE",
-    "department": "Glassware"
-  },
-  {
-    "code": "HK-185",
-    "desc": "GLASS BOTTLE WITH COVER 330 ML COLOR BOX 80 PCS CTN",
-    "price": "38",
-    "unit": "FOR 1PCS",
-    "category": "GLASS BOTTLE",
-    "department": "Glassware"
-  },
-  {
     "code": "HK-170",
     "desc": "GLASS BOTTLE WITH COVER 400 ML COLOR BOX 58 PCS CTN",
     "price": "42",
@@ -2123,22 +1899,6 @@ const PRODUCTS = [
     "code": "HK-190",
     "desc": "GLASS BOTTLE WITH COVER 400 ML COLOR BOX 58 PCS CTN",
     "price": "42",
-    "unit": "FOR 1PCS",
-    "category": "GLASS BOTTLE",
-    "department": "Glassware"
-  },
-  {
-    "code": "HK-198",
-    "desc": "GLASS BOTTLE WITH COVER 450 ML COLOR BOX 80 PCS CTN",
-    "price": "43",
-    "unit": "FOR 1PCS",
-    "category": "GLASS BOTTLE",
-    "department": "Glassware"
-  },
-  {
-    "code": "HK-200",
-    "desc": "GLASS BOTTLE WITH COVER 400 ML COLOR BOX 80 PCS CTN",
-    "price": "43",
     "unit": "FOR 1PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware"
@@ -2200,25 +1960,9 @@ const PRODUCTS = [
     "department": "Glassware"
   },
   {
-    "code": "HK-155",
-    "desc": "GLASS BOTTLE WITH COVER 300 ML COLOR BOX 60 PCS CTN",
-    "price": "68",
-    "unit": "FOR 1PCS",
-    "category": "GLASS BOTTLE",
-    "department": "Glassware"
-  },
-  {
     "code": "HK-180",
     "desc": "GLASS BOTTLE WITH COVER 200 ML COLOR BOX 80 PCS CTN",
     "price": "68",
-    "unit": "FOR 1PCS",
-    "category": "GLASS BOTTLE",
-    "department": "Glassware"
-  },
-  {
-    "code": "HK-140",
-    "desc": "GLASS BOTTLE WITH COVER 450 ML COLOR BOX 58 PCS CTN",
-    "price": "78",
     "unit": "FOR 1PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware"
@@ -2643,14 +2387,6 @@ const PRODUCTS = [
     "code": "TAG-350-3",
     "desc": "STEEL CANISTER INNER GLASS 325 ML 3 PC COLOR BOX 24 SET CTN",
     "price": "210",
-    "unit": "FOR 3PCS",
-    "category": "CANISTER",
-    "department": "Glassware"
-  },
-  {
-    "code": "TAG-350-550-750-1",
-    "desc": "STEEL CANISTER INNER GLASS 325 ML+550ML+750ML 3 PCS COLOR BOX 12 SET CTN",
-    "price": "300",
     "unit": "FOR 3PCS",
     "category": "CANISTER",
     "department": "Glassware"
@@ -3112,6 +2848,142 @@ const PRODUCTS = [
     "department": "Kitchenware"
   },
   {
+    "code": "EMP-TP48-12",
+    "desc": "EMPIRE SALT/PEPPER JAR  12 PCS INNER 144 PC CTN",
+    "price": "33",
+    "unit": "FOR 1 PCS",
+    "category": "SALT PEPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "JARA 14",
+    "desc": "ANMOL JARA 14\" INCH BACK SUPPORTED JARA BULK PACK 100 PCS CTN",
+    "price": "50",
+    "unit": "FOR 1 PCS",
+    "category": "MISC",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "EMP-TP48-SET",
+    "desc": "SALT PEPPER STAND COLOR BOX PACKING 72 SET CTN",
+    "price": "112",
+    "unit": "FOR 1 SET",
+    "category": "SALT PEPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "GARLIC BLADE",
+    "desc": "GARLIC BLADE COMPATIBLE WITH ANMOL 2L CHOOPER 100 PCS CTN",
+    "price": "150",
+    "unit": "FOR 1 PCS",
+    "category": "MISC",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "BOHEMIC-2PC",
+    "desc": "BOHEMIA BOWL SET 2 PC GIFT BOX 50 SET IN CTN",
+    "price": "200",
+    "unit": "FOR 1 SET",
+    "category": "CERAMIC BOWL SET",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "CHOPPING BOARD",
+    "desc": "CHOPPING BOARD 3 SIZES BULK PACK 12 SET CTN",
+    "price": "250",
+    "unit": "FOR 1 SET",
+    "category": "MISC",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "FOOD WARMER",
+    "desc": "FOOD WARMER BOWL SET COL BOX MIX COLOR 12 SET CTN",
+    "price": "260",
+    "unit": "FOR 1 SET",
+    "category": "MISC",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "BOHEMIA-4PC",
+    "desc": "BOHEMIA 4 PCS BOWL SET GIFT BOX PACK 24 SET IN CTN",
+    "price": "325",
+    "unit": "FOR 1 SET",
+    "category": "CERAMIC BOWL SET",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "ANMOL SS KETTLE",
+    "desc": "ANMOL ELECTRIC KETTLE 1.8 LTR COL BOX 12 PCS CTN",
+    "price": "350",
+    "unit": "FOR 1 PCS",
+    "category": "ELECTRIC KETTLE",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "EMP-115",
+    "desc": "ANMOL MULTIPURPOSE STAND WITH COL BOX 36 PCS IN CTN",
+    "price": "360",
+    "unit": "FOR 1 PCS",
+    "category": "MULTIPURPOSE STAND",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "ANMOL PP CUTLERY",
+    "desc": "ANMOL PP CUTLERY COLOR BOX PACKING 4 COL MIX 12 SET CTN",
+    "price": "400",
+    "unit": "FOR 1 SET",
+    "category": "CUTLERY SET",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "METAL TRAY",
+    "desc": "ANMOL METAL TRAY 3 PCS SET COLOR BOX 20 SET IN CTN",
+    "price": "400",
+    "unit": "FOR 1 SET",
+    "category": "MISC",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "BOHEMIA-6PC",
+    "desc": "BOHEMIA 6 PCS BOWL SET GIFT BOX 20 SET IN CTN",
+    "price": "450",
+    "unit": "FOR 1 SET",
+    "category": "CERAMIC BOWL SET",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "CHOPPER 2L",
+    "desc": "ANMOL ELECTRIC CHOPPER 2L COLOR BOX MIX COLOR 20 PCS IN CTN",
+    "price": "700",
+    "unit": "FOR 1 PCS",
+    "category": "ELECTRIC CHOPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "CHOPPER 3L",
+    "desc": "ANMOL ELECTRIC CHOPPER 3L COLOR BOX MIX COLOR 16 PCS IN CTN",
+    "price": "850",
+    "unit": "FOR 1 PCS",
+    "category": "ELECTRIC CHOPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "CHOPPER 4 IN 1",
+    "desc": "ANMOL CHOPPER 4 IN 1 WITH 4 BOWL AND 2 BLADES 24 PCS IN CTN",
+    "price": "850",
+    "unit": "FOR 1 PCS",
+    "category": "ELECTRIC CHOPPER",
+    "department": "Kitchenware"
+  },
+  {
+    "code": "PNP-001",
+    "desc": "ANMOL PINEAPPLE CUTLERY SET COL BOX 8 SET CTN",
+    "price": "1200",
+    "unit": "FOR 1 SET",
+    "category": "MISC",
+    "department": "Kitchenware"
+  },
+  {
     "code": "PP-900-281",
     "desc": "PLASTIC  CHARCTER BOTTLE BULK PACKING 100 PCS CTN",
     "price": "55",
@@ -3240,6 +3112,14 @@ const PRODUCTS = [
     "department": "vaccum_bottles"
   },
   {
+    "code": "TEMP CUP",
+    "desc": "STEEL TEMPRATURE CUP 510 ML COL BOX MIX PRINT 50 PCS CTN",
+    "price": "200",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles"
+  },
+  {
     "code": "KND-1000",
     "desc": "STEEL BOTTLE  1000 ML COL BOX MIX COLOR 50 PCS CTN",
     "price": "215",
@@ -3280,6 +3160,14 @@ const PRODUCTS = [
     "department": "vaccum_bottles"
   },
   {
+    "code": "82018",
+    "desc": "STEEL BOTTLE 500 ML COL BOX MIX PRINT 50 PCS CTN",
+    "price": "240",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles"
+  },
+  {
     "code": "SD-1000",
     "desc": "STEEL BOTTLE  1000 ML COL BOX MIX COLOR 50 PCS CTN",
     "price": "245",
@@ -3292,6 +3180,14 @@ const PRODUCTS = [
     "desc": "STEEL BOTTLE 750 ML BEER SHAPE BOTTLE COL BOX MIX COLOR 50 PCS CTN",
     "price": "250",
     "unit": "FOR 1PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles"
+  },
+  {
+    "code": "8201",
+    "desc": "STEEL BOTTLE 600 ML COL BOX MIX PRINT 50 PCS CTN",
+    "price": "250",
+    "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles"
   },
@@ -3336,6 +3232,22 @@ const PRODUCTS = [
     "department": "vaccum_bottles"
   },
   {
+    "code": "8171",
+    "desc": "STEEL BOTTLE 600 ML COL BOX DOUBE SIPPER  MIX PRINT 60 PCS CTN",
+    "price": "290",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles"
+  },
+  {
+    "code": "8193",
+    "desc": "STEEL BOTTLE 600 ML COL BOX SIPPER CAP MIX PRINT 50 PCS CTN",
+    "price": "290",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles"
+  },
+  {
     "code": "SP-750",
     "desc": "STEEL COLA BOTTLE SOWA PARIS 750 ML COLOR BOX 40 PCS CTN",
     "price": "295",
@@ -3360,10 +3272,34 @@ const PRODUCTS = [
     "department": "vaccum_bottles"
   },
   {
-    "code": "HK-1210ML",
-    "desc": "STEEL BOTTLE 1200 ML WITH PUSH BUTTON COL BOX 40 PCS CTN",
-    "price": "350",
-    "unit": "FOR 1PCS",
+    "code": "8173",
+    "desc": "STEEL BOTTLE 600 ML COL BOX PUSH BUTTON MIX PRINT 50 PCS CTN",
+    "price": "310",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles"
+  },
+  {
+    "code": "K-1000",
+    "desc": "STEEL KETTLE 1000 ML COL BOX MIX PRINT 40 PCS CTN",
+    "price": "310",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles"
+  },
+  {
+    "code": "8172",
+    "desc": "STEEL BOTTLE 800 ML COL BOX MIX PRINT 50 PCS CTN",
+    "price": "320",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles"
+  },
+  {
+    "code": "8202",
+    "desc": "STEEL BOTTLE 600 ML COL BOX PUSH BUTTON MIX PRINT 50 PCS CTN",
+    "price": "320",
+    "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles"
   },
@@ -3382,232 +3318,14 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles"
+  },
+  {
+    "code": "STANLEY LOGO",
+    "desc": "STEEL STANLEY TUMBLER 1200 ML OG BOX MIX PRINT 25 PCS CTN",
+    "price": "430",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles"
   }
 ];
-const MASTER_SORT_ORDER = ["JUICE GLASS", "WHISKEY GLASS", "WATER GLASS", "BORO JUICE GLASS", "BORO WATER GLASS", "WINE GLASS", "COLORED GLASS", "SHOT GLASS", "SHOT SET", "BOWL SET", "ICE CREAM BOWL SET", "PLATE SET", "BEER MUG", "TEA MUG", "BORO TEA MUG", "LID MUG", "SAUCER", "CUP SAUCER", "KETTLE SET", "JUG", "JUG SET", "LEMON SET", "SIPPER", "GLASS BOTTLE", "GLASS FRIDGE BOTTLE", "TURTLE", "PUDDING SET", "WOODEN JAR SINGLE", "WOODEN CANDY", "WOODEN 3 PCS", "GLASS JAR", "CANISTER", "GLASS LUNCHBOX", "GLASS BAKEWARE", "DISPENSER", "FRUIT PLATE", "GLASS PLAIN BOWL", "GLASS COLORED BOWL", "BORO SERVING BOWL", "FLOWER POT", "ACRYLIC SIPPER", "TRAY", "OTHER",
- 
-  {
-    "Category": "CUTLERY SET",
-    "Image_File": "ANMOL PP CUTLERY.JPG",
-    "Product_Name": "CUTLERY SET",
-    "Price": 400.0,
-    "Price_Unit": "FOR 1 SET",
-    "Description": "ANMOL PP CUTLERY COLOR BOX PACKING 4 COL MIX 12 SET CTN",
-    "Product_Code": "ANMOL PP CUTLERY",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 12
-}
-,
-  {
-    "Category": "ELECTRIC KETTLE",
-    "Image_File": "ANMOL SS KETTLE.JPG",
-    "Product_Name": "ELECTRIC KETTLE",
-    "Price": 350.0,
-    "Price_Unit": "FOR 1 PCS",
-    "Description": "ANMOL ELECTRIC KETTLE 1.8 LTR COL BOX 12 PCS CTN",
-    "Product_Code": "ANMOL SS KETTLE",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 12
-}
-,
-  {
-    "Category": "CERAMIC BOWL SET",
-    "Image_File": "BOHEMIC-2PC.JPG",
-    "Product_Name": "CERAMIC BOWL SET",
-    "Price": 200.0,
-    "Price_Unit": "FOR 1 SET",
-    "Description": "BOHEMIA BOWL SET 2 PC GIFT BOX 50 SET IN CTN",
-    "Product_Code": "BOHEMIC-2PC",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 50
-}
-,
-  {
-    "Category": "CERAMIC BOWL SET",
-    "Image_File": "BOHEMIA-4PC.JPG",
-    "Product_Name": "CERAMIC BOWL SET",
-    "Price": 325.0,
-    "Price_Unit": "FOR 1 SET",
-    "Description": "BOHEMIA 4 PCS BOWL SET GIFT BOX PACK 24 SET IN CTN",
-    "Product_Code": "BOHEMIA-4PC",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 24
-}
-,
-  {
-    "Category": "CERAMIC BOWL SET",
-    "Image_File": "BOHEMIA-6PC.JPG",
-    "Product_Name": "CERAMIC BOWL SET",
-    "Price": 450.0,
-    "Price_Unit": "FOR 1 SET",
-    "Description": "BOHEMIA 6 PCS BOWL SET GIFT BOX 20 SET IN CTN",
-    "Product_Code": "BOHEMIA-6PC",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 20
-}
-,
-  {
-    "Category": "ELECTRIC CHOPPER",
-    "Image_File": "CHOPPER 2L.JPG",
-    "Product_Name": "ELECTRIC CHOPPER",
-    "Price": 700.0,
-    "Price_Unit": "FOR 1 PCS",
-    "Description": "ANMOL ELECTRIC CHOPPER 2L COLOR BOX MIX COLOR 20 PCS IN CTN",
-    "Product_Code": "CHOPPER 2L",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 20
-}
-,
-  {
-    "Category": "ELECTRIC CHOPPER",
-    "Image_File": "CHOPPER 3L.JPG",
-    "Product_Name": "ELECTRIC CHOPPER",
-    "Price": 850.0,
-    "Price_Unit": "FOR 1 PCS",
-    "Description": "ANMOL ELECTRIC CHOPPER 3L COLOR BOX MIX COLOR 16 PCS IN CTN",
-    "Product_Code": "CHOPPER 3L",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 16
-}
-,
-  {
-    "Category": "ELECTRIC CHOPPER",
-    "Image_File": "CHOPPER 4 IN 1.JPG",
-    "Product_Name": "ELECTRIC CHOPPER",
-    "Price": 850.0,
-    "Price_Unit": "FOR 1 PCS",
-    "Description": "ANMOL CHOPPER 4 IN 1 WITH 4 BOWL AND 2 BLADES 24 PCS IN CTN",
-    "Product_Code": "CHOPPER 4 IN 1",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 24
-}
-,
-  {
-    "Category": "MULTIPURPOSE STAND",
-    "Image_File": "EMP-115.JPG",
-    "Product_Name": "MULTIPURPOSE STAND",
-    "Price": 360.0,
-    "Price_Unit": "FOR 1 PCS",
-    "Description": "ANMOL MULTIPURPOSE STAND WITH COL BOX 36 PCS IN CTN",
-    "Product_Code": "EMP-115",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 36
-}
-,
-  {
-    "Category": "SALT PEPPER",
-    "Image_File": "EMP-TP48-12.JPG",
-    "Product_Name": "SALT PEPPER",
-    "Price": 33.0,
-    "Price_Unit": "FOR 1 PCS",
-    "Description": "EMPIRE SALT/PEPPER JAR  12 PCS INNER 144 PC CTN",
-    "Product_Code": "EMP-TP48-12",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 144
-}
-,
-  {
-    "Category": "MISC",
-    "Image_File": "FOOD WARMER.JPG",
-    "Product_Name": "MISC",
-    "Price": 260.0,
-    "Price_Unit": "FOR 1 SET",
-    "Description": "FOOD WARMER BOWL SET COL BOX MIX COLOR 12 SET CTN",
-    "Product_Code": "FOOD WARMER",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 12
-}
-,
-  {
-    "Category": "MISC",
-    "Image_File": "GARLIC BLADE.JPG",
-    "Product_Name": "MISC",
-    "Price": 150.0,
-    "Price_Unit": "FOR 1 PCS",
-    "Description": "GARLIC BLADE COMPATIBLE WITH ANMOL 2L CHOOPER 100 PCS CTN",
-    "Product_Code": "GARLIC BLADE",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 100
-}
-,
-  {
-    "Category": "MISC",
-    "Image_File": "JARA 14.JPG",
-    "Product_Name": "MISC",
-    "Price": 50.0,
-    "Price_Unit": "FOR 1 PCS",
-    "Description": "ANMOL JARA 14\" INCH BACK SUPPORTED JARA BULK PACK 100 PCS CTN",
-    "Product_Code": "JARA 14",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 100
-}
-,
-  {
-    "Category": "MISC",
-    "Image_File": "METAL TRAY.JPG",
-    "Product_Name": "MISC",
-    "Price": 400.0,
-    "Price_Unit": "FOR 1 SET",
-    "Description": "ANMOL METAL TRAY 3 PCS SET COLOR BOX 20 SET IN CTN",
-    "Product_Code": "METAL TRAY",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 20
-}
-,
-  {
-    "Category": "MISC",
-    "Image_File": "PNP-001.JPG",
-    "Product_Name": "MISC",
-    "Price": 1200.0,
-    "Price_Unit": "FOR 1 SET",
-    "Description": "ANMOL PINEAPPLE CUTLERY SET COL BOX 8 SET CTN",
-    "Product_Code": "PNP-001",
-    "Status": "In Stock",
-    "New_Arrival": "YES",
-    "Exclude": "",
-    "Department": "Kitchenware",
-    "Carton_Spec": 8
-}
-];
+const MASTER_SORT_ORDER = ["JUICE GLASS", "WHISKEY GLASS", "WATER GLASS", "BORO JUICE GLASS", "BORO WATER GLASS", "WINE GLASS", "COLORED GLASS", "SHOT GLASS", "SHOT SET", "BOWL SET", "ICE CREAM BOWL SET", "PLATE SET", "BEER MUG", "TEA MUG", "BORO TEA MUG", "LID MUG", "SAUCER", "CUP SAUCER", "KETTLE SET", "JUG", "JUG SET", "LEMON SET", "SIPPER", "GLASS BOTTLE", "GLASS FRIDGE BOTTLE", "TURTLE", "PUDDING SET", "WOODEN JAR SINGLE", "WOODEN CANDY", "WOODEN 3 PCS", "GLASS JAR", "CANISTER", "GLASS LUNCHBOX", "GLASS BAKEWARE", "DISPENSER", "FRUIT PLATE", "GLASS PLAIN BOWL", "GLASS COLORED BOWL", "BORO SERVING BOWL", "FLOWER POT", "ACRYLIC SIPPER", "TRAY", "OTHER"];
