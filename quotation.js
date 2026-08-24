@@ -124,9 +124,8 @@ function addFromMasterDirect(p) {
     const spec = getProductSpec(p);
     const defaultPrice = parseFloat(String(getProductField(p, ['price', 'Price', 'rate', 'Rate'])).replace(/,/g, '')) || 0;
 
-    // Prompt for CTN and Price (Just like Offline Desktop Dialog)
     const ctnsInput = prompt(`Item: ${code}\nEnter No. of Cartons (CTN):`, "1");
-    if (ctnsInput === null) return; // Cancelled
+    if (ctnsInput === null) return;
 
     const ctnVal = parseInt(ctnsInput, 10) || 0;
     let looseVal = 0;
@@ -301,7 +300,6 @@ function renderLedger() {
     if (mCount) mCount.innerText = ledgerItems.length;
 
     ledgerItems.forEach((item, idx) => {
-        // Desktop Row
         if (desktopTbody) {
             const tr = document.createElement("tr");
             tr.innerHTML = `
@@ -316,7 +314,6 @@ function renderLedger() {
             desktopTbody.appendChild(tr);
         }
 
-        // Mobile Card
         if (mobileCards) {
             const card = document.createElement("div");
             card.className = "m-ledger-card";
@@ -442,6 +439,11 @@ function printDocument(mode = "QUOTE") {
     const disc = parseFloat(document.getElementById("discountPercent").value) || 0;
     const da = (sub * disc) / 100;
     const gt = Math.round(sub - da);
+
+    // --- FIREBASE CLOUD SYNC TRIGGER ---
+    if (typeof window.logQuotationToCloud === "function" && mode === "QUOTE") {
+        window.logQuotationToCloud(client, gt, ledgerItems);
+    }
 
     let html = `
         <div class="print-doc-header">
