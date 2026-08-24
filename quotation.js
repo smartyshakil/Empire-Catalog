@@ -3,6 +3,7 @@
 // ==========================================================
 
 let ledgerItems = [];
+let currentArchiveType = "QUOTE"; // Active tab in Cloud Archives
 
 document.addEventListener("DOMContentLoaded", () => {
     initClientAutocomplete();
@@ -508,11 +509,29 @@ function resumeDraft(key) {
     }
 }
 
-// --- 8. CLOUD ARCHIVES & HISTORY VIEWER ---
+// --- 8. CLOUD ARCHIVES & HISTORY VIEWER WITH TABS & CLIENT SEARCH ---
+function switchArchiveTab(type) {
+    currentArchiveType = type;
+    document.getElementById("archTabQuote").classList.remove("active");
+    document.getElementById("archTabDispatch").classList.remove("active");
+
+    if (type === "QUOTE") {
+        document.getElementById("archTabQuote").classList.add("active");
+    } else {
+        document.getElementById("archTabDispatch").classList.add("active");
+    }
+    fetchCloudHistory();
+}
+
 async function openHistoryModal() {
     const today = new Date().toISOString().split('T')[0];
-    document.getElementById("historyStartDate").value = today;
-    document.getElementById("historyEndDate").value = today;
+    document.getElementById("historyStartDate").value = "";
+    document.getElementById("historyEndDate").value = "";
+    document.getElementById("historyClientSearch").value = "";
+    currentArchiveType = "QUOTE";
+    document.getElementById("archTabQuote").classList.add("active");
+    document.getElementById("archTabDispatch").classList.remove("active");
+
     openModal("historyModal");
     await fetchCloudHistory();
 }
@@ -525,20 +544,41 @@ async function fetchCloudHistory() {
         const records = await window.fetchQuotationsFromCloud();
         const start = document.getElementById("historyStartDate").value;
         const end = document.getElementById("historyEndDate").value;
+        const clientSearch = (document.getElementById("historyClientSearch").value || "").trim().toUpperCase();
 
         tbody.innerHTML = "";
         let grandTotal = 0;
         let count = 0;
 
         records.forEach(rec => {
+            const recType = (rec.docType || "QUOTE").toUpperCase();
+            if (recType !== currentArchiveType) return;
+
             const recDate = rec.timestamp ? rec.timestamp.split('T')[0] : "";
-            if (recDate >= start && recDate <= end) {
+            const recClient = (rec.clientName || "").toUpperCase();
+
+            // Date filtering (if set) and Client Name filtering (if set)
+            let dateMatch = true;
+            if (start && end) {
+                dateMatch = (recDate >= start && recDate <= end);
+            } else if (start) {
+                dateMatch = (recDate >= start);
+            } else if (end) {
+                dateMatch = (recDate <= end);
+            }
+
+            let clientMatch = true;
+            if (clientSearch) {
+                clientMatch = recClient.includes(clientSearch);
+            }
+
+            if (dateMatch && clientMatch) {
                 count++;
                 grandTotal += (rec.finalAmount || 0);
 
                 const tr = document.createElement("tr");
                 tr.innerHTML = `
-                    <td style="font-family:monospace; font-size:11px; color:#2980b9;"><b>${rec.docName || 'QUOTE'}</b></td>
+                    <td style="font-family:monospace; font-size:11px; color:#2980b9;"><b>${rec.docName || 'DOC'}</b></td>
                     <td>${rec.timestamp ? rec.timestamp.replace('T', ' ').substring(0, 19) : ''}</td>
                     <td><b>${rec.clientName}</b></td>
                     <td style="text-align:right; font-weight:bold; color:var(--success);">₹${(rec.finalAmount || 0).toLocaleString('en-IN')}.00</td>
@@ -549,7 +589,7 @@ async function fetchCloudHistory() {
         });
 
         if (count === 0) {
-            tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; padding:15px; color:#7f8c8d;">No archives found for this date range.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; padding:15px; color:#7f8c8d;">No archives found matching your filters.</td></tr>`;
         }
 
         document.getElementById("historyCountLbl").innerText = `Total Records: ${count}`;

@@ -104,9 +104,14 @@
     .bottom-actions { margin-top: 10px; display: flex; gap: 8px; justify-content: flex-end; }
 
     .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; z-index: 1000; }
-    .modal-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; border-radius: 8px; width: 92%; max-width: 550px; padding: 14px; z-index: 1001; display: none; color: #2c3e50; max-height: 85vh; overflow-y: auto; }
+    .modal-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; border-radius: 8px; width: 92%; max-width: 650px; padding: 14px; z-index: 1001; display: none; color: #2c3e50; max-height: 85vh; overflow-y: auto; }
     .modal-header { font-size: 13px; font-weight: bold; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
     .modal-actions { margin-top: 10px; display: flex; justify-content: flex-end; gap: 6px; }
+
+    /* Archive Tabs */
+    .archive-tabs { display: flex; gap: 6px; margin-bottom: 10px; border-bottom: 2px solid #ecf0f1; padding-bottom: 6px; }
+    .arch-tab-btn { padding: 6px 14px; border: 1px solid #bdc3c7; background: #f8f9fa; font-size: 11px; font-weight: bold; border-radius: 4px; color: #555; cursor: pointer; }
+    .arch-tab-btn.active { background: var(--bg-dark); color: #fff; border-color: var(--bg-dark); }
 
     /* MOBILE APP VIEW (< 768px) */
     @media (max-width: 768px) {
@@ -311,20 +316,30 @@
       </div>
     </div>
 
-    <!-- Cloud Archives & History Modal -->
+    <!-- Cloud Archives & History Modal with Tabs & Client Search -->
     <div class="modal-backdrop" id="historyModalBackdrop" onclick="closeModal('historyModal')"></div>
-    <div class="modal-box" id="historyModal" style="max-width: 780px;">
+    <div class="modal-box" id="historyModal" style="max-width: 800px;">
       <div class="modal-header">
         <span>📊 Cloud Archives & Quotation History</span>
         <button class="t-btn" style="background:#7f8c8d; padding:2px 6px;" onclick="closeModal('historyModal')">✕</button>
       </div>
-      <div style="display: flex; gap: 6px; margin-bottom: 10px; align-items: center; flex-wrap: wrap;">
-        <input type="date" id="historyStartDate" class="form-control" style="width: 140px;">
-        <span>to</span>
-        <input type="date" id="historyEndDate" class="form-control" style="width: 140px;">
-        <button class="t-btn btn-history" onclick="fetchCloudHistory()">Search</button>
+
+      <!-- Quotation vs Dispatch Tabs -->
+      <div class="archive-tabs">
+        <button class="arch-tab-btn active" id="archTabQuote" onclick="switchArchiveTab('QUOTE')">📄 Quotations</button>
+        <button class="arch-tab-btn" id="archTabDispatch" onclick="switchArchiveTab('DISPATCH')">🚚 Dispatches</button>
       </div>
-      <div style="max-height: 320px; overflow-y: auto; border: 1px solid #ddd; border-radius: 4px;">
+
+      <!-- Search & Filters -->
+      <div style="display: flex; gap: 6px; margin-bottom: 10px; align-items: center; flex-wrap: wrap;">
+        <input type="text" id="historyClientSearch" class="form-control" style="width: 180px;" placeholder="🔍 Search Client Name..." oninput="fetchCloudHistory()">
+        <input type="date" id="historyStartDate" class="form-control" style="width: 130px;" onchange="fetchCloudHistory()">
+        <span>to</span>
+        <input type="date" id="historyEndDate" class="form-control" style="width: 130px;" onchange="fetchCloudHistory()">
+        <button class="t-btn btn-history" onclick="fetchCloudHistory()">Filter</button>
+      </div>
+
+      <div style="max-height: 280px; overflow-y: auto; border: 1px solid #ddd; border-radius: 4px;">
         <table class="ledger-table">
           <thead>
             <tr>
