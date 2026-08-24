@@ -422,7 +422,11 @@ function deleteItem(idx) {
 function resetDesk() {
     if (confirm("Reset current quotation workspace?")) {
         ledgerItems = [];
+        document.getElementById("clientName").value = "CASH / COUNTER";
+        document.getElementById("clientCity").value = "";
+        document.getElementById("clientMobile").value = "";
         document.getElementById("discountPercent").value = "0";
+        document.getElementById("btnUpdateMob").style.display = "none";
         renderLedger();
     }
 }
@@ -557,7 +561,6 @@ async function fetchCloudHistory() {
             const recDate = rec.timestamp ? rec.timestamp.split('T')[0] : "";
             const recClient = (rec.clientName || "").toUpperCase();
 
-            // Date filtering (if set) and Client Name filtering (if set)
             let dateMatch = true;
             if (start && end) {
                 dateMatch = (recDate >= start && recDate <= end);
@@ -582,7 +585,7 @@ async function fetchCloudHistory() {
                     <td>${rec.timestamp ? rec.timestamp.replace('T', ' ').substring(0, 19) : ''}</td>
                     <td><b>${rec.clientName}</b></td>
                     <td style="text-align:right; font-weight:bold; color:var(--success);">₹${(rec.finalAmount || 0).toLocaleString('en-IN')}.00</td>
-                    <td style="text-align:center;"><button class="t-btn" style="background:var(--primary); padding:3px 6px; font-size:10px;" onclick='previewCloudOrder(${JSON.stringify(rec.items)})'>Load</button></td>
+                    <td style="text-align:center;"><button class="t-btn" style="background:var(--primary); padding:3px 6px; font-size:10px;" onclick='previewCloudOrder(${JSON.stringify(rec.items)}, ${JSON.stringify(rec.clientName)})'>Load</button></td>
                 `;
                 tbody.appendChild(tr);
             }
@@ -597,32 +600,68 @@ async function fetchCloudHistory() {
     }
 }
 
-function previewCloudOrder(items) {
+function previewCloudOrder(items, clientName = "") {
     if (!items || items.length === 0) return;
     ledgerItems = items;
+    if (clientName) {
+        document.getElementById("clientName").value = clientName;
+        onClientNameSelect(clientName);
+    }
     renderLedger();
     closeModal("historyModal");
     alert("🟢 Historical document loaded into workspace!");
 }
 
-// --- 9. PRINT & PDF GENERATION WITH AUTOMATIC NAMING ---
-function printDocument(mode = "QUOTE") {
+// --- 9. PRINT & PDF GENERATION WITH AUTOMATIC NAMING & OPTION B ---
+async function printDocument(mode = "QUOTE") {
     if (ledgerItems.length === 0) {
         alert("Pehle ledger me items add karein!");
         return;
     }
 
-    const client = document.getElementById("clientName").value.trim().replace(/[\/\\]/g, "_") || "CASH_COUNTER";
+    const clientRaw = document.getElementById("clientName").value.trim() || "CASH_COUNTER";
+    const clientClean = clientRaw.replace(/[\/\\]/g, "_").toUpperCase();
     const city = document.getElementById("clientCity").value.trim();
     const mob = document.getElementById("clientMobile").value.trim();
     
     const now = new Date();
-    const dateStr = `${String(now.getDate()).padStart(2, '0')}-${String(now.getMonth() + 1).padStart(2, '0')}-${now.getFullYear()}`;
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const dateKey = `${year}${month}${day}`;
+    
+    const dateStr = `${day}-${month}-${year}`;
     const timeStr = `${String(now.getHours()).padStart(2, '0')}-${String(now.getMinutes()).padStart(2, '0')}-${String(now.getSeconds()).padStart(2, '0')}`;
     
-    // Automatic Naming Generation (Without Prompt)
     const docPrefix = mode === "QUOTE" ? "QUOTE" : "DISPATCH";
-    const uniqueDocName = `${docPrefix}_${client}_${dateStr}_${timeStr}`;
+    let uniqueDocName = `${dateKey}_${clientClean}`;
+
+    let existingDocId = null;
+    if (typeof window.fetchQuotationsFromCloud === "function") {
+        const records = await window.fetchQuotationsFromCloud();
+        const found = records.find(r => {
+            const rType = (r.docType || "QUOTE").toUpperCase();
+            const rDate = r.timestamp ? r.timestamp.split('T')[0].replace(/-/g, '') : "";
+            const rClient = (r.clientName || "").toUpperCase();
+            return rType === docPrefix && rDate === dateKey && rClient === clientClean;
+        });
+        if (found) {
+            existingDocId = found.id;
+        }
+    }
+
+    if (existingDocId) {
+        const choice = prompt(`"${clientRaw}" ka aaj ka quotation pehle se maujood hai.\nType 'Y' to Update/Overwrite, or type 'N' for New Order (_v2 suffix).`, "Y");
+        if (choice && choice.toUpperCase() === "Y") {
+            // Overwrite same ID
+        } else {
+            uniqueDocName = `${dateKey}_${clientClean}_v2_${timeStr}`;
+            existingDocId = null; // Create new document instead of overwriting
+        }
+    } else {
+        uniqueDocName = `${dateKey}_${clientClean}`;
+    }
+
     const docTitle = mode === "QUOTE" ? "QUOTATION" : "DISPATCH NOTE";
 
     let t_ctn = 0, t_loose = 0, sub = 0;
@@ -636,16 +675,15 @@ function printDocument(mode = "QUOTE") {
     const da = (sub * disc) / 100;
     const gt = Math.round(sub - da);
 
-    // --- FIREBASE CLOUD SYNC & ARCHIVE TRIGGER ---
     if (typeof window.logQuotationToCloud === "function") {
-        window.logQuotationToCloud(uniqueDocName, client, gt, ledgerItems, docPrefix);
+        window.logQuotationToCloud(uniqueDocName, clientRaw, gt, ledgerItems, docPrefix, existingDocId);
     }
 
     let html = `
         <div class="print-doc-header">
             <h2>E.G</h2>
             <h3>${docTitle}</h3>
-            <p><b>Doc ID:</b> ${uniqueDocName} | <b>Account:</b> ${client} ${city ? '(' + city + ')' : ''} ${mob ? '| Mob: ' + mob : ''} | <b>Date:</b> ${dateStr}</p>
+            <p><b>Doc ID:</b> ${uniqueDocName} | <b>Account:</b> ${clientRaw} ${city ? '(' + city + ')' : ''} ${mob ? '| Mob: ' + mob : ''} | <b>Date:</b> ${dateStr}</p>
         </div>
     `;
 

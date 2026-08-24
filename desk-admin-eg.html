@@ -379,7 +379,7 @@
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-analytics.js";
-    import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+    import { getFirestore, collection, addDoc, doc, setDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
 
     const firebaseConfig = {
       apiKey: "AIzaSyC5X4TMCds_atY_wi67b24D6pCT9pq83Z8",
@@ -395,24 +395,31 @@
     const analytics = getAnalytics(app);
     const db = getFirestore(app);
 
-    // Global Cloud Log Function with Automatic Naming
-    window.logQuotationToCloud = async function(docName, clientName, finalAmount, itemsArray, docType = "QUOTE") {
+    // Global Cloud Log Function with Overwrite support
+    window.logQuotationToCloud = async function(docName, clientName, finalAmount, itemsArray, docType = "QUOTE", existingId = null) {
       try {
-        await addDoc(collection(db, "quotations"), {
+        const payload = {
           docName: docName,
           docType: docType,
           timestamp: new Date().toISOString(),
           clientName: clientName,
           finalAmount: finalAmount,
           items: itemsArray
-        });
-        console.log("Document successfully synced to cloud archive!");
+        };
+
+        if (existingId) {
+          await setDoc(doc(db, "quotations", existingId), payload);
+          console.log("Existing document successfully updated/overwritten in cloud!");
+        } else {
+          await addDoc(collection(db, "quotations"), payload);
+          console.log("New document successfully synced to cloud archive!");
+        }
       } catch (e) {
         console.error("Error adding document to cloud: ", e);
       }
     };
 
-    // Global Cloud History Fetcher (Shared across all devices / colleagues)
+    // Global Cloud History Fetcher
     window.fetchQuotationsFromCloud = async function() {
       try {
         const q = query(collection(db, "quotations"), orderBy("timestamp", "desc"));
