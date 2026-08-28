@@ -40,6 +40,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
+    <!-- jsPDF Library for Client-Side PDF Generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VSXTN9XXZ"></script>
     <script>
@@ -980,6 +983,10 @@
             <p>Digital Order Catalog</p>
         </div>
         <div class="header-right-actions">
+            <!-- Download PDF Catalog Button Added -->
+            <button class="access-badge" onclick="openCatalogModal()" style="background: #2563eb; color: #fff; border-color: #2563eb;">
+                📥 Download Catalog
+            </button>
             <a href="sneak-peek.html" class="sneak-peek-header-btn">🔥 Sneak Peek</a>
             <button id="accessBadge" class="access-badge" onclick="promptAccessCode()">
                 🔑 Wholesale Access
@@ -1200,6 +1207,37 @@
             <span>💬 Request Code via WhatsApp</span>
         </a>
     </div>
+
+    <!-- Download Catalog Modal Added -->
+    <div id="catalogModalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.7); backdrop-filter:blur(3px); z-index:600;" onclick="closeCatalogModal()"></div>
+    <div id="catalogModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:90%; max-width:400px; background:#ffffff; border-radius:16px; padding:22px 18px; box-shadow:0 20px 40px rgba(0,0,0,0.25); z-index:601; text-align:center;">
+        <button onclick="closeCatalogModal()" style="position:absolute; right:12px; top:12px; width:28px; height:28px; border-radius:50%; border:none; background:#f1f5f9; color:#64748b; font-size:18px; font-weight:700; cursor:pointer;">&times;</button>
+        <h3 style="font-size:16px; font-weight:800; color:#0f172a; margin-bottom:6px;">📥 Download PDF Catalog</h3>
+        <p style="font-size:11.5px; color:#64748b; margin-bottom:16px;">Select a department to download the respective wholesale catalog:</p>
+        
+        <div style="display:flex; flex-direction:column; gap:10px;">
+            <button onclick="triggerCatalogDownload('Glassware')" style="padding:12px; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; font-size:13px; font-weight:700; color:#0f172a; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center;">
+                <span>🍷 Glassware Catalog</span><span>📥 PDF</span>
+            </button>
+            <button onclick="triggerCatalogDownload('vaccum_bottles')" style="padding:12px; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; font-size:13px; font-weight:700; color:#0f172a; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center;">
+                <span>🍶 Vacuum Bottles Catalog</span><span>📥 PDF</span>
+            </button>
+            <button onclick="triggerCatalogDownload('Kitchenware')" style="padding:12px; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; font-size:13px; font-weight:700; color:#0f172a; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center;">
+                <span>🍳 Kitchenware Catalog</span><span>📥 PDF</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+    function openCatalogModal() {
+        document.getElementById('catalogModalBackdrop').style.display = 'block';
+        document.getElementById('catalogModal').style.display = 'block';
+    }
+    function closeCatalogModal() {
+        document.getElementById('catalogModalBackdrop').style.display = 'none';
+        document.getElementById('catalogModal').style.display = 'none';
+    }
+    </script>
 
     <script src="products_data.js"></script>
     <script src="script.js"></script>

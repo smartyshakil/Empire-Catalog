@@ -21,7 +21,6 @@ let currentSelectedCategory = "ALL";
 // ==========================================
 // 1. TIERED ACCESS CODE SYSTEM (Secure Instant Obfuscation)
 // ==========================================
-// Obfuscated Security Keys (Protected from plain text search in DevTools)
 const _K_MASTER = [69, 77, 80, 73, 82, 69, 50, 48, 50, 54].map(c => String.fromCharCode(c)).join(''); // EMPIRE2026
 const _K_TIER45 = [69, 77, 80, 73, 82, 69, 52, 53].map(c => String.fromCharCode(c)).join('');         // EMPIRE45
 const _K_TIER40 = [69, 77, 80, 73, 82, 69, 52, 48].map(c => String.fromCharCode(c)).join('');         // EMPIRE40
@@ -88,10 +87,10 @@ function applyAccessCodeFromModal() {
 
 function getAccessMultiplier() {
     const tier = localStorage.getItem("empire_access_tier");
-    if (tier === "50") return 1;       // Flat 50% Less = Base Master Price (1x)
-    if (tier === "45") return 1.1;     // 45% Less on 2x Retail = 1.1x Base Price
-    if (tier === "40") return 1.2;     // 40% Less on 2x Retail = 1.2x Base Price
-    return 2;                          // Standard Retail Mode = 2x Base Price
+    if (tier === "50") return 1;        // Flat 50% Less = Base Master Price (1x)
+    if (tier === "45") return 1.1;       // 45% Less on 2x Retail = 1.1x Base Price
+    if (tier === "40") return 1.2;       // 40% Less on 2x Retail = 1.2x Base Price
+    return 2;                            // Standard Retail Mode = 2x Base Price
 }
 
 function getTierLabel() {
@@ -121,13 +120,11 @@ function updateAccessHeader() {
 function getMinSetLimit(price, department = 'glassware') {
     const dept = (department || '').toLowerCase();
 
-    // Vacuum Bottles MOQ Rule
     if (dept === 'vaccum_bottles' || dept === 'vaccum bottles' || dept === 'bottles') {
         if (price < 100) return 100;
         return 12;
     }
 
-    // Glassware & Other Items Default MOQ Rule
     if (price < 150) return 12;
     if (price <= 399) return 4;
     return 2;
@@ -250,7 +247,6 @@ function selectCategory(cat, element) {
     
     filterProducts();
 
-    // Smooth scroll back to top of main catalog grid
     const mainContent = document.querySelector(".main-catalog-content");
     if (mainContent) {
         const topPos = mainContent.getBoundingClientRect().top + window.pageYOffset - 110;
@@ -392,7 +388,7 @@ function renderProducts(items) {
 }
 
 // ==========================================
-// 5. PRODUCT DETAIL MODAL LOGIC & SIMILAR ITEMS
+// 5. PRODUCT DETAIL MODAL & FLYER LOGIC
 // ==========================================
 let currentViewingProduct = null;
 
@@ -510,9 +506,6 @@ function closeProductDetail() {
     document.body.style.overflow = "auto";
 }
 
-// ==========================================
-// 5.1 CUSTOM FLYER GENERATOR (TIER-BASED PRICE GUARDRAIL)
-// ==========================================
 function openFlyerModal() {
     if (!currentViewingProduct) return;
 
@@ -522,7 +515,6 @@ function openFlyerModal() {
     const moqInput = document.getElementById("flyerCustomMoq");
     const firmInput = document.getElementById("flyerCustomFirm");
 
-    // Dealer ka apna active purchase price (based on their entered code/tier)
     const multiplier = getAccessMultiplier();
     const dealerPurchasePrice = Math.round(Number(currentViewingProduct.price) * multiplier);
     const packing = getDisplayPacking(currentViewingProduct);
@@ -578,23 +570,19 @@ function generateFlyerCanvas(callback) {
     const canvas = document.getElementById("flyerCanvas");
     const ctx = canvas.getContext("2d");
 
-    // Standard High-Res Card Dimensions
     canvas.width = 800;
     canvas.height = 1000;
 
-    // Background Gradient
     const bgGrad = ctx.createLinearGradient(0, 0, 0, 1000);
     bgGrad.addColorStop(0, "#f8fafc");
     bgGrad.addColorStop(1, "#edf2f7");
     ctx.fillStyle = bgGrad;
     ctx.fillRect(0, 0, 800, 1000);
 
-    // Outer Decorative Border
     ctx.strokeStyle = "#cbd5e1";
     ctx.lineWidth = 10;
     ctx.strokeRect(20, 20, 760, 960);
 
-    // Header Tag
     ctx.fillStyle = "#0f172a";
     ctx.fillRect(40, 40, 720, 70);
     ctx.fillStyle = "#ffffff";
@@ -602,20 +590,17 @@ function generateFlyerCanvas(callback) {
     ctx.textAlign = "center";
     ctx.fillText(customFirm || "PREMIUM CROCKERY & GLASSWARE", 400, 85);
 
-    // Product Image Render
     const imgElem = new Image();
     imgElem.crossOrigin = "anonymous";
     imgElem.src = getInitialImagePath(currentViewingProduct);
 
     imgElem.onload = () => {
-        // Image Container Box
         ctx.fillStyle = "#ffffff";
         ctx.fillRect(60, 140, 680, 500);
         ctx.strokeStyle = "#e2e8f0";
         ctx.lineWidth = 2;
         ctx.strokeRect(60, 140, 680, 500);
 
-        // Aspect fit image
         const maxW = 640, maxH = 460;
         let w = imgElem.width, h = imgElem.height;
         const ratio = Math.min(maxW / w, maxH / h);
@@ -625,7 +610,6 @@ function generateFlyerCanvas(callback) {
 
         ctx.drawImage(imgElem, nx, ny, nw, nh);
 
-        // Item Code & Name
         ctx.fillStyle = "#0369a1";
         ctx.font = "bold 32px sans-serif";
         ctx.textAlign = "center";
@@ -635,19 +619,16 @@ function generateFlyerCanvas(callback) {
         ctx.font = "600 20px sans-serif";
         ctx.fillText(currentViewingProduct.desc || "", 400, 725);
 
-        // Price Box
         ctx.fillStyle = "#b91c1c";
         ctx.font = "800 46px sans-serif";
         ctx.fillText(`Offer Rate: ₹${customPrice}/-`, 400, 795);
 
-        // MOQ & Specifications Box
         ctx.fillStyle = "#0f172a";
         ctx.fillRect(100, 830, 600, 55);
         ctx.fillStyle = "#fbbf24";
         ctx.font = "bold 22px sans-serif";
         ctx.fillText(`📦 ${customMoq}`, 400, 865);
 
-        // Footer Guarantee Badge
         ctx.fillStyle = "#64748b";
         ctx.font = "600 16px sans-serif";
         ctx.fillText("✨ Breakage-Free Carton Packing • Fast Dispatch Guaranteed ✨", 400, 935);
@@ -917,7 +898,7 @@ function filterProducts() {
 }
 
 // ==========================================
-// 8. WHATSAPP SENDER (100% Quotation Safe Format)
+// 8. WHATSAPP SENDER
 // ==========================================
 function sendWhatsAppOrder() {
     const keys = Object.keys(cart);
@@ -957,7 +938,6 @@ function sendWhatsAppOrder() {
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
 
-    // Auto-clear cart and storage after dispatch
     cart = {};
     localStorage.removeItem("empire_user_cart");
     document.querySelectorAll(".qty-val").forEach(el => el.innerText = "0");
@@ -1008,7 +988,7 @@ window.addEventListener("popstate", (e) => {
 });
 
 // ==========================================
-// 10. DEEP-LINKING (Direct URL Navigation Handler)
+// 10. DEEP-LINKING
 // ==========================================
 function checkUrlDepartment() {
     const hash = window.location.hash.toLowerCase().replace('#', '').trim();
@@ -1028,7 +1008,6 @@ function checkUrlDepartment() {
         switchDepartment('ALL');
     }
 
-    // Direct Product Pop-up Deep-Link Handler
     if (itemParam && typeof PRODUCTS !== 'undefined') {
         const targetCode = itemParam.trim().toUpperCase();
         const found = PRODUCTS.find(p => (p.code || '').trim().toUpperCase() === targetCode);
@@ -1041,7 +1020,174 @@ function checkUrlDepartment() {
 }
 
 // ==========================================
-// INIT ON LOAD, KEYBOARD & TOUCH SWIPE CLOSE
+// 11. CLIENT-SIDE PDF CATALOG DOWNLOAD (MULTI-EXTENSION FALLBACK)
+// ==========================================
+async function triggerCatalogDownload(dept) {
+    closeCatalogModal();
+    
+    if (typeof window.jspdf === 'undefined') {
+        alert("PDF library loading, please try again in a moment.");
+        return;
+    }
+
+    if (typeof PRODUCTS === 'undefined') {
+        alert("Products data not found!");
+        return;
+    }
+    
+    let targetProducts = PRODUCTS;
+    
+    let filtered = targetProducts.filter(item => {
+        let itemDept = String(item.department || item.Department || '').trim().toLowerCase();
+        let targetDept = dept.trim().toLowerCase();
+        
+        let deptMatch = (targetDept === 'all' || itemDept === targetDept || (targetDept === 'vaccum_bottles' && (itemDept.includes('vaccum') || itemDept.includes('bottle'))));
+        return deptMatch;
+    });
+
+    if (filtered.length === 0) {
+        alert("No items found for department: " + dept);
+        return;
+    }
+
+    showToast("Resolving paths & generating PDF with images...");
+
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+    
+    let mX = 10, mY = 20;
+    let cW = 63, cH = 64; 
+    let cols = 3, rows = 4;
+    let itemsPerPage = cols * rows; 
+
+    // Multi-Extension Image Loader Helper
+   async function loadImageWithAllExtensions(item) {
+        const code = item.code || item.Product_Code || '';
+        let deptFolder = "glassware";
+        const dept = (item.department || '').toLowerCase();
+        if (dept.includes('kitchen')) {
+            deptFolder = "kitchenware";
+        } else if (dept.includes('vaccum') || dept.includes('bottle')) {
+            deptFolder = "vaccum_bottles";
+        }
+
+        let basePath = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
+        
+        // Sabhi variations ki priority list (pehli priority website par chal rahe standard paths ko di gayi hai)
+        const extensions = ['.jpg', '.JPG', '.jpeg', '.JPEG', '.png', '.PNG'];
+
+        for (let ext of extensions) {
+            let url = `${basePath}images/${deptFolder}/${code}${ext}`;
+            let dataUri = await tryFetchImage(url);
+            if (dataUri) return dataUri;
+        }
+        return null;
+    }
+
+    function tryFetchImage(url) {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.onload = function() {
+                try {
+                    const canvas = document.createElement("canvas");
+                    canvas.width = img.naturalWidth || 150;
+                    canvas.height = img.naturalHeight || 120;
+                    const ctx = canvas.getContext("2d");
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    const dataUri = canvas.toDataURL("image/jpeg", 0.90);
+                    resolve(dataUri);
+                } catch (e) {
+                    resolve(null);
+                }
+            };
+            img.onerror = function() {
+                resolve(null);
+            };
+            // Cache buster add karne se browser old blocked cache ko ignore kar deta hai
+            img.src = url + "?v=" + new Date().getTime();
+        });
+    }
+
+    for (let i = 0; i < filtered.length; i++) {
+        let pageIndex = Math.floor(i / itemsPerPage);
+        let pos = i % itemsPerPage;
+
+        if (pos === 0 && i > 0) {
+            pdf.addPage();
+        }
+
+        // Header on every page start
+        if (pos === 0) {
+            pdf.setFont("helvetica", "bold");
+            pdf.setFontSize(15);
+            pdf.setTextColor(15, 23, 42);
+            pdf.text("EMPIRE GLASSWARE - " + dept.toUpperCase() + " CATALOG", mX, 12);
+            
+            pdf.setFont("helvetica", "normal");
+            pdf.setFontSize(8.5);
+            pdf.setTextColor(100, 116, 139);
+            pdf.text("Live Wholesale Catalog | Generated on: " + new Date().toLocaleDateString(), mX, 16);
+        }
+
+        let col = pos % cols;
+        let row = Math.floor(pos / cols);
+        let x = mX + (col * cW);
+        let y = mY + 4 + (row * cH);
+
+        // Draw Card Border
+        pdf.setDrawColor(215, 219, 221);
+        pdf.rect(x, y, cW - 2, cH - 2);
+
+        let item = filtered[i];
+        let pCode = String(item.code || item.Product_Code || '').trim();
+        let pPrice = item.price || item.Price_Num || 0;
+        let pUnit = item.unit || item.Price_Unit || '';
+        let pDesc = String(item.desc || item.Description || '').trim();
+
+        // Load image with multi-extension fallbacks
+        let imgDataUri = await loadImageWithAllExtensions(item);
+
+        if (imgDataUri) {
+            try {
+                pdf.addImage(imgDataUri, 'JPEG', x + 2, y + 2, cW - 6, 32);
+            } catch (err) {
+                // ignore
+            }
+        }
+
+        // Product Code
+        pdf.setFont("helvetica", "bold");
+        pdf.setFontSize(9.5);
+        pdf.setTextColor(31, 78, 121);
+        pdf.text(pCode, x + 3, y + 39);
+
+        // Price & Unit
+        pdf.setFont("helvetica", "bold");
+        pdf.setFontSize(10.5);
+        pdf.setTextColor(185, 28, 28);
+        pdf.text(`Rs. ${pPrice} ${pUnit}`, x + 3, y + 46);
+
+        // In Stock Badge
+        pdf.setFont("helvetica", "bold");
+        pdf.setFontSize(7);
+        pdf.setTextColor(46, 125, 50);
+        pdf.text("IN STOCK", x + cW - 17, y + 39);
+
+        // Description Snippet
+        pdf.setFont("helvetica", "normal");
+        pdf.setFontSize(7.5);
+        pdf.setTextColor(40, 55, 71);
+        let splitDesc = pdf.splitTextToSize(pDesc, cW - 6);
+        pdf.text(splitDesc.slice(0, 2), x + 3, y + 52);
+    }
+
+    pdf.save(`Empire_${dept}_Catalog.pdf`);
+    showToast("PDF Downloaded Successfully!");
+}
+
+// ==========================================
+// INIT ON LOAD
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
     updateAccessHeader();
@@ -1050,7 +1196,6 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCartBar();
     }
 
-    // Touch Swipe Gesture for Mobile Access Modal
     let touchStartX = 0;
     let touchStartY = 0;
 
@@ -1065,7 +1210,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const touchEndX = e.changedTouches[0].screenX;
             const touchEndY = e.changedTouches[0].screenY;
             
-            // Left swipe (50px+) ya downward drag (50px+) par close
             if ((touchStartX - touchEndX > 50) || (touchEndY - touchStartY > 50)) {
                 closeAccessModal();
             }
@@ -1085,18 +1229,15 @@ window.addEventListener('keydown', function(e) {
     }
 });
 
-// ==========================================================
-// 📊 EMPIRE GLASSWARE - GA4 SMART B2B BUSINESS ANALYTICS
-// ==========================================================
-
-// Safe GA4 Event Dispatcher Helper
+// ==========================================
+// 📊 GA4 ANALYTICS
+// ==========================================
 function trackGA4(eventName, params = {}) {
   if (typeof gtag === 'function') {
     gtag('event', eventName, params);
   }
 }
 
-// 1. PWA Installation & App-Icon Launch Tracking
 window.addEventListener('appinstalled', () => {
   trackGA4('pwa_install_success', {
     event_category: 'PWA',
@@ -1114,7 +1255,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// 2. Search Demand Tracker (Track what buyers are typing)
 let searchDebounceTimer = null;
 const searchBox = document.getElementById('searchInput');
 if (searchBox) {
@@ -1131,7 +1271,6 @@ if (searchBox) {
   });
 }
 
-// 3. Wholesale Code & WhatsApp Request Tracker
 const originalApplyAccessCode = window.applyAccessCodeFromModal;
 if (typeof originalApplyAccessCode === 'function') {
   window.applyAccessCodeFromModal = function() {
@@ -1154,7 +1293,6 @@ if (waReqBtn) {
   });
 }
 
-// 4. Hot Products & Lightbox Views (Trending items)
 const originalOpenProductDetail = window.openProductDetail;
 if (typeof originalOpenProductDetail === 'function') {
   window.openProductDetail = function(product) {
@@ -1170,7 +1308,6 @@ if (typeof originalOpenProductDetail === 'function') {
   };
 }
 
-// 5. WhatsApp Order Funnel & Conversion Tracker
 const originalSendWhatsAppOrder = window.sendWhatsAppOrder;
 if (typeof originalSendWhatsAppOrder === 'function') {
   window.sendWhatsAppOrder = function() {
@@ -1187,7 +1324,7 @@ if (typeof originalSendWhatsAppOrder === 'function') {
     return originalSendWhatsAppOrder.apply(this, arguments);
   };
 }
-// Auto-refresh PWA if new version available
+
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.ready.then(registration => {
     registration.update();
