@@ -88,9 +88,9 @@ function applyAccessCodeFromModal() {
 function getAccessMultiplier() {
     const tier = localStorage.getItem("empire_access_tier");
     if (tier === "50") return 1;        // Flat 50% Less = Base Master Price (1x)
-    if (tier === "45") return 1.1;       // 45% Less on 2x Retail = 1.1x Base Price
-    if (tier === "40") return 1.2;       // 40% Less on 2x Retail = 1.2x Base Price
-    return 2;                            // Standard Retail Mode = 2x Base Price
+    if (tier === "45") return 1.1;        // 45% Less on 2x Retail = 1.1x Base Price
+    if (tier === "40") return 1.2;        // 40% Less on 2x Retail = 1.2x Base Price
+    return 2;                             // Standard Retail Mode = 2x Base Price
 }
 
 function getTierLabel() {
@@ -1073,7 +1073,6 @@ async function triggerCatalogDownload(dept) {
 
         let basePath = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
         
-        // Sabhi variations ki priority list (pehli priority website par chal rahe standard paths ko di gayi hai)
         const extensions = ['.jpg', '.JPG', '.jpeg', '.JPEG', '.png', '.PNG'];
 
         for (let ext of extensions) {
@@ -1104,7 +1103,6 @@ async function triggerCatalogDownload(dept) {
             img.onerror = function() {
                 resolve(null);
             };
-            // Cache buster add karne se browser old blocked cache ko ignore kar deta hai
             img.src = url + "?v=" + new Date().getTime();
         });
     }
@@ -1117,7 +1115,6 @@ async function triggerCatalogDownload(dept) {
             pdf.addPage();
         }
 
-        // Header on every page start
         if (pos === 0) {
             pdf.setFont("helvetica", "bold");
             pdf.setFontSize(15);
@@ -1135,21 +1132,18 @@ async function triggerCatalogDownload(dept) {
         let x = mX + (col * cW);
         let y = mY + 4 + (row * cH);
 
-        // Draw Card Border
         pdf.setDrawColor(215, 219, 221);
         pdf.rect(x, y, cW - 2, cH - 2);
 
        let item = filtered[i];
         let pCode = String(item.code || item.Product_Code || '').trim();
         
-        // Tier multiplier apply karein taaki user ke active tier ke hisab se price aaye
         let baseRawPrice = Number(item.price || item.Price_Num || 0);
         let pPrice = Math.round(baseRawPrice * getAccessMultiplier());
         
         let pUnit = item.unit || item.Price_Unit || '';
         let pDesc = String(item.desc || item.Description || '').trim();
 
-        // Load image with multi-extension fallbacks
         let imgDataUri = await loadImageWithAllExtensions(item);
 
         if (imgDataUri) {
@@ -1160,25 +1154,21 @@ async function triggerCatalogDownload(dept) {
             }
         }
 
-        // Product Code
         pdf.setFont("helvetica", "bold");
         pdf.setFontSize(9.5);
         pdf.setTextColor(31, 78, 121);
         pdf.text(pCode, x + 3, y + 39);
 
-        // Price & Unit
         pdf.setFont("helvetica", "bold");
         pdf.setFontSize(10.5);
         pdf.setTextColor(185, 28, 28);
         pdf.text(`Rs. ${pPrice} ${pUnit}`, x + 3, y + 46);
 
-        // In Stock Badge
         pdf.setFont("helvetica", "bold");
         pdf.setFontSize(7);
         pdf.setTextColor(46, 125, 50);
         pdf.text("IN STOCK", x + cW - 17, y + 39);
 
-        // Description Snippet
         pdf.setFont("helvetica", "normal");
         pdf.setFontSize(7.5);
         pdf.setTextColor(40, 55, 71);
@@ -1188,6 +1178,70 @@ async function triggerCatalogDownload(dept) {
 
     pdf.save(`Empire_${dept}_Catalog.pdf`);
     showToast("PDF Downloaded Successfully!");
+}
+
+// ==========================================
+// PWA INSTALL BUTTON & iOS BANNER LOGIC
+// ==========================================
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    const installBtn = document.getElementById('pwaInstallBtn');
+    if (installBtn) {
+        installBtn.style.display = 'flex';
+    }
+});
+
+function installPWA() {
+    const installBtn = document.getElementById('pwaInstallBtn');
+    if (!deferredPrompt) return;
+
+    deferredPrompt.prompt();
+
+    deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the install prompt');
+        }
+        deferredPrompt = null;
+        if (installBtn) {
+            installBtn.style.display = 'none';
+        }
+    });
+}
+
+window.addEventListener('appinstalled', (evt) => {
+    console.log('PWA was installed successfully');
+    const installBtn = document.getElementById('pwaInstallBtn');
+    if (installBtn) {
+        installBtn.style.display = 'none';
+    }
+});
+
+function isIOS() {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    return /iphone|ipad|ipod/.test(userAgent);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const isStandalone = window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
+    const bannerDismissed = localStorage.getItem('iosBannerDismissed');
+    
+    if (isIOS() && !isStandalone && !bannerDismissed) {
+        const iosBanner = document.getElementById('iosInstallBanner');
+        if (iosBanner) {
+            iosBanner.style.display = 'block';
+        }
+    }
+});
+
+function closeIosBanner() {
+    const iosBanner = document.getElementById('iosInstallBanner');
+    if (iosBanner) {
+        iosBanner.style.display = 'none';
+    }
+    localStorage.setItem('iosBannerDismissed', 'true');
 }
 
 // ==========================================
