@@ -128,7 +128,7 @@
         }
         .top-trust-bar span { color: #f59e0b; }
 
-        /* Premium Header - Optimized 2-Row Right Action Grid */
+        /* Premium Header - 2-Row Clean Stack Layout */
         header { 
             background: var(--header-bg); 
             color: white; 
@@ -153,22 +153,22 @@
         .header-right-actions {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 5px;
             align-items: flex-end;
         }
         .header-top-row {
             display: flex;
-            gap: 4px;
+            gap: 6px;
         }
 
-        /* Modern Compact Action Buttons with Oval Pill Shape */
+        /* Catalog & Sneak Peek Top Row Buttons */
         .header-action-btn {
             background: rgba(255, 255, 255, 0.08);
             color: #ffffff;
             border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 4px 10px;
+            padding: 5px 10px;
             border-radius: 20px;
-            font-size: 10px;
+            font-size: 10.5px;
             font-weight: 600;
             cursor: pointer;
             display: flex;
@@ -193,18 +193,27 @@
             font-weight: 700;
             animation: gentle-bounce 2s infinite ease-in-out;
         }
-        .header-action-btn.tier-btn {
-            background: rgba(255, 255, 255, 0.08);
-            color: #fbbf24;
-            border-color: rgba(251, 191, 36, 0.4);
-            padding: 4px 10px;
-            font-size: 9.5px;
-            justify-content: center;
+
+        /* Original Purana Access Badge Restored for Bottom Row */
+        .access-badge { 
+            background: rgba(255, 255, 255, 0.08); 
+            color: #fbbf24; 
+            border: 1px solid rgba(251, 191, 36, 0.4);
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 11px; 
+            font-weight: 600; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            gap: 5px; 
+            transition: all 0.2s ease;
+            white-space: nowrap;
         }
-        .access-badge.wholesale, .header-action-btn.tier-btn.wholesale { 
-            background: var(--accent-green) !important; 
-            color: #ffffff !important; 
-            border-color: var(--accent-green) !important;
+        .access-badge.wholesale { 
+            background: var(--accent-green); 
+            color: #ffffff; 
+            border-color: var(--accent-green);
         }
 
         /* Department Switcher Navigation Bar */
@@ -1008,8 +1017,8 @@
                     🔥 <span>Sneak Peek</span>
                 </a>
             </div>
-            <!-- Bottom Row: Wholesale Access Oval Pill Shape -->
-            <button id="accessBadge" class="header-action-btn tier-btn" onclick="promptAccessCode()" title="Wholesale Access">
+            <!-- Bottom Row: Original Pill Shape Access Badge -->
+            <button id="accessBadge" class="access-badge" onclick="promptAccessCode()" title="Wholesale Access">
                 🔑 <span id="tierBtnText">Wholesale Access</span>
             </button>
         </div>
