@@ -1139,9 +1139,13 @@ async function triggerCatalogDownload(dept) {
         pdf.setDrawColor(215, 219, 221);
         pdf.rect(x, y, cW - 2, cH - 2);
 
-        let item = filtered[i];
+       let item = filtered[i];
         let pCode = String(item.code || item.Product_Code || '').trim();
-        let pPrice = item.price || item.Price_Num || 0;
+        
+        // Tier multiplier apply karein taaki user ke active tier ke hisab se price aaye
+        let baseRawPrice = Number(item.price || item.Price_Num || 0);
+        let pPrice = Math.round(baseRawPrice * getAccessMultiplier());
+        
         let pUnit = item.unit || item.Price_Unit || '';
         let pDesc = String(item.desc || item.Description || '').trim();
 
