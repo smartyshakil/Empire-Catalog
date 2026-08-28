@@ -84,23 +84,23 @@
         .sneak-peek-strip {
             background: linear-gradient(90deg, #0b1329 0%, #1e1b4b 50%, #0b1329 100%);
             color: #fbbf24;
-            font-size: 11.5px;
+            font-size: 11px;
             font-weight: 700;
             text-align: center;
-            padding: 8px 12px;
-            letter-spacing: 0.4px;
+            padding: 6px 10px;
+            letter-spacing: 0.3px;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             border-bottom: 2px solid #f59e0b;
         }
         .sneak-peek-strip a {
             color: #ffffff;
             background: rgba(245, 158, 11, 0.2);
             border: 1px solid #f59e0b;
-            padding: 2px 10px;
-            border-radius: 12px;
+            padding: 2px 8px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 800;
             transition: all 0.2s ease;
@@ -116,23 +116,23 @@
         .top-trust-bar {
             background: #060b18;
             color: #cbd5e1;
-            font-size: 11px;
+            font-size: 10.5px;
             font-weight: 600;
             text-align: center;
-            padding: 6px 10px;
-            letter-spacing: 0.5px;
+            padding: 4px 8px;
+            letter-spacing: 0.4px;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
         .top-trust-bar span { color: #f59e0b; }
 
-        /* Premium Header */
+        /* Premium Header - Streamlined & De-cluttered */
         header { 
             background: var(--header-bg); 
             color: white; 
-            padding: 12px 16px; 
+            padding: 8px 12px; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -143,75 +143,83 @@
         }
         .header-title h1 { 
             font-family: 'Poppins', sans-serif;
-            font-size: 17px; 
+            font-size: 15px; 
             font-weight: 700; 
-            letter-spacing: 0.8px; 
+            letter-spacing: 0.5px; 
             color: #ffffff;
         }
-        .header-title p { font-size: 11px; color: #94a3b8; font-weight: 500; }
+        .header-title p { font-size: 10px; color: #94a3b8; font-weight: 500; }
         
         .header-right-actions {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
-        .sneak-peek-header-btn {
-            background: #f59e0b;
-            color: #0f172a;
-            border: none;
-            padding: 6px 10px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 800;
-            text-decoration: none;
+
+        /* Modern Compact Action Buttons */
+        .header-action-btn {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 5px 9px;
+            border-radius: 14px;
+            font-size: 10.5px;
+            font-weight: 600;
+            cursor: pointer;
             display: flex;
             align-items: center;
             gap: 4px;
-            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        .header-action-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .header-action-btn.pdf-btn {
+            background: #2563eb;
+            border-color: #3b82f6;
+            color: #ffffff;
+        }
+        .header-action-btn.sneak-btn {
+            background: #f59e0b;
+            border-color: #fbbf24;
+            color: #0f172a;
+            font-weight: 700;
             animation: gentle-bounce 2s infinite ease-in-out;
         }
-        
-        .access-badge { 
-            background: rgba(255, 255, 255, 0.08); 
-            color: #fbbf24; 
-            border: 1px solid rgba(251, 191, 36, 0.4);
-            padding: 6px 12px; 
-            border-radius: 20px; 
-            font-size: 11px; 
-            font-weight: 600; 
-            cursor: pointer; 
-            display: flex; 
-            align-items: center; 
-            gap: 5px; 
-            transition: all 0.2s ease;
+        .header-action-btn.tier-btn {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fbbf24;
+            border-color: rgba(251, 191, 36, 0.4);
         }
-        .access-badge.wholesale { 
-            background: var(--accent-green); 
-            color: #ffffff; 
-            border-color: var(--accent-green);
+        .header-action-btn.tier-btn.wholesale { 
+            background: var(--accent-green) !important; 
+            color: #ffffff !important; 
+            border-color: var(--accent-green) !important;
         }
 
         /* Department Switcher Navigation Bar */
         .dept-navbar {
             background: #ffffff;
             border-bottom: 1px solid var(--border-color);
-            padding: 10px 14px;
+            padding: 8px 12px;
             display: flex;
-            gap: 8px;
+            gap: 6px;
             overflow-x: auto;
             scrollbar-width: none;
             position: sticky;
-            top: 57px;
+            top: 51px;
             z-index: 95;
             box-shadow: 0 2px 10px rgba(0,0,0,0.03);
         }
         .dept-navbar::-webkit-scrollbar { display: none; }
         .dept-tab-btn {
             flex-shrink: 0;
-            padding: 7px 16px;
-            font-size: 12.5px;
+            padding: 6px 14px;
+            font-size: 12px;
             font-weight: 700;
-            border-radius: 25px;
+            border-radius: 20px;
             border: 1.5px solid var(--border-color);
             background: #f8fafc;
             color: #475569;
@@ -219,7 +227,7 @@
             transition: all 0.2s ease;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
         }
         .dept-tab-btn:hover {
             border-color: #94a3b8;
@@ -247,13 +255,13 @@
             width: 230px;
             flex-shrink: 0;
             position: sticky;
-            top: 120px;
+            top: 110px;
             background: #ffffff;
             border-radius: 14px;
             padding: 14px;
             border: 1px solid var(--border-color);
             box-shadow: var(--card-shadow);
-            max-height: calc(100vh - 140px);
+            max-height: calc(100vh - 130px);
             overflow-y: auto;
             scrollbar-width: thin;
         }
@@ -915,8 +923,8 @@
         /* --- RESPONSIVE BREAKPOINT (Mobile View) --- */
         @media (max-width: 860px) {
             .dept-navbar {
-                top: 55px;
-                padding: 8px 10px;
+                top: 47px;
+                padding: 6px 10px;
             }
             .dept-tab-btn {
                 padding: 5px 12px;
@@ -931,7 +939,7 @@
             .sidebar {
                 width: 100%;
                 position: sticky;
-                top: 100px;
+                top: 90px;
                 z-index: 85;
                 padding: 8px 10px;
                 border-radius: 10px;
@@ -983,13 +991,17 @@
             <p>Digital Order Catalog</p>
         </div>
         <div class="header-right-actions">
-            <!-- Download PDF Catalog Button Added -->
-            <button class="access-badge" onclick="openCatalogModal()" style="background: #2563eb; color: #fff; border-color: #2563eb;">
-                📥 Download Catalog
+            <!-- Compact PDF Download Button -->
+            <button class="header-action-btn pdf-btn" onclick="openCatalogModal()" title="Download PDF Catalog">
+                📥 <span>Catalog</span>
             </button>
-            <a href="sneak-peek.html" class="sneak-peek-header-btn">🔥 Sneak Peek</a>
-            <button id="accessBadge" class="access-badge" onclick="promptAccessCode()">
-                🔑 Wholesale Access
+            <!-- Compact Sneak Peek Button -->
+            <a href="sneak-peek.html" class="header-action-btn sneak-btn" title="Sneak Peek">
+                🔥 <span>Sneak Peek</span>
+            </a>
+            <!-- Compact Tier Badge -->
+            <button id="accessBadge" class="header-action-btn tier-btn" onclick="promptAccessCode()" title="Wholesale Access">
+                🔑 <span id="tierBtnText">Access</span>
             </button>
         </div>
     </header>
@@ -1208,7 +1220,7 @@
         </a>
     </div>
 
-    <!-- Download Catalog Modal Added -->
+    <!-- Download Catalog Modal -->
     <div id="catalogModalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.7); backdrop-filter:blur(3px); z-index:600;" onclick="closeCatalogModal()"></div>
     <div id="catalogModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:90%; max-width:400px; background:#ffffff; border-radius:16px; padding:22px 18px; box-shadow:0 20px 40px rgba(0,0,0,0.25); z-index:601; text-align:center;">
         <button onclick="closeCatalogModal()" style="position:absolute; right:12px; top:12px; width:28px; height:28px; border-radius:50%; border:none; background:#f1f5f9; color:#64748b; font-size:18px; font-weight:700; cursor:pointer;">&times;</button>
@@ -1219,7 +1231,7 @@
             <button onclick="triggerCatalogDownload('Glassware')" style="padding:12px; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; font-size:13px; font-weight:700; color:#0f172a; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center;">
                 <span>🍷 Glassware Catalog</span><span>📥 PDF</span>
             </button>
-            <button onclick="triggerCatalogDownload('vaccum_bottles')" style="padding:12px; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; font-size:13px; font-weight:700; color:#0f172a; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center;">
+            <button onclick="triggerLiteralCatalogDownload('vaccum_bottles')" onclick="triggerCatalogDownload('vaccum_bottles')" style="padding:12px; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; font-size:13px; font-weight:700; color:#0f172a; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center;">
                 <span>🍶 Vacuum Bottles Catalog</span><span>📥 PDF</span>
             </button>
             <button onclick="triggerCatalogDownload('Kitchenware')" style="padding:12px; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; font-size:13px; font-weight:700; color:#0f172a; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center;">
