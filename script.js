@@ -118,13 +118,11 @@ function updateAccessHeader() {
 // 2. DYNAMIC MOQ RULES (Price-Based Minimums)
 // ==========================================
 function getMinSetLimit(price, department = 'glassware', productObj = null) {
-    // Agar product object mein direct 'moq' define hai, toh wahi uthao
     if (productObj && productObj.moq !== undefined && productObj.moq !== null && !isNaN(productObj.moq)) {
         let val = parseInt(productObj.moq, 10);
         if (val > 0) return val;
     }
 
-    // Fallback hardcoded rules agar moq na mile
     const dept = (department || '').toLowerCase();
 
     if (dept === 'vaccum_bottles' || dept === 'vaccum bottles' || dept === 'bottles') {
@@ -210,7 +208,14 @@ function initCategoryPills() {
 
     let availableProducts = PRODUCTS;
     if (currentSelectedDepartment !== "ALL") {
-        availableProducts = PRODUCTS.filter(p => (p.department || '').toLowerCase() === currentSelectedDepartment.toLowerCase());
+        availableProducts = PRODUCTS.filter(p => {
+            const itemDept = (p.department || '').toLowerCase().trim().replace(/[\s-]/g, '_');
+            const targetDept = currentSelectedDepartment.toLowerCase().trim().replace(/[\s-]/g, '_');
+            if (targetDept === 'vaccum_bottles') {
+                return itemDept === 'vaccum_bottles' || itemDept === 'vacuum_bottles' || itemDept.includes('vaccum');
+            }
+            return itemDept === targetDept;
+        });
     }
 
     const totalAvailableCount = availableProducts.length;
@@ -340,7 +345,7 @@ function renderProducts(items) {
         const itemData = cart[p.code] || { ctn: 0, set: 0 };
         const effectivePrice = Math.round(Number(p.price) * multiplier);
         const itemDept = p.department || 'glassware';
-        const minSet = getMinSetLimit(effectivePrice, itemDept, p); // 👈 PASSING p HERE TO RESPECT CUSTOM MOQ
+        const minSet = getMinSetLimit(effectivePrice, itemDept, p);
         const packingDesc = getDisplayPacking(p);
         const imgSrc = getInitialImagePath(p);
 
@@ -414,7 +419,7 @@ function openProductDetail(code) {
     const multiplier = getAccessMultiplier();
     const effectivePrice = Math.round(Number(item.price) * multiplier);
     const itemDept = item.department || 'glassware';
-    const minSet = getMinSetLimit(effectivePrice, itemDept, item); // 👈 PASSING item HERE
+    const minSet = getMinSetLimit(effectivePrice, itemDept, item);
     const packing = getDisplayPacking(item);
 
     document.getElementById("pdetailImg").src = getInitialImagePath(item);
@@ -700,7 +705,7 @@ function updateItemQty(code, type, change, price, department = 'glassware', prod
         prodObj = PRODUCTS.find(p => p.code === code);
     }
 
-    const minSetLimit = getMinSetLimit(price, department, prodObj); // 👈 PASSING prodObj HERE
+    const minSetLimit = getMinSetLimit(price, department, prodObj);
 
     if (type === 'ctn') {
         cart[code].ctn += change;
@@ -901,12 +906,13 @@ function filterProducts() {
     const sortVal = document.getElementById("sortSelect").value;
 
     let filtered = PRODUCTS.filter(p => {
-        const itemDept = (p.department || '').toLowerCase().trim();
-        const selDept = (currentSelectedDepartment || '').toLowerCase().trim();
+        const itemDept = (p.department || '').toLowerCase().trim().replace(/[\s-]/g, '_');
+        const selDept = (currentSelectedDepartment || '').toLowerCase().trim().replace(/[\s-]/g, '_');
+        
         const itemCat = (p.category || '').toUpperCase().trim();
         const selCat = (currentSelectedCategory || '').toUpperCase().trim();
 
-        const matchesDept = (selDept === "all") || (itemDept === selDept);
+        const matchesDept = (selDept === "all") || (itemDept === selDept) || (selDept === "vaccum_bottles" && (itemDept.includes("vaccum") || itemDept.includes("bottle")));
         const matchesCat = (selCat === "ALL") || (itemCat === selCat);
         const matchesQuery = p.code.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query);
         
@@ -921,6 +927,7 @@ function filterProducts() {
 
     renderProducts(filtered);
 }
+
 // ==========================================
 // 8. WHATSAPP SENDER
 // ==========================================
