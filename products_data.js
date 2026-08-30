@@ -1773,15 +1773,6 @@ const PRODUCTS = [
     "moq": 12
   },
   {
-    "code": "LXP7012",
-    "desc": "LANGXU SAUCER 5\"  - 6 PCS COLOR BOX 12 SET CTN",
-    "price": "170",
-    "unit": "FOR 6PCS",
-    "category": "SAUCER",
-    "department": "Glassware",
-    "moq": 4
-  },
-  {
     "code": "KRCF027-L12",
     "desc": "KARBON FISH CUP SAUCER 220 ML COLOR BOX 8 SET CTN",
     "price": "290",
@@ -2239,15 +2230,6 @@ const PRODUCTS = [
     "category": "GLASS BOTTLE",
     "department": "Glassware",
     "moq": 80
-  },
-  {
-    "code": "HK-125",
-    "desc": "GLASS BOTTLE WITH COVER 500 ML COLOR BOX 70 PCS CTN",
-    "price": "90",
-    "unit": "FOR 1PCS",
-    "category": "GLASS BOTTLE",
-    "department": "Glassware",
-    "moq": 70
   },
   {
     "code": "KRWB1039-1100-B",
