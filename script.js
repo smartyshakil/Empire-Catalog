@@ -117,7 +117,14 @@ function updateAccessHeader() {
 // ==========================================
 // 2. DYNAMIC MOQ RULES (Price-Based Minimums)
 // ==========================================
-function getMinSetLimit(price, department = 'glassware') {
+function getMinSetLimit(price, department = 'glassware', productObj = null) {
+    // Agar product object mein direct 'moq' define hai, toh wahi uthao
+    if (productObj && productObj.moq !== undefined && productObj.moq !== null && !isNaN(productObj.moq)) {
+        let val = parseInt(productObj.moq, 10);
+        if (val > 0) return val;
+    }
+
+    // Fallback hardcoded rules agar moq na mile
     const dept = (department || '').toLowerCase();
 
     if (dept === 'vaccum_bottles' || dept === 'vaccum bottles' || dept === 'bottles') {
@@ -129,7 +136,6 @@ function getMinSetLimit(price, department = 'glassware') {
     if (price <= 399) return 4;
     return 2;
 }
-
 // ==========================================
 // 3. CARTON PACKING RESOLVER & DISPLAY CHIPS
 // ==========================================
