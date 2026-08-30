@@ -212,7 +212,7 @@ function initCategoryPills() {
             const itemDept = (p.department || '').toLowerCase().trim().replace(/[\s-]/g, '_');
             const targetDept = currentSelectedDepartment.toLowerCase().trim().replace(/[\s-]/g, '_');
             if (targetDept === 'vaccum_bottles') {
-                return itemDept === 'vaccum_bottles' || itemDept === 'vacuum_bottles' || itemDept.includes('vaccum');
+                return itemDept === 'vaccum_bottles' || itemDept === 'vacuum_bottles' || itemDept.includes('vaccum') || itemDept.includes('bottle');
             }
             return itemDept === targetDept;
         });
@@ -912,7 +912,15 @@ function filterProducts() {
         const itemCat = (p.category || '').toUpperCase().trim();
         const selCat = (currentSelectedCategory || '').toUpperCase().trim();
 
-        const matchesDept = (selDept === "all") || (itemDept === selDept) || (selDept === "vaccum_bottles" && (itemDept.includes("vaccum") || itemDept.includes("bottle")));
+        let matchesDept = (selDept === "all");
+        if (!matchesDept) {
+            if (selDept === "vaccum_bottles") {
+                matchesDept = (itemDept === 'vaccum_bottles' || itemDept === 'vacuum_bottles' || itemDept.includes('vaccum') || itemDept.includes('bottle'));
+            } else {
+                matchesDept = (itemDept === selDept);
+            }
+        }
+
         const matchesCat = (selCat === "ALL") || (itemCat === selCat);
         const matchesQuery = p.code.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query);
         
