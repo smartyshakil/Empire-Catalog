@@ -901,10 +901,15 @@ function filterProducts() {
     const sortVal = document.getElementById("sortSelect").value;
 
     let filtered = PRODUCTS.filter(p => {
-        const itemDept = (p.department || '').toLowerCase();
-        const matchesDept = (currentSelectedDepartment === "ALL") || (itemDept === currentSelectedDepartment.toLowerCase());
-        const matchesCat = (currentSelectedCategory === "ALL") || (p.category === currentSelectedCategory);
+        const itemDept = (p.department || '').toLowerCase().trim();
+        const selDept = (currentSelectedDepartment || '').toLowerCase().trim();
+        const itemCat = (p.category || '').toUpperCase().trim();
+        const selCat = (currentSelectedCategory || '').toUpperCase().trim();
+
+        const matchesDept = (selDept === "all") || (itemDept === selDept);
+        const matchesCat = (selCat === "ALL") || (itemCat === selCat);
         const matchesQuery = p.code.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query);
+        
         return matchesDept && matchesCat && matchesQuery;
     });
 
@@ -916,7 +921,6 @@ function filterProducts() {
 
     renderProducts(filtered);
 }
-
 // ==========================================
 // 8. WHATSAPP SENDER
 // ==========================================
