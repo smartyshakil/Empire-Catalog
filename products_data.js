@@ -1,5 +1,14 @@
 const PRODUCTS = [
   {
+    "code": "DEPKI-CAPCOLOR",
+    "desc": "350ML STEEL BOTTLE CAP COLOR BOX 120 PCS CTN",
+    "price": "165",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 12
+},
+  {
     "code": "KRF008B-G",
     "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
     "price": "280",
