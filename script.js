@@ -87,7 +87,7 @@ function applyAccessCodeFromModal() {
 
 function getAccessMultiplier() {
     const tier = localStorage.getItem("empire_access_tier");
-    if (tier === "50") return 1;        // Flat 50% Less = Base Master Price (1x)
+    if (tier === "50") return 1;         // Flat 50% Less = Base Master Price (1x)
     if (tier === "45") return 1.1;        // 45% Less on 2x Retail = 1.1x Base Price
     if (tier === "40") return 1.2;        // 40% Less on 2x Retail = 1.2x Base Price
     return 2;                             // Standard Retail Mode = 2x Base Price
@@ -406,6 +406,7 @@ function renderProducts(items) {
 // 5. PRODUCT DETAIL MODAL & FLYER LOGIC
 // ==========================================
 let currentViewingProduct = null;
+let isDetailModalOpen = false; // Added tracking flag for View Details modal state
 
 function openProductDetail(code) {
     let item = null;
@@ -447,6 +448,12 @@ function openProductDetail(code) {
     document.getElementById("productDetailBackdrop").style.display = "block";
     document.getElementById("productDetailModal").style.display = "block";
     document.body.style.overflow = "hidden";
+
+    // Push state so left-swipe / back button closes the detail modal instead of exiting the site
+    if (!isDetailModalOpen) {
+        isDetailModalOpen = true;
+        history.pushState({ detailModal: true }, "");
+    }
 }
 
 function renderSimilarProducts(product) {
@@ -513,12 +520,19 @@ function shareCurrentProduct() {
     }
 }
 
-function closeProductDetail() {
+function closeProductDetail(fromHistory = false) {
     const modal = document.getElementById("productDetailModal");
     const backdrop = document.getElementById("productDetailBackdrop");
     if (modal) modal.style.display = "none";
     if (backdrop) backdrop.style.display = "none";
     document.body.style.overflow = "auto";
+
+    if (isDetailModalOpen) {
+        isDetailModalOpen = false;
+        if (!fromHistory && history.state && history.state.detailModal) {
+            history.back();
+        }
+    }
 }
 
 function openFlyerModal() {
@@ -1025,9 +1039,13 @@ function closeLightbox(fromHistory = false) {
     }
 }
 
+// Updated unified popstate event listener for handling both Lightbox and View Details modals cleanly
 window.addEventListener("popstate", (e) => {
     if (isLightboxOpen) {
         closeLightbox(true);
+    }
+    if (isDetailModalOpen) {
+        closeProductDetail(true);
     }
 });
 
