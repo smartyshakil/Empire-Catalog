@@ -125,7 +125,7 @@ function getMinSetLimit(price, department = 'glassware', productObj = null) {
 
     const dept = (department || '').toLowerCase();
 
-    if (dept === 'vaccum_bottles' || dept === 'vaccum bottles' || dept === 'bottles') {
+    if (dept.includes('vaccum') || dept.includes('bottle')) {
         if (price < 100) return 100;
         return 12;
     }
@@ -209,12 +209,15 @@ function initCategoryPills() {
     let availableProducts = PRODUCTS;
     if (currentSelectedDepartment !== "ALL") {
         availableProducts = PRODUCTS.filter(p => {
-            const itemDept = (p.department || '').toLowerCase().trim().replace(/[\s-]/g, '_');
-            const targetDept = currentSelectedDepartment.toLowerCase().trim().replace(/[\s-]/g, '_');
-            if (targetDept === 'vaccum_bottles') {
-                return itemDept === 'vaccum_bottles' || itemDept === 'vacuum_bottles' || itemDept.includes('vaccum') || itemDept.includes('bottle');
+            const itemDept = (p.department || '').toLowerCase().trim();
+            const targetDept = currentSelectedDepartment.toLowerCase().trim();
+            if (targetDept === 'vaccum_bottles' || targetDept === 'bottles') {
+                return itemDept.includes('vaccum') || itemDept.includes('bottle') || itemDept.includes('vac');
+            } else if (targetDept === 'kitchenware') {
+                return itemDept.includes('kitchen');
+            } else {
+                return itemDept.includes('glass');
             }
-            return itemDept === targetDept;
         });
     }
 
@@ -906,18 +909,20 @@ function filterProducts() {
     const sortVal = document.getElementById("sortSelect").value;
 
     let filtered = PRODUCTS.filter(p => {
-        const itemDept = (p.department || '').toLowerCase().trim().replace(/[\s-]/g, '_');
-        const selDept = (currentSelectedDepartment || '').toLowerCase().trim().replace(/[\s-]/g, '_');
+        const itemDept = (p.department || '').toLowerCase().trim();
+        const selDept = (currentSelectedDepartment || '').toLowerCase().trim();
         
         const itemCat = (p.category || '').toUpperCase().trim();
         const selCat = (currentSelectedCategory || '').toUpperCase().trim();
 
         let matchesDept = (selDept === "all");
         if (!matchesDept) {
-            if (selDept === "vaccum_bottles") {
-                matchesDept = (itemDept === 'vaccum_bottles' || itemDept === 'vacuum_bottles' || itemDept.includes('vaccum') || itemDept.includes('bottle'));
+            if (selDept === "vaccum_bottles" || selDept === "bottles") {
+                matchesDept = (itemDept.includes("vaccum") || itemDept.includes("bottle") || itemDept.includes("vac"));
+            } else if (selDept === "kitchenware") {
+                matchesDept = itemDept.includes("kitchen");
             } else {
-                matchesDept = (itemDept === selDept);
+                matchesDept = itemDept.includes("glass");
             }
         }
 
