@@ -136,6 +136,7 @@ function getMinSetLimit(price, department = 'glassware', productObj = null) {
     if (price <= 399) return 4;
     return 2;
 }
+
 // ==========================================
 // 3. CARTON PACKING RESOLVER & DISPLAY CHIPS
 // ==========================================
@@ -339,7 +340,7 @@ function renderProducts(items) {
         const itemData = cart[p.code] || { ctn: 0, set: 0 };
         const effectivePrice = Math.round(Number(p.price) * multiplier);
         const itemDept = p.department || 'glassware';
-        const minSet = getMinSetLimit(effectivePrice, itemDept);
+        const minSet = getMinSetLimit(effectivePrice, itemDept, p); // 👈 PASSING p HERE TO RESPECT CUSTOM MOQ
         const packingDesc = getDisplayPacking(p);
         const imgSrc = getInitialImagePath(p);
 
@@ -375,17 +376,17 @@ function renderProducts(items) {
                 <!-- Carton Counter -->
                 <div class="counter-row">
                     <span class="counter-label">CTN</span>
-                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'ctn', -1, ${effectivePrice}, '${itemDept}')">-</button>
+                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'ctn', -1, ${effectivePrice}, '${itemDept}', '${encodeURIComponent(JSON.stringify(p))}')">-</button>
                     <span class="qty-val" id="ctn-${p.code}">${itemData.ctn}</span>
-                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'ctn', 1, ${effectivePrice}, '${itemDept}')">+</button>
+                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'ctn', 1, ${effectivePrice}, '${itemDept}', '${encodeURIComponent(JSON.stringify(p))}')">+</button>
                 </div>
 
                 <!-- Set Counter -->
                 <div class="counter-row">
                     <span class="counter-label">SET</span>
-                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'set', -1, ${effectivePrice}, '${itemDept}')">-</button>
+                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'set', -1, ${effectivePrice}, '${itemDept}', '${encodeURIComponent(JSON.stringify(p))}')">-</button>
                     <span class="qty-val" id="set-${p.code}">${itemData.set}</span>
-                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'set', 1, ${effectivePrice}, '${itemDept}')">+</button>
+                    <button class="qty-btn" onclick="updateItemQty('${p.code}', 'set', 1, ${effectivePrice}, '${itemDept}', '${encodeURIComponent(JSON.stringify(p))}')">+</button>
                 </div>
             </div>
         `;
@@ -413,7 +414,7 @@ function openProductDetail(code) {
     const multiplier = getAccessMultiplier();
     const effectivePrice = Math.round(Number(item.price) * multiplier);
     const itemDept = item.department || 'glassware';
-    const minSet = getMinSetLimit(effectivePrice, itemDept);
+    const minSet = getMinSetLimit(effectivePrice, itemDept, item); // 👈 PASSING item HERE
     const packing = getDisplayPacking(item);
 
     document.getElementById("pdetailImg").src = getInitialImagePath(item);
@@ -428,7 +429,7 @@ function openProductDetail(code) {
     document.getElementById("pdetailDesc").innerText = item.desc || '';
 
     document.getElementById("pdetailAddBtn").onclick = () => {
-        updateItemQty(code, 'set', 1, effectivePrice, itemDept);
+        updateItemQty(code, 'set', 1, effectivePrice, itemDept, item);
         showToast(`${code} added to cart!`);
         closeProductDetail();
     };
@@ -527,7 +528,7 @@ function openFlyerModal() {
 
     priceInput.value = dealerPurchasePrice;
     priceInput.setAttribute("data-min-price", dealerPurchasePrice);
-    moqInput.value = `MOQ: ${getMinSetLimit(dealerPurchasePrice, currentViewingProduct.department)} SET (${packing})`;
+    moqInput.value = `MOQ: ${getMinSetLimit(dealerPurchasePrice, currentViewingProduct.department, currentViewingProduct)} SET (${packing})`;
     firmInput.value = "";
 
     document.getElementById("flyerPriceErr").style.display = "none";
@@ -681,12 +682,25 @@ function shareFlyerDirect() {
 // ==========================================
 // 6. QUANTITY UPDATE & ESTIMATED TOTAL
 // ==========================================
-function updateItemQty(code, type, change, price, department = 'glassware') {
+function updateItemQty(code, type, change, price, department = 'glassware', productObjOrUri = null) {
     if (!cart[code]) {
         cart[code] = { ctn: 0, set: 0 };
     }
 
-    const minSetLimit = getMinSetLimit(price, department);
+    let prodObj = null;
+    if (typeof productObjOrUri === 'string') {
+        try {
+            prodObj = JSON.parse(decodeURIComponent(productObjOrUri));
+        } catch(e) {
+            prodObj = PRODUCTS.find(p => p.code === code);
+        }
+    } else if (typeof productObjOrUri === 'object') {
+        prodObj = productObjOrUri;
+    } else {
+        prodObj = PRODUCTS.find(p => p.code === code);
+    }
+
+    const minSetLimit = getMinSetLimit(price, department, prodObj); // 👈 PASSING prodObj HERE
 
     if (type === 'ctn') {
         cart[code].ctn += change;
@@ -832,7 +846,7 @@ function adjustDrawerQty(code, type, change) {
     const item = PRODUCTS.find(p => p.code === code);
     if (!item) return;
     const price = Math.round(Number(item.price) * getAccessMultiplier());
-    updateItemQty(code, type, change, price, item.department || 'glassware');
+    updateItemQty(code, type, change, price, item.department || 'glassware', item);
     renderDrawerItems();
 }
 
@@ -1348,7 +1362,7 @@ if (typeof originalApplyAccessCode === 'function') {
   };
 }
 
-const waReqBtn = document.getElementById('waRequestBtn');
+const waReqBtn = document.getElementById('waRequest_modal');
 if (waReqBtn) {
   waReqBtn.addEventListener('click', () => {
     trackGA4('request_wholesale_code_click', {
