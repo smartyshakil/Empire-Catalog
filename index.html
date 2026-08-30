@@ -989,6 +989,51 @@
             }
         }
     </style>
+<!-- Firebase App & Messaging SDK (Compat versions) -->
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-messaging-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyC5X4TMCds_atY_wi67b24D6pCT9pq83Z8",
+    authDomain: "empirequotationdesk.firebaseapp.com",
+    projectId: "empirequotationdesk",
+    storageBucket: "empirequotationdesk.firebasestorage.app",
+    messagingSenderId: "165921209421",
+    appId: "1:165921209421:web:7a7088d18aec2ff0dd7004"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const messaging = firebase.messaging();
+
+  // Notification Permission & Token Request Function
+  function requestNotificationPermission() {
+    Notification.requestPermission().then((permission) => {
+      if (permission === 'granted') {
+        console.log('Notification permission granted.');
+        messaging.getToken({ 
+          vapidKey: 'BCFUinktQrlcmklEcB5sEA5GUyEoNRr5bPq7_HAxu3-adwbTY6eKM-HJjqh8XkEuPQoOk5-SGkgdXWxugoySIFU' 
+        }).then((currentToken) => {
+          if (currentToken) {
+            console.log('FCM Token:', currentToken);
+            // Yahan aap token ko Firestore database mein save kara sakte hain
+          } else {
+            console.log('No registration token available.');
+          }
+        }).catch((err) => {
+          console.log('An error occurred while retrieving token. ', err);
+        });
+      } else {
+        console.log('Unable to get permission to notify.');
+      }
+    });
+  }
+
+  // Page load hone ke thodi der baad permission pop-up trigger karne ke liye
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(requestNotificationPermission, 3000);
+  });
+</script>
 </head>
 <body>
 
