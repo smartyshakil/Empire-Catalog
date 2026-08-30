@@ -3688,6 +3688,223 @@ const PRODUCTS = [
     "category": "BOTTLES",
     "department": "vaccum_bottles",
     "moq": 6
+  },
+  {
+    "code": "EMP210-250",
+    "desc": "VALENCIA DOUBLE WALL JUICE GLASS 250 ML BOX PACK 72 PCS CTN",
+    "price": "90",
+    "unit": "FOR 1 PCS",
+    "category": "JUICE GLASS",
+    "department": "Glassware",
+    "moq": 12
+  },
+  {
+    "code": "EMP-178",
+    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
+    "price": "190",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "EMP-177",
+    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
+    "price": "155",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "EMP-174",
+    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
+    "price": "170",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "EMP-114",
+    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
+    "price": "175",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "EMP-11",
+    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
+    "price": "80",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "EMP-66",
+    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
+    "price": "120",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "EMP-99",
+    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
+    "price": "75",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "EMP-50",
+    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
+    "price": "85",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "EMP-54",
+    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
+    "price": "80",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "EMP-70",
+    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
+    "price": "125",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "EMP-41",
+    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
+    "price": "90",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "EMP-81B",
+    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
+    "price": "80",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "EMP--81W",
+    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
+    "price": "80",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "EMP-67",
+    "desc": "EMPIRE ACRYLIC DISPENSER BULK PACKING 144 PCS CTN",
+    "price": "90",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "SP-750",
+    "desc": "SOWA PARIS COLA BOTTLE 750 ML COLO BOX 40 PCS CTN",
+    "price": "295",
+    "unit": "FOR 1 PCS",
+    "category": "COLA BOTTLE",
+    "department": "Kitchenware",
+    "moq": 6
+  },
+  {
+    "code": "AM-786-5",
+    "desc": "ANMOL 38 PCS NEW BONE CHINA DINNE SET POLYFOAM PACKNG 1 SET CTN",
+    "price": "4000",
+    "unit": "FOR 1 SET",
+    "category": "DINNER SET",
+    "department": "Kitchenware",
+    "moq": 1
+  },
+  {
+    "code": "AM-786-4",
+    "desc": "ANMOL 38 PCS NEW BONE CHINA DINNE SET POLYFOAM PACKNG 1 SET CTN",
+    "price": "4000",
+    "unit": "FOR 1 SET",
+    "category": "DINNER SET",
+    "department": "Kitchenware",
+    "moq": 1
+  },
+  {
+    "code": "AM-786-3",
+    "desc": "ANMOL 38 PCS NEW BONE CHINA DINNE SET POLYFOAM PACKNG 1 SET CTN",
+    "price": "4000",
+    "unit": "FOR 1 SET",
+    "category": "DINNER SET",
+    "department": "Kitchenware",
+    "moq": 1
+  },
+  {
+    "code": "AM-786-2",
+    "desc": "ANMOL 38 PCS NEW BONE CHINA DINNE SET POLYFOAM PACKNG 1 SET CTN",
+    "price": "4000",
+    "unit": "FOR 1 SET",
+    "category": "DINNER SET",
+    "department": "Kitchenware",
+    "moq": 1
+  },
+  {
+    "code": "AM-786-1",
+    "desc": "ANMOL 38 PCS NEW BONE CHINA DINNE SET POLYFOAM PACKNG 1 SET CTN",
+    "price": "4000",
+    "unit": "FOR 1 SET",
+    "category": "DINNER SET",
+    "department": "Kitchenware",
+    "moq": 1
+  },
+  {
+    "code": "WSB",
+    "desc": "PORCELAIN SERVING SPOON  BIG 24 CM 200 PCS CTN",
+    "price": "90",
+    "unit": "FOR 1 PCS",
+    "category": "SPOON",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "WSEB",
+    "desc": "PORCELAIN SERVING SPOON EXTRA BIG 28 CM 200 PCS CTN",
+    "price": "110",
+    "unit": "FOR 1 PCS",
+    "category": "SPOON",
+    "department": "Kitchenware",
+    "moq": 12
+  },
+  {
+    "code": "WSS",
+    "desc": "PORCELAIN WHITE SOUP SPOON BULK PACK 800 PCS CTN",
+    "price": "15",
+    "unit": "FOR 1 PCS",
+    "category": "SPOON",
+    "department": "Kitchenware",
+    "moq": 100
   }
 ];
+
 const MASTER_SORT_ORDER = ["JUICE GLASS", "WHISKEY GLASS", "WATER GLASS", "BORO JUICE GLASS", "BORO WATER GLASS", "WINE GLASS", "COLORED GLASS", "SHOT GLASS", "SHOT SET", "BOWL SET", "ICE CREAM BOWL SET", "PLATE SET", "BEER MUG", "TEA MUG", "BORO TEA MUG", "LID MUG", "SAUCER", "CUP SAUCER", "KETTLE SET", "JUG", "JUG SET", "LEMON SET", "SIPPER", "GLASS BOTTLE", "GLASS FRIDGE BOTTLE", "TURTLE", "PUDDING SET", "WOODEN JAR SINGLE", "WOODEN CANDY", "WOODEN 3 PCS", "GLASS JAR", "CANISTER", "GLASS LUNCHBOX", "GLASS BAKEWARE", "DISPENSER", "FRUIT PLATE", "GLASS PLAIN BOWL", "GLASS COLORED BOWL", "BORO SERVING BOWL", "FLOWER POT", "ACRYLIC SIPPER", "TRAY", "OTHER"];
