@@ -1,5 +1,14 @@
 const PRODUCTS = [
   {
+    "code": "SMWB1036-500",
+    "desc": "SHINEMAX BOROSILICATE GLASS BOTTLE 500 ML 1 PC COLOR BOX 60 PCS CTN",
+    "price": "110",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS BOTTLE",
+    "department": "Glassware",
+    "moq": 12
+},
+  {
     "code": "KRF008B-G",
     "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
     "price": "280.0",
