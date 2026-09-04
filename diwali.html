@@ -265,6 +265,15 @@
             box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
         }
 
+        /* Lightbox Pinch Zoom Support Added */
+        #lightboxModal img {
+            max-width: 95vw;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 8px;
+            touch-action: pinch-zoom;
+        }
+
         @media (max-width: 768px) {
             .catalog-container { flex-direction: column; padding: 0 8px; }
             .sidebar { 
@@ -335,7 +344,7 @@
 
     <div id="lightboxModal" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.95); z-index:1000; justify-content:center; align-items:center;" onclick="closeLightbox()">
         <span style="position:absolute; top:18px; right:22px; color:#fff; font-size:28px; cursor:pointer;">&times;</span>
-        <img id="lightboxImg" src="" style="max-width:92vw; max-height:85vh; object-fit:contain; border-radius:8px;">
+        <img id="lightboxImg" src="" alt="Lightbox View">
     </div>
 
     <script>
@@ -374,12 +383,15 @@
             document.getElementById('iosInstallBanner').style.display = 'block';
         }
 
+        // Left Swipe Gesture using window.history.back() to keep user inside app context
         let touchstartX = 0;
         let touchendX = 0;
         document.addEventListener('touchstart', e => { touchstartX = e.changedTouches[0].screenX; }, false);
         document.addEventListener('touchend', e => {
             touchendX = e.changedTouches[0].screenX;
-            if (touchstartX - touchendX > 100) { window.location.href = 'index.html'; }
+            if (touchstartX - touchendX > 100) { 
+                window.history.back(); 
+            }
         }, false);
 
         fetch('diwali-categories.json')
