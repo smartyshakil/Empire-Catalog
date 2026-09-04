@@ -6,6 +6,7 @@
     <title>EMPIRE GLASSWARE - Diwali Special 200+ Collection Catalog</title>
     <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
     
+    <!-- PWA Manifest & App Config -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0b1329">
     <meta name="mobile-web-app-capable" content="yes">
@@ -14,6 +15,13 @@
     <meta name="apple-mobile-web-app-title" content="Empire Catalog">
     <link rel="apple-touch-icon" href="images/icon-192.png">
 
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Empire Glassware - Diwali Special Wholesale Catalog. Explore live collection and reserve bulk orders on WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EMPIRE GLASSWARE - Diwali Special 200+ Collection Catalog">
+    <meta property="og:description" content="Diwali Special Crockery & Glassware. Browse collection and pre-book on WhatsApp.">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -26,6 +34,17 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-7VSXTN9XXZ');
+    </script>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then((reg) => console.log('✅ Service Worker Active:', reg.scope))
+            .catch((err) => console.log('❌ Service Worker Error:', err));
+        });
+      }
     </script>
 
     <style>
@@ -265,7 +284,7 @@
             box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
         }
 
-        /* Lightbox Pinch Zoom Support Added */
+        /* Lightbox Pinch Zoom Support */
         #lightboxModal img {
             max-width: 95vw;
             max-height: 85vh;
@@ -296,6 +315,32 @@
             .card-img-wrapper, .card img { height: 120px; }
         }
     </style>
+
+    <!-- Firebase SDK for Notifications -->
+    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-messaging-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyC5X4TMCds_atY_wi67b24D6pCT9pq83Z8",
+        authDomain: "empirequotationdesk.firebaseapp.com",
+        projectId: "empirequotationdesk",
+        storageBucket: "empirequotationdesk.firebasestorage.app",
+        messagingSenderId: "165921209421",
+        appId: "1:165921209421:web:7a7088d18aec2ff0dd7004"
+      };
+      firebase.initializeApp(firebaseConfig);
+      const messaging = firebase.messaging();
+
+      function requestNotificationPermission() {
+        Notification.requestPermission().then((permission) => {
+          if (permission === 'granted') {
+            messaging.getToken({ vapidKey: 'BCFUinktQrlcmklEcB5sEA5GUyEoNRr5bPq7_HAxu3-adwbTY6eKM-HJjqh8XkEuPQoOk5-SGkgdXWxugoySIFU' })
+              .then((currentToken) => { if (currentToken) console.log('FCM Token:', currentToken); });
+          }
+        });
+      }
+      window.addEventListener('DOMContentLoaded', () => { setTimeout(requestNotificationPermission, 3000); });
+    </script>
 </head>
 <body>
 
@@ -357,6 +402,7 @@
         const TARGET_TIME = new Date("2026-09-21T11:00:00+05:30").getTime();
         let timerInterval = null;
 
+        // PWA Install Prompt Logic
         let deferredPrompt;
         window.addEventListener('beforeinstallprompt', (e) => {
             e.preventDefault();
