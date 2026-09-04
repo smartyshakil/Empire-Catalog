@@ -290,7 +290,7 @@
             max-height: 85vh;
             object-fit: contain;
             border-radius: 8px;
-            touch-action: pinch-zoom;
+            touch-action: none;
         }
 
         @media (max-width: 768px) {
@@ -430,7 +430,7 @@
         }
 
         // Left Swipe Gesture using window.history.back() to keep user inside app context
-        let touchstartX = 0;
+       let touchstartX = 0;
 let touchendX = 0;
 
 document.addEventListener('touchstart', e => { 
@@ -439,10 +439,10 @@ document.addEventListener('touchstart', e => {
 
 document.addEventListener('touchend', e => {
     touchendX = e.changedTouches[0].screenX;
-    if (touchstartX - touchendX > 100) { 
+    if (touchstartX - touchendX > 80) { // Left swipe threshold
         const lightbox = document.getElementById('lightboxModal');
         if (lightbox && lightbox.style.display === 'flex') {
-            closeLightbox();
+            closeLightbox(); // Sirf photo band hogi, aap diwali.html par hi rahenge
         }
     }
 }, false);
