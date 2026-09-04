@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMPIRE GLASSWARE - Diwali Special 200+ Collection Catalog</title>
     <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
     
@@ -431,14 +431,21 @@
 
         // Left Swipe Gesture using window.history.back() to keep user inside app context
         let touchstartX = 0;
-        let touchendX = 0;
-        document.addEventListener('touchstart', e => { touchstartX = e.changedTouches[0].screenX; }, false);
-        document.addEventListener('touchend', e => {
-            touchendX = e.changedTouches[0].screenX;
-            if (touchstartX - touchendX > 100) { 
-                window.history.back(); 
-            }
-        }, false);
+let touchendX = 0;
+
+document.addEventListener('touchstart', e => { 
+    touchstartX = e.changedTouches[0].screenX; 
+}, false);
+
+document.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX;
+    if (touchstartX - touchendX > 100) { 
+        const lightbox = document.getElementById('lightboxModal');
+        if (lightbox && lightbox.style.display === 'flex') {
+            closeLightbox();
+        }
+    }
+}, false);
 
         fetch('diwali-categories.json')
             .then(res => res.json())
