@@ -1,0 +1,802 @@
+{
+    "DIWALI ITEMS": [
+        {
+            "code": "KJG061A",
+            "image": "DIWALI ITEMS/KJG061A.jpeg"
+        },
+        {
+            "code": "KJG061B",
+            "image": "DIWALI ITEMS/KJG061B.jpeg"
+        },
+        {
+            "code": "KJG062A",
+            "image": "DIWALI ITEMS/KJG062A.jpeg"
+        },
+        {
+            "code": "KJG062B",
+            "image": "DIWALI ITEMS/KJG062B.jpeg"
+        },
+        {
+            "code": "KJG072",
+            "image": "DIWALI ITEMS/KJG072.jpeg"
+        },
+        {
+            "code": "KJG072B",
+            "image": "DIWALI ITEMS/KJG072B.jpeg"
+        },
+        {
+            "code": "KRZB143",
+            "image": "DIWALI ITEMS/KRZB143.jpeg"
+        },
+        {
+            "code": "SMB406-B",
+            "image": "DIWALI ITEMS/SMB406-B.jpeg"
+        },
+        {
+            "code": "SMB406-G",
+            "image": "DIWALI ITEMS/SMB406-G.jpeg"
+        },
+        {
+            "code": "SMBC20-L1",
+            "image": "DIWALI ITEMS/SMBC20-L1.jpeg"
+        },
+        {
+            "code": "SMBC48",
+            "image": "DIWALI ITEMS/SMBC48.jpeg"
+        },
+        {
+            "code": "SMBC49",
+            "image": "DIWALI ITEMS/SMBC49.jpeg"
+        },
+        {
+            "code": "SMBC76",
+            "image": "DIWALI ITEMS/SMBC76.jpeg"
+        },
+        {
+            "code": "SMBC78",
+            "image": "DIWALI ITEMS/SMBC78.jpeg"
+        },
+        {
+            "code": "SMBC88",
+            "image": "DIWALI ITEMS/SMBC88.jpeg"
+        },
+        {
+            "code": "SMH95-1-B",
+            "image": "DIWALI ITEMS/SMH95-1-B.jpeg"
+        },
+        {
+            "code": "SMH95-1-G",
+            "image": "DIWALI ITEMS/SMH95-1-G.jpeg"
+        },
+        {
+            "code": "SMH95-1.5",
+            "image": "DIWALI ITEMS/SMH95-1.5.jpeg"
+        },
+        {
+            "code": "SMH95-1.5B",
+            "image": "DIWALI ITEMS/SMH95-1.5B.jpeg"
+        },
+        {
+            "code": "SMIC626",
+            "image": "DIWALI ITEMS/SMIC626.jpeg"
+        },
+        {
+            "code": "SMJC138-1",
+            "image": "DIWALI ITEMS/SMJC138-1.jpeg"
+        },
+        {
+            "code": "SMJC138-2",
+            "image": "DIWALI ITEMS/SMJC138-2.jpeg"
+        },
+        {
+            "code": "SMP7201",
+            "image": "DIWALI ITEMS/SMP7201.jpeg"
+        },
+        {
+            "code": "SMTC237",
+            "image": "DIWALI ITEMS/SMTC237.jpeg"
+        },
+        {
+            "code": "SMTC272",
+            "image": "DIWALI ITEMS/SMTC272.jpeg"
+        },
+        {
+            "code": "SMTC283",
+            "image": "DIWALI ITEMS/SMTC283.jpeg"
+        },
+        {
+            "code": "SMTC286",
+            "image": "DIWALI ITEMS/SMTC286.jpeg"
+        },
+        {
+            "code": "SMTC289",
+            "image": "DIWALI ITEMS/SMTC289.jpeg"
+        },
+        {
+            "code": "SMTC369",
+            "image": "DIWALI ITEMS/SMTC369.jpeg"
+        },
+        {
+            "code": "SMWH11-L7",
+            "image": "DIWALI ITEMS/SMWH11-L7.jpeg"
+        },
+        {
+            "code": "SMWH64-L8",
+            "image": "DIWALI ITEMS/SMWH64-L8.jpeg"
+        },
+        {
+            "code": "SMWH65-L8",
+            "image": "DIWALI ITEMS/SMWH65-L8.jpeg"
+        },
+        {
+            "code": "SMWH66-L8",
+            "image": "DIWALI ITEMS/SMWH66-L8.jpeg"
+        },
+        {
+            "code": "SMWH67-L8",
+            "image": "DIWALI ITEMS/SMWH67-L8.jpeg"
+        },
+        {
+            "code": "SMWH69-L7",
+            "image": "DIWALI ITEMS/SMWH69-L7.jpeg"
+        },
+        {
+            "code": "SMWH97-L7",
+            "image": "DIWALI ITEMS/SMWH97-L7.jpeg"
+        },
+        {
+            "code": "SMWH99-L7",
+            "image": "DIWALI ITEMS/SMWH99-L7.jpeg"
+        }
+    ],
+    "DIWALI SNACK PLATES  SETS": [
+        {
+            "code": "SMP021-L6",
+            "image": "DIWALI SNACK PLATES  SETS/SMP021-L6.jpeg"
+        },
+        {
+            "code": "SMP021-L6B",
+            "image": "DIWALI SNACK PLATES  SETS/SMP021-L6B.jpeg"
+        },
+        {
+            "code": "SMP021-L6G",
+            "image": "DIWALI SNACK PLATES  SETS/SMP021-L6G.jpeg"
+        },
+        {
+            "code": "SMP021-L7",
+            "image": "DIWALI SNACK PLATES  SETS/SMP021-L7.jpeg"
+        },
+        {
+            "code": "SMP021-L7B",
+            "image": "DIWALI SNACK PLATES  SETS/SMP021-L7B.jpeg"
+        },
+        {
+            "code": "SMP021-L7G",
+            "image": "DIWALI SNACK PLATES  SETS/SMP021-L7G.jpeg"
+        },
+        {
+            "code": "SMP031-B",
+            "image": "DIWALI SNACK PLATES  SETS/SMP031-B.jpeg"
+        },
+        {
+            "code": "SMP031-G",
+            "image": "DIWALI SNACK PLATES  SETS/SMP031-G.jpeg"
+        },
+        {
+            "code": "SMP031",
+            "image": "DIWALI SNACK PLATES  SETS/SMP031.jpeg"
+        },
+        {
+            "code": "SMP051-L6",
+            "image": "DIWALI SNACK PLATES  SETS/SMP051-L6.jpeg"
+        },
+        {
+            "code": "SMP051-L6B",
+            "image": "DIWALI SNACK PLATES  SETS/SMP051-L6B.jpeg"
+        },
+        {
+            "code": "SMP051-L6G",
+            "image": "DIWALI SNACK PLATES  SETS/SMP051-L6G.jpeg"
+        },
+        {
+            "code": "SMP051-L7",
+            "image": "DIWALI SNACK PLATES  SETS/SMP051-L7.jpeg"
+        },
+        {
+            "code": "SMP051-L7B",
+            "image": "DIWALI SNACK PLATES  SETS/SMP051-L7B.jpeg"
+        },
+        {
+            "code": "SMP051-L7G",
+            "image": "DIWALI SNACK PLATES  SETS/SMP051-L7G.jpeg"
+        },
+        {
+            "code": "SMP052-B",
+            "image": "DIWALI SNACK PLATES  SETS/SMP052-B.jpeg"
+        },
+        {
+            "code": "SMP052-G",
+            "image": "DIWALI SNACK PLATES  SETS/SMP052-G.jpeg"
+        },
+        {
+            "code": "SMP052",
+            "image": "DIWALI SNACK PLATES  SETS/SMP052.jpeg"
+        }
+    ],
+    "Dry Fruits": [
+        {
+            "code": "SMBJ-601",
+            "image": "Dry Fruits/SMBJ-601.jpeg"
+        },
+        {
+            "code": "SMBJ-602",
+            "image": "Dry Fruits/SMBJ-602.jpeg"
+        },
+        {
+            "code": "SMBJ-603",
+            "image": "Dry Fruits/SMBJ-603.jpeg"
+        },
+        {
+            "code": "SMBJ-604",
+            "image": "Dry Fruits/SMBJ-604.jpeg"
+        },
+        {
+            "code": "SMBJ-605",
+            "image": "Dry Fruits/SMBJ-605.jpeg"
+        },
+        {
+            "code": "SMBJ-606",
+            "image": "Dry Fruits/SMBJ-606.jpeg"
+        },
+        {
+            "code": "SMBJ-607",
+            "image": "Dry Fruits/SMBJ-607.jpeg"
+        },
+        {
+            "code": "SMBJ-608",
+            "image": "Dry Fruits/SMBJ-608.jpeg"
+        },
+        {
+            "code": "SMBJ-609",
+            "image": "Dry Fruits/SMBJ-609.jpeg"
+        },
+        {
+            "code": "SMBJ-610",
+            "image": "Dry Fruits/SMBJ-610.jpeg"
+        },
+        {
+            "code": "SMBJ-611",
+            "image": "Dry Fruits/SMBJ-611.jpeg"
+        },
+        {
+            "code": "SMBJ-612",
+            "image": "Dry Fruits/SMBJ-612.jpeg"
+        },
+        {
+            "code": "SMBJ-613",
+            "image": "Dry Fruits/SMBJ-613.jpeg"
+        },
+        {
+            "code": "SMBJ-614",
+            "image": "Dry Fruits/SMBJ-614.jpeg"
+        },
+        {
+            "code": "SMBJ-615",
+            "image": "Dry Fruits/SMBJ-615.jpeg"
+        },
+        {
+            "code": "SMBJ-616",
+            "image": "Dry Fruits/SMBJ-616.jpeg"
+        },
+        {
+            "code": "SMBJ-617",
+            "image": "Dry Fruits/SMBJ-617.jpeg"
+        },
+        {
+            "code": "SMBJ-701-G",
+            "image": "Dry Fruits/SMBJ-701-G.jpeg"
+        },
+        {
+            "code": "SMBJ-701-S",
+            "image": "Dry Fruits/SMBJ-701-S.jpeg"
+        },
+        {
+            "code": "SMBJ-702-G",
+            "image": "Dry Fruits/SMBJ-702-G.jpeg"
+        },
+        {
+            "code": "SMBJ-702-S",
+            "image": "Dry Fruits/SMBJ-702-S.jpeg"
+        },
+        {
+            "code": "SMBJ-703-G",
+            "image": "Dry Fruits/SMBJ-703-G.jpeg"
+        },
+        {
+            "code": "SMBJ-703-S",
+            "image": "Dry Fruits/SMBJ-703-S.jpeg"
+        },
+        {
+            "code": "SMBJ-704-G",
+            "image": "Dry Fruits/SMBJ-704-G.jpeg"
+        },
+        {
+            "code": "SMBJ-704-S",
+            "image": "Dry Fruits/SMBJ-704-S.jpeg"
+        },
+        {
+            "code": "SMBJ-705-G",
+            "image": "Dry Fruits/SMBJ-705-G.jpeg"
+        },
+        {
+            "code": "SMBJ-705-S",
+            "image": "Dry Fruits/SMBJ-705-S.jpeg"
+        },
+        {
+            "code": "SMBJ-706-G",
+            "image": "Dry Fruits/SMBJ-706-G.jpeg"
+        },
+        {
+            "code": "SMBJ-706-S",
+            "image": "Dry Fruits/SMBJ-706-S.jpeg"
+        },
+        {
+            "code": "SMBJ-707-G",
+            "image": "Dry Fruits/SMBJ-707-G.jpeg"
+        },
+        {
+            "code": "SMBJ-707-S",
+            "image": "Dry Fruits/SMBJ-707-S.jpeg"
+        },
+        {
+            "code": "SMBJ-708-G",
+            "image": "Dry Fruits/SMBJ-708-G.jpeg"
+        },
+        {
+            "code": "SMBJ-708-S",
+            "image": "Dry Fruits/SMBJ-708-S.jpeg"
+        },
+        {
+            "code": "SMBJ-709-G",
+            "image": "Dry Fruits/SMBJ-709-G.jpeg"
+        },
+        {
+            "code": "SMBJ-709-S",
+            "image": "Dry Fruits/SMBJ-709-S.jpeg"
+        },
+        {
+            "code": "SMBJ-710-G",
+            "image": "Dry Fruits/SMBJ-710-G.jpeg"
+        },
+        {
+            "code": "SMBJ-710-S",
+            "image": "Dry Fruits/SMBJ-710-S.jpeg"
+        },
+        {
+            "code": "SMBJ-711-G",
+            "image": "Dry Fruits/SMBJ-711-G.jpeg"
+        },
+        {
+            "code": "SMBJ-711-S",
+            "image": "Dry Fruits/SMBJ-711-S.jpeg"
+        },
+        {
+            "code": "SMBJ-712-G",
+            "image": "Dry Fruits/SMBJ-712-G.jpeg"
+        },
+        {
+            "code": "SMBJ-712-S",
+            "image": "Dry Fruits/SMBJ-712-S.jpeg"
+        },
+        {
+            "code": "SMBJ-713-G",
+            "image": "Dry Fruits/SMBJ-713-G.jpeg"
+        },
+        {
+            "code": "SMBJ-713-G2",
+            "image": "Dry Fruits/SMBJ-713-G2.jpeg"
+        },
+        {
+            "code": "SMBJ-713-G3",
+            "image": "Dry Fruits/SMBJ-713-G3.jpeg"
+        },
+        {
+            "code": "SMBJ-713-S",
+            "image": "Dry Fruits/SMBJ-713-S.jpeg"
+        },
+        {
+            "code": "SMBJ-713-S2",
+            "image": "Dry Fruits/SMBJ-713-S2.jpeg"
+        },
+        {
+            "code": "SMBJ-713-S3",
+            "image": "Dry Fruits/SMBJ-713-S3.jpeg"
+        },
+        {
+            "code": "SMBJ-714-G",
+            "image": "Dry Fruits/SMBJ-714-G.jpeg"
+        },
+        {
+            "code": "SMBJ-714-G2",
+            "image": "Dry Fruits/SMBJ-714-G2.jpeg"
+        },
+        {
+            "code": "SMBJ-714-G3",
+            "image": "Dry Fruits/SMBJ-714-G3.jpeg"
+        },
+        {
+            "code": "SMBJ-714-S",
+            "image": "Dry Fruits/SMBJ-714-S.jpeg"
+        },
+        {
+            "code": "SMBJ-714-S2",
+            "image": "Dry Fruits/SMBJ-714-S2.jpeg"
+        },
+        {
+            "code": "SMBJ-714-S3",
+            "image": "Dry Fruits/SMBJ-714-S3.jpeg"
+        },
+        {
+            "code": "SMBJ-715-G-2",
+            "image": "Dry Fruits/SMBJ-715-G-2.jpeg"
+        },
+        {
+            "code": "SMBJ-715-G",
+            "image": "Dry Fruits/SMBJ-715-G.jpeg"
+        },
+        {
+            "code": "SMBJ-715-S-2",
+            "image": "Dry Fruits/SMBJ-715-S-2.jpeg"
+        },
+        {
+            "code": "SMBJ-715-S",
+            "image": "Dry Fruits/SMBJ-715-S.jpeg"
+        },
+        {
+            "code": "SMBJ-716-G",
+            "image": "Dry Fruits/SMBJ-716-G.jpeg"
+        },
+        {
+            "code": "SMBJ-716-S",
+            "image": "Dry Fruits/SMBJ-716-S.jpeg"
+        },
+        {
+            "code": "SMBJ-717-G",
+            "image": "Dry Fruits/SMBJ-717-G.jpeg"
+        },
+        {
+            "code": "SMBJ-717-S",
+            "image": "Dry Fruits/SMBJ-717-S.jpeg"
+        },
+        {
+            "code": "SMBJ-718-G",
+            "image": "Dry Fruits/SMBJ-718-G.jpeg"
+        },
+        {
+            "code": "SMBJ-718-S",
+            "image": "Dry Fruits/SMBJ-718-S.jpeg"
+        },
+        {
+            "code": "SMBJ-719-G",
+            "image": "Dry Fruits/SMBJ-719-G.jpeg"
+        },
+        {
+            "code": "SMBJ-719-S",
+            "image": "Dry Fruits/SMBJ-719-S.jpeg"
+        },
+        {
+            "code": "SMBJ-720-G",
+            "image": "Dry Fruits/SMBJ-720-G.jpeg"
+        },
+        {
+            "code": "SMBJ-720-S",
+            "image": "Dry Fruits/SMBJ-720-S.jpeg"
+        },
+        {
+            "code": "SMBJ-721-G",
+            "image": "Dry Fruits/SMBJ-721-G.jpeg"
+        },
+        {
+            "code": "SMBJ-721-S",
+            "image": "Dry Fruits/SMBJ-721-S.jpeg"
+        }
+    ],
+    "Whiskey Glasses": [
+        {
+            "code": "SWG-0312A-B",
+            "image": "Whiskey Glasses/SWG-0312A-B.jpeg"
+        },
+        {
+            "code": "SWG-0312A-G",
+            "image": "Whiskey Glasses/SWG-0312A-G.jpeg"
+        },
+        {
+            "code": "SWG-0312B-B",
+            "image": "Whiskey Glasses/SWG-0312B-B.jpeg"
+        },
+        {
+            "code": "SWG-0312B-G",
+            "image": "Whiskey Glasses/SWG-0312B-G.jpeg"
+        },
+        {
+            "code": "SWG-0312C-B",
+            "image": "Whiskey Glasses/SWG-0312C-B.jpeg"
+        },
+        {
+            "code": "SWG-0312C-G",
+            "image": "Whiskey Glasses/SWG-0312C-G.jpeg"
+        },
+        {
+            "code": "SWG-0314A-B",
+            "image": "Whiskey Glasses/SWG-0314A-B.jpeg"
+        },
+        {
+            "code": "SWG-0314A-G",
+            "image": "Whiskey Glasses/SWG-0314A-G.jpeg"
+        },
+        {
+            "code": "SWG-0314B-B",
+            "image": "Whiskey Glasses/SWG-0314B-B.jpeg"
+        },
+        {
+            "code": "SWG-0314B-G",
+            "image": "Whiskey Glasses/SWG-0314B-G.jpeg"
+        },
+        {
+            "code": "SWG-0314C-B",
+            "image": "Whiskey Glasses/SWG-0314C-B.jpeg"
+        },
+        {
+            "code": "SWG-0314C-G",
+            "image": "Whiskey Glasses/SWG-0314C-G.jpeg"
+        },
+        {
+            "code": "SWG-0370A-G",
+            "image": "Whiskey Glasses/SWG-0370A-G.jpeg"
+        },
+        {
+            "code": "SWG-0370B-G",
+            "image": "Whiskey Glasses/SWG-0370B-G.jpeg"
+        },
+        {
+            "code": "SWG-0370C-G",
+            "image": "Whiskey Glasses/SWG-0370C-G.jpeg"
+        },
+        {
+            "code": "SWG-0370D-G",
+            "image": "Whiskey Glasses/SWG-0370D-G.jpeg"
+        },
+        {
+            "code": "SWG-0370E-G",
+            "image": "Whiskey Glasses/SWG-0370E-G.jpeg"
+        },
+        {
+            "code": "SWG-0371A-G",
+            "image": "Whiskey Glasses/SWG-0371A-G.jpeg"
+        },
+        {
+            "code": "SWG-0371B-G",
+            "image": "Whiskey Glasses/SWG-0371B-G.jpeg"
+        },
+        {
+            "code": "SWG-0371C-G",
+            "image": "Whiskey Glasses/SWG-0371C-G.jpeg"
+        },
+        {
+            "code": "SWG-0371D-G",
+            "image": "Whiskey Glasses/SWG-0371D-G.jpeg"
+        },
+        {
+            "code": "SWG-0371E-G",
+            "image": "Whiskey Glasses/SWG-0371E-G.jpeg"
+        },
+        {
+            "code": "SWG-0372A-G",
+            "image": "Whiskey Glasses/SWG-0372A-G.jpeg"
+        },
+        {
+            "code": "SWG-0372B-G",
+            "image": "Whiskey Glasses/SWG-0372B-G.jpeg"
+        },
+        {
+            "code": "SWG-0372C-G",
+            "image": "Whiskey Glasses/SWG-0372C-G.jpeg"
+        },
+        {
+            "code": "SWG-0372D-G",
+            "image": "Whiskey Glasses/SWG-0372D-G.jpeg"
+        },
+        {
+            "code": "SWG-0372E-G",
+            "image": "Whiskey Glasses/SWG-0372E-G.jpeg"
+        },
+        {
+            "code": "SWG-0373A-G",
+            "image": "Whiskey Glasses/SWG-0373A-G.jpeg"
+        },
+        {
+            "code": "SWG-0373B-G",
+            "image": "Whiskey Glasses/SWG-0373B-G.jpeg"
+        },
+        {
+            "code": "SWG-0373C-G",
+            "image": "Whiskey Glasses/SWG-0373C-G.jpeg"
+        },
+        {
+            "code": "SWG-0373D-G",
+            "image": "Whiskey Glasses/SWG-0373D-G.jpeg"
+        },
+        {
+            "code": "SWG-0374A-G",
+            "image": "Whiskey Glasses/SWG-0374A-G.jpeg"
+        },
+        {
+            "code": "SWG-0374B-G",
+            "image": "Whiskey Glasses/SWG-0374B-G.jpeg"
+        },
+        {
+            "code": "SWG-0374C-G",
+            "image": "Whiskey Glasses/SWG-0374C-G.jpeg"
+        },
+        {
+            "code": "SWG-0374D-G",
+            "image": "Whiskey Glasses/SWG-0374D-G.jpeg"
+        },
+        {
+            "code": "SWG-0374E-G",
+            "image": "Whiskey Glasses/SWG-0374E-G.jpeg"
+        },
+        {
+            "code": "SWG-0375A-G",
+            "image": "Whiskey Glasses/SWG-0375A-G.jpeg"
+        },
+        {
+            "code": "SWG-0375B-G",
+            "image": "Whiskey Glasses/SWG-0375B-G.jpeg"
+        },
+        {
+            "code": "SWG-0375D-G",
+            "image": "Whiskey Glasses/SWG-0375D-G.jpeg"
+        },
+        {
+            "code": "SWG-0376A-G",
+            "image": "Whiskey Glasses/SWG-0376A-G.jpeg"
+        },
+        {
+            "code": "SWG-0376B-G",
+            "image": "Whiskey Glasses/SWG-0376B-G.jpeg"
+        },
+        {
+            "code": "SWG-0376C-G",
+            "image": "Whiskey Glasses/SWG-0376C-G.jpeg"
+        },
+        {
+            "code": "SWG-0376D-G",
+            "image": "Whiskey Glasses/SWG-0376D-G.jpeg"
+        },
+        {
+            "code": "SWG-0376E-G",
+            "image": "Whiskey Glasses/SWG-0376E-G.jpeg"
+        },
+        {
+            "code": "SWG-0377A-G",
+            "image": "Whiskey Glasses/SWG-0377A-G.jpeg"
+        },
+        {
+            "code": "SWG-0377B-G",
+            "image": "Whiskey Glasses/SWG-0377B-G.jpeg"
+        },
+        {
+            "code": "SWG-0377C-G",
+            "image": "Whiskey Glasses/SWG-0377C-G.jpeg"
+        },
+        {
+            "code": "SWG-0377D-G",
+            "image": "Whiskey Glasses/SWG-0377D-G.jpeg"
+        },
+        {
+            "code": "SWG-0381A-G",
+            "image": "Whiskey Glasses/SWG-0381A-G.jpeg"
+        },
+        {
+            "code": "SWG-0381B-G",
+            "image": "Whiskey Glasses/SWG-0381B-G.jpeg"
+        },
+        {
+            "code": "SWG-0382A-G",
+            "image": "Whiskey Glasses/SWG-0382A-G.jpeg"
+        },
+        {
+            "code": "SWG-0382B-G",
+            "image": "Whiskey Glasses/SWG-0382B-G.jpeg"
+        },
+        {
+            "code": "SWG-0383A-G",
+            "image": "Whiskey Glasses/SWG-0383A-G.jpeg"
+        },
+        {
+            "code": "SWG-0383B-G",
+            "image": "Whiskey Glasses/SWG-0383B-G.jpeg"
+        },
+        {
+            "code": "SWG-0383C-G",
+            "image": "Whiskey Glasses/SWG-0383C-G.jpeg"
+        },
+        {
+            "code": "SWG-0383D-G",
+            "image": "Whiskey Glasses/SWG-0383D-G.jpeg"
+        },
+        {
+            "code": "SWG-0383E-G",
+            "image": "Whiskey Glasses/SWG-0383E-G.jpeg"
+        },
+        {
+            "code": "SWG-0384A-G",
+            "image": "Whiskey Glasses/SWG-0384A-G.jpeg"
+        },
+        {
+            "code": "SWG-0384B-G",
+            "image": "Whiskey Glasses/SWG-0384B-G.jpeg"
+        },
+        {
+            "code": "SWG-0384C-G",
+            "image": "Whiskey Glasses/SWG-0384C-G.jpeg"
+        },
+        {
+            "code": "SWG-0384D-G",
+            "image": "Whiskey Glasses/SWG-0384D-G.jpeg"
+        },
+        {
+            "code": "SWG-0387A-G",
+            "image": "Whiskey Glasses/SWG-0387A-G.jpeg"
+        },
+        {
+            "code": "SWG-0388A-G",
+            "image": "Whiskey Glasses/SWG-0388A-G.jpeg"
+        },
+        {
+            "code": "SWG-0390A-G",
+            "image": "Whiskey Glasses/SWG-0390A-G.jpeg"
+        },
+        {
+            "code": "SWG-0391-BE",
+            "image": "Whiskey Glasses/SWG-0391-BE.jpeg"
+        },
+        {
+            "code": "SWG-0391-BL",
+            "image": "Whiskey Glasses/SWG-0391-BL.jpeg"
+        },
+        {
+            "code": "SWG-0391-BT",
+            "image": "Whiskey Glasses/SWG-0391-BT.jpeg"
+        },
+        {
+            "code": "SWG-0391-GE",
+            "image": "Whiskey Glasses/SWG-0391-GE.jpeg"
+        },
+        {
+            "code": "SWG-0391-GL",
+            "image": "Whiskey Glasses/SWG-0391-GL.jpeg"
+        },
+        {
+            "code": "SWG-0391-GT",
+            "image": "Whiskey Glasses/SWG-0391-GT.jpeg"
+        },
+        {
+            "code": "SWG-0393-BE",
+            "image": "Whiskey Glasses/SWG-0393-BE.jpeg"
+        },
+        {
+            "code": "SWG-0393-BL",
+            "image": "Whiskey Glasses/SWG-0393-BL.jpeg"
+        },
+        {
+            "code": "SWG-0393-GL",
+            "image": "Whiskey Glasses/SWG-0393-GL.jpeg"
+        },
+        {
+            "code": "SWG-0393-GT",
+            "image": "Whiskey Glasses/SWG-0393-GT.jpeg"
+        }
+    ]
+}
