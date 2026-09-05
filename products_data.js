@@ -1,13 +1,5 @@
 const PRODUCTS = [
-  {
-    "code": "KRF008B-G",
-    "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
-    "price": "280.0",
-    "unit": "FOR 1 PCS",
-    "category": "GLASS COLORED BOWL",
-    "department": "GLASSWARE",
-    "moq": 4
-  },
+  
   {
     "code": "EMP210-250",
     "desc": "VALENCIA DOUBLE WALL JUICE GLASS 250 ML BOX PACK 72 PCS CTN",
@@ -2787,6 +2779,15 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
     "department": "Glassware",
+    "moq": 4
+  },
+{
+    "code": "KRF008B-G",
+    "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
+    "price": "280.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS COLORED BOWL",
+    "department": "GLASSWARE",
     "moq": 4
   },
   {
