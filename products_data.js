@@ -2787,7 +2787,7 @@ const PRODUCTS = [
     "price": "280.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
-    "department": "GLASSWARE",
+    "department": "Glassware",
     "moq": 4
   },
   {
