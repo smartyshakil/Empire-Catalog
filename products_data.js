@@ -1,32 +1,5 @@
 const PRODUCTS = [
   {
-    "code": "SP-1000",
-    "desc": "SOWA PARIS COLA BOTTLE 1000 ML COLOR BOX 40 PCS CTN",
-    "price": "340",
-    "unit": "FOR 1 PCS",
-    "category": "STEEL BOTTLE",
-    "department": "vaccum_bottles",
-    "moq": 6
-},
-  {
-    "code": "ND-800",
-    "desc": "STEEL SLIM BOTTLE 800 ML COLOR BOX MIX COLOR 50",
-    "price": "180",
-    "unit": "FOR 1 PCS",
-    "category": "STEEL BOTTLE",
-    "department": "vaccum_bottles",
-    "moq": 6
-},
-  {
-    "code": "HK-420-9",
-    "desc": "STEEL SMALL CAP BOTTLE 800 ML COLOR BOX MIX COLOR 50",
-    "price": "210",
-    "unit": "FOR 1 PCS",
-    "category": "STEEL BOTTLE",
-    "department": "vaccum_bottles",
-    "moq": 6
-},
-  {
     "code": "KRF008B-G",
     "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
     "price": "280.0",
@@ -805,6 +778,15 @@ const PRODUCTS = [
     "desc": "SHINE MAX FISH SHOT GLASS 40 ML 6 PCS COL BOX 24 SET CTN",
     "price": "130.0",
     "unit": "FOR 6 PCS",
+    "category": "SHOT GLASS",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "KRY314",
+    "desc": "KARBON SKULL SHOT GLASS 60 ML COL BOX 24 SET CTN",
+    "price": "150.0",
+    "unit": "FOR 6PCS",
     "category": "SHOT GLASS",
     "department": "Glassware",
     "moq": 4
@@ -3474,6 +3456,15 @@ const PRODUCTS = [
     "moq": 12
   },
   {
+    "code": "ND-800",
+    "desc": "STEEL SLIM BOTTLE 800 ML COLOR BOX MIX COLOR 50",
+    "price": "180.0",
+    "unit": "FOR 1 PCS",
+    "category": "STEEL BOTTLE",
+    "department": "vaccum_bottles",
+    "moq": 6
+  },
+  {
     "code": "8723",
     "desc": "STEEL BOTTLE 500 ML PUSH BUTTON COL BOX MIX CHARACTER 50 PCS CTN",
     "price": "190.0",
@@ -3535,6 +3526,15 @@ const PRODUCTS = [
     "category": "BOTTLES",
     "department": "vaccum_bottles",
     "moq": 12
+  },
+  {
+    "code": "HK-420-9",
+    "desc": "STEEL SMALL CAP BOTTLE 800 ML COLOR BOX MIX COLOR 50",
+    "price": "210.0",
+    "unit": "FOR 1 PCS",
+    "category": "STEEL BOTTLE",
+    "department": "vaccum_bottles",
+    "moq": 6
   },
   {
     "code": "KND-1000",
@@ -3740,6 +3740,15 @@ const PRODUCTS = [
     "price": "320.0",
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6
+  },
+  {
+    "code": "SP-1000",
+    "desc": "SOWA PARIS COLA BOTTLE 1000 ML COLOR BOX 40 PCS CTN",
+    "price": "340.0",
+    "unit": "FOR 1 PCS",
+    "category": "STEEL BOTTLE",
     "department": "vaccum_bottles",
     "moq": 6
   },
