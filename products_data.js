@@ -2403,7 +2403,7 @@ const PRODUCTS = [
     "moq": 1
   },
   {
-    "code": "SP-320A-L6",
+    "code": "SP-220-L3",
     "desc": "SOWA PARIS BOROSILICATE JAR WDN LID 220 ML ROUND 3 PC COL BOX 16 SET CTN",
     "price": "130.0",
     "unit": "FOR 3PCS",
