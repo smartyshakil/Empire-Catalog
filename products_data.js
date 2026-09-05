@@ -1,5 +1,32 @@
 const PRODUCTS = [
   {
+    "code": "SP-1000",
+    "desc": "SOWA PARIS COLA BOTTLE 1000 ML COLOR BOX 40 PCS CTN",
+    "price": "340",
+    "unit": "FOR 1 PCS",
+    "category": "STEEL BOTTLE",
+    "department": "vaccum_bottles",
+    "moq": 6
+},
+  {
+    "code": "ND-800",
+    "desc": "STEEL SLIM BOTTLE 800 ML COLOR BOX MIX COLOR 50",
+    "price": "180",
+    "unit": "FOR 1 PCS",
+    "category": "STEEL BOTTLE",
+    "department": "vaccum_bottles",
+    "moq": 6
+},
+  {
+    "code": "HK-420-9",
+    "desc": "STEEL SMALL CAP BOTTLE 800 ML COLOR BOX MIX COLOR 50",
+    "price": "210",
+    "unit": "FOR 1 PCS",
+    "category": "STEEL BOTTLE",
+    "department": "vaccum_bottles",
+    "moq": 6
+},
+  {
     "code": "KRF008B-G",
     "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
     "price": "280.0",
@@ -2403,7 +2430,7 @@ const PRODUCTS = [
     "moq": 1
   },
   {
-    "code": "SP-220-L3",
+    "code": "SP-320A-L6",
     "desc": "SOWA PARIS BOROSILICATE JAR WDN LID 220 ML ROUND 3 PC COL BOX 16 SET CTN",
     "price": "130.0",
     "unit": "FOR 3PCS",
