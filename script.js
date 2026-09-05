@@ -362,7 +362,7 @@ function renderProducts(items) {
                      data-err-idx="0"
                      onerror="handleImageFallback(this, '${p.code}', '${itemDept}')" 
                      alt="${p.code}" 
-                     onclick="openLightbox('${imgSrc}', '${p.code} - ${p.desc}')"
+                     onclick="openLightbox(this.src, '${p.code} - ${p.desc}')"
             </div>
             <div>
                 <div class="p-code" onclick="copyItemCode('${p.code}')" title="Click to Copy Code">${p.code} 📋</div>
