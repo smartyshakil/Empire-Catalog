@@ -1,1329 +1,1329 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPIRE GLASSWARE - Digital Order Catalog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPIRE GLASSWARE - Digital Order Catalog</title>
 <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
-    
-    <!-- PWA Manifest & App Config -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0b1329">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Empire Catalog">
-    <link rel="apple-touch-icon" href="images/icon-192.png">
+    
+    <!-- PWA Manifest & App Config -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0b1329">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Empire Catalog">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Empire Glassware - Top Wholesale Importer of Glassware and Crockery. Explore our digital order catalog and order directly on WhatsApp.">
-    <meta name="keywords" content="Empire Glassware, Glassware Importer, Crockery Wholesaler, Wholesale Glassware Catalog, Glassware Bulk Order, SOWA Glassware">
-    <meta name="author" content="Empire Glassware">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Empire Glassware - Top Wholesale Importer of Glassware and Crockery. Explore our digital order catalog and order directly on WhatsApp.">
+    <meta name="keywords" content="Empire Glassware, Glassware Importer, Crockery Wholesaler, Wholesale Glassware Catalog, Glassware Bulk Order, SOWA Glassware">
+    <meta name="author" content="Empire Glassware">
 
-    <!-- WhatsApp & Social Media Preview Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.empireglassware.co.in/">
-    <meta property="og:title" content="Empire Glassware - Digital Wholesale Catalog">
-    <meta property="og:description" content="Direct Importers & Crockery Wholesalers. Browse live stock and place bulk orders directly on WhatsApp.">
-    <meta property="og:image" content="https://www.empireglassware.co.in/images/glassware/og-banner.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <!-- WhatsApp & Social Media Preview Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.empireglassware.co.in/">
+    <meta property="og:title" content="Empire Glassware - Digital Wholesale Catalog">
+    <meta property="og:description" content="Direct Importers & Crockery Wholesalers. Browse live stock and place bulk orders directly on WhatsApp.">
+    <meta property="og:image" content="https://www.empireglassware.co.in/images/glassware/og-banner.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Empire Glassware - Digital Wholesale Catalog">
-    <meta name="twitter:description" content="Direct Importers & Crockery Wholesalers. Browse live stock and place bulk orders directly on WhatsApp.">
-    <meta name="twitter:image" content="https://www.empireglassware.co.in/images/glassware/og-banner.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Empire Glassware - Digital Wholesale Catalog">
+    <meta name="twitter:description" content="Direct Importers & Crockery Wholesalers. Browse live stock and place bulk orders directly on WhatsApp.">
+    <meta name="twitter:image" content="https://www.empireglassware.co.in/images/glassware/og-banner.jpg">
 
-    <!-- Google Fonts (Poppins & Inter) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts (Poppins & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- jsPDF Library for Client-Side PDF Generation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- jsPDF Library for Client-Side PDF Generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VSXTN9XXZ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-7VSXTN9XXZ');
-    </script>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VSXTN9XXZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7VSXTN9XXZ');
+    </script>
 
-    <!-- PWA Service Worker Registration -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js')
-            .then((reg) => console.log('✅ Service Worker Active:', reg.scope))
-            .catch((err) => console.log('❌ Service Worker Error:', err));
-        });
-      }
-    </script>
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then((reg) => console.log('✅ Service Worker Active:', reg.scope))
+            .catch((err) => console.log('❌ Service Worker Error:', err));
+        });
+      }
+    </script>
 
-    <style>
-        :root {
-            --bg-main: #f8fafc;
-            --primary-dark: #0f172a;
-            --header-bg: #0b1329;
-            --gold: #d97706;
-            --gold-light: #fef3c7;
-            --accent-green: #10b981;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --border-color: #e2e8f0;
-            --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
-        }
+    <style>
+        :root {
+            --bg-main: #f8fafc;
+            --primary-dark: #0f172a;
+            --header-bg: #0b1329;
+            --gold: #d97706;
+            --gold-light: #fef3c7;
+            --accent-green: #10b981;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+        }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
-        body { background-color: var(--bg-main); padding-bottom: 125px; color: var(--text-main); }
-        
-        /* Sneak Peek Announcement Top Bar */
-        .sneak-peek-strip {
-            background: linear-gradient(90deg, #0b1329 0%, #1e1b4b 50%, #0b1329 100%);
-            color: #fbbf24;
-            font-size: 11px;
-            font-weight: 700;
-            text-align: center;
-            padding: 6px 10px;
-            letter-spacing: 0.3px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 6px;
-            border-bottom: 2px solid #f59e0b;
-        }
-        .sneak-peek-strip a {
-            color: #ffffff;
-            background: rgba(245, 158, 11, 0.2);
-            border: 1px solid #f59e0b;
-            padding: 2px 8px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 800;
-            transition: all 0.2s ease;
-            animation: pulse-glow 1.8s infinite ease-in-out;
-            display: inline-block;
-        }
-        .sneak-peek-strip a:hover {
-            background: #f59e0b;
-            color: #0f172a;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        body { background-color: var(--bg-main); padding-bottom: 125px; color: var(--text-main); }
+        
+        /* Sneak Peek Announcement Top Bar */
+        .sneak-peek-strip {
+            background: linear-gradient(90deg, #0b1329 0%, #1e1b4b 50%, #0b1329 100%);
+            color: #fbbf24;
+            font-size: 11px;
+            font-weight: 700;
+            text-align: center;
+            padding: 6px 10px;
+            letter-spacing: 0.3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            border-bottom: 2px solid #f59e0b;
+        }
+        .sneak-peek-strip a {
+            color: #ffffff;
+            background: rgba(245, 158, 11, 0.2);
+            border: 1px solid #f59e0b;
+            padding: 2px 8px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 800;
+            transition: all 0.2s ease;
+            animation: pulse-glow 1.8s infinite ease-in-out;
+            display: inline-block;
+        }
+        .sneak-peek-strip a:hover {
+            background: #f59e0b;
+            color: #0f172a;
+        }
 
-        /* Top Trust Strip */
-        .top-trust-bar {
-            background: #060b18;
-            color: #cbd5e1;
-            font-size: 10.5px;
-            font-weight: 600;
-            text-align: center;
-            padding: 4px 8px;
-            letter-spacing: 0.4px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 6px;
-        }
-        .top-trust-bar span { color: #f59e0b; }
+        /* Top Trust Strip */
+        .top-trust-bar {
+            background: #060b18;
+            color: #cbd5e1;
+            font-size: 10.5px;
+            font-weight: 600;
+            text-align: center;
+            padding: 4px 8px;
+            letter-spacing: 0.4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+        }
+        .top-trust-bar span { color: #f59e0b; }
 
-        /* Premium Header - 2-Row Clean Stack Layout */
-        header { 
-            background: var(--header-bg); 
-            color: white; 
-            padding: 8px 12px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            position: sticky; 
-            top: 0; 
-            z-index: 100; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15); 
-        }
-        .header-title h1 { 
-            font-family: 'Poppins', sans-serif;
-            font-size: 15px; 
-            font-weight: 700; 
-            letter-spacing: 0.5px; 
-            color: #ffffff;
-        }
-        .header-title p { font-size: 10px; color: #94a3b8; font-weight: 500; }
-        
-        .header-right-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            align-items: flex-end;
-        }
-        .header-top-row {
-            display: flex;
-            gap: 6px;
-        }
+        /* Premium Header - 2-Row Clean Stack Layout */
+        header { 
+            background: var(--header-bg); 
+            color: white; 
+            padding: 8px 12px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15); 
+        }
+        .header-title h1 { 
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px; 
+            font-weight: 700; 
+            letter-spacing: 0.5px; 
+            color: #ffffff;
+        }
+        .header-title p { font-size: 10px; color: #94a3b8; font-weight: 500; }
+        
+        .header-right-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: flex-end;
+        }
+        .header-top-row {
+            display: flex;
+            gap: 6px;
+        }
 
-        /* Catalog & Sneak Peek Top Row Buttons */
-        .header-action-btn {
-            background: rgba(255, 255, 255, 0.08);
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 10.5px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            transition: all 0.2s ease;
-            white-space: nowrap;
-            text-decoration: none;
-        }
-        .header-action-btn:hover {
-            background: rgba(255, 255, 255, 0.15);
-        }
-        .header-action-btn.pdf-btn {
-            background: #2563eb;
-            border-color: #3b82f6;
-            color: #ffffff;
-        }
-        .header-action-btn.sneak-btn {
-            background: #f59e0b;
-            border-color: #fbbf24;
-            color: #0f172a;
-            font-weight: 700;
-            animation: gentle-bounce 2s infinite ease-in-out;
-        }
+        /* Catalog & Sneak Peek Top Row Buttons */
+        .header-action-btn {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 10.5px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        .header-action-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .header-action-btn.pdf-btn {
+            background: #2563eb;
+            border-color: #3b82f6;
+            color: #ffffff;
+        }
+        .header-action-btn.sneak-btn {
+            background: #f59e0b;
+            border-color: #fbbf24;
+            color: #0f172a;
+            font-weight: 700;
+            animation: gentle-bounce 2s infinite ease-in-out;
+        }
 
-        /* Original Purana Access Badge Restored for Bottom Row */
-        .access-badge { 
-            background: rgba(255, 255, 255, 0.08); 
-            color: #fbbf24; 
-            border: 1px solid rgba(251, 191, 36, 0.4);
-            padding: 5px 12px; 
-            border-radius: 20px; 
-            font-size: 11px; 
-            font-weight: 600; 
-            cursor: pointer; 
-            display: flex; 
-            align-items: center; 
-            gap: 5px; 
-            transition: all 0.2s ease;
-            white-space: nowrap;
-        }
-        .access-badge.wholesale { 
-            background: var(--accent-green); 
-            color: #ffffff; 
-            border-color: var(--accent-green);
-        }
+        /* Original Purana Access Badge Restored for Bottom Row */
+        .access-badge { 
+            background: rgba(255, 255, 255, 0.08); 
+            color: #fbbf24; 
+            border: 1px solid rgba(251, 191, 36, 0.4);
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 11px; 
+            font-weight: 600; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            gap: 5px; 
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .access-badge.wholesale { 
+            background: var(--accent-green); 
+            color: #ffffff; 
+            border-color: var(--accent-green);
+        }
 
-        /* Department Switcher Navigation Bar */
-        .dept-navbar {
-            background: #ffffff;
-            border-bottom: 1px solid var(--border-color);
-            padding: 8px 12px;
-            display: flex;
-            gap: 6px;
-            overflow-x: auto;
-            scrollbar-width: none;
-            position: sticky;
-            top: 51px;
-            z-index: 95;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-        }
-        .dept-navbar::-webkit-scrollbar { display: none; }
-        .dept-tab-btn {
-            flex-shrink: 0;
-            padding: 6px 14px;
-            font-size: 12px;
-            font-weight: 700;
-            border-radius: 20px;
-            border: 1.5px solid var(--border-color);
-            background: #f8fafc;
-            color: #475569;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .dept-tab-btn:hover {
-            border-color: #94a3b8;
-            background: #f1f5f9;
-        }
-        .dept-tab-btn.active {
-            background: #0f172a;
-            color: #ffffff;
-            border-color: #0f172a;
-            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
-        }
+        /* Department Switcher Navigation Bar */
+        .dept-navbar {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 8px 12px;
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            position: sticky;
+            top: 51px;
+            z-index: 95;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .dept-navbar::-webkit-scrollbar { display: none; }
+        .dept-tab-btn {
+            flex-shrink: 0;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 20px;
+            border: 1.5px solid var(--border-color);
+            background: #f8fafc;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .dept-tab-btn:hover {
+            border-color: #94a3b8;
+            background: #f1f5f9;
+        }
+        .dept-tab-btn.active {
+            background: #0f172a;
+            color: #ffffff;
+            border-color: #0f172a;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+        }
 
-        /* --- B2B CATALOG LAYOUT --- */
-        .catalog-container {
-            display: flex;
-            gap: 20px;
-            max-width: 1550px;
-            margin: 14px auto 0 auto;
-            padding: 0 14px;
-            align-items: flex-start;
-        }
+        /* --- B2B CATALOG LAYOUT --- */
+        .catalog-container {
+            display: flex;
+            gap: 20px;
+            max-width: 1550px;
+            margin: 14px auto 0 auto;
+            padding: 0 14px;
+            align-items: flex-start;
+        }
 
-        /* Left Sticky Sidebar */
-        .sidebar {
-            width: 230px;
-            flex-shrink: 0;
-            position: sticky;
-            top: 110px;
-            background: #ffffff;
-            border-radius: 14px;
-            padding: 14px;
-            border: 1px solid var(--border-color);
-            box-shadow: var(--card-shadow);
-            max-height: calc(100vh - 130px);
-            overflow-y: auto;
-            scrollbar-width: thin;
-        }
-        .sidebar-header {
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.6px;
-            margin-bottom: 10px;
-            padding-left: 4px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+        /* Left Sticky Sidebar */
+        .sidebar {
+            width: 230px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 110px;
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 14px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--card-shadow);
+            max-height: calc(100vh - 130px);
+            overflow-y: auto;
+            scrollbar-width: thin;
+        }
+        .sidebar-header {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 10px;
+            padding-left: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
 
-        /* Category Items in Sidebar */
-        .category-pills-bar {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-        .cat-pill {
-            padding: 9px 12px;
-            background: #f8fafc;
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            font-size: 12px;
-            font-weight: 600;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.15s ease;
-            text-align: left;
-            white-space: normal;
-            word-break: break-word;
-            display: flex;
-            align-items: center;
-        }
-        .cat-pill:hover {
-            background: #f1f5f9;
-            border-color: #cbd5e1;
-        }
-        .cat-pill.active {
-            background: var(--primary-dark);
-            color: #ffffff;
-            border-color: var(--primary-dark);
-            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
-        }
-        .cat-pill.sneak-peek-link {
-            background: #fef3c7;
-            color: #b45309;
-            border-color: #fcd34d;
-            font-weight: 700;
-            text-decoration: none;
-            animation: subtle-flash 2.2s infinite ease-in-out;
-        }
-        .cat-pill.sneak-peek-link:hover {
-            background: #fde68a;
-        }
+        /* Category Items in Sidebar */
+        .category-pills-bar {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .cat-pill {
+            padding: 9px 12px;
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-align: left;
+            white-space: normal;
+            word-break: break-word;
+            display: flex;
+            align-items: center;
+        }
+        .cat-pill:hover {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+        }
+        .cat-pill.active {
+            background: var(--primary-dark);
+            color: #ffffff;
+            border-color: var(--primary-dark);
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+        }
+        .cat-pill.sneak-peek-link {
+            background: #fef3c7;
+            color: #b45309;
+            border-color: #fcd34d;
+            font-weight: 700;
+            text-decoration: none;
+            animation: subtle-flash 2.2s infinite ease-in-out;
+        }
+        .cat-pill.sneak-peek-link:hover {
+            background: #fde68a;
+        }
 
-        /* --- SNEAK PEEK ATTENTION ANIMATIONS --- */
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); transform: scale(1); }
-            50% { box-shadow: 0 0 10px 3px rgba(245, 158, 11, 0.9); transform: scale(1.05); background: #f59e0b; color: #0f172a; }
-            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); transform: scale(1); }
-        }
+        /* --- SNEAK PEEK ATTENTION ANIMATIONS --- */
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); transform: scale(1); }
+            50% { box-shadow: 0 0 10px 3px rgba(245, 158, 11, 0.9); transform: scale(1.05); background: #f59e0b; color: #0f172a; }
+            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); transform: scale(1); }
+        }
 
-        @keyframes gentle-bounce {
-            0%, 100% { transform: translateY(0); }
-            30% { transform: translateY(-3px) scale(1.03); }
-            50% { transform: translateY(0); }
-            70% { transform: translateY(-1.5px); }
-        }
+        @keyframes gentle-bounce {
+            0%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-3px) scale(1.03); }
+            50% { transform: translateY(0); }
+            70% { transform: translateY(-1.5px); }
+        }
 
-        @keyframes subtle-flash {
-            0%, 100% { border-color: #fcd34d; background: #fef3c7; }
-            50% { border-color: #f59e0b; background: #fde68a; box-shadow: 0 0 10px rgba(245, 158, 11, 0.35); }
-        }
+        @keyframes subtle-flash {
+            0%, 100% { border-color: #fcd34d; background: #fef3c7; }
+            50% { border-color: #f59e0b; background: #fde68a; box-shadow: 0 0 10px rgba(245, 158, 11, 0.35); }
+        }
 
-        /* Right Content Area */
-        .main-catalog-content {
-            flex: 1;
-            min-width: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
+        /* Right Content Area */
+        .main-catalog-content {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
 
-        /* Top Controls Section */
-        .controls-wrapper {
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 10px 14px;
-            box-shadow: var(--card-shadow);
-        }
+        /* Top Controls Section */
+        .controls-wrapper {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 10px 14px;
+            box-shadow: var(--card-shadow);
+        }
 
-        .search-and-sort-container {
-            display: flex;
-            gap: 10px;
-        }
-        .search-box-container {
-            position: relative;
-            flex: 1;
-        }
-        .search-box-container input { 
-            width: 100%; 
-            padding: 10px 36px 10px 14px; 
-            border-radius: 10px; 
-            border: 1.5px solid var(--border-color); 
-            outline: none; 
-            font-size: 13px; 
-            background: #f8fafc; 
-            transition: all 0.2s ease;
-        }
-        .search-box-container input:focus {
-            background: #ffffff;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-        .search-clear-btn {
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-            font-size: 16px;
-            cursor: pointer;
-            display: none;
-        }
-        .sort-select {
-            padding: 0 12px;
-            border-radius: 10px;
-            border: 1.5px solid var(--border-color);
-            background: #f8fafc;
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--primary-dark);
-            outline: none;
-            cursor: pointer;
-        }
+        .search-and-sort-container {
+            display: flex;
+            gap: 10px;
+        }
+        .search-box-container {
+            position: relative;
+            flex: 1;
+        }
+        .search-box-container input { 
+            width: 100%; 
+            padding: 10px 36px 10px 14px; 
+            border-radius: 10px; 
+            border: 1.5px solid var(--border-color); 
+            outline: none; 
+            font-size: 13px; 
+            background: #f8fafc; 
+            transition: all 0.2s ease;
+        }
+        .search-box-container input:focus {
+            background: #ffffff;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .search-clear-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+        }
+        .sort-select {
+            padding: 0 12px;
+            border-radius: 10px;
+            border: 1.5px solid var(--border-color);
+            background: #f8fafc;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            outline: none;
+            cursor: pointer;
+        }
 
-        /* Product Grid & Cards */
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
-            gap: 12px; 
-        }
-        .card { 
-            background: #ffffff; 
-            border-radius: 14px; 
-            padding: 10px; 
-            border: 1px solid var(--border-color); 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: space-between; 
-            position: relative; 
-            box-shadow: var(--card-shadow); 
-            transition: transform 0.15s ease; 
-        }
-        .card:hover { transform: translateY(-2px); }
-        .card:active { transform: scale(0.99); }
-        
-        .card-img-wrapper {
-            position: relative;
-            background: #f8fafc;
-            border-radius: 8px;
-            padding: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 130px;
-        }
-        .card img { 
-            width: 100%; 
-            height: 130px; 
-            object-fit: contain; 
-            border-radius: 6px; 
-            cursor: pointer; 
-        }
-        
-        /* In-Stock Indicator Tag */
-        .stock-tag {
-            position: absolute;
-            top: 6px;
-            right: 6px;
-            background: rgba(255, 255, 255, 0.9);
-            color: #059669;
-            font-size: 9px;
-            font-weight: 700;
-            padding: 2px 6px;
-            border-radius: 10px;
-            border: 1px solid #d1fae5;
-            display: flex;
-            align-items: center;
-            gap: 3px;
-        }
-        .stock-dot {
-            width: 5px;
-            height: 5px;
-            background: #10b981;
-            border-radius: 50%;
-        }
+        /* Product Grid & Cards */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+            gap: 12px; 
+        }
+        .card { 
+            background: #ffffff; 
+            border-radius: 14px; 
+            padding: 10px; 
+            border: 1px solid var(--border-color); 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+            position: relative; 
+            box-shadow: var(--card-shadow); 
+            transition: transform 0.15s ease; 
+        }
+        .card:hover { transform: translateY(-2px); }
+        .card:active { transform: scale(0.99); }
+        
+        .card-img-wrapper {
+            position: relative;
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 130px;
+        }
+        .card img { 
+            width: 100%; 
+            height: 130px; 
+            object-fit: contain; 
+            border-radius: 6px; 
+            cursor: pointer; 
+        }
+        
+        /* In-Stock Indicator Tag */
+        .stock-tag {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #059669;
+            font-size: 9px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 10px;
+            border: 1px solid #d1fae5;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+        .stock-dot {
+            width: 5px;
+            height: 5px;
+            background: #10b981;
+            border-radius: 50%;
+        }
 
-        .p-code { 
-            font-weight: 700; 
-            font-size: 13px; 
-            color: #0369a1; 
-            margin-top: 6px; 
-            letter-spacing: 0.3px; 
-            cursor: pointer; 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 4px; 
-        }
-        .p-code:hover { text-decoration: underline; }
-        .p-desc { 
-            font-size: 11px; 
-            color: var(--text-muted); 
-            margin: 4px 0; 
-            height: 28px; 
-            overflow: hidden; 
-            line-height: 1.3; 
-        }
+        .p-code { 
+            font-weight: 700; 
+            font-size: 13px; 
+            color: #0369a1; 
+            margin-top: 6px; 
+            letter-spacing: 0.3px; 
+            cursor: pointer; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 4px; 
+        }
+        .p-code:hover { text-decoration: underline; }
+        .p-desc { 
+            font-size: 11px; 
+            color: var(--text-muted); 
+            margin: 4px 0; 
+            height: 28px; 
+            overflow: hidden; 
+            line-height: 1.3; 
+        }
 
-        /* B2B Product Chips */
-        .card-chips-row {
-            display: flex;
-            gap: 4px;
-            flex-wrap: wrap;
-            margin: 3px 0 5px;
-        }
-        .b2b-chip {
-            font-size: 9px;
-            font-weight: 700;
-            padding: 2px 6px;
-            border-radius: 6px;
-            background: #f1f5f9;
-            color: #475569;
-            border: 1px solid #e2e8f0;
-        }
-        .b2b-chip.gold {
-            background: #fffbeb;
-            color: #a16207;
-            border-color: #fde68a;
-        }
+        /* B2B Product Chips */
+        .card-chips-row {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+            margin: 3px 0 5px;
+        }
+        .b2b-chip {
+            font-size: 9px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 6px;
+            background: #f1f5f9;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+        }
+        .b2b-chip.gold {
+            background: #fffbeb;
+            color: #a16207;
+            border-color: #fde68a;
+        }
 
-        .p-price { 
-            font-weight: 700; 
-            font-size: 15px; 
-            color: #b91c1c; 
-            margin-bottom: 6px; 
-        }
-        .p-price span { font-size: 10px; color: var(--text-muted); font-weight: 500; }
+        .p-price { 
+            font-weight: 700; 
+            font-size: 15px; 
+            color: #b91c1c; 
+            margin-bottom: 6px; 
+        }
+        .p-price span { font-size: 10px; color: var(--text-muted); font-weight: 500; }
 
-        /* Card Action Details Button */
-        .card-actions {
-            display: flex;
-            gap: 6px;
-            margin-bottom: 8px;
-        }
-        .btn-detail {
-            flex: 1;
-            border: 1px solid #cbd5e1;
-            background: #fff;
-            color: #0f172a;
-            border-radius: 8px;
-            padding: 6px 8px;
-            font-size: 10.5px;
-            font-weight: 700;
-            cursor: pointer;
-        }
-        .btn-detail:hover {
-            background: #f8fafc;
-        }
+        /* Card Action Details Button */
+        .card-actions {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+        .btn-detail {
+            flex: 1;
+            border: 1px solid #cbd5e1;
+            background: #fff;
+            color: #0f172a;
+            border-radius: 8px;
+            padding: 6px 8px;
+            font-size: 10.5px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .btn-detail:hover {
+            background: #f8fafc;
+        }
 
-        /* Dual Counters */
-        .counter-section { display: flex; flex-direction: column; gap: 5px; }
-        .counter-row { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            background: #f8fafc; 
-            border-radius: 8px; 
-            border: 1px solid var(--border-color); 
-            padding: 3px 5px; 
-        }
-        .counter-label { font-size: 11px; font-weight: 700; color: #475569; width: 40px; }
-        .qty-btn { 
-            background: var(--primary-dark); 
-            color: white; 
-            border: none; 
-            width: 26px; 
-            height: 26px; 
-            border-radius: 6px; 
-            font-weight: 700; 
-            font-size: 14px; 
-            cursor: pointer; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-        }
-        .qty-btn:active { background: #334155; }
-        .qty-val { font-size: 13px; font-weight: 700; color: var(--text-main); min-width: 22px; text-align: center; }
+        /* Dual Counters */
+        .counter-section { display: flex; flex-direction: column; gap: 5px; }
+        .counter-row { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            background: #f8fafc; 
+            border-radius: 8px; 
+            border: 1px solid var(--border-color); 
+            padding: 3px 5px; 
+        }
+        .counter-label { font-size: 11px; font-weight: 700; color: #475569; width: 40px; }
+        .qty-btn { 
+            background: var(--primary-dark); 
+            color: white; 
+            border: none; 
+            width: 26px; 
+            height: 26px; 
+            border-radius: 6px; 
+            font-weight: 700; 
+            font-size: 14px; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .qty-btn:active { background: #334155; }
+        .qty-val { font-size: 13px; font-weight: 700; color: var(--text-main); min-width: 22px; text-align: center; }
 
-        /* PERMANENT FROZEN TRUST BAR */
-        .trust-footer {
-            position: fixed;
-            bottom: 58px;
-            left: 0;
-            right: 0;
-            background: #ffffff;
-            border-top: 1px solid var(--border-color);
-            padding: 6px 14px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            text-align: center;
-            z-index: 98;
-            box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
-        }
-        .trust-item {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 6px;
-        }
-        .trust-item span.icon { font-size: 15px; }
-        .trust-item span.title { font-size: 11px; font-weight: 700; color: var(--primary-dark); }
-        .trust-item span.subtitle { font-size: 9.5px; color: var(--text-muted); }
+        /* PERMANENT FROZEN TRUST BAR */
+        .trust-footer {
+            position: fixed;
+            bottom: 58px;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
+            padding: 6px 14px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            z-index: 98;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
+        }
+        .trust-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 6px;
+        }
+        .trust-item span.icon { font-size: 15px; }
+        .trust-item span.title { font-size: 11px; font-weight: 700; color: var(--primary-dark); }
+        .trust-item span.subtitle { font-size: 9.5px; color: var(--text-muted); }
 
-        /* Floating Modern Cart Bar */
-        .cart-bar { 
-            position: fixed; 
-            bottom: 0; 
-            left: 0; 
-            right: 0; 
-            background: #ffffff; 
-            padding: 10px 18px; 
-            border-top: 1px solid var(--border-color); 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            box-shadow: 0 -6px 20px rgba(0,0,0,0.06); 
-            z-index: 99; 
-            height: 58px; 
-        }
-        .cart-info { display: flex; flex-direction: column; }
-        .cart-info-count { font-size: 11px; font-weight: 600; color: var(--text-muted); }
-        .cart-info-total { font-size: 14.5px; font-weight: 800; color: var(--primary-dark); }
-        .cart-info-total span { color: #b91c1c; }
+        /* Floating Modern Cart Bar */
+        .cart-bar { 
+            position: fixed; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            background: #ffffff; 
+            padding: 10px 18px; 
+            border-top: 1px solid var(--border-color); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 -6px 20px rgba(0,0,0,0.06); 
+            z-index: 99; 
+            height: 58px; 
+        }
+        .cart-info { display: flex; flex-direction: column; }
+        .cart-info-count { font-size: 11px; font-weight: 600; color: var(--text-muted); }
+        .cart-info-total { font-size: 14.5px; font-weight: 800; color: var(--primary-dark); }
+        .cart-info-total span { color: #b91c1c; }
 
-        .send-btn { 
-            background: #25D366; 
-            color: white; 
-            border: none; 
-            padding: 10px 18px; 
-            border-radius: 30px; 
-            font-weight: 700; 
-            font-size: 13px; 
-            cursor: pointer; 
-            display: flex; 
-            align-items: center; 
-            gap: 8px; 
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); 
-            transition: transform 0.15s ease; 
-        }
-        .send-btn:active { transform: scale(0.97); }
+        .send-btn { 
+            background: #25D366; 
+            color: white; 
+            border: none; 
+            padding: 10px 18px; 
+            border-radius: 30px; 
+            font-weight: 700; 
+            font-size: 13px; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); 
+            transition: transform 0.15s ease; 
+        }
+        .send-btn:active { transform: scale(0.97); }
 
-        /* ORDER SUMMARY DRAWER */
-        .order-drawer-backdrop {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(2px);
-            z-index: 200;
-        }
-        .order-drawer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #ffffff;
-            border-radius: 20px 20px 0 0;
-            padding: 20px 16px 24px 16px;
-            max-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
-            z-index: 201;
-            transform: translateY(100%);
-            transition: transform 0.25s ease-out;
-        }
-        .order-drawer.open {
-            transform: translateY(0);
-        }
-        .drawer-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 12px;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .drawer-header-left {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .drawer-header h3 { font-size: 15px; font-weight: 700; color: var(--primary-dark); }
-        .clear-cart-btn {
-            background: #fee2e2;
-            color: #dc2626;
-            border: 1px solid #fca5a5;
-            font-size: 10px;
-            font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-        .drawer-close { font-size: 24px; color: var(--text-muted); cursor: pointer; border: none; background: none; font-weight: bold; }
-        
-        .drawer-items-list {
-            overflow-y: auto;
-            margin: 12px 0;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            max-height: 50vh;
-        }
-        .drawer-item-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #f8fafc;
-            border: 1px solid var(--border-color);
-            padding: 8px 12px;
-            border-radius: 10px;
-        }
-        .drawer-item-info { display: flex; flex-direction: column; gap: 2px; }
-        .drawer-item-code { font-weight: 700; font-size: 13px; color: var(--primary-dark); }
-        .drawer-item-qty { font-size: 11px; font-weight: 600; color: #0369a1; }
-        
-        /* Drawer Counter Buttons */
-        .drawer-qty-btns {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            margin-top: 4px;
-        }
-        .drawer-qty-btns button {
-            width: 22px;
-            height: 22px;
-            border: 1px solid #cbd5e1;
-            background: #ffffff;
-            border-radius: 5px;
-            font-size: 12px;
-            font-weight: 700;
-            cursor: pointer;
-        }
-        .drawer-qty-btns span {
-            font-size: 10px;
-            font-weight: 700;
-            color: #334155;
-            min-width: 32px;
-            text-align: center;
-        }
+        /* ORDER SUMMARY DRAWER */
+        .order-drawer-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(2px);
+            z-index: 200;
+        }
+        .order-drawer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-radius: 20px 20px 0 0;
+            padding: 20px 16px 24px 16px;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
+            z-index: 201;
+            transform: translateY(100%);
+            transition: transform 0.25s ease-out;
+        }
+        .order-drawer.open {
+            transform: translateY(0);
+        }
+        .drawer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .drawer-header-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .drawer-header h3 { font-size: 15px; font-weight: 700; color: var(--primary-dark); }
+        .clear-cart-btn {
+            background: #fee2e2;
+            color: #dc2626;
+            border: 1px solid #fca5a5;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        .drawer-close { font-size: 24px; color: var(--text-muted); cursor: pointer; border: none; background: none; font-weight: bold; }
+        
+        .drawer-items-list {
+            overflow-y: auto;
+            margin: 12px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-height: 50vh;
+        }
+        .drawer-item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            padding: 8px 12px;
+            border-radius: 10px;
+        }
+        .drawer-item-info { display: flex; flex-direction: column; gap: 2px; }
+        .drawer-item-code { font-weight: 700; font-size: 13px; color: var(--primary-dark); }
+        .drawer-item-qty { font-size: 11px; font-weight: 600; color: #0369a1; }
+        
+        /* Drawer Counter Buttons */
+        .drawer-qty-btns {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 4px;
+        }
+        .drawer-qty-btns button {
+            width: 22px;
+            height: 22px;
+            border: 1px solid #cbd5e1;
+            background: #ffffff;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .drawer-qty-btns span {
+            font-size: 10px;
+            font-weight: 700;
+            color: #334155;
+            min-width: 32px;
+            text-align: center;
+        }
 
-        .drawer-item-right {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .drawer-item-price { font-weight: 700; font-size: 13px; color: #b91c1c; text-align: right; }
-        .drawer-trash-btn {
-            background: none;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            padding: 2px;
-            color: #94a3b8;
-            transition: color 0.15s;
-        }
-        .drawer-trash-btn:hover { color: #ef4444; }
-        
-        .drawer-footer {
-            padding-top: 12px;
-            border-top: 1px solid var(--border-color);
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .drawer-total-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 15px;
-            font-weight: 800;
-            color: var(--primary-dark);
-        }
-        .drawer-confirm-btn {
-            background: #25D366;
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 14px;
-            cursor: pointer;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-        }
+        .drawer-item-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .drawer-item-price { font-weight: 700; font-size: 13px; color: #b91c1c; text-align: right; }
+        .drawer-trash-btn {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 2px;
+            color: #94a3b8;
+            transition: color 0.15s;
+        }
+        .drawer-trash-btn:hover { color: #ef4444; }
+        
+        .drawer-footer {
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .drawer-total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--primary-dark);
+        }
+        .drawer-confirm-btn {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
 
-        /* Toast Notification */
-        .toast {
-            position: fixed;
-            bottom: 75px;
-            left: 50%;
-            transform: translateX(-50%) translateY(30px);
-            background: rgba(15, 23, 42, 0.9);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.25s ease;
-            z-index: 150;
-        }
-        .toast.show {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 75px;
+            left: 50%;
+            transform: translateX(-50%) translateY(30px);
+            background: rgba(15, 23, 42, 0.9);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.25s ease;
+            z-index: 150;
+        }
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
 
-        /* Lightbox Modal */
-        .lightbox-modal { 
-            display: none; 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100vw; 
-            height: 100vh; 
-            background: rgba(15, 23, 42, 0.95); 
-            z-index: 1000; 
-            justify-content: center; 
-            align-items: center; 
-            flex-direction: column; 
-            overflow: auto; 
-        }
-        .lightbox-modal img { 
-            max-width: 92vw; 
-            max-height: 80vh; 
-            object-fit: contain; 
-            border-radius: 10px; 
-            touch-action: manipulation; 
-        }
-        .lightbox-close { 
-            position: absolute; 
-            top: 18px; 
-            right: 22px; 
-            color: white; 
-            font-size: 32px; 
-            cursor: pointer; 
-            font-weight: 300; 
-            z-index: 1001; 
-        }
-        .lightbox-title { 
-            color: #e2e8f0; 
-            font-size: 13px; 
-            margin-top: 12px; 
-            text-align: center; 
-            font-weight: 600; 
-            padding: 0 20px; 
-        }
+        /* Lightbox Modal */
+        .lightbox-modal { 
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100vw; 
+            height: 100vh; 
+            background: rgba(15, 23, 42, 0.95); 
+            z-index: 1000; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: column; 
+            overflow: auto; 
+        }
+        .lightbox-modal img { 
+            max-width: 92vw; 
+            max-height: 80vh; 
+            object-fit: contain; 
+            border-radius: 10px; 
+            touch-action: manipulation; 
+        }
+        .lightbox-close { 
+            position: absolute; 
+            top: 18px; 
+            right: 22px; 
+            color: white; 
+            font-size: 32px; 
+            cursor: pointer; 
+            font-weight: 300; 
+            z-index: 1001; 
+        }
+        .lightbox-title { 
+            color: #e2e8f0; 
+            font-size: 13px; 
+            margin-top: 12px; 
+            text-align: center; 
+            font-weight: 600; 
+            padding: 0 20px; 
+        }
 
-        /* Product Detail Modal */
-        .product-detail-backdrop {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: blur(3px);
-            z-index: 700;
-        }
-        .product-detail-modal {
-            display: none;
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: min(92vw, 750px);
-            max-height: 88vh;
-            overflow-y: auto;
-            background: #ffffff;
-            border-radius: 18px;
-            z-index: 701;
-            box-shadow: 0 25px 70px rgba(0,0,0,0.25);
-        }
-        .product-detail-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            padding: 18px;
-        }
-        .product-detail-image-box {
-            background: #f8fafc;
-            border-radius: 12px;
-            min-height: 260px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .product-detail-image-box img {
-            max-width: 100%;
-            max-height: 320px;
-            object-fit: contain;
-        }
-        .product-detail-meta-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin: 12px 0;
-        }
-        .product-detail-meta-grid div {
-            background: #f8fafc;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 8px;
-            font-size: 10.5px;
-            color: #64748b;
-        }
-        .product-detail-meta-grid b {
-            display: block;
-            color: #0f172a;
-            font-size: 11.5px;
-            margin-top: 2px;
-        }
-        .product-detail-close-btn {
-            position: absolute;
-            right: 12px;
-            top: 10px;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            border: 0;
-            background: #f1f5f9;
-            font-size: 20px;
-            cursor: pointer;
-        }
+        /* Product Detail Modal */
+        .product-detail-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(3px);
+            z-index: 700;
+        }
+        .product-detail-modal {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: min(92vw, 750px);
+            max-height: 88vh;
+            overflow-y: auto;
+            background: #ffffff;
+            border-radius: 18px;
+            z-index: 701;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+        }
+        .product-detail-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding: 18px;
+        }
+        .product-detail-image-box {
+            background: #f8fafc;
+            border-radius: 12px;
+            min-height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-detail-image-box img {
+            max-width: 100%;
+            max-height: 320px;
+            object-fit: contain;
+        }
+        .product-detail-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 12px 0;
+        }
+        .product-detail-meta-grid div {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px;
+            font-size: 10.5px;
+            color: #64748b;
+        }
+        .product-detail-meta-grid b {
+            display: block;
+            color: #0f172a;
+            font-size: 11.5px;
+            margin-top: 2px;
+        }
+        .product-detail-close-btn {
+            position: absolute;
+            right: 12px;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 0;
+            background: #f1f5f9;
+            font-size: 20px;
+            cursor: pointer;
+        }
 
-        /* --- RESPONSIVE BREAKPOINT (Mobile View) --- */
-        @media (max-width: 860px) {
-            .dept-navbar {
-                top: 47px;
-                padding: 6px 10px;
-            }
-            .dept-tab-btn {
-                padding: 5px 12px;
-                font-size: 11.5px;
-            }
-            .catalog-container {
-                flex-direction: column;
-                gap: 10px;
-                padding: 0 10px;
-                margin-top: 10px;
-            }
-            .sidebar {
-                width: 100%;
-                position: sticky;
-                top: 90px;
-                z-index: 85;
-                padding: 8px 10px;
-                border-radius: 10px;
-                max-height: none;
-                overflow-x: auto;
-            }
-            .sidebar-header {
-                display: none;
-            }
-            .category-pills-bar {
-                flex-direction: row;
-                overflow-x: auto;
-                white-space: nowrap;
-                scrollbar-width: none;
-                gap: 6px;
-            }
-            .category-pills-bar::-webkit-scrollbar { display: none; }
-            .cat-pill {
-                flex-shrink: 0;
-                padding: 6px 12px;
-                font-size: 11.5px;
-                border-radius: 20px;
-            }
-            .grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                gap: 10px;
-            }
-            .product-detail-inner {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+        /* --- RESPONSIVE BREAKPOINT (Mobile View) --- */
+        @media (max-width: 860px) {
+            .dept-navbar {
+                top: 47px;
+                padding: 6px 10px;
+            }
+            .dept-tab-btn {
+                padding: 5px 12px;
+                font-size: 11.5px;
+            }
+            .catalog-container {
+                flex-direction: column;
+                gap: 10px;
+                padding: 0 10px;
+                margin-top: 10px;
+            }
+            .sidebar {
+                width: 100%;
+                position: sticky;
+                top: 90px;
+                z-index: 85;
+                padding: 8px 10px;
+                border-radius: 10px;
+                max-height: none;
+                overflow-x: auto;
+            }
+            .sidebar-header {
+                display: none;
+            }
+            .category-pills-bar {
+                flex-direction: row;
+                overflow-x: auto;
+                white-space: nowrap;
+                scrollbar-width: none;
+                gap: 6px;
+            }
+            .category-pills-bar::-webkit-scrollbar { display: none; }
+            .cat-pill {
+                flex-shrink: 0;
+                padding: 6px 12px;
+                font-size: 11.5px;
+                border-radius: 20px;
+            }
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+            }
+            .product-detail-inner {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 <!-- Firebase App & Messaging SDK (Compat versions) -->
 <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-messaging-compat.js"></script>
 
 <script>
-  const firebaseConfig = {
-    apiKey: "AIzaSyC5X4TMCds_atY_wi67b24D6pCT9pq83Z8",
-    authDomain: "empirequotationdesk.firebaseapp.com",
-    projectId: "empirequotationdesk",
-    storageBucket: "empirequotationdesk.firebasestorage.app",
-    messagingSenderId: "165921209421",
-    appId: "1:165921209421:web:7a7088d18aec2ff0dd7004"
-  };
+  const firebaseConfig = {
+    apiKey: "AIzaSyC5X4TMCds_atY_wi67b24D6pCT9pq83Z8",
+    authDomain: "empirequotationdesk.firebaseapp.com",
+    projectId: "empirequotationdesk",
+    storageBucket: "empirequotationdesk.firebasestorage.app",
+    messagingSenderId: "165921209421",
+    appId: "1:165921209421:web:7a7088d18aec2ff0dd7004"
+  };
 
-  firebase.initializeApp(firebaseConfig);
-  const messaging = firebase.messaging();
+  firebase.initializeApp(firebaseConfig);
+  const messaging = firebase.messaging();
 
-  // Notification Permission & Token Request Function
-  function requestNotificationPermission() {
-    Notification.requestPermission().then((permission) => {
-      if (permission === 'granted') {
-        console.log('Notification permission granted.');
-        messaging.getToken({ 
-          vapidKey: 'BCFUinktQrlcmklEcB5sEA5GUyEoNRr5bPq7_HAxu3-adwbTY6eKM-HJjqh8XkEuPQoOk5-SGkgdXWxugoySIFU' 
-        }).then((currentToken) => {
-          if (currentToken) {
-            console.log('FCM Token:', currentToken);
-            // Yahan aap token ko Firestore database mein save kara sakte hain
-          } else {
-            console.log('No registration token available.');
-          }
-        }).catch((err) => {
-          console.log('An error occurred while retrieving token. ', err);
-        });
-      } else {
-        console.log('Unable to get permission to notify.');
-      }
-    });
-  }
+  // Notification Permission & Token Request Function
+  function requestNotificationPermission() {
+    Notification.requestPermission().then((permission) => {
+      if (permission === 'granted') {
+        console.log('Notification permission granted.');
+        messaging.getToken({ 
+          vapidKey: 'BCFUinktQrlcmklEcB5sEA5GUyEoNRr5bPq7_HAxu3-adwbTY6eKM-HJjqh8XkEuPQoOk5-SGkgdXWxugoySIFU' 
+        }).then((currentToken) => {
+          if (currentToken) {
+            console.log('FCM Token:', currentToken);
+            // Yahan aap token ko Firestore database mein save kara sakte hain
+          } else {
+            console.log('No registration token available.');
+          }
+        }).catch((err) => {
+          console.log('An error occurred while retrieving token. ', err);
+        });
+      } else {
+        console.log('Unable to get permission to notify.');
+      }
+    });
+  }
 
-  // Page load hone ke thodi der baad permission pop-up trigger karne ke liye
-  window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(requestNotificationPermission, 3000);
-  });
+  // Page load hone ke thodi der baad permission pop-up trigger karne ke liye
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(requestNotificationPermission, 3000);
+  });
 </script>
 </head>
 <body>
 
-    <!-- iOS Add to Home Screen Banner -->
-    <div id="iosInstallBanner" style="display: none; background: #1e293b; color: #f8fafc; padding: 10px 14px; font-size: 11.5px; text-align: center; border-bottom: 1px solid #334155; position: relative; z-index: 94;">
-        <span>📲 To install Empire Catalog on your iPhone: Tap the <b>Share</b> button <span style="font-size: 14px;">⎋</span> and select <b>"Add to Home Screen"</b> <span style="font-size: 13px;">➕</span></span>
-        <span onclick="closeIosBanner()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 16px; cursor: pointer; color: #94a3b8; padding: 2px 6px;">&times;</span>
-    </div>
+    <!-- iOS Add to Home Screen Banner -->
+    <div id="iosInstallBanner" style="display: none; background: #1e293b; color: #f8fafc; padding: 10px 14px; font-size: 11.5px; text-align: center; border-bottom: 1px solid #334155; position: relative; z-index: 94;">
+        <span>📲 To install Empire Catalog on your iPhone: Tap the <b>Share</b> button <span style="font-size: 14px;">⎋</span> and select <b>"Add to Home Screen"</b> <span style="font-size: 13px;">➕</span></span>
+        <span onclick="closeIosBanner()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 16px; cursor: pointer; color: #94a3b8; padding: 2px 6px;">&times;</span>
+    </div>
 
-    <!-- Sneak Peek Top Strip Banner -->
-    <div class="sneak-peek-strip">
-        <span>✨</span> <b>Upcoming Shipments & Diwali Special Stock Arriving!</b>
-        <a href="diwali.html">View Diwali Stock ➔</a>
-    </div>
+    <!-- Sneak Peek Top Strip Banner -->
+    <div class="sneak-peek-strip">
+        <span>✨</span> <b>Upcoming Shipments & Diwali Special Stock Arriving!</b>
+        <a href="diwali.html">View Diwali Stock ➔</a>
+    </div>
 
-    <div class="top-trust-bar">
-        <span>✨</span> Direct Importers &nbsp;•&nbsp; Wholesale Pricing <span>✨</span>
-    </div>
+    <div class="top-trust-bar">
+        <span>✨</span> Direct Importers &nbsp;•&nbsp; Wholesale Pricing <span>✨</span>
+    </div>
 
-    <header>
-        <div class="header-title">
-            <h1>EMPIRE GLASSWARE</h1>
-            <p>Digital Order Catalog</p>
-        </div>
-        <div class="header-right-actions">
-            <!-- Top Row: Catalog, Sneak Peek & Android Install Button -->
-            <div class="header-top-row">
-                <button id="pwaInstallBtn" style="display: none;" class="header-action-btn" onclick="installPWA()" title="Install App">
-                    📲 <span>Install</span>
-                </button>
-                <button class="header-action-btn pdf-btn" onclick="openCatalogModal()" title="Download PDF Catalog">
-                    📥 <span>Catalog</span>
-                </button>
-                <a href="diwali.html" class="header-action-btn sneak-btn" title="Diwali Stock">
-                    🔥 <span>Diwali Stock</span>
-                </a>
-            </div>
-            <!-- Bottom Row: Original Pill Shape Access Badge -->
-            <button id="accessBadge" class="access-badge" onclick="promptAccessCode()" title="Wholesale Access">
-                🔑 <span id="tierBtnText">Wholesale Access</span>
-            </button>
-        </div>
-    </header>
+    <header>
+        <div class="header-title">
+            <h1>EMPIRE GLASSWARE</h1>
+            <p>Digital Order Catalog</p>
+        </div>
+        <div class="header-right-actions">
+            <!-- Top Row: Catalog, Sneak Peek & Android Install Button -->
+            <div class="header-top-row">
+                <button id="pwaInstallBtn" style="display: none;" class="header-action-btn" onclick="installPWA()" title="Install App">
+                    📲 <span>Install</span>
+                </button>
+                <button class="header-action-btn pdf-btn" onclick="openCatalogModal()" title="Download PDF Catalog">
+                    📥 <span>Catalog</span>
+                </button>
+                <a href="diwali.html" class="header-action-btn sneak-btn" title="Diwali Stock">
+                    🔥 <span>Diwali Stock</span>
+                </a>
+            </div>
+            <!-- Bottom Row: Original Pill Shape Access Badge -->
+            <button id="accessBadge" class="access-badge" onclick="promptAccessCode()" title="Wholesale Access">
+                🔑 <span id="tierBtnText">Wholesale Access</span>
+            </button>
+        </div>
+    </header>
 
-    <!-- Top Department Switcher Navbar -->
-    <nav class="dept-navbar" id="deptNavbar">
-        <button class="dept-tab-btn active" onclick="switchDepartment('ALL', this)">✨ All Departments</button>
-        <button class="dept-tab-btn" onclick="switchDepartment('Glassware', this)">🍷 Glassware</button>
-        <button class="dept-tab-btn" onclick="switchDepartment('vaccum_bottles', this)">🍶 Vacuum Bottles</button>
-        <button class="dept-tab-btn" onclick="switchDepartment('Kitchenware', this)">🍳 Kitchenware</button>
-    </nav>
+    <!-- Top Department Switcher Navbar -->
+    <nav class="dept-navbar" id="deptNavbar">
+        <button class="dept-tab-btn active" onclick="switchDepartment('ALL', this)">✨ All Departments</button>
+        <button class="dept-tab-btn" onclick="switchDepartment('Glassware', this)">🍷 Glassware</button>
+        <button class="dept-tab-btn" onclick="switchDepartment('vaccum_bottles', this)">🍶 Vacuum Bottles</button>
+        <button class="dept-tab-btn" onclick="switchDepartment('Kitchenware', this)">🍳 Kitchenware</button>
+    </nav>
 
-    <!-- Main Container: Left Sidebar + Right Catalog Content -->
-    <div class="catalog-container">
-        
-        <!-- Left Sidebar Categories -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <span>📁</span> Product Categories
-            </div>
-            <div class="category-pills-bar" id="categoryPillsBar">
-                <!-- Dynamic categories loaded via script.js -->
-            </div>
-        </aside>
+    <!-- Main Container: Left Sidebar + Right Catalog Content -->
+    <div class="catalog-container">
+        
+        <!-- Left Sidebar Categories -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span>📁</span> Product Categories
+            </div>
+            <div class="category-pills-bar" id="categoryPillsBar">
+                <!-- Dynamic categories loaded via script.js -->
+            </div>
+        </aside>
 
-        <!-- Right Main Catalog Area -->
-        <main class="main-catalog-content">
-            <!-- Search & Sort Top Controls -->
-            <div class="controls-wrapper">
-                <div class="search-and-sort-container">
-                    <div class="search-box-container">
-                        <input type="text" id="searchInput" placeholder="🔍 Search item code, name..." oninput="onSearchInput()">
-                        <span id="searchClearBtn" class="search-clear-btn" onclick="clearSearch()">&times;</span>
-                    </div>
-                    <select id="sortSelect" class="sort-select" onchange="filterProducts()">
-                        <option value="DEFAULT">Sort By</option>
-                        <option value="PRICE_LOW">Price: Low to High</option>
-                        <option value="PRICE_HIGH">Price: High to Low</option>
-                    </select>
-                </div>
-            </div>
+        <!-- Right Main Catalog Area -->
+        <main class="main-catalog-content">
+            <!-- Search & Sort Top Controls -->
+            <div class="controls-wrapper">
+                <div class="search-and-sort-container">
+                    <div class="search-box-container">
+                        <input type="text" id="searchInput" placeholder="🔍 Search item code, name..." oninput="onSearchInput()">
+                        <span id="searchClearBtn" class="search-clear-btn" onclick="clearSearch()">&times;</span>
+                    </div>
+                    <select id="sortSelect" class="sort-select" onchange="filterProducts()">
+                        <option value="DEFAULT">Sort By</option>
+                        <option value="PRICE_LOW">Price: Low to High</option>
+                        <option value="PRICE_HIGH">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
 
-            <!-- Product Grid -->
-            <div class="grid" id="productGrid"></div>
-        </main>
+            <!-- Product Grid -->
+            <div class="grid" id="productGrid"></div>
+        </main>
 
-    </div>
+    </div>
 
-    <!-- Permanent Frozen Trust Bar -->
-    <div class="trust-footer">
-        <div class="trust-item">
-            <span class="icon">📦</span>
-            <div>
-                <span class="title">Safe Breakage-Free</span>
-                <span class="subtitle">• Carton Packing</span>
-            </div>
-        </div>
-        <div style="width: 1px; height: 18px; background: var(--border-color);"></div>
-        <div class="trust-item">
-            <span class="icon">🚚</span>
-            <div>
-                <span class="title">Pan-India Transport</span>
-                <span class="subtitle">• Fast Dispatch</span>
-            </div>
-        </div>
-    </div>
+    <!-- Permanent Frozen Trust Bar -->
+    <div class="trust-footer">
+        <div class="trust-item">
+            <span class="icon">📦</span>
+            <div>
+                <span class="title">Safe Breakage-Free</span>
+                <span class="subtitle">• Carton Packing</span>
+            </div>
+        </div>
+        <div style="width: 1px; height: 18px; background: var(--border-color);"></div>
+        <div class="trust-item">
+            <span class="icon">🚚</span>
+            <div>
+                <span class="title">Pan-India Transport</span>
+                <span class="subtitle">• Fast Dispatch</span>
+            </div>
+        </div>
+    </div>
 
-    <!-- Permanent Bottom Cart Bar -->
-    <div class="cart-bar">
-        <div class="cart-info">
-            <span class="cart-info-count">Selected: <b id="totalItems">0</b> Items</span>
-            <span class="cart-info-total">Est. Total: <span id="cartEstTotal">Rs. 0</span></span>
-        </div>
-        <button class="send-btn" onclick="openOrderDrawer()">
-            <span>💬 Review & Order</span>
-        </button>
-    </div>
+    <!-- Permanent Bottom Cart Bar -->
+    <div class="cart-bar">
+        <div class="cart-info">
+            <span class="cart-info-count">Selected: <b id="totalItems">0</b> Items</span>
+            <span class="cart-info-total">Est. Total: <span id="cartEstTotal">Rs. 0</span></span>
+        </div>
+        <button class="send-btn" onclick="openOrderDrawer()">
+            <span>💬 Review & Order</span>
+        </button>
+    </div>
 
-    <!-- Order Summary Bottom Drawer -->
-    <div id="drawerBackdrop" class="order-drawer-backdrop" onclick="closeOrderDrawer()"></div>
-    <div id="orderDrawer" class="order-drawer">
-        <div class="drawer-header">
-            <div class="drawer-header-left">
-                <h3>📋 Order Summary</h3>
-                <button class="clear-cart-btn" onclick="clearFullCart()">Clear All</button>
-            </div>
-            <button class="drawer-close" onclick="closeOrderDrawer()">&times;</button>
-        </div>
-        <div class="drawer-items-list" id="drawerItemsList"></div>
-        <div class="drawer-footer">
-            <div class="drawer-total-row">
-                <span>Estimated Total:</span>
-                <span id="drawerEstTotal" style="color: #b91c1c;">Rs. 0</span>
-            </div>
-            <button class="drawer-confirm-btn" onclick="sendWhatsAppOrder()">
-                <span>💬 Confirm & Send on WhatsApp</span>
-            </button>
-        </div>
-    </div>
+    <!-- Order Summary Bottom Drawer -->
+    <div id="drawerBackdrop" class="order-drawer-backdrop" onclick="closeOrderDrawer()"></div>
+    <div id="orderDrawer" class="order-drawer">
+        <div class="drawer-header">
+            <div class="drawer-header-left">
+                <h3>📋 Order Summary</h3>
+                <button class="clear-cart-btn" onclick="clearFullCart()">Clear All</button>
+            </div>
+            <button class="drawer-close" onclick="closeOrderDrawer()">&times;</button>
+        </div>
+        <div class="drawer-items-list" id="drawerItemsList"></div>
+        <div class="drawer-footer">
+            <div class="drawer-total-row">
+                <span>Estimated Total:</span>
+                <span id="drawerEstTotal" style="color: #b91c1c;">Rs. 0</span>
+            </div>
+            <button class="drawer-confirm-btn" onclick="sendWhatsAppOrder()">
+                <span>💬 Confirm & Send on WhatsApp</span>
+            </button>
+        </div>
+    </div>
 
-    <!-- Toast Notification -->
-    <div id="toast" class="toast">Code Copied!</div>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Code Copied!</div>
 
-    <!-- Image Lightbox Modal -->
-    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightboxImg" src="" alt="Full View">
-        <div id="lightboxTitle" class="lightbox-title"></div>
-    </div>
+    <!-- Image Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightboxImg" src="" alt="Full View">
+        <div id="lightboxTitle" class="lightbox-title"></div>
+    </div>
 
-    <!-- Product Detail Modal (With Flyer & Share Buttons) -->
-    <div id="productDetailBackdrop" class="product-detail-backdrop" onclick="closeProductDetail()"></div>
-    <div id="productDetailModal" class="product-detail-modal">
-        <button class="product-detail-close-btn" onclick="closeProductDetail()">&times;</button>
-        <div class="product-detail-inner">
-            <div class="product-detail-image-box">
-                <img id="pdetailImg" src="" alt="Product Detail Image">
-            </div>
-            <div>
-                <div style="display: flex; justify-content: space-between; align-items: center; gap: 6px;">
-                    <span id="pdetailCode" class="p-code" style="font-size:14px;"></span>
-                    <div style="display: flex; gap: 6px;">
-                        <!-- Flyer Button -->
-                        <button id="pdetailFlyerBtn" onclick="openFlyerModal()" style="background: #0f172a; color: #fbbf24; border: 1px solid #fbbf24; padding: 4px 10px; border-radius: 14px; font-size: 11px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 4px;">
-                            🎨 Flyer
-                        </button>
-                        <!-- Share Button -->
-                        <button id="pdetailShareBtn" onclick="shareCurrentProduct()" style="background: #25D366; color: #fff; border: none; padding: 4px 10px; border-radius: 14px; font-size: 11px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 4px;">
-                            📲 Share
-                        </button>
-                    </div>
-                </div>
-                <h3 id="pdetailTitle" style="font-size:16px; margin:8px 0; color:#0f172a;"></h3>
-                <div id="pdetailPrice" class="p-price" style="font-size:18px;"></div>
-                <div class="product-detail-meta-grid">
-                    <div>📦 Packing<b id="pdetailPacking">—</b></div>
-                    <div>📋 Minimum Order<b id="pdetailMoq">—</b></div>
-                    <div>🟢 Status<b id="pdetailStock">In Stock</b></div>
-                    <div>🏷️ Department<b id="pdetailDept">—</b></div>
-                </div>
-                <p id="pdetailDesc" style="font-size:11.5px; color:#64748b; line-height:1.5; margin-bottom:14px;"></p>
-                <button id="pdetailAddBtn" class="btn-detail" style="width:100%; background:#0f172a; color:#fff; padding:10px; font-size:12px;">+ Add Minimum to Order</button>
-            </div>
-        </div>
+    <!-- Product Detail Modal (With Flyer & Share Buttons) -->
+    <div id="productDetailBackdrop" class="product-detail-backdrop" onclick="closeProductDetail()"></div>
+    <div id="productDetailModal" class="product-detail-modal">
+        <button class="product-detail-close-btn" onclick="closeProductDetail()">&times;</button>
+        <div class="product-detail-inner">
+            <div class="product-detail-image-box">
+                <img id="pdetailImg" src="" alt="Product Detail Image">
+            </div>
+            <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 6px;">
+                    <span id="pdetailCode" class="p-code" style="font-size:14px;"></span>
+                    <div style="display: flex; gap: 6px;">
+                        <!-- Flyer Button -->
+                        <button id="pdetailFlyerBtn" onclick="openFlyerModal()" style="background: #0f172a; color: #fbbf24; border: 1px solid #fbbf24; padding: 4px 10px; border-radius: 14px; font-size: 11px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+                            🎨 Flyer
+                        </button>
+                        <!-- Share Button -->
+                        <button id="pdetailShareBtn" onclick="shareCurrentProduct()" style="background: #25D366; color: #fff; border: none; padding: 4px 10px; border-radius: 14px; font-size: 11px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+                            📲 Share
+                        </button>
+                    </div>
+                </div>
+                <h3 id="pdetailTitle" style="font-size:16px; margin:8px 0; color:#0f172a;"></h3>
+                <div id="pdetailPrice" class="p-price" style="font-size:18px;"></div>
+                <div class="product-detail-meta-grid">
+                    <div>📦 Packing<b id="pdetailPacking">—</b></div>
+                    <div>📋 Minimum Order<b id="pdetailMoq">—</b></div>
+                    <div>🟢 Status<b id="pdetailStock">In Stock</b></div>
+                    <div>🏷️ Department<b id="pdetailDept">—</b></div>
+                </div>
+                <p id="pdetailDesc" style="font-size:11.5px; color:#64748b; line-height:1.5; margin-bottom:14px;"></p>
+                <button id="pdetailAddBtn" class="btn-detail" style="width:100%; background:#0f172a; color:#fff; padding:10px; font-size:12px;">+ Add Minimum to Order</button>
+            </div>
+        </div>
 
-        <!-- Similar Recommended Products Section -->
-        <div style="border-top: 1px solid #e2e8f0; padding: 14px 18px; background: #f8fafc; border-radius: 0 0 18px 18px;">
-            <div style="font-size: 12px; font-weight: 700; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
-                🔥 More from this Category:
-            </div>
-            <div id="pdetailSimilarList" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: thin;"></div>
-        </div>
-    </div>
+        <!-- Similar Recommended Products Section -->
+        <div style="border-top: 1px solid #e2e8f0; padding: 14px 18px; background: #f8fafc; border-radius: 0 0 18px 18px;">
+            <div style="font-size: 12px; font-weight: 700; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+                🔥 More from this Category:
+            </div>
+            <div id="pdetailSimilarList" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: thin;"></div>
+        </div>
+    </div>
 
-    <!-- Custom White-Label Flyer Generator Modal -->
-    <div id="flyerModalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.7); backdrop-filter:blur(3px); z-index:800;" onclick="closeFlyerModal()"></div>
-    <div id="flyerModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:92%; max-width:440px; max-height:90vh; overflow-y:auto; background:#ffffff; border-radius:16px; padding:18px; box-shadow:0 25px 50px rgba(0,0,0,0.3); z-index:801;">
-        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:10px; margin-bottom:12px;">
-            <h3 style="font-size:15px; font-weight:800; color:#0f172a;">🎨 Make Custom Client Flyer</h3>
-            <button onclick="closeFlyerModal()" style="border:none; background:none; font-size:22px; cursor:pointer; color:#64748b;">&times;</button>
-        </div>
-        
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
-            <div>
-                <label style="display:block; font-size:11px; font-weight:700; color:#475569; margin-bottom:3px;">Your Selling Price (₹):</label>
-                <input type="number" id="flyerCustomPrice" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:13px; font-weight:700;" oninput="onFlyerPriceChange()">
-                <div id="flyerPriceErr" style="font-size:9.5px; color:#dc2626; font-weight:700; margin-top:2px; display:none;">⚠️ Below dealer rate!</div>
-            </div>
-            <div>
-                <label style="display:block; font-size:11px; font-weight:700; color:#475569; margin-bottom:3px;">Min Order Qty (MOQ):</label>
-                <input type="text" id="flyerCustomMoq" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:13px; font-weight:600;">
-            </div>
-        </div>
+    <!-- Custom White-Label Flyer Generator Modal -->
+    <div id="flyerModalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.7); backdrop-filter:blur(3px); z-index:800;" onclick="closeFlyerModal()"></div>
+    <div id="flyerModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:92%; max-width:440px; max-height:90vh; overflow-y:auto; background:#ffffff; border-radius:16px; padding:18px; box-shadow:0 25px 50px rgba(0,0,0,0.3); z-index:801;">
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:10px; margin-bottom:12px;">
+            <h3 style="font-size:15px; font-weight:800; color:#0f172a;">🎨 Make Custom Client Flyer</h3>
+            <button onclick="closeFlyerModal()" style="border:none; background:none; font-size:22px; cursor:pointer; color:#64748b;">&times;</button>
+        </div>
+        
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
+            <div>
+                <label style="display:block; font-size:11px; font-weight:700; color:#475569; margin-bottom:3px;">Your Selling Price (₹):</label>
+                <input type="number" id="flyerCustomPrice" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:13px; font-weight:700;" oninput="onFlyerPriceChange()">
+                <div id="flyerPriceErr" style="font-size:9.5px; color:#dc2626; font-weight:700; margin-top:2px; display:none;">⚠️ Below dealer rate!</div>
+            </div>
+            <div>
+                <label style="display:block; font-size:11px; font-weight:700; color:#475569; margin-bottom:3px;">Min Order Qty (MOQ):</label>
+                <input type="text" id="flyerCustomMoq" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:13px; font-weight:600;">
+            </div>
+        </div>
 
-        <div style="margin-bottom:12px;">
-            <label style="display:block; font-size:11px; font-weight:700; color:#475569; margin-bottom:3px;">Your Firm Name / Note (Optional):</label>
-            <input type="text" id="flyerCustomFirm" placeholder="e.g. Special Deal / Exclusive Stock" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:12px;">
-        </div>
+        <div style="margin-bottom:12px;">
+            <label style="display:block; font-size:11px; font-weight:700; color:#475569; margin-bottom:3px;">Your Firm Name / Note (Optional):</label>
+            <input type="text" id="flyerCustomFirm" placeholder="e.g. Special Deal / Exclusive Stock" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:12px;">
+        </div>
 
-        <!-- Hidden Canvas for Rendering Flyer -->
-        <canvas id="flyerCanvas" style="display:none;"></canvas>
+        <!-- Hidden Canvas for Rendering Flyer -->
+        <canvas id="flyerCanvas" style="display:none;"></canvas>
 
-        <div style="display:flex; gap:8px;">
-            <button onclick="downloadFlyerImage()" id="flyerDownloadBtn" style="flex:1; background:#0f172a; color:#fff; border:none; padding:10px; border-radius:10px; font-size:12px; font-weight:700; cursor:pointer;">
-                📥 Download Image
-            </button>
-            <button onclick="shareFlyerDirect()" id="flyerShareBtn" style="flex:1; background:#25D366; color:#fff; border:none; padding:10px; border-radius:10px; font-size:12px; font-weight:700; cursor:pointer;">
-                📲 WhatsApp Share
-            </button>
-        </div>
-    </div>
+        <div style="display:flex; gap:8px;">
+            <button onclick="downloadFlyerImage()" id="flyerDownloadBtn" style="flex:1; background:#0f172a; color:#fff; border:none; padding:10px; border-radius:10px; font-size:12px; font-weight:700; cursor:pointer;">
+                📥 Download Image
+            </button>
+            <button onclick="shareFlyerDirect()" id="flyerShareBtn" style="flex:1; background:#25D366; color:#fff; border:none; padding:10px; border-radius:10px; font-size:12px; font-weight:700; cursor:pointer;">
+                📲 WhatsApp Share
+            </button>
+        </div>
+    </div>
 
-    <!-- Wholesale Access Request & Entry Modal -->
-    <div id="accessModalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.7); backdrop-filter:blur(3px); z-index:500;" onclick="closeAccessModal()"></div>
-    <div id="accessModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:90%; max-width:380px; background:#ffffff; border-radius:16px; padding:22px 18px; box-shadow:0 20px 40px rgba(0,0,0,0.25); z-index:501; text-align:center;">
-        
-        <!-- Top Right Cross (X) Close Button -->
-        <button onclick="closeAccessModal()" aria-label="Close" style="position:absolute; right:12px; top:12px; width:28px; height:28px; border-radius:50%; border:none; background:#f1f5f9; color:#64748b; font-size:18px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center;">&times;</button>
+    <!-- Wholesale Access Request & Entry Modal -->
+    <div id="accessModalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.7); backdrop-filter:blur(3px); z-index:500;" onclick="closeAccessModal()"></div>
+    <div id="accessModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:90%; max-width:380px; background:#ffffff; border-radius:16px; padding:22px 18px; box-shadow:0 20px 40px rgba(0,0,0,0.25); z-index:501; text-align:center;">
+        
+        <!-- Top Right Cross (X) Close Button -->
+        <button onclick="closeAccessModal()" aria-label="Close" style="position:absolute; right:12px; top:12px; width:28px; height:28px; border-radius:50%; border:none; background:#f1f5f9; color:#64748b; font-size:18px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center;">&times;</button>
 
-        <h3 style="font-size:16px; font-weight:800; color:#0f172a; margin-bottom:6px;">🔑 Wholesale B2B Access</h3>
-        <p style="font-size:11.5px; color:#64748b; margin-bottom:16px; line-height:1.4;">Enter your secret dealer code to unlock wholesale discounted pricing.</p>
-        
-        <!-- Code Input -->
-        <input type="text" id="accessCodeInput" placeholder="Enter Access Code" style="width:100%; padding:10px 12px; border-radius:10px; border:1.5px solid #cbd5e1; font-size:13px; font-weight:700; text-align:center; text-transform:uppercase; outline:none; margin-bottom:10px;">
-        
-        <!-- Apply Button -->
-        <button onclick="applyAccessCodeFromModal()" style="width:100%; background:#0f172a; color:#ffffff; border:none; padding:10px; border-radius:10px; font-size:13px; font-weight:700; cursor:pointer; margin-bottom:14px;">Apply Code</button>
-        
-        <div style="position:relative; margin:14px 0; border-bottom:1px solid #e2e8f0;">
-            <span style="position:absolute; top:-9px; left:50%; transform:translateX(-50%); background:#fff; padding:0 8px; font-size:10.5px; color:#94a3b8; font-weight:600;">NEW DEALER?</span>
-        </div>
+        <h3 style="font-size:16px; font-weight:800; color:#0f172a; margin-bottom:6px;">🔑 Wholesale B2B Access</h3>
+        <p style="font-size:11.5px; color:#64748b; margin-bottom:16px; line-height:1.4;">Enter your secret dealer code to unlock wholesale discounted pricing.</p>
+        
+        <!-- Code Input -->
+        <input type="text" id="accessCodeInput" placeholder="Enter Access Code" style="width:100%; padding:10px 12px; border-radius:10px; border:1.5px solid #cbd5e1; font-size:13px; font-weight:700; text-align:center; text-transform:uppercase; outline:none; margin-bottom:10px;">
+        
+        <!-- Apply Button -->
+        <button onclick="applyAccessCodeFromModal()" style="width:100%; background:#0f172a; color:#ffffff; border:none; padding:10px; border-radius:10px; font-size:13px; font-weight:700; cursor:pointer; margin-bottom:14px;">Apply Code</button>
+        
+        <div style="position:relative; margin:14px 0; border-bottom:1px solid #e2e8f0;">
+            <span style="position:absolute; top:-9px; left:50%; transform:translateX(-50%); background:#fff; padding:0 8px; font-size:10.5px; color:#94a3b8; font-weight:600;">NEW DEALER?</span>
+        </div>
 
-        <!-- WhatsApp Request Button for Organic Visitors -->
-        <a id="waRequestBtn" href="https://wa.me/919601693938?text=Hello%20Empire%20Glassware%2C%20I%20am%20a%20crockery%20dealer%20visiting%20your%20website.%20Please%20share%20the%20Wholesale%20Access%20Code.%0A%E2%80%A2%20Firm%20Name%3A%20%0A%E2%80%A2%20City%3A%20" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:6px; width:100%; background:#25D366; color:#ffffff; text-decoration:none; padding:10px; border-radius:10px; font-size:12px; font-weight:700; box-shadow:0 3px 10px rgba(37,211,102,0.25);">
-            <span>💬 Request Code via WhatsApp</span>
-        </a>
-    </div>
+        <!-- WhatsApp Request Button for Organic Visitors -->
+        <a id="waRequestBtn" href="https://wa.me/919601693938?text=Hello%20Empire%20Glassware%2C%20I%20am%20a%20crockery%20dealer%20visiting%20your%20website.%20Please%20share%20the%20Wholesale%20Access%20Code.%0A%E2%80%A2%20Firm%20Name%3A%20%0A%E2%80%A2%20City%3A%20" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:6px; width:100%; background:#25D366; color:#ffffff; text-decoration:none; padding:10px; border-radius:10px; font-size:12px; font-weight:700; box-shadow:0 3px 10px rgba(37,211,102,0.25);">
+            <span>💬 Request Code via WhatsApp</span>
+        </a>
+    </div>
 
-    <!-- Download Catalog Modal -->
-    <div id="catalogModalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.7); backdrop-filter:blur(3px); z-index:600;" onclick="closeCatalogModal()"></div>
-    <div id="catalogModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:90%; max-width:400px; background:#ffffff; border-radius:16px; padding:22px 18px; box-shadow:0 20px 40px rgba(0,0,0,0.25); z-index:601; text-align:center;">
-        <button onclick="closeCatalogModal()" style="position:absolute; right:12px; top:12px; width:28px; height:28px; border-radius:50%; border:none; background:#f1f5f9; color:#64748b; font-size:18px; font-weight:700; cursor:pointer;">&times;</button>
-        <h3 style="font-size:16px; font-weight:800; color:#0f172a; margin-bottom:6px;">📥 Download PDF Catalog</h3>
-        <p style="font-size:11.5px; color:#64748b; margin-bottom:16px;">Select a department to download the respective wholesale catalog:</p>
-        
-        <div style="display:flex; flex-direction:column; gap:10px;">
-            <button onclick="triggerCatalogDownload('Glassware')" style="padding:12px; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; font-size:13px; font-weight:700; color:#0f172a; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center;">
-                <span>🍷 Glassware Catalog</span><span>📥 PDF</span>
-            </button>
-            <button onclick="triggerCatalogDownload('vaccum_bottles')" style="padding:12px; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; font-size:13px; font-weight:700; color:#0f172a; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center;">
-                <span>🍶 Vacuum Bottles Catalog</span><span>📥 PDF</span>
-            </button>
-            <button onclick="triggerCatalogDownload('Kitchenware')" style="padding:12px; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; font-size:13px; font-weight:700; color:#0f172a; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center;">
-                <span>🍳 Kitchenware Catalog</span><span>📥 PDF</span>
-            </button>
-        </div>
-    </div>
+    <!-- Download Catalog Modal -->
+    <div id="catalogModalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.7); backdrop-filter:blur(3px); z-index:600;" onclick="closeCatalogModal()"></div>
+    <div id="catalogModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:90%; max-width:400px; background:#ffffff; border-radius:16px; padding:22px 18px; box-shadow:0 20px 40px rgba(0,0,0,0.25); z-index:601; text-align:center;">
+        <button onclick="closeCatalogModal()" style="position:absolute; right:12px; top:12px; width:28px; height:28px; border-radius:50%; border:none; background:#f1f5f9; color:#64748b; font-size:18px; font-weight:700; cursor:pointer;">&times;</button>
+        <h3 style="font-size:16px; font-weight:800; color:#0f172a; margin-bottom:6px;">📥 Download PDF Catalog</h3>
+        <p style="font-size:11.5px; color:#64748b; margin-bottom:16px;">Select a department to download the respective wholesale catalog:</p>
+        
+        <div style="display:flex; flex-direction:column; gap:10px;">
+            <button onclick="triggerCatalogDownload('Glassware')" style="padding:12px; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; font-size:13px; font-weight:700; color:#0f172a; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center;">
+                <span>🍷 Glassware Catalog</span><span>📥 PDF</span>
+            </button>
+            <button onclick="triggerCatalogDownload('vaccum_bottles')" style="padding:12px; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; font-size:13px; font-weight:700; color:#0f172a; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center;">
+                <span>🍶 Vacuum Bottles Catalog</span><span>📥 PDF</span>
+            </button>
+            <button onclick="triggerCatalogDownload('Kitchenware')" style="padding:12px; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; font-size:13px; font-weight:700; color:#0f172a; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center;">
+                <span>🍳 Kitchenware Catalog</span><span>📥 PDF</span>
+            </button>
+        </div>
+    </div>
 
-    <script>
-    function openCatalogModal() {
-        document.getElementById('catalogModalBackdrop').style.display = 'block';
-        document.getElementById('catalogModal').style.display = 'block';
-    }
-    function closeCatalogModal() {
-        document.getElementById('catalogModalBackdrop').style.display = 'none';
-        document.getElementById('catalogModal').style.display = 'none';
-    }
-    </script>
+    <script>
+    function openCatalogModal() {
+        document.getElementById('catalogModalBackdrop').style.display = 'block';
+        document.getElementById('catalogModal').style.display = 'block';
+    }
+    function closeCatalogModal() {
+        document.getElementById('catalogModalBackdrop').style.display = 'none';
+        document.getElementById('catalogModal').style.display = 'none';
+    }
+    </script>
 
-    <script src="products_data.js"></script>
-    <script src="script.js"></script>
+    <script src="products_data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
