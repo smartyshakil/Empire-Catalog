@@ -361,7 +361,7 @@ function renderProducts(items) {
                      loading="lazy"
                      data-err-idx="0"
                      onerror="handleImageFallback(this, '${p.code}', '${itemDept}')" 
-                     alt="${p.code}" 
+                     alt="${p.desc} - Product Code: ${p.code} | Empire Glassware" 
                      onclick="openLightbox(this.src, '${p.code} - ${p.desc}')">
             </div>
             <div>
@@ -426,8 +426,11 @@ function openProductDetail(code) {
     const minSet = getMinSetLimit(effectivePrice, itemDept, item);
     const packing = getDisplayPacking(item);
 
-    document.getElementById("pdetailImg").src = getInitialImagePath(item);
-    document.getElementById("pdetailImg").onerror = function() { handleImageFallback(this, code, itemDept); };
+    const detailImg = document.getElementById("pdetailImg");
+    detailImg.src = getInitialImagePath(item);
+    detailImg.alt = `${item.desc || ''} - Product Code: ${code} | Empire Glassware`;
+    detailImg.onerror = function() { handleImageFallback(this, code, itemDept); };
+
     document.getElementById("pdetailCode").innerText = `${code} 📋`;
     document.getElementById("pdetailCode").onclick = () => copyItemCode(code);
     document.getElementById("pdetailTitle").innerText = item.desc || code;
@@ -490,7 +493,7 @@ function renderSimilarProducts(product) {
         };
 
         card.innerHTML = `
-            <img src="${imgSrc}" data-err-idx="0" onerror="handleImageFallback(this, '${itemCode}', '${itemDept}')" style="width:100%; height:65px; object-fit:contain; border-radius:4px; margin-bottom:4px;">
+            <img src="${imgSrc}" data-err-idx="0" alt="${itemDesc} - Product Code: ${itemCode} | Empire Glassware" onerror="handleImageFallback(this, '${itemCode}', '${itemDept}')" style="width:100%; height:65px; object-fit:contain; border-radius:4px; margin-bottom:4px;">
             <div style="font-size:10.5px; font-weight:700; color:#0369a1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${itemCode}</div>
             <div style="font-size:9.5px; color:#64748b; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${itemDesc}</div>
         `;
