@@ -66,15 +66,15 @@ function applyAccessCodeFromModal() {
     if (userCode === _K_MASTER || userCode === dailyCode) {
         localStorage.setItem("empire_access_tier", "50");
         localStorage.setItem("empire_access_code", userCode);
-        alert("🟢 Wholesale Access (Flat 50% Less) Activated!");
+        alert("🟢 Wholesale Access Activated!");
     } else if (userCode === _K_TIER45) {
         localStorage.setItem("empire_access_tier", "45");
         localStorage.setItem("empire_access_code", userCode);
-        alert("🟢 Dealer Access (45% Less Rate) Activated!");
+        alert("🟢 Dealer Access Activated!");
     } else if (userCode === _K_TIER40) {
         localStorage.setItem("empire_access_tier", "40");
         localStorage.setItem("empire_access_code", userCode);
-        alert("🟢 Partner Access (40% Less Rate) Activated!");
+        alert("🟢 Partner Access Activated!");
     } else {
         localStorage.setItem("empire_access_tier", "0");
         localStorage.setItem("empire_access_code", "RETAIL");
