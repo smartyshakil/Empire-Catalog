@@ -406,7 +406,7 @@ function renderProducts(items) {
 // 5. PRODUCT DETAIL MODAL & FLYER LOGIC
 // ==========================================
 let currentViewingProduct = null;
-let isDetailModalOpen = false; // Added tracking flag for View Details modal state
+let isDetailModalOpen = false;
 
 function openProductDetail(code) {
     let item = null;
@@ -449,7 +449,6 @@ function openProductDetail(code) {
     document.getElementById("productDetailModal").style.display = "block";
     document.body.style.overflow = "hidden";
 
-    // Push state so left-swipe / back button closes the detail modal instead of exiting the site
     if (!isDetailModalOpen) {
         isDetailModalOpen = true;
         history.pushState({ detailModal: true }, "");
@@ -1004,15 +1003,28 @@ function sendWhatsAppOrder() {
 }
 
 // ==========================================
-// 9. PHOTO LIGHTBOX / ZOOM LOGIC
+// 9. PHOTO LIGHTBOX / ZOOM LOGIC (WITH MULTI-PHOTO LIFESTYLE SUPPORT)
 // ==========================================
 let isLightboxOpen = false;
+let currentLightboxImages = [];
+let currentLightboxIndex = 0;
+let currentLightboxTitle = "";
 
 function openLightbox(imgSrc, titleText) {
     const modal = document.getElementById("lightboxModal");
     const img = document.getElementById("lightboxImg");
     const title = document.getElementById("lightboxTitle");
     
+    if (!modal || !img) return;
+
+    // Extract product code from image source path (e.g., 'SMP021' from 'images/glassware/SMP021.jpg')
+    const match = imgSrc.match(/([A-Z0-9_-]+)\.\w+$/i);
+    const pCode = match ? match[1] : null;
+
+    currentLightboxImages = [imgSrc];
+    currentLightboxIndex = 0;
+    currentLightboxTitle = titleText;
+
     img.src = imgSrc;
     title.innerText = titleText;
     modal.style.display = "flex";
@@ -1021,6 +1033,61 @@ function openLightbox(imgSrc, titleText) {
     if (!isLightboxOpen) {
         isLightboxOpen = true;
         history.pushState({ lightbox: true }, "");
+    }
+
+    // Check if additional lifestyle photos exist in LIFESTYLE PHOTOS folder
+    if (pCode) {
+        let checkPromises = [];
+        for (let i = 2; i <= 5; i++) {
+            let testUrl = `images/LIFESTYLE PHOTOS/${pCode}_${i}.jpg`;
+            let p = new Promise((resolve) => {
+                let testImg = new Image();
+                testImg.onload = () => resolve(testUrl);
+                testImg.onerror = () => resolve(null);
+                testImg.src = testUrl;
+            });
+            checkPromises.push(p);
+        }
+
+        Promise.all(checkPromises).then(results => {
+            results.forEach(url => {
+                if (url) currentLightboxImages.push(url);
+            });
+
+            // Inject or update Next/Prev navigation buttons inside lightbox if multiple photos exist
+            let navContainer = document.getElementById('customLightboxNav');
+            if (!navContainer) {
+                navContainer = document.createElement('div');
+                navContainer.id = 'customLightboxNav';
+                navContainer.style.cssText = "position: absolute; display: flex; gap: 20px; bottom: 40px; z-index: 1002;";
+                navContainer.innerHTML = `
+                    <button id="lbPrevBtn" style="background:rgba(255,255,255,0.2); color:white; border:none; padding:8px 16px; border-radius:20px; font-weight:bold; cursor:pointer;">❮ Prev</button>
+                    <button id="lbNextBtn" style="background:rgba(255,255,255,0.2); color:white; border:none; padding:8px 16px; border-radius:20px; font-weight:bold; cursor:pointer;">Next ❯</button>
+                `;
+                modal.appendChild(navContainer);
+            }
+
+            if (currentLightboxImages.length > 1) {
+                navContainer.style.display = 'flex';
+                title.innerText = `${titleText} (Photo 1 of ${currentLightboxImages.length})`;
+
+                document.getElementById('lbPrevBtn').onclick = (e) => {
+                    e.stopPropagation();
+                    currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length;
+                    img.src = currentLightboxImages[currentLightboxIndex];
+                    title.innerText = `${titleText} (Photo ${currentLightboxIndex + 1} of ${currentLightboxImages.length})`;
+                };
+
+                document.getElementById('lbNextBtn').onclick = (e) => {
+                    e.stopPropagation();
+                    currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxImages.length;
+                    img.src = currentLightboxImages[currentLightboxIndex];
+                    title.innerText = `${titleText} (Photo ${currentLightboxIndex + 1} of ${currentLightboxImages.length})`;
+                };
+            } else {
+                navContainer.style.display = 'none';
+            }
+        });
     }
 }
 
@@ -1039,7 +1106,6 @@ function closeLightbox(fromHistory = false) {
     }
 }
 
-// Updated unified popstate event listener for handling both Lightbox and View Details modals cleanly
 window.addEventListener("popstate", (e) => {
     if (isLightboxOpen) {
         closeLightbox(true);
@@ -1122,7 +1188,6 @@ async function triggerCatalogDownload(dept) {
     let cols = 3, rows = 4;
     let itemsPerPage = cols * rows; 
 
-    // Multi-Extension Image Loader Helper
    async function loadImageWithAllExtensions(item) {
         const code = item.code || item.Product_Code || '';
         let deptFolder = "glassware";
