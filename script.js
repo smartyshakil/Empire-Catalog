@@ -1001,14 +1001,14 @@ function sendWhatsAppOrder() {
     updateCartBar();
     closeOrderDrawer();
 }
-
 // ==========================================
-// 9. PHOTO LIGHTBOX / ZOOM LOGIC (WITH MULTI-PHOTO LIFESTYLE SUPPORT)
+// 9. PHOTO LIGHTBOX / ZOOM LOGIC (WITH TOUCH SWIPE & AUTO-SLIDE)
 // ==========================================
 let isLightboxOpen = false;
 let currentLightboxImages = [];
 let currentLightboxIndex = 0;
 let currentLightboxTitle = "";
+let autoSlideInterval = null;
 
 function openLightbox(imgSrc, titleText) {
     const modal = document.getElementById("lightboxModal");
@@ -1017,7 +1017,6 @@ function openLightbox(imgSrc, titleText) {
     
     if (!modal || !img) return;
 
-    // Extract product code from image source path (e.g., 'SMP021' from 'images/glassware/SMP021.jpg')
     const match = imgSrc.match(/([A-Z0-9_-]+)\.\w+$/i);
     const pCode = match ? match[1] : null;
 
@@ -1035,7 +1034,6 @@ function openLightbox(imgSrc, titleText) {
         history.pushState({ lightbox: true }, "");
     }
 
-    // Check if additional lifestyle photos exist in LIFESTYLE PHOTOS folder
     if (pCode) {
         let checkPromises = [];
         for (let i = 2; i <= 5; i++) {
@@ -1054,47 +1052,108 @@ function openLightbox(imgSrc, titleText) {
                 if (url) currentLightboxImages.push(url);
             });
 
-            // Inject or update Next/Prev navigation buttons inside lightbox if multiple photos exist
-            let navContainer = document.getElementById('customLightboxNav');
-            if (!navContainer) {
-                navContainer = document.createElement('div');
-                navContainer.id = 'customLightboxNav';
-                navContainer.style.cssText = "position: absolute; display: flex; gap: 20px; bottom: 40px; z-index: 1002;";
-                navContainer.innerHTML = `
-                    <button id="lbPrevBtn" style="background:rgba(255,255,255,0.2); color:white; border:none; padding:8px 16px; border-radius:20px; font-weight:bold; cursor:pointer;">❮ Prev</button>
-                    <button id="lbNextBtn" style="background:rgba(255,255,255,0.2); color:white; border:none; padding:8px 16px; border-radius:20px; font-weight:bold; cursor:pointer;">Next ❯</button>
-                `;
-                modal.appendChild(navContainer);
-            }
-
-            if (currentLightboxImages.length > 1) {
-                navContainer.style.display = 'flex';
-                title.innerText = `${titleText} (Photo 1 of ${currentLightboxImages.length})`;
-
-                document.getElementById('lbPrevBtn').onclick = (e) => {
-                    e.stopPropagation();
-                    currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length;
-                    img.src = currentLightboxImages[currentLightboxIndex];
-                    title.innerText = `${titleText} (Photo ${currentLightboxIndex + 1} of ${currentLightboxImages.length})`;
-                };
-
-                document.getElementById('lbNextBtn').onclick = (e) => {
-                    e.stopPropagation();
-                    currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxImages.length;
-                    img.src = currentLightboxImages[currentLightboxIndex];
-                    title.innerText = `${titleText} (Photo ${currentLightboxIndex + 1} of ${currentLightboxImages.length})`;
-                };
-            } else {
-                navContainer.style.display = 'none';
-            }
+            setupLightboxUI(modal, img, title, titleText);
         });
+    } else {
+        setupLightboxUI(modal, img, title, titleText);
     }
+}
+
+function setupLightboxUI(modal, img, titleElem, titleText) {
+    let navContainer = document.getElementById('customLightboxNav');
+    if (!navContainer) {
+        navContainer = document.createElement('div');
+        navContainer.id = 'customLightboxNav';
+        // Buttons ko image ke upar/proper position par laane ke liye styling fix ki hai
+        navContainer.style.cssText = "position: relative; display: flex; justify-content: center; gap: 25px; margin-top: 15px; z-index: 1002;";
+        navContainer.innerHTML = `
+            <button id="lbPrevBtn" style="background:rgba(255,255,255,0.25); color:white; border:1px solid rgba(255,255,255,0.4); padding:10px 20px; border-radius:25px; font-weight:bold; font-size:13px; cursor:pointer;">❮ Prev</button>
+            <button id="lbNextBtn" style="background:rgba(255,255,255,0.25); color:white; border:1px solid rgba(255,255,255,0.4); padding:10px 20px; border-radius:25px; font-weight:bold; font-size:13px; cursor:pointer;">Next ❯</button>
+        `;
+        // Image ke neeche append karne ke liye modal mein insert karenge
+        modal.appendChild(navContainer);
+    }
+
+    if (currentLightboxImages.length > 1) {
+        navContainer.style.display = 'flex';
+        updateLightboxView(img, titleElem, titleText);
+
+        document.getElementById('lbPrevBtn').onclick = (e) => {
+            e.stopPropagation();
+            currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length;
+            updateLightboxView(img, titleElem, titleText);
+            resetAutoSlide(img, titleElem, titleText);
+        };
+
+        document.getElementById('lbNextBtn').onclick = (e) => {
+            e.stopPropagation();
+            currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxImages.length;
+            updateLightboxView(img, titleElem, titleText);
+            resetAutoSlide(img, titleElem, titleText);
+        };
+
+        // Touch Swipe Gestures for Mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        modal.ontouchstart = (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        };
+
+        modal.ontouchend = (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            let diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 40) { // Min swipe distance
+                if (diff > 0) {
+                    // Swiped Left -> Next Photo
+                    currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxImages.length;
+                } else {
+                    // Swiped Right -> Prev Photo
+                    currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length;
+                }
+                updateLightboxView(img, titleElem, titleText);
+                resetAutoSlide(img, titleElem, titleText);
+            }
+        };
+
+        // Start Auto Slide Every 3 Seconds
+        startAutoSlide(img, titleElem, titleText);
+
+    } else {
+        navContainer.style.display = 'none';
+    }
+}
+
+function updateLightboxView(img, titleElem, titleText) {
+    img.src = currentLightboxImages[currentLightboxIndex];
+    titleElem.innerText = `${titleText} (Photo ${currentLightboxIndex + 1} of ${currentLightboxImages.length})`;
+}
+
+function startAutoSlide(img, titleElem, titleText) {
+    stopAutoSlide();
+    autoSlideInterval = setInterval(() => {
+        if (!isLightboxOpen || currentLightboxImages.length <= 1) return;
+        currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxImages.length;
+        updateLightboxView(img, titleElem, titleText);
+    }, 3000);
+}
+
+function stopAutoSlide() {
+    if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+    }
+}
+
+function resetAutoSlide(img, titleElem, titleText) {
+    startAutoSlide(img, titleElem, titleText);
 }
 
 function closeLightbox(fromHistory = false) {
     const modal = document.getElementById("lightboxModal");
     if (!modal) return;
 
+    stopAutoSlide();
     modal.style.display = "none";
     document.body.style.overflow = "auto";
 
@@ -1105,7 +1164,6 @@ function closeLightbox(fromHistory = false) {
         }
     }
 }
-
 window.addEventListener("popstate", (e) => {
     if (isLightboxOpen) {
         closeLightbox(true);
