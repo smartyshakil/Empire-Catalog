@@ -113,6 +113,26 @@
             cursor: pointer;
         }
 
+        /* About Button Custom Style */
+        .about-btn {
+            background: rgba(255, 255, 255, 0.08);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 10.5px;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .about-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
         .catalog-container {
             max-width: 1400px;
             margin: 12px auto;
@@ -359,6 +379,7 @@
             <p>Diwali Exclusive Full Catalog</p>
         </div>
         <div class="header-actions">
+            <a href="about.html" class="about-btn" title="About Us">ℹ️ About</a>
             <button id="pwaInstallBtn" style="display: none;" class="header-action-btn" onclick="installPWA()">
                 📲 <span>Install</span>
             </button>
