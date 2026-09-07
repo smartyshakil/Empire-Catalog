@@ -1,5 +1,13 @@
 const PRODUCTS = [
-  
+  {
+    "code": "KRF008B-G",
+    "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
+    "price": "280.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS COLORED BOWL",
+    "department": "GLASSWARE",
+    "moq": 4
+  },
   {
     "code": "EMP210-250",
     "desc": "VALENCIA DOUBLE WALL JUICE GLASS 250 ML BOX PACK 72 PCS CTN",
@@ -2404,7 +2412,7 @@ const PRODUCTS = [
     "moq": 1
   },
   {
-    "code": "SP-220-L3",
+    "code": "SP-320A-L6",
     "desc": "SOWA PARIS BOROSILICATE JAR WDN LID 220 ML ROUND 3 PC COL BOX 16 SET CTN",
     "price": "130.0",
     "unit": "FOR 3PCS",
@@ -2774,15 +2782,6 @@ const PRODUCTS = [
   },
   {
     "code": "KRF008A-G",
-    "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
-    "price": "280.0",
-    "unit": "FOR 1 PCS",
-    "category": "GLASS COLORED BOWL",
-    "department": "Glassware",
-    "moq": 4
-  },
-{
-    "code": "KRF008B-G",
     "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
     "price": "280.0",
     "unit": "FOR 1 PCS",
@@ -3572,6 +3571,15 @@ const PRODUCTS = [
     "category": "BOTTLES",
     "department": "vaccum_bottles",
     "moq": 6
+  },
+  {
+    "code": "HK-900",
+    "desc": "STEEL HANDLE  SIPPER 900 ML COLOR BOX 50 PCS CTN",
+    "price": "240.0",
+    "unit": "FOR 1PCS",
+    "category": "VACCUM BOTTLE",
+    "department": "vaccum_bottles",
+    "moq": 4
   },
   {
     "code": "7744",
