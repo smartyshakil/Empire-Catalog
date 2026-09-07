@@ -3573,15 +3573,6 @@ const PRODUCTS = [
     "moq": 6
   },
   {
-    "code": "HK-900",
-    "desc": "STEEL HANDLE  SIPPER 900 ML COLOR BOX 50 PCS CTN",
-    "price": "240.0",
-    "unit": "FOR 1PCS",
-    "category": "VACCUM BOTTLE",
-    "department": "vaccum_bottles",
-    "moq": 4
-  },
-  {
     "code": "7744",
     "desc": "STEEL BOTTLE 500 ML COL BOX MIX COLOR 50 PCS CTN",
     "price": "240.0",
