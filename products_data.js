@@ -2007,24 +2007,6 @@ const PRODUCTS = [
     "moq": 12
   },
   {
-    "code": "HK-170",
-    "desc": "GLASS BOTTLE WITH COVER 400 ML COLOR BOX 58 PCS CTN",
-    "price": "42.0",
-    "unit": "FOR 1PCS",
-    "category": "GLASS BOTTLE",
-    "department": "Glassware",
-    "moq": 58
-  },
-  {
-    "code": "HK-190",
-    "desc": "GLASS BOTTLE WITH COVER 400 ML COLOR BOX 58 PCS CTN",
-    "price": "42.0",
-    "unit": "FOR 1PCS",
-    "category": "GLASS BOTTLE",
-    "department": "Glassware",
-    "moq": 58
-  },
-  {
     "code": "HK-105",
     "desc": "GLASS BOTTLE WITH COVER 350 ML COLOR BOX 80 PCS CTN",
     "price": "52.0",
@@ -2313,15 +2295,6 @@ const PRODUCTS = [
     "moq": 12
   },
   {
-    "code": "SP-800ML",
-    "desc": "SOWA PARIS BOROSILICATE JAR WDN LID 800 ML SQUARE 1 PC COL BOX 36 PC CTN",
-    "price": "105.0",
-    "unit": "FOR 1 PCS",
-    "category": "WOODEN JAR SINGLE",
-    "department": "Glassware",
-    "moq": 12
-  },
-  {
     "code": "SMBJ05-1050",
     "desc": "SHINE MAX BOROSILICATE JAR WITH WOODEN LID 1050 ML 36 PC CTN",
     "price": "110.0",
@@ -2335,15 +2308,6 @@ const PRODUCTS = [
     "desc": "DELI SOGA BAMBOO LID JAR 750 ML COL BOX 36 PCS CTN",
     "price": "115.0",
     "unit": "FOR 1PCS",
-    "category": "WOODEN JAR SINGLE",
-    "department": "Glassware",
-    "moq": 12
-  },
-  {
-    "code": "SP-1200ML",
-    "desc": "SOWA PARIS BOROSILICATE JAR WDN LID 1200 ML SQUARE 1 PC COL BOX 36 PC CTN",
-    "price": "120.0",
-    "unit": "FOR 1 PCS",
     "category": "WOODEN JAR SINGLE",
     "department": "Glassware",
     "moq": 12
@@ -2437,24 +2401,6 @@ const PRODUCTS = [
     "category": "WOODEN 3 PCS",
     "department": "Glassware",
     "moq": 4
-  },
-  {
-    "code": "SP-270-L3",
-    "desc": "SOWA PARIS BOROSILICATE JAR WDN LID 270 ML ROUND 3 PC COL BOX 16 SET CTN",
-    "price": "145.0",
-    "unit": "FOR 3PCS",
-    "category": "WOODEN 3 PCS",
-    "department": "Glassware",
-    "moq": 4
-  },
-  {
-    "code": "SMBJ05-270-L3",
-    "desc": "SHINE MAX 3 PCS ROUND JAR WITH WOODEN LID 270 ML 16 SET CTN",
-    "price": "150.0",
-    "unit": "FOR 3PCS",
-    "category": "WOODEN 3 PCS",
-    "department": "Glassware",
-    "moq": 6
   },
   {
     "code": "SP-320-L3",
@@ -3566,7 +3512,7 @@ const PRODUCTS = [
   {
     "code": "HK-900",
     "desc": "STEEL HANDLE  SIPPER 900 ML COLOR BOX 50 PCS CTN",
-    "price": "240.0",
+    "price": "230.0",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
@@ -3604,15 +3550,6 @@ const PRODUCTS = [
     "desc": "STEEL BOTTLE 750 ML BEER SHAPE BOTTLE COL BOX MIX COLOR 50 PCS CTN",
     "price": "250.0",
     "unit": "FOR 1PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 6
-  },
-  {
-    "code": "8201",
-    "desc": "STEEL BOTTLE 600 ML COL BOX MIX PRINT 50 PCS CTN",
-    "price": "250.0",
-    "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
     "moq": 6
