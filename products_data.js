@@ -3654,15 +3654,6 @@ const PRODUCTS = [
     "moq": 6
   },
   {
-    "code": "K-1000",
-    "desc": "STEEL KETTLE 1000 ML COL BOX MIX PRINT 40 PCS CTN",
-    "price": "310.0",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 6
-  },
-  {
     "code": "8172",
     "desc": "STEEL BOTTLE 800 ML COL BOX MIX PRINT 50 PCS CTN",
     "price": "320.0",
