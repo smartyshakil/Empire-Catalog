@@ -1,5 +1,5 @@
-const CACHE_NAME = 'empire-catalog-v3.10';
-const IMAGE_CACHE_NAME = 'empire-images-v3.10';
+const CACHE_NAME = 'empire-catalog-v3.11';
+const IMAGE_CACHE_NAME = 'empire-images-v3.11';
 
 const ASSETS_TO_CACHE = [
   './',
@@ -65,6 +65,24 @@ self.addEventListener('fetch', (e) => {
           return caches.match(e.request);
         });
       })
+    );
+    return;
+  }
+
+  // Strategy for Data & Core Files: Network-First (Taki naya update turant mile)
+  if (requestUrl.pathname.includes('products_data.js') || requestUrl.pathname.endsWith('index.html') || requestUrl.pathname.endsWith('/')) {
+    e.respondWith(
+      fetch(e.request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const responseToCache = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(e.request, responseToCache);
+            });
+          }
+          return networkResponse;
+        })
+        .catch(() => caches.match(e.request))
     );
     return;
   }
