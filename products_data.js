@@ -1,7 +1,7 @@
 const PRODUCTS = [
   {
     "code": "KRF008B-G",
-    "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
+    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
@@ -1090,7 +1090,7 @@ const PRODUCTS = [
   },
   {
     "code": "SMP509-3",
-    "desc": "SHINE MAX SOUP PLATE 7.5\" - 840 ML 2 PCS COL BOX 18 SET CTN",
+    "desc": "SHINE MAX SOUP PLATE 7.5 INCHES - 840 ML 2 PCS COL BOX 18 SET CTN",
     "price": "210.0",
     "unit": "FOR 2PCS",
     "category": "PLATE SET",
@@ -1099,7 +1099,7 @@ const PRODUCTS = [
   },
   {
     "code": "LXP109-1",
-    "desc": "SHINE MAX SOUP PLATE 5.7\" - 240 ML 6 PCS COL BOX 12 SET CTN",
+    "desc": "SHINE MAX SOUP PLATE 5.7 INCHES - 240 ML 6 PCS COL BOX 12 SET CTN",
     "price": "210.0",
     "unit": "FOR 6PCS",
     "category": "PLATE SET",
@@ -1108,7 +1108,7 @@ const PRODUCTS = [
   },
   {
     "code": "LXP109-3",
-    "desc": "SHINE MAX SOUP PLATE 8.25\" - 840 ML 2 PCS COL BOX 18 SET CTN",
+    "desc": "SHINE MAX SOUP PLATE 8.25 INCHES - 840 ML 2 PCS COL BOX 18 SET CTN",
     "price": "210.0",
     "unit": "FOR 2PCS",
     "category": "PLATE SET",
@@ -1135,7 +1135,7 @@ const PRODUCTS = [
   },
   {
     "code": "LXP109-2",
-    "desc": "SHINE MAX SOUP PLATE 7\" - 480 ML 4 PCS COL BOX 12 SET CTN",
+    "desc": "SHINE MAX SOUP PLATE 7 INCHES - 480 ML 4 PCS COL BOX 12 SET CTN",
     "price": "230.0",
     "unit": "FOR 4PCS",
     "category": "PLATE SET",
@@ -2593,7 +2593,7 @@ const PRODUCTS = [
   },
   {
     "code": "LXGP002",
-    "desc": "LANGXU BUBBLE PLATE 11\" - 12 PCS CTN",
+    "desc": "LANGXU BUBBLE PLATE 11 INCHES- 12 PCS CTN",
     "price": "220.0",
     "unit": "FOR 1PCS",
     "category": "FRUIT PLATE",
@@ -2602,7 +2602,7 @@ const PRODUCTS = [
   },
   {
     "code": "LXGP003",
-    "desc": "LANGXU BUBBLE PLATE 14\"-8 PCS CTN",
+    "desc": "LANGXU BUBBLE PLATE 14 INCHES 8 PCS CTN",
     "price": "300.0",
     "unit": "FOR 1PCS",
     "category": "FRUIT PLATE",
@@ -2665,7 +2665,7 @@ const PRODUCTS = [
   },
   {
     "code": "LXGW002",
-    "desc": "LANGXU BUBBLE FRUIT BOWL 11.5\" INCHES COL BOX 8 SET CTN",
+    "desc": "LANGXU BUBBLE FRUIT BOWL 11.5 INCHES COL BOX 8 SET CTN",
     "price": "350.0",
     "unit": "FOR 1PCS",
     "category": "GLASS PLAIN BOWL",
@@ -2701,7 +2701,7 @@ const PRODUCTS = [
   },
   {
     "code": "KRF008A-B",
-    "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
+    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
@@ -2710,7 +2710,7 @@ const PRODUCTS = [
   },
   {
     "code": "KRF008B-B",
-    "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
+    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
@@ -2719,7 +2719,7 @@ const PRODUCTS = [
   },
   {
     "code": "KRF008C-B",
-    "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
+    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
@@ -2728,7 +2728,7 @@ const PRODUCTS = [
   },
   {
     "code": "KRF008A-G",
-    "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
+    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
@@ -2737,7 +2737,7 @@ const PRODUCTS = [
   },
   {
     "code": "KRF008C-G",
-    "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
+    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
@@ -2746,7 +2746,7 @@ const PRODUCTS = [
   },
   {
     "code": "KRF008A-LN",
-    "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
+    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
@@ -2755,7 +2755,7 @@ const PRODUCTS = [
   },
   {
     "code": "KRF008B-LN",
-    "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
+    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
@@ -2764,7 +2764,7 @@ const PRODUCTS = [
   },
   {
     "code": "KRF008C-LN",
-    "desc": "KARBON STAND FRUIT BOWL 10\" COL BOX 12 SET CTN",
+    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
@@ -2827,7 +2827,7 @@ const PRODUCTS = [
   },
   {
     "code": "LXHP19B-30",
-    "desc": "LANGXU FLOWER VASE 11\" INCHES COL BOX 8 SET CTN",
+    "desc": "LANGXU FLOWER VASE 11 INCHES COL BOX 8 SET CTN",
     "price": "360.0",
     "unit": "FOR 1PCS",
     "category": "FLOWER POT",
@@ -3106,7 +3106,7 @@ const PRODUCTS = [
   },
   {
     "code": "JARA 14",
-    "desc": "ANMOL JARA 14\" INCH BACK SUPPORTED JARA BULK PACK 100 PCS CTN",
+    "desc": "ANMOL JARA 14 INCH BACK SUPPORTED JARA BULK PACK 100 PCS CTN",
     "price": "50.0",
     "unit": "FOR 1 PCS",
     "category": "MISC",
@@ -3647,6 +3647,15 @@ const PRODUCTS = [
   {
     "code": "8173",
     "desc": "STEEL BOTTLE 600 ML COL BOX PUSH BUTTON MIX PRINT 50 PCS CTN",
+    "price": "310.0",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6
+  },
+  {
+    "code": "K-1000",
+    "desc": "STEEL KETTLE 1000 ML COL BOX MIX PRINT 40 PCS CTN",
     "price": "310.0",
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
