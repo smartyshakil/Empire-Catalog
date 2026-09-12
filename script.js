@@ -408,7 +408,37 @@ function renderProducts(items) {
 let currentViewingProduct = null;
 let isDetailModalOpen = false;
 
-function openProductDetail(code) {
+async function resolveProductImagePath(item) {
+    const code = item.code || item.Product_Code || '';
+    let deptFolder = "glassware";
+    const dept = (item.department || '').toLowerCase();
+    if (dept.includes('kitchen')) {
+        deptFolder = "kitchenware";
+    } else if (dept.includes('vaccum') || dept.includes('bottle')) {
+        deptFolder = "vaccum_bottles";
+    }
+
+    const extensions = ['.jpg', '.JPG', '.png', '.PNG', '.jpeg', '.JPEG'];
+    let basePath = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
+
+    for (let ext of extensions) {
+        let url = `${basePath}images/${deptFolder}/${code}${ext}`;
+        let exists = await checkImageExists(url);
+        if (exists) return url;
+    }
+    return getInitialImagePath(item);
+}
+
+function checkImageExists(url) {
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = url;
+    });
+}
+
+async function openProductDetail(code) {
     let item = null;
     if (typeof code === 'object' && code !== null) {
         item = code;
@@ -427,7 +457,7 @@ function openProductDetail(code) {
     const packing = getDisplayPacking(item);
 
     const detailImg = document.getElementById("pdetailImg");
-    detailImg.src = getInitialImagePath(item);
+    detailImg.src = await resolveProductImagePath(item);
     detailImg.alt = `${item.desc || ''} - Product Code: ${code} | Empire Glassware`;
     detailImg.onerror = function() { handleImageFallback(this, code, itemDept); };
 
@@ -583,7 +613,7 @@ function onFlyerPriceChange() {
     }
 }
 
-function generateFlyerCanvas(callback) {
+async function generateFlyerCanvas(callback) {
     if (!currentViewingProduct) return;
 
     const priceInput = document.getElementById("flyerCustomPrice");
@@ -621,9 +651,10 @@ function generateFlyerCanvas(callback) {
     ctx.textAlign = "center";
     ctx.fillText(customFirm || "PREMIUM CROCKERY & GLASSWARE", 400, 85);
 
+    const resolvedSrc = await resolveProductImagePath(currentViewingProduct);
     const imgElem = new Image();
     imgElem.crossOrigin = "anonymous";
-    imgElem.src = getInitialImagePath(currentViewingProduct);
+    imgElem.src = resolvedSrc;
 
     imgElem.onload = () => {
         ctx.fillStyle = "#ffffff";
@@ -668,7 +699,6 @@ function generateFlyerCanvas(callback) {
     };
 
     imgElem.onerror = () => {
-        alert("Flyer generated without external image cache. Downloading card.");
         if (typeof callback === "function") callback(canvas);
     };
 }
