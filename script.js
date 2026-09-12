@@ -1020,8 +1020,8 @@ function openLightbox(imgSrc, titleText) {
     
     if (!modal || !img) return;
 
-    const match = imgSrc.match(/([A-Z0-9_-]+)\.\w+$/i);
-    const pCode = match ? match[1] : null;
+    const filename = imgSrc.substring(imgSrc.lastIndexOf('/') + 1);
+    const pCode = filename.substring(0, filename.lastIndexOf('.'));
 
     currentLightboxImages = [imgSrc];
     currentLightboxIndex = 0;
