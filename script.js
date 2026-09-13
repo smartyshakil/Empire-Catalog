@@ -476,7 +476,20 @@ async function openProductDetail(code) {
     document.getElementById("pdetailMoq").innerText = `${minSet} SET`;
     document.getElementById("pdetailDept").innerText = item.department || 'Glassware';
     document.getElementById("pdetailDesc").innerText = item.desc || '';
-
+// Dynamic Status Update inside Product Detail Modal
+    const itemStatus = (item.status || 'In Stock').trim();
+    const isAdvBook = itemStatus.toUpperCase().includes('ADV');
+    const pdetailStockElem = document.getElementById("pdetailStock");
+    
+    if (pdetailStockElem) {
+        if (isAdvBook) {
+            pdetailStockElem.innerText = "Advance Book";
+            pdetailStockElem.style.color = "#ea580c"; // Orange color for Advance Book
+        } else {
+            pdetailStockElem.innerText = "In Stock";
+            pdetailStockElem.style.color = "#059669"; // Green color for In Stock
+        }
+    }
     document.getElementById("pdetailAddBtn").onclick = () => {
         updateItemQty(code, 'set', 1, effectivePrice, itemDept, item);
         showToast(`${code} added to cart!`);
