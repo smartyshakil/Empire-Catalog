@@ -2,361 +2,709 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empire Glassware - Upcoming Shipments & Advance Bookings</title>
+    <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
     
-    <!-- Fonts & Icons -->
+    <!-- PWA Manifest & App Config -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0b1329">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Empire Catalog">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Empire Glassware upcoming shipments and advance booking catalog. Pre-book incoming glassware and crockery models.">
+    <meta name="author" content="Empire Glassware">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+    <!-- jsPDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VSXTN9XXZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7VSXTN9XXZ');
+    </script>
+
     <style>
         :root {
-            --primary: #0f172a;
-            --accent: #ea580c;
-            --bg-light: #f8fafc;
-            --card-border: #e2e8f0;
-            --whatsapp-green: #25D366;
+            --bg-main: #f8fafc;
+            --primary-dark: #0f172a;
+            --header-bg: #0b1329;
+            --gold: #d97706;
+            --gold-light: #fef3c7;
+            --accent-green: #10b981;
+            --accent-orange: #ea580c;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
-        body { background: var(--bg-light); color: #1e293b; padding-bottom: 100px; overflow-x: hidden; }
-
-        header {
-            background: #ffffff;
-            border-bottom: 1px solid var(--card-border);
-            padding: 12px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .brand-logo { font-size: 1.2rem; font-weight: 800; color: var(--primary); font-family: 'Poppins', sans-serif; }
-        .brand-logo span { color: var(--accent); }
+        body { background-color: var(--bg-main); padding-bottom: 125px; color: var(--text-main); }
         
-        .btn-live-catalog {
-            background: #0f172a;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 8px 14px;
-            border-radius: 8px;
-            font-size: 0.82rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
+        /* Hero Banner */
         .hero-banner {
             background: linear-gradient(135deg, #0b1329 0%, #1e1b4b 100%);
             color: white;
             padding: 22px 16px;
             text-align: center;
-            border-bottom: 3px solid var(--accent);
+            border-bottom: 3px solid var(--accent-orange);
         }
         .hero-banner h1 { font-size: 1.4rem; font-weight: 800; font-family: 'Poppins', sans-serif; color: #fdba74; margin-bottom: 4px; }
         .hero-banner p { font-size: 0.85rem; color: #cbd5e1; }
 
-        .container { max-width: 1300px; margin: 16px auto; padding: 0 14px; display: flex; gap: 18px; }
+        /* Header */
+        header { 
+            background: var(--header-bg); 
+            color: white; 
+            padding: 8px 12px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15); 
+        }
+        .header-title h1 { 
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px; 
+            font-weight: 700; 
+            letter-spacing: 0.5px; 
+            color: #ffffff;
+        }
+        .header-title p { font-size: 10px; color: #94a3b8; font-weight: 500; }
         
-        .sidebar {
-            width: 220px;
-            flex-shrink: 0;
-            background: #ffffff;
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 14px;
-            height: fit-content;
-        }
-        .sidebar h3 { font-size: 0.8rem; font-weight: 800; color: #64748b; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .cat-btn {
-            display: block;
-            width: 100%;
-            text-align: left;
-            padding: 9px 12px;
-            margin-bottom: 5px;
-            border: none;
-            background: transparent;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            color: #334155;
-            cursor: pointer;
-        }
-        .cat-btn.active, .cat-btn:hover { background: #ffedd5; color: #c2410c; font-weight: 700; }
-
-        /* Index Catalog Grid & Card Layout Classes */
-        .product-grid {
-            flex-grow: 1;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 16px;
-        }
-
-        .card {
-            background: #ffffff;
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 12px;
+        .header-right-actions {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            gap: 5px;
+            align-items: flex-end;
+        }
+        .header-top-row { display: flex; gap: 6px; }
+        .header-bottom-row { display: flex; gap: 6px; align-items: center; }
+
+        .header-action-btn {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 10.5px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            text-decoration: none;
+        }
+        .header-action-btn:hover { background: rgba(255, 255, 255, 0.15); }
+        .header-action-btn.catalog-btn {
+            background: #0f172a;
+            color: #ffffff;
+            border-color: #334155;
+        }
+
+        .access-badge { 
+            background: rgba(255, 255, 255, 0.08); 
+            color: #fbbf24; 
+            border: 1px solid rgba(251, 191, 36, 0.4);
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 11px; 
+            font-weight: 600; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            gap: 5px; 
+            white-space: nowrap;
+        }
+        .access-badge.wholesale { 
+            background: var(--accent-green); 
+            color: #ffffff; 
+            border-color: var(--accent-green);
+        }
+
+        /* Layout Container */
+        .catalog-container {
+            display: flex;
+            gap: 20px;
+            max-width: 1550px;
+            margin: 14px auto 0 auto;
+            padding: 0 14px;
+            align-items: flex-start;
+        }
+
+        .sidebar {
+            width: 230px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 70px;
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 14px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--card-shadow);
+            max-height: calc(100vh - 90px);
+            overflow-y: auto;
+        }
+        .sidebar-header {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 10px;
+            padding-left: 4px;
+        }
+
+        .category-pills-bar {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .cat-pill {
+            padding: 9px 12px;
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+        .cat-pill:hover { background: #f1f5f9; border-color: #cbd5e1; }
+        .cat-pill.active {
+            background: var(--primary-dark);
+            color: #ffffff;
+            border-color: var(--primary-dark);
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+        }
+
+        .main-catalog-content {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .controls-wrapper {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 10px 14px;
+            box-shadow: var(--card-shadow);
+        }
+        .search-and-sort-container { display: flex; gap: 10px; }
+        .search-box-container { position: relative; flex: 1; }
+        .search-box-container input { 
+            width: 100%; 
+            padding: 10px 36px 10px 14px; 
+            border-radius: 10px; 
+            border: 1.5px solid var(--border-color); 
+            outline: none; 
+            font-size: 13px; 
+            background: #f8fafc; 
+        }
+        .search-clear-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+        }
+        .sort-select {
+            padding: 0 12px;
+            border-radius: 10px;
+            border: 1.5px solid var(--border-color);
+            background: #f8fafc;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* Product Grid & Cards */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+            gap: 12px; 
+        }
+        .card { 
+            background: #ffffff; 
+            border-radius: 14px; 
+            padding: 10px; 
+            border: 1px solid var(--border-color); 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+            position: relative; 
+            box-shadow: var(--card-shadow); 
         }
         .card-img-wrapper {
-            width: 100%;
-            height: 160px;
             position: relative;
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 10px;
-            cursor: pointer;
-            background: #fff;
-            border-bottom: 1px solid #f1f5f9;
+            min-height: 130px;
         }
-        .card-img-wrapper img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
+        .card img { 
+            width: 100%; 
+            height: 130px; 
+            object-fit: contain; 
+            border-radius: 6px; 
+            cursor: pointer; 
         }
+        
         .stock-tag {
             position: absolute;
-            top: 8px;
-            left: 8px;
+            top: 6px;
+            right: 6px;
             background: #fff7ed;
             color: #c2410c;
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 6px;
+            padding: 2px 6px;
+            border-radius: 10px;
             border: 1px solid #ffedd5;
-            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3px;
         }
-        .p-code { font-size: 11px; font-weight: 700; color: #0369a1; margin-bottom: 4px; cursor: pointer; }
-        .p-desc { font-size: 12px; font-weight: 600; color: #1e293b; margin-bottom: 8px; line-height: 1.3; }
-        .card-chips-row { display: flex; gap: 6px; margin-bottom: 8px; }
-        .b2b-chip { background: #f1f5f9; color: #475569; font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px; }
-        .b2b-chip.gold { background: #fef3c7; color: #b45309; }
-        .p-price { font-size: 13px; font-weight: 800; color: #0f172a; margin-bottom: 8px; }
-        .p-price span { font-size: 10px; font-weight: 600; color: #64748b; }
-        
-        .card-actions { margin-bottom: 8px; }
-        .btn-detail {
-            width: 100%;
-            background: #f1f5f9;
-            border: 1px solid #cbd5e1;
-            color: #334155;
-            padding: 6px;
+        .stock-dot { width: 5px; height: 5px; background: #ea580c; border-radius: 50%; }
+
+        .p-code { 
+            font-weight: 700; 
+            font-size: 13px; 
+            color: #0369a1; 
+            margin-top: 6px; 
+            cursor: pointer; 
+        }
+        .p-desc { font-size: 11px; color: var(--text-muted); margin: 4px 0; height: 28px; overflow: hidden; line-height: 1.3; }
+
+        .card-chips-row { display: flex; gap: 4px; flex-wrap: wrap; margin: 3px 0 5px; }
+        .b2b-chip {
+            font-size: 9px;
+            font-weight: 700;
+            padding: 2px 6px;
             border-radius: 6px;
-            font-size: 11px;
+            background: #f1f5f9;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+        }
+        .b2b-chip.gold { background: #fffbeb; color: #a16207; border-color: #fde68a; }
+
+        .p-price { font-weight: 700; font-size: 15px; color: #b91c1c; margin-bottom: 6px; }
+        .p-price span { font-size: 10px; color: var(--text-muted); font-weight: 500; }
+
+        .card-actions { display: flex; gap: 6px; margin-bottom: 8px; }
+        .btn-detail {
+            flex: 1;
+            border: 1px solid #cbd5e1;
+            background: #fff;
+            color: #0f172a;
+            border-radius: 8px;
+            padding: 6px 8px;
+            font-size: 10.5px;
             font-weight: 700;
             cursor: pointer;
         }
-        .btn-detail:hover { background: #e2e8f0; }
 
-        .counter-section { border-top: 1px solid #f1f5f9; padding-top: 8px; margin-top: auto; }
-        .counter-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
-        .counter-label { font-size: 10px; font-weight: 700; color: #64748b; }
-        .qty-btn { width: 26px; height: 26px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; font-weight: 700; cursor: pointer; }
-        .qty-val { font-size: 12px; font-weight: 700; color: #0f172a; min-width: 20px; text-align: center; }
+        .counter-section { display: flex; flex-direction: column; gap: 5px; }
+        .counter-row { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            background: #f8fafc; 
+            border-radius: 8px; 
+            border: 1px solid var(--border-color); 
+            padding: 3px 5px; 
+        }
+        .counter-label { font-size: 11px; font-weight: 700; color: #475569; width: 40px; }
+        .qty-btn { 
+            background: var(--primary-dark); 
+            color: white; 
+            border: none; 
+            width: 26px; 
+            height: 26px; 
+            border-radius: 6px; 
+            font-weight: 700; 
+            font-size: 14px; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .qty-val { font-size: 13px; font-weight: 700; color: var(--text-main); min-width: 22px; text-align: center; }
 
-        /* Sticky Bottom Bar */
-        .bottom-bar {
+        /* Cart Bar */
+        .cart-bar { 
+            position: fixed; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            background: #ffffff; 
+            padding: 10px 18px; 
+            border-top: 1px solid var(--border-color); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 -6px 20px rgba(0,0,0,0.06); 
+            z-index: 99; 
+            height: 58px; 
+        }
+        .cart-info { display: flex; flex-direction: column; }
+        .cart-info-count { font-size: 11px; font-weight: 600; color: var(--text-muted); }
+        .cart-info-total { font-size: 14.5px; font-weight: 800; color: var(--primary-dark); }
+        .cart-info-total span { color: #b91c1c; }
+
+        .send-btn { 
+            background: #25D366; 
+            color: white; 
+            border: none; 
+            padding: 10px 18px; 
+            border-radius: 30px; 
+            font-weight: 700; 
+            font-size: 13px; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+        }
+
+        /* Order Drawer */
+        .order-drawer-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.6);
+            z-index: 200;
+        }
+        .order-drawer {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
             background: #ffffff;
-            border-top: 1px solid var(--card-border);
-            padding: 12px 20px;
+            border-radius: 20px 20px 0 0;
+            padding: 20px 16px 24px 16px;
+            max-height: 80vh;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 -4px 15px rgba(0,0,0,0.06);
-            z-index: 100;
+            flex-direction: column;
+            z-index: 201;
+            transform: translateY(100%);
+            transition: transform 0.25s ease-out;
         }
-        .summary-text { font-size: 0.9rem; font-weight: 700; color: var(--primary); }
-        .btn-whatsapp-prebook {
-            background: var(--whatsapp-green);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 0.92rem;
-            font-weight: 700;
-            border-radius: 8px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+        .order-drawer.open { transform: translateY(0); }
+        .drawer-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px; border-bottom: 1px solid var(--border-color); }
+        .clear-cart-btn { background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 12px; cursor: pointer; }
+        .drawer-close { font-size: 24px; color: var(--text-muted); cursor: pointer; border: none; background: none; }
+        .drawer-items-list { overflow-y: auto; margin: 12px 0; display: flex; flex-direction: column; gap: 8px; max-height: 50vh; }
+        .drawer-item-row { display: flex; justify-content: space-between; align-items: center; background: #f8fafc; border: 1px solid var(--border-color); padding: 8px 12px; border-radius: 10px; }
+        .drawer-item-info { display: flex; flex-direction: column; gap: 2px; }
+        .drawer-item-code { font-weight: 700; font-size: 13px; color: var(--primary-dark); }
+        .drawer-item-qty { font-size: 11px; font-weight: 600; color: #0369a1; }
+        .drawer-qty-btns { display: flex; align-items: center; gap: 4px; margin-top: 4px; }
+        .drawer-qty-btns button { width: 22px; height: 22px; border: 1px solid #cbd5e1; background: #fff; border-radius: 5px; font-weight: 700; cursor: pointer; }
+        .drawer-qty-btns span { font-size: 10px; font-weight: 700; color: #334155; min-width: 32px; text-align: center; }
+        .drawer-item-right { display: flex; align-items: center; gap: 12px; }
+        .drawer-item-price { font-weight: 700; font-size: 13px; color: #b91c1c; }
+        .drawer-trash-btn { background: none; border: none; font-size: 16px; cursor: pointer; color: #94a3b8; }
+        .drawer-footer { padding-top: 12px; border-top: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 12px; }
+        .drawer-total-row { display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 800; color: var(--primary-dark); }
+        .drawer-confirm-btn { background: #25D366; color: white; border: none; padding: 12px; border-radius: 30px; font-weight: 700; font-size: 14px; cursor: pointer; text-align: center; display: flex; justify-content: center; align-items: center; gap: 8px; }
 
-        /* Modals Styling */
-        .modal-backdrop { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:998; }
-        .modal-box { display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#fff; z-index:999; width:92%; max-width:680px; max-height:90vh; overflow-y:auto; border-radius:16px; padding:22px; box-shadow:0 15px 35px rgba(0,0,0,0.25); }
+        /* Toast & Modals */
+        .toast { position: fixed; bottom: 75px; left: 50%; transform: translateX(-50%) translateY(30px); background: rgba(15, 23, 42, 0.9); color: white; padding: 8px 16px; border-radius: 20px; font-size: 12px; opacity: 0; transition: all 0.25s ease; z-index: 150; pointer-events: none; }
+        .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-        @media (max-width: 768px) {
-            .container { flex-direction: column; }
-            .sidebar { width: 100%; display: flex; overflow-x: auto; gap: 6px; padding: 10px; }
-            .sidebar h3 { display: none; }
-            .cat-btn { width: auto; white-space: nowrap; font-size: 0.8rem; padding: 7px 10px; }
+        .lightbox-modal { display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.95); z-index: 1000; justify-content: center; align-items: center; flex-direction: column; }
+        .lightbox-modal img { max-width: 92vw; max-height: 80vh; object-fit: contain; border-radius: 10px; }
+        .lightbox-close { position: absolute; top: 18px; right: 22px; color: white; font-size: 32px; cursor: pointer; z-index: 1001; }
+        .lightbox-title { color: #e2e8f0; font-size: 13px; margin-top: 12px; text-align: center; font-weight: 600; }
+
+        .product-detail-backdrop { display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(3px); z-index: 700; }
+        .product-detail-modal { display: none; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(92vw, 750px); max-height: 88vh; overflow-y: auto; background: #ffffff; border-radius: 18px; z-index: 701; box-shadow: 0 25px 70px rgba(0,0,0,0.25); }
+        .product-detail-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 18px; }
+        .product-detail-image-box { background: #f8fafc; border-radius: 12px; min-height: 260px; display: flex; align-items: center; justify-content: center; }
+        .product-detail-image-box img { max-width: 100%; max-height: 320px; object-fit: contain; }
+        .product-detail-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0; }
+        .product-detail-meta-grid div { background: #f8fafc; border: 1px solid var(--border-color); border-radius: 8px; padding: 8px; font-size: 10.5px; color: #64748b; }
+        .product-detail-meta-grid b { display: block; color: #0f172a; font-size: 11.5px; margin-top: 2px; }
+        .product-detail-close-btn { position: absolute; right: 12px; top: 10px; width: 30px; height: 30px; border-radius: 50%; border: 0; background: #f1f5f9; font-size: 20px; cursor: pointer; }
+
+        @media (max-width: 860px) {
+            .catalog-container { flex-direction: column; gap: 10px; padding: 0 10px; margin-top: 10px; }
+            .sidebar { width: 100%; position: sticky; top: 55px; z-index: 85; padding: 8px 10px; border-radius: 10px; max-height: none; }
+            .sidebar-header { display: none; }
+            .category-pills-bar { flex-direction: row; overflow-x: auto; white-space: nowrap; scrollbar-width: none; gap: 6px; }
+            .category-pills-bar::-webkit-scrollbar { display: none; }
+            .cat-pill { flex-shrink: 0; padding: 6px 12px; font-size: 11.5px; border-radius: 20px; }
+            .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+            .product-detail-inner { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="brand-logo">EMPIRE <span>GLASSWARE</span> <small style="font-size: 0.65rem; color: #64748b; font-weight: 700;">UPCOMING SHIPMENTS</small></div>
-        <a href="index.html" class="btn-live-catalog"><i class="fa-solid fa-arrow-left"></i> In-Stock Catalog</a>
+        <div class="header-title">
+            <h1>EMPIRE GLASSWARE</h1>
+            <p>UPCOMING SHIPMENTS</p>
+        </div>
+        <div class="header-right-actions">
+            <div class="header-top-row">
+                <a href="index.html" class="header-action-btn catalog-btn">
+                    <span>🍷 In-Stock Catalog</span>
+                </a>
+            </div>
+            <div class="header-bottom-row">
+                <button id="accessBadge" class="access-badge" onclick="promptAccessCode()" title="Wholesale Access">
+                    🔑 <span id="tierBtnText">Wholesale Access</span>
+                </button>
+            </div>
+        </div>
     </header>
 
     <section class="hero-banner">
         <h1>⚡ Upcoming Shipments Arriving in 3-4 Days</h1>
-        <p>Advance booking open for incoming models. Tap image to zoom, view details & order on WhatsApp.</p>
+        <p>Advance booking open for incoming models. Select cartons and pre-book on WhatsApp.</p>
     </section>
 
-    <div class="container">
+    <div class="catalog-container">
+        <!-- Left Sidebar Categories -->
         <aside class="sidebar">
-            <h3>Filter Stock</h3>
-            <button class="cat-btn active" onclick="filterUpcomingCategory('All', this)">All Items</button>
-            <button class="cat-btn" onclick="filterUpcomingCategory('Diwali Gifts', this)">Diwali Gift Sets</button>
-            <button class="cat-btn" onclick="filterUpcomingCategory('Barware & Glasses', this)">Barware & Glasses</button>
+            <div class="sidebar-header">📁 Filter Stock</div>
+            <div class="category-pills-bar" id="categoryPillsBar">
+                <!-- Dynamically loaded via custom script below -->
+            </div>
         </aside>
 
-        <!-- Main Product Grid -->
-        <main class="product-grid main-catalog-content" id="productGrid"></main>
+        <!-- Right Main Catalog Area -->
+        <main class="main-catalog-content">
+            <div class="controls-wrapper">
+                <div class="search-and-sort-container">
+                    <div class="search-box-container">
+                        <input type="text" id="searchInput" placeholder="🔍 Search upcoming code, name..." oninput="onSearchInput()">
+                        <span id="searchClearBtn" class="search-clear-btn" onclick="clearSearch()">&times;</span>
+                    </div>
+                    <select id="sortSelect" class="sort-select" onchange="filterProducts()">
+                        <option value="DEFAULT">Sort By</option>
+                        <option value="PRICE_LOW">Price: Low to High</option>
+                        <option value="PRICE_HIGH">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid" id="productGrid"></div>
+        </main>
     </div>
 
-    <!-- Sticky Bottom Bar -->
-    <footer class="bottom-bar">
-        <div class="summary-text" onclick="openOrderDrawer()" style="cursor:pointer;">
-            🛒 Selected Items: <span id="totalItems">0</span> | Est: <span id="cartEstTotal">Rs. 0</span>
+    <!-- Permanent Bottom Cart Bar -->
+    <div class="cart-bar">
+        <div class="cart-info">
+            <span class="cart-info-count">Selected: <b id="totalItems">0</b> Items</span>
+            <span class="cart-info-total">Est. Total: <span id="cartEstTotal">Rs. 0</span></span>
         </div>
-        <button class="btn-whatsapp-prebook" onclick="sendWhatsAppOrder()">
-            <i class="fa-brands fa-whatsapp fa-xl"></i> Send Advance Booking Inquiry
+        <button class="send-btn" onclick="openOrderDrawer()">
+            <span>💬 Review & Order</span>
         </button>
-    </footer>
+    </div>
 
-    <!-- Modals (Handled natively by script.js) -->
-    <div id="productDetailBackdrop" class="modal-backdrop" onclick="closeProductDetail()"></div>
-    <div id="productDetailModal" class="modal-box">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; border-bottom:1px solid #f1f5f9; padding-bottom:10px;">
-            <div id="pdetailCode" style="font-size:12px; font-weight:700; color:#0369a1; cursor:pointer;" title="Click to copy"></div>
-            <div style="display:flex; gap:8px; align-items:center;">
-                <button onclick="openFlyerModal()" style="background:#0f172a; color:#fff; border:none; padding:5px 12px; border-radius:6px; font-size:11px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:4px;"><i class="fa-solid fa-bolt"></i> Flyer</button>
-                <button onclick="shareCurrentProduct()" style="background:#f1f5f9; color:#334155; border:1px solid #cbd5e1; padding:5px 12px; border-radius:6px; font-size:11px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:4px;"><i class="fa-solid fa-share-nodes"></i> Share</button>
-                <button onclick="closeProductDetail()" style="background:none; border:none; font-size:1.6rem; cursor:pointer; color:#64748b; margin-left:4px;">&times;</button>
+    <!-- Order Summary Drawer -->
+    <div id="drawerBackdrop" class="order-drawer-backdrop" onclick="closeOrderDrawer()"></div>
+    <div id="orderDrawer" class="order-drawer">
+        <div class="drawer-header">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <h3>📋 Advance Booking Summary</h3>
+                <button class="clear-cart-btn" onclick="clearFullCart()">Clear All</button>
+            </div>
+            <button class="drawer-close" onclick="closeOrderDrawer()">&times;</button>
+        </div>
+        <div class="drawer-items-list" id="drawerItemsList"></div>
+        <div class="drawer-footer">
+            <div class="drawer-total-row">
+                <span>Estimated Total:</span>
+                <span id="drawerEstTotal" style="color: #b91c1c;">Rs. 0</span>
+            </div>
+            <button class="drawer-confirm-btn" onclick="sendWhatsAppOrder()">
+                <span>💬 Send Advance Booking Inquiry</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Code Copied!</div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightboxImg" src="" alt="Full View">
+        <div id="lightboxTitle" class="lightbox-title"></div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="productDetailBackdrop" class="product-detail-backdrop" onclick="closeProductDetail()"></div>
+    <div id="productDetailModal" class="product-detail-modal">
+        <button class="product-detail-close-btn" onclick="closeProductDetail()">&times;</button>
+        <div class="product-detail-inner">
+            <div class="product-detail-image-box">
+                <img id="pdetailImg" src="" alt="Product Detail Image">
+            </div>
+            <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 6px;">
+                    <span id="pdetailCode" class="p-code" style="font-size:14px;"></span>
+                    <div style="display: flex; gap: 6px;">
+                        <button id="pdetailFlyerBtn" onclick="openFlyerModal()" style="background: #0f172a; color: #fbbf24; border: 1px solid #fbbf24; padding: 4px 10px; border-radius: 14px; font-size: 11px; font-weight: 700; cursor: pointer;">🎨 Flyer</button>
+                        <button id="pdetailShareBtn" onclick="shareCurrentProduct()" style="background: #25D366; color: #fff; border: none; padding: 4px 10px; border-radius: 14px; font-size: 11px; font-weight: 700; cursor: pointer;">📲 Share</button>
+                    </div>
+                </div>
+                <h3 id="pdetailTitle" style="font-size:16px; margin:8px 0; color:#0f172a;"></h3>
+                <div id="pdetailPrice" class="p-price" style="font-size:18px;"></div>
+                <div class="product-detail-meta-grid">
+                    <div>📦 Packing<b id="pdetailPacking">—</b></div>
+                    <div>📋 Minimum Order<b id="pdetailMoq">—</b></div>
+                    <div>🟢 Status<b id="pdetailStock">Advance Book</b></div>
+                    <div>🏷️ Department<b id="pdetailDept">—</b></div>
+                </div>
+                <p id="pdetailDesc" style="font-size:11.5px; color:#64748b; line-height:1.5; margin-bottom:14px;"></p>
+                <button id="pdetailAddBtn" class="btn-detail" style="width:100%; background:#0f172a; color:#fff; padding:10px; font-size:12px;">+ Add Minimum to Order</button>
             </div>
         </div>
-        <div style="text-align:center; margin-bottom:14px; background:#f8fafc; border-radius:12px; padding:12px; border:1px solid #f1f5f9;">
-            <img id="pdetailImg" src="" alt="Product Detail" style="max-height:240px; max-width:100%; object-fit:contain;">
-        </div>
-        <div id="pdetailTitle" style="font-size:15px; font-weight:800; color:#0f172a; margin-bottom:8px; line-height:1.3;"></div>
-        <div id="pdetailPrice" style="font-size:18px; font-weight:800; color:#b91c1c; margin-bottom:14px;"></div>
-        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:8px; margin-bottom:14px;">
-            <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:8px 10px; border-radius:8px;">
-                <div style="font-size:10px; color:#64748b; font-weight:700; text-transform:uppercase;">📦 Packing</div>
-                <div id="pdetailPacking" style="font-size:12px; font-weight:700; color:#1e293b; margin-top:2px;"></div>
-            </div>
-            <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:8px 10px; border-radius:8px;">
-                <div style="font-size:10px; color:#64748b; font-weight:700; text-transform:uppercase;">⏳ Minimum Order</div>
-                <div id="pdetailMoq" style="font-size:12px; font-weight:700; color:#b45309; margin-top:2px;"></div>
-            </div>
-            <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:8px 10px; border-radius:8px;">
-                <div style="font-size:10px; color:#64748b; font-weight:700; text-transform:uppercase;">🟢 Status</div>
-                <div id="pdetailStock" style="font-size:12px; font-weight:700; color:#ea580c; margin-top:2px;"></div>
-            </div>
-            <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:8px 10px; border-radius:8px;">
-                <div style="font-size:10px; color:#64748b; font-weight:700; text-transform:uppercase;">📁 Department</div>
-                <div id="pdetailDept" style="font-size:12px; font-weight:700; color:#0369a1; margin-top:2px;"></div>
-            </div>
-        </div>
-        <div id="pdetailDesc" style="font-size:12px; color:#475569; margin-bottom:16px; line-height:1.4; background:#f8fafc; padding:10px; border-radius:8px; border:1px solid #f1f5f9;"></div>
-        <div style="margin-bottom:18px;">
-            <button id="pdetailAddBtn" style="width:100%; background:#0f172a; color:#fff; border:none; padding:12px; border-radius:10px; font-weight:800; font-size:13px; cursor:pointer; box-shadow:0 4px 12px rgba(15,23,42,0.2);">+ Add Minimum to Order</button>
-        </div>
-        <div style="border-top:1px solid #e2e8f0; padding-top:14px;">
-            <div style="font-size:11px; font-weight:800; color:#64748b; margin-bottom:8px; text-transform:uppercase;">More from this Category:</div>
-            <div id="pdetailSimilarList" style="display:flex; gap:8px; overflow-x:auto; padding-bottom:6px;"></div>
+        <div style="border-top: 1px solid #e2e8f0; padding: 14px 18px; background: #f8fafc; border-radius: 0 0 18px 18px;">
+            <div style="font-size: 12px; font-weight: 700; color: #0f172a; margin-bottom: 10px;">🔥 More from this Category:</div>
+            <div id="pdetailSimilarList" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px;"></div>
         </div>
     </div>
 
     <!-- Flyer Modal -->
-    <div id="flyerModalBackdrop" class="modal-backdrop" onclick="closeFlyerModal()"></div>
-    <div id="flyerModal" class="modal-box" style="max-width:450px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-            <div style="font-size:14px; font-weight:800; color:#0f172a;">⚡ Generate Wholesale Flyer</div>
-            <button onclick="closeFlyerModal()" style="background:none; border:none; font-size:1.5rem; cursor:pointer; color:#64748b;">&times;</button>
+    <div id="flyerModalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.7); z-index:800;" onclick="closeFlyerModal()"></div>
+    <div id="flyerModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:92%; max-width:440px; background:#fff; border-radius:16px; padding:18px; z-index:801;">
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:10px; margin-bottom:12px;">
+            <h3 style="font-size:15px; font-weight:800;">🎨 Make Custom Client Flyer</h3>
+            <button onclick="closeFlyerModal()" style="border:none; background:none; font-size:22px; cursor:pointer;">&times;</button>
         </div>
-        <div style="margin-bottom:10px;">
-            <label style="font-size:11px; font-weight:700; color:#475569; display:block; margin-bottom:4px;">Custom Offer Rate (₹)</label>
-            <input type="number" id="flyerCustomPrice" oninput="onFlyerPriceChange()" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; font-weight:700;">
-            <div id="flyerPriceErr" style="font-size:10px; color:#dc2626; margin-top:3px; display:none;"></div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
+            <div>
+                <label style="display:block; font-size:11px; font-weight:700; margin-bottom:3px;">Your Selling Price (₹):</label>
+                <input type="number" id="flyerCustomPrice" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:13px; font-weight:700;" oninput="onFlyerPriceChange()">
+                <div id="flyerPriceErr" style="font-size:9.5px; color:#dc2626; font-weight:700; margin-top:2px; display:none;">⚠️ Below dealer rate!</div>
+            </div>
+            <div>
+                <label style="display:block; font-size:11px; font-weight:700; margin-bottom:3px;">Min Order Qty:</label>
+                <input type="text" id="flyerCustomMoq" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:13px;">
+            </div>
         </div>
-        <div style="margin-bottom:10px;">
-            <label style="font-size:11px; font-weight:700; color:#475569; display:block; margin-bottom:4px;">MOQ Note</label>
-            <input type="text" id="flyerCustomMoq" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px;">
-        </div>
-        <div style="margin-bottom:14px;">
-            <label style="font-size:11px; font-weight:700; color:#475569; display:block; margin-bottom:4px;">Firm / Header Name (Optional)</label>
-            <input type="text" id="flyerCustomFirm" placeholder="Empire Glassware" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px;">
-        </div>
-        <div style="display:flex; gap:8px;">
-            <button onclick="downloadFlyerImage()" style="flex:1; background:#0369a1; color:#fff; border:none; padding:10px; border-radius:8px; font-weight:700; cursor:pointer;">Download Flyer</button>
-            <button onclick="shareFlyerDirect()" style="flex:1; background:#25D366; color:#fff; border:none; padding:10px; border-radius:8px; font-weight:700; cursor:pointer;"><i class="fa-brands fa-whatsapp"></i> Share</button>
+        <div style="margin-bottom:12px;">
+            <label style="display:block; font-size:11px; font-weight:700; margin-bottom:3px;">Firm Name / Note:</label>
+            <input type="text" id="flyerCustomFirm" placeholder="Special Deal" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:12px;">
         </div>
         <canvas id="flyerCanvas" style="display:none;"></canvas>
+        <div style="display:flex; gap:8px;">
+            <button onclick="downloadFlyerImage()" style="flex:1; background:#0f172a; color:#fff; border:none; padding:10px; border-radius:10px; font-size:12px; font-weight:700; cursor:pointer;">📥 Download Image</button>
+            <button onclick="shareFlyerDirect()" style="flex:1; background:#25D366; color:#fff; border:none; padding:10px; border-radius:10px; font-size:12px; font-weight:700; cursor:pointer;">📲 WhatsApp Share</button>
+        </div>
     </div>
 
-    <!-- Lightbox Modal -->
-    <div id="lightboxModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); z-index:1000; flex-direction:column; align-items:center; justify-content:center;" onclick="closeLightbox()">
-        <div id="lightboxTitle" style="color:#fff; margin-bottom:15px; font-weight:700;"></div>
-        <img id="lightboxImg" style="max-width:90%; max-height:80vh; object-fit:contain;" alt="Zoom View">
+    <!-- Wholesale Access Modal -->
+    <div id="accessModalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.7); z-index:500;" onclick="closeAccessModal()"></div>
+    <div id="accessModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:90%; max-width:380px; background:#fff; border-radius:16px; padding:22px 18px; z-index:501; text-align:center;">
+        <button onclick="closeAccessModal()" style="position:absolute; right:12px; top:12px; width:28px; height:28px; border-radius:50%; border:none; background:#f1f5f9; font-size:18px; font-weight:700; cursor:pointer;">&times;</button>
+        <h3 style="font-size:16px; font-weight:800; margin-bottom:6px;">🔑 Wholesale B2B Access</h3>
+        <p style="font-size:11.5px; color:#64748b; margin-bottom:16px;">Enter your secret dealer code to unlock wholesale discounted pricing.</p>
+        <input type="text" id="accessCodeInput" placeholder="Enter Access Code" style="width:100%; padding:10px; border-radius:10px; border:1.5px solid #cbd5e1; font-size:13px; font-weight:700; text-align:center; text-transform:uppercase; outline:none; margin-bottom:10px;">
+        <button onclick="applyAccessCodeFromModal()" style="width:100%; background:#0f172a; color:#fff; border:none; padding:10px; border-radius:10px; font-size:13px; font-weight:700; cursor:pointer; margin-bottom:14px;">Apply Code</button>
     </div>
 
-    <!-- Data & Script files -->
+    <!-- Data & Script Files -->
     <script src="products_data.js"></script>
     <script src="script.js"></script>
     <script>
-        let globalAdvItems = [];
+        // Override filterProducts and initCategoryPills specifically for Upcoming/Advance Booking items
+        const originalFilterProducts = window.filterProducts;
 
-        window.addEventListener('DOMContentLoaded', () => {
-            if (typeof PRODUCTS === 'undefined') {
-                console.error("PRODUCTS not found!");
-                return;
-            }
+        window.filterProducts = function() {
+            const query = document.getElementById("searchInput").value.toLowerCase().trim();
+            const sortVal = document.getElementById("sortSelect").value;
 
-            // Filter only Advance Booking items
-            globalAdvItems = PRODUCTS.filter(p => {
+            // Restrict base pool to ONLY advance booking items (status contains ADV)
+            let filtered = PRODUCTS.filter(p => {
                 const status = (p.status || '').toUpperCase();
-                return status.includes('ADV');
+                if (!status.includes('ADV')) return false;
+
+                const itemCat = (p.category || '').toUpperCase().trim();
+                const selCat = (currentSelectedCategory || '').toUpperCase().trim();
+
+                const matchesCat = (selCat === "ALL") || (itemCat === selCat);
+                const matchesQuery = p.code.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query);
+                
+                return matchesCat && matchesQuery;
             });
 
-            renderUpcomingGrid('All');
-            updateCartBar();
+            if (sortVal === "PRICE_LOW") {
+                filtered.sort((a, b) => Number(a.price) - Number(b.price));
+            } else if (sortVal === "PRICE_HIGH") {
+                filtered.sort((a, b) => Number(b.price) - Number(a.price));
+            }
+
+            renderProducts(filtered);
+        };
+
+        window.initCategoryPills = function() {
+            const pillsBar = document.getElementById("categoryPillsBar");
+            if (!pillsBar || typeof PRODUCTS === 'undefined') return;
+
+            const advBookItems = PRODUCTS.filter(p => (p.status || '').toUpperCase().includes('ADV'));
+            const totalCount = advBookItems.length;
+
+            pillsBar.innerHTML = `
+                <div class="cat-pill active" onclick="selectCategory('ALL', this)">📁 All Categories (${totalCount})</div>
+            `;
+
+            const categoriesInProducts = [...new Set(advBookItems.map(p => p.category).filter(Boolean))];
+            
+            categoriesInProducts.forEach(cat => {
+                const catCount = advBookItems.filter(p => p.category === cat).length;
+                const pill = document.createElement("div");
+                pill.className = "cat-pill";
+                pill.innerText = `${cat} (${catCount})`;
+                pill.onclick = () => selectCategory(cat, pill);
+                pillsBar.appendChild(pill);
+            });
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            updateAccessHeader();
+            if (typeof PRODUCTS !== 'undefined') {
+                initCategoryPills();
+                filterProducts();
+                updateCartBar();
+            }
         });
-
-        function renderUpcomingGrid(cat) {
-            let itemsToRender = globalAdvItems;
-            if (cat !== 'All') {
-                itemsToRender = globalAdvItems.filter(p => p.category === cat || (p.tag && p.tag.includes(cat)));
-            }
-
-            // Directly call script.js renderProducts
-            if (typeof renderProducts === 'function') {
-                renderProducts(itemsToRender);
-            }
-        }
-
-        function filterUpcomingCategory(cat, btn) {
-            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-            if (btn) btn.classList.add('active');
-            renderUpcomingGrid(cat);
-        }
     </script>
 </body>
 </html>
