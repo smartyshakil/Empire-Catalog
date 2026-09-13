@@ -224,7 +224,7 @@ function initCategoryPills() {
     const totalAvailableCount = availableProducts.length;
 
     pillsBar.innerHTML = `
-        <a href="sneak-peek.html" class="cat-pill sneak-peek-link">✨ Sneak Peek / Diwali (143)</a>
+        <div class="cat-pill adv-booking-pill" onclick="filterAdvanceBookItems()" style="background: #fff7ed; color: #c2410c; border: 1.5px solid #ffedd5; font-weight: 700; animation: subtle-flash 2.2s infinite ease-in-out;">⚡ Arriving in 3-4 Days (Advance Book)</div>
         <div class="cat-pill active" onclick="selectCategory('ALL', this)">📁 All Categories (${totalAvailableCount})</div>
     `;
 
@@ -1625,4 +1625,33 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.ready.then(registration => {
     registration.update();
   });
+}
+// ==========================================
+// ADVANCE BOOKING QUICK FILTER FUNCTION
+// ==========================================
+function filterAdvanceBookItems() {
+    currentSelectedDepartment = "ALL";
+    currentSelectedCategory = "ALL";
+
+    // Department tabs active state hata dein
+    document.querySelectorAll(".dept-tab-btn").forEach(btn => btn.classList.remove("active"));
+    
+    // Category pills active state reset karein
+    document.querySelectorAll(".cat-pill").forEach(p => p.classList.remove("active"));
+
+    // Sirf ADV BOOK items ko filter karein
+    const advFiltered = PRODUCTS.filter(p => {
+        const status = (p.status || '').toUpperCase();
+        return status.includes('ADV');
+    });
+
+    renderProducts(advFiltered);
+    showToast("Showing Advance Booking Items (Arriving in 3-4 Days)");
+
+    // Smooth scroll to catalog grid
+    const mainContent = document.querySelector(".main-catalog-content");
+    if (mainContent) {
+        const topPos = mainContent.getBoundingClientRect().top + window.pageYOffset - 110;
+        window.scrollTo({ top: Math.max(0, topPos), behavior: 'smooth' });
+    }
 }
