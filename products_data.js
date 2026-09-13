@@ -1,5 +1,14 @@
 const PRODUCTS = [
   {
+    "code": "SMIC656I-",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC\nCOL BOX 12 SET CTN",
+    "price": "260",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+},
+  {
     "code": "KRF008B-G",
     "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
@@ -765,6 +774,123 @@ const PRODUCTS = [
     "moq": 4
   },
   {
+    "code": "SMV3013-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS 350 ML COL BOX 8 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 1 SET",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMV3022-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS 350 ML COL BOX 8 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMV3022-B",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS 350 ML COL BOX 8 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMV3032-B",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS 350 ML COL BOX 8 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMV3013-B",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS 350 ML COL BOX 8 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SWG0391G-T",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "700.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SWG0370A-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SWG0393-GT",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SWG0393-GL",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SWG0312A-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "950.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SWG0314A-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "950.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SWG0314B-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "950.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SWG0314C-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "950.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
     "code": "LXY5003",
     "desc": "LANGXU SHOT GLASS 50 ML 6 PC COL BOX 48 SET CTN",
     "price": "100.0",
@@ -1062,6 +1188,60 @@ const PRODUCTS = [
     "moq": 4
   },
   {
+    "code": "SMB253A",
+    "desc": "SHINEMAX DESSERT BOWL 150 ML 6 PCS COLOR BOX 12 SET CTN",
+    "price": "210.0",
+    "unit": "FOR 6 PCS",
+    "category": "BOWL SET",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMB253A-B",
+    "desc": "SHINEMAX DESSERT BOWL 150 ML 6 PCS COLOR BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "BOWL SET",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMB253A-G",
+    "desc": "SHINEMAX DESSERT BOWL 150 ML 6 PCS COLOR BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "BOWL SET",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMB253B-B",
+    "desc": "SHINEMAX DESSERT BOWL 150 ML 6 PCS COLOR BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "BOWL SET",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMB253C-B",
+    "desc": "SHINEMAX DESSERT BOWL 150 ML 6 PCS COLOR BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "BOWL SET",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMB253C-G",
+    "desc": "SHINEMAX DESSERT BOWL 150 ML 6 PCS COLOR BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "BOWL SET",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
     "code": "SMIC632-L2B",
     "desc": "SHINE MAX 170 ML ICE CUP 2 PCS COL BOX-36 SET CTN",
     "price": "130.0",
@@ -1085,6 +1265,24 @@ const PRODUCTS = [
     "price": "220.0",
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL SET",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656I",
+    "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL SET",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMP501",
+    "desc": "SHINEMAX SAUCER 5 INCHES COLOR BOX 12 SET CTN",
+    "price": "180.0",
+    "unit": "FOR 6 PCS",
+    "category": "PLATE SET",
     "department": "Glassware",
     "moq": 4
   },
@@ -1584,6 +1782,24 @@ const PRODUCTS = [
     "moq": 4
   },
   {
+    "code": "KRZB143",
+    "desc": "KARBON TEA MUG 155 ML 6 PCS COLOR BOX 12 SET CTN",
+    "price": "170.0",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "KRZB143B",
+    "desc": "KARBON TEA MUG 155 ML 6 PCS COLOR BOX 12 SET CTN",
+    "price": "170.0",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
     "code": "LXJ400",
     "desc": "LANGXU GLASS TEA CUP 137 ML 6 PC COL BOX - 12 SET CTN",
     "price": "190.0",
@@ -1710,6 +1926,42 @@ const PRODUCTS = [
     "moq": 2
   },
   {
+    "code": "SMWH64-L8B",
+    "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET CTN",
+    "price": "990.0",
+    "unit": "FOR 1 SET",
+    "category": "KETTLE SET",
+    "department": "Glassware",
+    "moq": 1
+  },
+  {
+    "code": "SMWH64-L8G",
+    "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET IN CTN",
+    "price": "990.0",
+    "unit": "FOR 1 SET",
+    "category": "KETTLE SET",
+    "department": "Glassware",
+    "moq": 1
+  },
+  {
+    "code": "SMWH65-L8B",
+    "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET IN CTN",
+    "price": "1190.0",
+    "unit": "FOR 1 SET",
+    "category": "KETTLE SET",
+    "department": "Glassware",
+    "moq": 1
+  },
+  {
+    "code": "SMWH65-L8G",
+    "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET IN CTN",
+    "price": "1190.0",
+    "unit": "FOR 1 SET",
+    "category": "KETTLE SET",
+    "department": "Glassware",
+    "moq": 1
+  },
+  {
     "code": "YZH36",
     "desc": "DELI SOGA 1700 ML JUG WITH LID IN COL BOX 12 PC CTN",
     "price": "160.0",
@@ -1732,6 +1984,15 @@ const PRODUCTS = [
     "desc": "SHINEMAX BOROSILICATE LEMON SET 7 PCS COL BOX 6 SET CTN",
     "price": "550.0",
     "unit": "FOR 7PCS",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMWH76-L7",
+    "desc": "SHINE MAX  7 PCS LEMON SET 1550ML+320ML COL BOX 6 SET CTN",
+    "price": "550.0",
+    "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2
@@ -1782,6 +2043,42 @@ const PRODUCTS = [
     "moq": 2
   },
   {
+    "code": "SMWH88-L7-",
+    "desc": "SHINE MAX 7 PCS LEMON SET 1900ML+320ML COL BOX 6 SET CTN",
+    "price": "600.0",
+    "unit": "FOR 1 SET",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMWH75-L7",
+    "desc": "SHINEMAX LEMON SET 1500ML+320ML COLOR BOX PACK 6 SET CTN",
+    "price": "600.0",
+    "unit": "FOR 1 SET",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMWH69-L7",
+    "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1800ML+370ML GIFT BOX PACK 8 SET CTN",
+    "price": "600.0",
+    "unit": "FOR 1 SET",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMWH89-L7B",
+    "desc": "SHINE MAX COLORED 7 PCS LEMON SET 1440ML+270ML COL BOX 6 SET CTN",
+    "price": "650.0",
+    "unit": "FOR 1 SET",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
     "code": "SMWH76-L7B",
     "desc": "SHINE MAX COLORED 7 PCS LEMON SET COL BOX 6 SET CTN",
     "price": "675.0",
@@ -1809,6 +2106,24 @@ const PRODUCTS = [
     "moq": 2
   },
   {
+    "code": "SMWH88-L7B",
+    "desc": "SHINE MAX COLORED 7 PCS LEMON SET 1900ML+320ML COL BOX 6 SET CTN",
+    "price": "675.0",
+    "unit": "FOR 1 SET",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMWH97-L7B",
+    "desc": "SHINEMAX 7 PCS WATER SET 1700ML+320ML COLOR BOX 6 SET CTN",
+    "price": "700.0",
+    "unit": "FOR 1 SET",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
     "code": "SMWH91-L8B",
     "desc": "SHINE MAX LEMON SET WITH BAMBOO TRAY SMOKE 8 PCS SET 6 SET CTN",
     "price": "775.0",
@@ -1825,6 +2140,51 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2
+  },
+  {
+    "code": "SMWH99-L7B",
+    "desc": "SHINE MAX COLORED 7 PCS LEMON SET COL 1450ML+280ML BOX 6 SET CTN",
+    "price": "950.0",
+    "unit": "FOR 1 SET",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMWH66-L8B",
+    "desc": "SHINEMAX 7 PCS WATER SET WITH REVOLVING STAND 1550ML+320ML COLOR BOX 4 SET IN CTN",
+    "price": "1190.0",
+    "unit": "FOR 1 SET",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 1
+  },
+  {
+    "code": "SMWH66-L8G",
+    "desc": "SHINEMAX 7 PCS WATER SET WITH REVOLVING STAND 1550ML+320ML COLOR BOX 4 SET IN CTN",
+    "price": "1190.0",
+    "unit": "FOR 1 SET",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 1
+  },
+  {
+    "code": "SMWH67-L8B",
+    "desc": "SHINEMAX 7 PCS WATER SET WITH REVOLVING STAND 1550ML+320ML COLOR BOX 4 SET IN CTN",
+    "price": "1375.0",
+    "unit": "FOR 1 SET",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 1
+  },
+  {
+    "code": "SMWH67-L8G",
+    "desc": "SHINEMAX 7 PCS WATER SET WITH REVOLVING STAND 1550ML+320ML COLOR BOX 4 SET IN CTN",
+    "price": "1375.0",
+    "unit": "FOR 1 SET",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 1
   },
   {
     "code": "SMBC18-L1-B",
@@ -2547,9 +2907,27 @@ const PRODUCTS = [
     "moq": 2
   },
   {
+    "code": "SMBB01-2600-BE",
+    "desc": "SHINE MAX DISPENSER PRINTED 2600 ML WITH STAND 16 SET CTN",
+    "price": "650.0",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
     "code": "SMBB02-3600G",
     "desc": "SHINE MAX DISPENSER PLAIN 3600 ML WITH STAND 12 SET CTN",
     "price": "700.0",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMBB11-3200-B",
+    "desc": "SHINE MAX SQUARE DISPENSER PLAIN 3200 ML WITH STAND 16 SET CTN",
+    "price": "725.0",
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
@@ -2569,6 +2947,60 @@ const PRODUCTS = [
     "desc": "SHINE MAX DISPENSER PRINTED 3600 ML WITH STAND 12 SET CTN",
     "price": "750.0",
     "unit": "FOR 1PCS",
+    "category": "DISPENSER",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMBB11-3200-BE",
+    "desc": "SHINE MAX SQUARE DISPENSER PRINTED 3200 ML WITH STAND 16 SET CTN",
+    "price": "775.0",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMBB11-3200-GE",
+    "desc": "SHINE MAX SQUARE DISPENSER PRINTED 3200 ML WITH STAND 16 SET CTN",
+    "price": "775.0",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMBB12-4200-B",
+    "desc": "SHINE MAX SQUARE DISPENSER PLAIN 4200 ML WITH STAND 12 SET CTN",
+    "price": "775.0",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMBB12-4200-G",
+    "desc": "SHINE MAX SQUARE DISPENSER PLAIN 4200 ML WITH STAND 12 SET CTN",
+    "price": "775.0",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMBB12-4200-BE",
+    "desc": "SHINE MAX SQUARE DISPENSER PRINTED 4200 ML WITH STAND 12 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMBB12-4200-GE",
+    "desc": "SHINE MAX SQUARE DISPENSER PRINTED 4200 ML WITH STAND 12 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
     "moq": 2
@@ -2862,6 +3294,78 @@ const PRODUCTS = [
     "moq": 12
   },
   {
+    "code": "KJG071A",
+    "desc": "KARBON JUG 1000 ML COLOR BOX PACKING 12 SET CTN",
+    "price": "120.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "KJG071B",
+    "desc": "KARBON JUG 1000 ML COLOR BOX PACKING 12 SET CTN",
+    "price": "120.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "KJG072A",
+    "desc": "KARBON JUG 1000 ML COLOR BOX PACKING 12 SET CTN",
+    "price": "120.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "KJG072B",
+    "desc": "KARBON JUG 1000 ML COLOR BOX PACKING 12 SET CTN",
+    "price": "120.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "KJG071A-B",
+    "desc": "KARBON JUG 1000 ML COLOR BOX PACKING 12 SET CTN",
+    "price": "140.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "KJG071B-B",
+    "desc": "KARBON JUG 1000 ML COLOR BOX PACKING 12 SET CTN",
+    "price": "140.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "KJG072A-B",
+    "desc": "KARBON JUG 1000 ML COLOR BOX PACKING 12 SET CTN",
+    "price": "140.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "KJG072B-B",
+    "desc": "KARBON JUG 1000 ML COLOR BOX PACKING 12 SET CTN",
+    "price": "140.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
     "code": "RE-1000",
     "desc": "TAG RECTANGLE BOWL WITH LID 1000 ML COLOR BOX 24 PCS CTN",
     "price": "150.0",
@@ -2878,6 +3382,474 @@ const PRODUCTS = [
     "category": "GLASS LUNCH BOX",
     "department": "Glassware",
     "moq": 4
+  },
+  {
+    "code": "SMH95A-1L-B",
+    "desc": "SHINEMAX BOROSILICATE KETTLE/KAWA JUG 1 LTR COL BOX 24 PCS CTN",
+    "price": "190.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMH95A-1L-G",
+    "desc": "SHINEMAX BOROSILICATE KETTLE/KAWA JUG 1 LTR COL BOX 24 PCS CTN",
+    "price": "190.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMH95B-1L-B",
+    "desc": "SHINEMAX BOROSILICATE KETTLE/KAWA JUG 1 LTR COL BOX 24 PCS CTN",
+    "price": "190.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMH95C-1L-B",
+    "desc": "SHINEMAX BOROSILICATE KETTLE/KAWA JUG 1 LTR COL BOX 24 PCS CTN",
+    "price": "190.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMH95A-1.5L-B",
+    "desc": "SHINEMAX BOROSILICATE KETTLE/KAWA JUG 1.5 LTR COL BOX 24 PCS CTN",
+    "price": "220.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMH95A-1.5L-G",
+    "desc": "SHINEMAX BOROSILICATE KETTLE/KAWA JUG 1.5 LTR COL BOX 24 PCS CTN",
+    "price": "220.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMH95B-1.5L-B",
+    "desc": "SHINEMAX BOROSILICATE KETTLE/KAWA JUG 1.5 LTR COL BOX 24 PCS CTN",
+    "price": "220.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMH95B-1.5L-G",
+    "desc": "SHINEMAX BOROSILICATE KETTLE/KAWA JUG 1.5 LTR COL BOX 24 PCS CTN",
+    "price": "220.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMIC656D",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656G",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656H",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656B-B",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656B-G",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656C-B",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656C-G",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656D-G",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656D-B",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656E-B",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656E-G",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656G-B",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656G-G",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656H-B",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656H-G",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656I",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656I-B",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656I-G",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656J-B",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656J-G",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMIC656A-B",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4
+  },
+  {
+    "code": "SMP011-L7",
+    "desc": "SHINEMAX 7 PCS ROUND SNACK SET GIFT BOX PACK 6 SET CTN",
+    "price": "475.0",
+    "unit": "FOR 1 SET",
+    "category": "SNACK SET",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMBJ-610",
+    "desc": "SHINEMAX PREMIUM 2+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
+    "price": "475.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 24
+  },
+  {
+    "code": "SMP011-L7B",
+    "desc": "SHINEMAX 7 PCS ROUND SNACK SET GIFT BOX PACK 6 SET CTN",
+    "price": "600.0",
+    "unit": "FOR 1 SET",
+    "category": "SNACK SET",
+    "department": "Glassware",
+    "moq": 2
+  },
+  {
+    "code": "SMBJ-613",
+    "desc": "SHINEMAX PREMIUM 3+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
+    "price": "750.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12
+  },
+  {
+    "code": "SMBJ-614",
+    "desc": "SHINEMAX PREMIUM 3+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
+    "price": "775.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12
+  },
+  {
+    "code": "SMBJ-608",
+    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
+    "price": "800.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12
+  },
+  {
+    "code": "SMBJ-601",
+    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
+    "price": "875.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12
+  },
+  {
+    "code": "SMBJ-606",
+    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
+    "price": "900.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12
+  },
+  {
+    "code": "SMBJ-607",
+    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
+    "price": "900.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12
+  },
+  {
+    "code": "SMP051A-L7B",
+    "desc": "SHINEMAX 7 PCS SQUARE SNACK SET GIFT BOX PACK 4 SET CTN",
+    "price": "1000.0",
+    "unit": "FOR 1 SET",
+    "category": "SNACK SET",
+    "department": "Glassware",
+    "moq": 1
+  },
+  {
+    "code": "SMP051C-L7G",
+    "desc": "SHINEMAX 7 PCS SQUARE SNACK SET GIFT BOX PACK 4 SET CTN",
+    "price": "1000.0",
+    "unit": "FOR 1 SET",
+    "category": "SNACK SET",
+    "department": "Glassware",
+    "moq": 1
+  },
+  {
+    "code": "SMP051B-L7B",
+    "desc": "SHINEMAX 7 PCS SQUARE SNACK SET GIFT BOX PACK 4 SET CTN",
+    "price": "1000.0",
+    "unit": "FOR 1 SET",
+    "category": "SNACK SET",
+    "department": "Glassware",
+    "moq": 1
+  },
+  {
+    "code": "SMP051B-L7G",
+    "desc": "SHINEMAX 7 PCS SQUARE SNACK SET GIFT BOX PACK 4 SET CTN",
+    "price": "1000.0",
+    "unit": "FOR 1 SET",
+    "category": "SNACK SET",
+    "department": "Glassware",
+    "moq": 1
+  },
+  {
+    "code": "SMP051C-L7B",
+    "desc": "SHINEMAX 7 PCS SQUARE SNACK SET GIFT BOX PACK 4 SET CTN",
+    "price": "1000.0",
+    "unit": "FOR 1 SET",
+    "category": "SNACK SET",
+    "department": "Glassware",
+    "moq": 1
+  },
+  {
+    "code": "SMBJ-720-G",
+    "desc": "SHINEMAX PREMIUM 4+1 GOLDEN IRON TRICYCLE STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1225.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMBJ-720-S",
+    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON TRICYCLE STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1275.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMBJ-701-S",
+    "desc": "SHINEMAX PREMIUM 2+1 SILVER IRON 2 HORSE STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1475.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMBJ-703-G",
+    "desc": "SHINEMAX PREMIUM 4+1 GOLDEN IRON 2 HORSE STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1525.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMBJ-709-S",
+    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON PEACOCK TRAY STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1525.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMBJ-707-G",
+    "desc": "SHINEMAX PREMIUM 3+1 GOLDEN IRON 1 BIG HORSE STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1600.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMBJ-705-G",
+    "desc": "SHINEMAX PREMIUM 4+1 GOLDEN IRON 1 BIG HORSE STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1625.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMBJ-706-S",
+    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON 1 BIG ELEPHANT STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1650.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6
+  },
+  {
+    "code": "SMBJ-707-S",
+    "desc": "SHINEMAX PREMIUM 3+1 SILVER IRON 1 BIG HORSE STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1650.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6
   },
   {
     "code": "EMP-99",
