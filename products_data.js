@@ -1,21 +1,13 @@
 const PRODUCTS = [
   {
-    "code": "SMIC656I-",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC\nCOL BOX 12 SET CTN",
-    "price": "260",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4
-},
-  {
     "code": "KRF008B-G",
     "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
     "department": "GLASSWARE",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "EMP210-250",
@@ -24,7 +16,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "LXY1511",
@@ -33,7 +26,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXY5010",
@@ -42,7 +36,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "JGGC-04",
@@ -51,7 +46,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "JGGC-05",
@@ -60,7 +56,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "JGGC-06",
@@ -69,7 +66,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "JGGC-07",
@@ -78,7 +76,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXY5004",
@@ -87,7 +86,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXY4008",
@@ -96,7 +96,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXY1101",
@@ -105,7 +106,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXY4015",
@@ -114,7 +116,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXY5014",
@@ -123,7 +126,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "STY721",
@@ -132,7 +136,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXY4306",
@@ -141,7 +146,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXY4010",
@@ -150,7 +156,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "ES5163-2A",
@@ -159,7 +166,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "WIGC-1",
@@ -168,7 +176,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "WIGC-2",
@@ -177,7 +186,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRW044",
@@ -186,7 +196,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SWG2022",
@@ -195,7 +206,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "STY5012",
@@ -204,7 +216,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZS0609",
@@ -213,7 +226,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZS0613-1",
@@ -222,7 +236,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZS0610",
@@ -231,7 +246,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZS0614",
@@ -240,7 +256,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "WIGC-21",
@@ -249,7 +266,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SWG0615-1",
@@ -258,7 +276,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SWG0615-2",
@@ -267,7 +286,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SWG0615-3",
@@ -276,7 +296,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SWG0615-4",
@@ -285,7 +306,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZS0608",
@@ -294,7 +316,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZS0615-1",
@@ -303,7 +326,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMV5051A",
@@ -312,7 +336,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMV5051B",
@@ -321,7 +346,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMV5051C",
@@ -330,7 +356,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WHISKEY GLASS",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "KRY1007",
@@ -339,7 +366,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "JS5139-1",
@@ -348,7 +376,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "JS5139-1B",
@@ -357,7 +386,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXY1001",
@@ -366,7 +396,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "CNGC-03",
@@ -375,7 +406,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMW6021",
@@ -384,7 +416,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMW6022",
@@ -393,7 +426,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMW6031",
@@ -402,7 +436,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "WAGC-1",
@@ -411,7 +446,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "WAGC-2",
@@ -420,7 +456,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRT077",
@@ -429,7 +466,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRY5010-1",
@@ -438,7 +476,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "STY5006",
@@ -447,7 +486,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "STY5010-1",
@@ -456,7 +496,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KB047-2",
@@ -465,7 +506,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXY5010-1",
@@ -474,7 +516,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "DSKB032-3",
@@ -483,7 +526,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "ES1005",
@@ -492,7 +536,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXY1007-2",
@@ -501,7 +546,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXY1007-3",
@@ -510,7 +556,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "HBGC-1",
@@ -519,7 +566,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "GCBR02",
@@ -528,7 +576,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SP-270-L6",
@@ -537,7 +586,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBY11-1",
@@ -546,7 +596,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SP-270A-L6",
@@ -555,7 +606,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBY21-1",
@@ -564,7 +616,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBY11-1-B",
@@ -573,7 +626,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBY11-1-G",
@@ -582,7 +636,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBY21-1-E",
@@ -591,7 +646,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBY21-1-G",
@@ -600,7 +656,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO JUICE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBY21-1-BE",
@@ -609,7 +666,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO JUICE GLASS",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBY21-1-GE",
@@ -618,7 +676,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO JUICE GLASS",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SP-320-L6",
@@ -627,7 +686,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SP-320A-L6",
@@ -636,7 +696,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBY11-2",
@@ -645,7 +706,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBY11-2-E",
@@ -654,7 +716,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBY21-2-E",
@@ -663,7 +726,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO WATER GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBY11-2-BE",
@@ -672,7 +736,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO WATER GLASS",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBY11-2-GE",
@@ -681,7 +746,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO WATER GLASS",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBY21-2-GE",
@@ -690,7 +756,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO WATER GLASS",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBY21-2-BE",
@@ -699,7 +766,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO WATER GLASS",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "GL1303",
@@ -708,7 +776,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WINE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "GL1304",
@@ -717,7 +786,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WINE GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "GL1323",
@@ -726,7 +796,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WINE GLASS",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "GL3796",
@@ -735,7 +806,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "WINE GLASS",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "STY2013-B",
@@ -744,7 +816,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "GCN-01",
@@ -753,7 +826,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "GCN-02",
@@ -762,7 +836,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "GCN-03",
@@ -771,7 +846,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMV3013-G",
@@ -780,7 +856,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMV3022-G",
@@ -789,7 +866,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMV3022-B",
@@ -798,7 +876,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMV3032-B",
@@ -807,7 +886,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMV3013-B",
@@ -816,7 +896,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SWG0391G-T",
@@ -825,7 +906,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SWG0370A-G",
@@ -834,7 +916,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SWG0393-GT",
@@ -843,7 +926,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SWG0393-GL",
@@ -852,7 +936,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SWG0312A-G",
@@ -861,7 +946,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SWG0314A-G",
@@ -870,7 +956,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SWG0314B-G",
@@ -879,7 +966,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SWG0314C-G",
@@ -888,7 +976,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "LXY5003",
@@ -897,7 +986,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "SHOT GLASS",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "STY401",
@@ -906,7 +996,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "SHOT GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRY314",
@@ -915,7 +1006,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "SHOT GLASS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRWH702A-L7",
@@ -924,7 +1016,8 @@ const PRODUCTS = [
     "unit": "FOR 7 PCS",
     "category": "SHOT SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRWH702B-L7",
@@ -933,7 +1026,8 @@ const PRODUCTS = [
     "unit": "FOR 7 PCS",
     "category": "SHOT SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRWH702C-L7",
@@ -942,7 +1036,8 @@ const PRODUCTS = [
     "unit": "FOR 7 PCS",
     "category": "SHOT SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRWH702D-L7",
@@ -951,7 +1046,8 @@ const PRODUCTS = [
     "unit": "FOR 7 PCS",
     "category": "SHOT SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRWH702E-L7",
@@ -960,7 +1056,8 @@ const PRODUCTS = [
     "unit": "FOR 7 PCS",
     "category": "SHOT SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRB013-3",
@@ -969,7 +1066,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRB013-1",
@@ -978,7 +1076,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRB013-2",
@@ -987,7 +1086,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRB066A",
@@ -996,7 +1096,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRB066B",
@@ -1005,7 +1106,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRB066C",
@@ -1014,7 +1116,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB407",
@@ -1023,7 +1126,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB406A-B",
@@ -1032,7 +1136,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB406B-B",
@@ -1041,7 +1146,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB406C-B",
@@ -1050,7 +1156,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB406D-B",
@@ -1059,7 +1166,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB406E-B",
@@ -1068,7 +1176,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB406F-B",
@@ -1077,7 +1186,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB406A-G",
@@ -1086,7 +1196,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB406B-G",
@@ -1095,7 +1206,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB406C-G",
@@ -1104,7 +1216,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB406D-G",
@@ -1113,7 +1226,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB406E-G",
@@ -1122,7 +1236,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB406F-G",
@@ -1131,7 +1246,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRB063A-G",
@@ -1140,7 +1256,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRB063B-G",
@@ -1149,7 +1266,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRB063C-B",
@@ -1158,7 +1276,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRB063C-G",
@@ -1167,7 +1286,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRB063D-G",
@@ -1176,7 +1296,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRB063B-B",
@@ -1185,7 +1306,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB253A",
@@ -1194,7 +1316,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB253A-B",
@@ -1203,7 +1326,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB253A-G",
@@ -1212,7 +1336,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB253B-B",
@@ -1221,7 +1346,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB253C-B",
@@ -1230,7 +1356,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB253C-G",
@@ -1239,7 +1366,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC632-L2B",
@@ -1248,7 +1376,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "ICE CREAM BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC616",
@@ -1257,7 +1386,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC626",
@@ -1266,7 +1396,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656I",
@@ -1275,7 +1406,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP501",
@@ -1284,7 +1416,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP509-3",
@@ -1293,7 +1426,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXP109-1",
@@ -1302,7 +1436,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXP109-3",
@@ -1311,7 +1446,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRP120",
@@ -1320,7 +1456,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRS7201",
@@ -1329,7 +1466,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXP109-2",
@@ -1338,7 +1476,8 @@ const PRODUCTS = [
     "unit": "FOR 4PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP508A",
@@ -1347,7 +1486,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP508B",
@@ -1356,7 +1496,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP508D",
@@ -1365,7 +1506,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP508E",
@@ -1374,7 +1516,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP508F",
@@ -1383,7 +1526,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP508C",
@@ -1392,7 +1536,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP510-1",
@@ -1401,7 +1546,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP510-3",
@@ -1410,7 +1556,8 @@ const PRODUCTS = [
     "unit": "FOR 2 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP508D-B",
@@ -1419,7 +1566,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP508F-B",
@@ -1428,7 +1576,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP508D-G",
@@ -1437,7 +1586,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP508F-G",
@@ -1446,7 +1596,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRS7201-B",
@@ -1455,7 +1606,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRS7201-G",
@@ -1464,7 +1616,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "DZB01-300",
@@ -1473,7 +1626,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "BEER MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZB08",
@@ -1482,7 +1636,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "BEER MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "GCBE-04",
@@ -1491,7 +1646,8 @@ const PRODUCTS = [
     "unit": "FOR 2 PCS",
     "category": "BEER MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZB18",
@@ -1500,7 +1656,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "BEER MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZB27",
@@ -1509,7 +1666,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "BEER MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZB10",
@@ -1518,7 +1676,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "BEER MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZB17-1",
@@ -1527,7 +1686,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "BEER MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZB05-375",
@@ -1536,7 +1696,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "BEER MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZB15",
@@ -1545,7 +1706,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "BEER MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZB09",
@@ -1554,7 +1716,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "BEER MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "GCBE-02",
@@ -1563,7 +1726,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "BEER MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXZB02",
@@ -1572,7 +1736,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "BEER MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB406",
@@ -1581,7 +1746,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMTC217-1",
@@ -1590,7 +1756,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB162",
@@ -1599,7 +1766,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB163",
@@ -1608,7 +1776,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB164",
@@ -1617,7 +1786,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMTC213-1",
@@ -1626,7 +1796,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB48A",
@@ -1635,7 +1806,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB48B",
@@ -1644,7 +1816,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB48C",
@@ -1653,7 +1826,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "GC003",
@@ -1662,7 +1836,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB78",
@@ -1671,7 +1846,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB135",
@@ -1680,7 +1856,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB173",
@@ -1689,7 +1866,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB178",
@@ -1698,7 +1876,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB187",
@@ -1707,7 +1886,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMTC24-1",
@@ -1716,7 +1896,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMTC24-5",
@@ -1725,7 +1906,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB05B",
@@ -1734,7 +1916,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB05A",
@@ -1743,7 +1926,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB05D",
@@ -1752,7 +1936,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB161",
@@ -1761,7 +1946,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "ZB24-WEAVE",
@@ -1770,7 +1956,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "GCT007",
@@ -1779,7 +1966,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB143",
@@ -1788,7 +1976,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB143B",
@@ -1797,7 +1986,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXJ400",
@@ -1806,7 +1996,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB199A",
@@ -1815,7 +2006,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRZB199B",
@@ -1824,7 +2016,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBC51-1-L2",
@@ -1833,7 +2026,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "BORO TEA MUG",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC51-2-L2",
@@ -1842,7 +2036,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "BORO TEA MUG",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "GCBR08",
@@ -1851,7 +2046,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBC14",
@@ -1860,7 +2056,8 @@ const PRODUCTS = [
     "unit": "FOR 6PCS",
     "category": "BORO TEA MUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXCY006",
@@ -1869,7 +2066,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "LID MUG",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "LXCY007",
@@ -1878,7 +2076,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "LID MUG",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "KRCF027-L12",
@@ -1887,7 +2086,8 @@ const PRODUCTS = [
     "unit": "FOR 12PCS",
     "category": "CUP SAUCER",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "CF241-L12",
@@ -1896,7 +2096,8 @@ const PRODUCTS = [
     "unit": "FOR 12PCS",
     "category": "CUP SAUCER",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMWH96-L8",
@@ -1905,7 +2106,8 @@ const PRODUCTS = [
     "unit": "FOR 8PCS",
     "category": "KETTLE SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH96-L8B",
@@ -1914,7 +2116,8 @@ const PRODUCTS = [
     "unit": "FOR 8PCS",
     "category": "KETTLE SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH96-L8G",
@@ -1923,7 +2126,8 @@ const PRODUCTS = [
     "unit": "FOR 8PCS",
     "category": "KETTLE SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH64-L8B",
@@ -1932,7 +2136,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "KETTLE SET",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "ADV BOOK"
   },
   {
     "code": "SMWH64-L8G",
@@ -1941,7 +2146,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "KETTLE SET",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "ADV BOOK"
   },
   {
     "code": "SMWH65-L8B",
@@ -1950,7 +2156,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "KETTLE SET",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "ADV BOOK"
   },
   {
     "code": "SMWH65-L8G",
@@ -1959,7 +2166,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "KETTLE SET",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "ADV BOOK"
   },
   {
     "code": "YZH36",
@@ -1968,7 +2176,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "JUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "DSH040B",
@@ -1977,7 +2186,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "JUG",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMWH88-L7",
@@ -1986,7 +2196,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH76-L7",
@@ -1995,7 +2206,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH89-L7G",
@@ -2004,7 +2216,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH88A-L7G",
@@ -2013,7 +2226,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH73-L7G",
@@ -2022,7 +2236,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH74-L7G",
@@ -2031,7 +2246,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "GCLS-01",
@@ -2040,7 +2256,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH88-L7-",
@@ -2049,7 +2266,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH75-L7",
@@ -2058,7 +2276,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH69-L7",
@@ -2067,7 +2286,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH89-L7B",
@@ -2076,7 +2296,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH76-L7B",
@@ -2085,7 +2306,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH82-L7B",
@@ -2094,7 +2316,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH91-L8",
@@ -2103,7 +2326,8 @@ const PRODUCTS = [
     "unit": "FOR 8PCS",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH88-L7B",
@@ -2112,7 +2336,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH97-L7B",
@@ -2121,7 +2346,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH91-L8B",
@@ -2130,7 +2356,8 @@ const PRODUCTS = [
     "unit": "FOR 8PCS",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH91-L8G",
@@ -2139,7 +2366,8 @@ const PRODUCTS = [
     "unit": "FOR 8PCS",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH99-L7B",
@@ -2148,7 +2376,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMWH66-L8B",
@@ -2157,7 +2386,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "ADV BOOK"
   },
   {
     "code": "SMWH66-L8G",
@@ -2166,7 +2396,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "ADV BOOK"
   },
   {
     "code": "SMWH67-L8B",
@@ -2175,7 +2406,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "ADV BOOK"
   },
   {
     "code": "SMWH67-L8G",
@@ -2184,7 +2416,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "ADV BOOK"
   },
   {
     "code": "SMBC18-L1-B",
@@ -2193,7 +2426,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC18-L1-G",
@@ -2202,7 +2436,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC20-L1",
@@ -2211,7 +2446,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC52-L1",
@@ -2220,7 +2456,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC54-L1",
@@ -2229,7 +2466,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC57-L1",
@@ -2238,7 +2476,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC28-L1",
@@ -2247,7 +2486,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC52-L1G",
@@ -2256,7 +2496,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC54-L1G",
@@ -2265,7 +2506,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC56-L1B",
@@ -2274,7 +2516,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC56-L1G",
@@ -2283,7 +2526,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC57-L1B",
@@ -2292,7 +2536,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC57-L1G",
@@ -2301,7 +2546,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC58-L1B",
@@ -2310,7 +2556,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC58-L1G",
@@ -2319,7 +2566,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC33-L1G",
@@ -2328,7 +2576,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC33-L1B",
@@ -2337,7 +2586,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC22-L1",
@@ -2346,7 +2596,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC20-L1-B",
@@ -2355,7 +2606,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBC20-L1-G",
@@ -2364,7 +2616,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "SIPPER",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "HK-105",
@@ -2373,7 +2626,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
-    "moq": 80
+    "moq": 80,
+    "status": "In Stock"
   },
   {
     "code": "HK-210",
@@ -2382,7 +2636,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
-    "moq": 80
+    "moq": 80,
+    "status": "In Stock"
   },
   {
     "code": "HK-165",
@@ -2391,7 +2646,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
-    "moq": 80
+    "moq": 80,
+    "status": "In Stock"
   },
   {
     "code": "HK-130",
@@ -2400,7 +2656,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
-    "moq": 80
+    "moq": 80,
+    "status": "In Stock"
   },
   {
     "code": "HK-145",
@@ -2409,7 +2666,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
-    "moq": 80
+    "moq": 80,
+    "status": "In Stock"
   },
   {
     "code": "HK-205",
@@ -2418,7 +2676,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
-    "moq": 80
+    "moq": 80,
+    "status": "In Stock"
   },
   {
     "code": "HK-150",
@@ -2427,7 +2686,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
-    "moq": 80
+    "moq": 80,
+    "status": "In Stock"
   },
   {
     "code": "HK-180",
@@ -2436,7 +2696,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
-    "moq": 80
+    "moq": 80,
+    "status": "In Stock"
   },
   {
     "code": "HK-160",
@@ -2445,7 +2706,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
-    "moq": 80
+    "moq": 80,
+    "status": "In Stock"
   },
   {
     "code": "HK-175",
@@ -2454,7 +2716,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
-    "moq": 80
+    "moq": 80,
+    "status": "In Stock"
   },
   {
     "code": "SMWB1036-500",
@@ -2463,7 +2726,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMTS701-2",
@@ -2472,7 +2736,8 @@ const PRODUCTS = [
     "unit": "FOR 2 PCS",
     "category": "TURTLE",
     "department": "Glassware",
-    "moq": 24
+    "moq": 24,
+    "status": "In Stock"
   },
   {
     "code": "KRCB006A",
@@ -2481,7 +2746,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SPS023-L7",
@@ -2490,7 +2756,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SPS024-L7",
@@ -2499,7 +2766,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SPS025-L7",
@@ -2508,7 +2776,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "YZW20080-L7A",
@@ -2517,7 +2786,8 @@ const PRODUCTS = [
     "unit": "FOR 7 PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "YZW20080-L7B",
@@ -2526,7 +2796,8 @@ const PRODUCTS = [
     "unit": "FOR 7 PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "YZW20080-L7C",
@@ -2535,7 +2806,8 @@ const PRODUCTS = [
     "unit": "FOR 7 PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRPS021-L7",
@@ -2544,7 +2816,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "KRPS031-L7",
@@ -2553,7 +2826,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "KRPS041-L7",
@@ -2562,7 +2836,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "KRPS031-L7G",
@@ -2571,7 +2846,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SPS033-L7",
@@ -2580,7 +2856,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SPS024-L7B",
@@ -2589,7 +2866,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SPS025-L7B",
@@ -2598,7 +2876,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SPS063-L7B",
@@ -2607,7 +2886,8 @@ const PRODUCTS = [
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "GPG4060-2",
@@ -2616,7 +2896,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "WOODEN JAR SINGLE",
     "department": "Glassware",
-    "moq": 24
+    "moq": 24,
+    "status": "In Stock"
   },
   {
     "code": "SP-520ML",
@@ -2625,7 +2906,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "WOODEN JAR SINGLE",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SP-685ML",
@@ -2634,7 +2916,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "WOODEN JAR SINGLE",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "GPG74-1",
@@ -2643,7 +2926,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "WOODEN JAR SINGLE",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SP-480ML",
@@ -2652,7 +2936,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "WOODEN JAR SINGLE",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ05-1050",
@@ -2661,7 +2946,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "WOODEN JAR SINGLE",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "GPG74-2",
@@ -2670,7 +2956,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "WOODEN JAR SINGLE",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "GPG74-3",
@@ -2679,7 +2966,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "WOODEN JAR SINGLE",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ05-1400",
@@ -2688,7 +2976,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "WOODEN JAR SINGLE",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "GPG16-1580",
@@ -2697,7 +2986,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "WOODEN JAR SINGLE",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ02-500-L2",
@@ -2706,7 +2996,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "WOODEN CANDY",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-542R-L4",
@@ -2715,7 +3006,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "WOODEN CANDY",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-614-L4",
@@ -2724,7 +3016,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "WOODEN CANDY",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ613-L4",
@@ -2733,7 +3026,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "WOODEN CANDY",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "In Stock"
   },
   {
     "code": "SP-320A-L6",
@@ -2742,7 +3036,8 @@ const PRODUCTS = [
     "unit": "FOR 3PCS",
     "category": "WOODEN 3 PCS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "GPG10-220",
@@ -2751,7 +3046,8 @@ const PRODUCTS = [
     "unit": "FOR 3PCS",
     "category": "WOODEN 3 PCS",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SP-220A-L3",
@@ -2760,7 +3056,8 @@ const PRODUCTS = [
     "unit": "FOR 3PCS",
     "category": "WOODEN 3 PCS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SP-320-L3",
@@ -2769,7 +3066,8 @@ const PRODUCTS = [
     "unit": "FOR 3PCS",
     "category": "WOODEN 3 PCS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SP-270A-L3",
@@ -2778,7 +3076,8 @@ const PRODUCTS = [
     "unit": "FOR 3PCS",
     "category": "WOODEN 3 PCS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SP-320A-L3",
@@ -2787,7 +3086,8 @@ const PRODUCTS = [
     "unit": "FOR 3PCS",
     "category": "WOODEN 3 PCS",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "HMFG60-900",
@@ -2796,7 +3096,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS JAR",
     "department": "Glassware",
-    "moq": 24
+    "moq": 24,
+    "status": "In Stock"
   },
   {
     "code": "HMFG60-1200",
@@ -2805,7 +3106,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS JAR",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "HMFG56S-1800",
@@ -2814,7 +3116,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS JAR",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "HMFG57S-1800",
@@ -2823,7 +3126,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS JAR",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "HMFG57S-2500",
@@ -2832,7 +3136,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS JAR",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "TAG-350-1",
@@ -2841,7 +3146,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "CANISTER",
     "department": "Glassware",
-    "moq": 24
+    "moq": 24,
+    "status": "In Stock"
   },
   {
     "code": "TAG-350-2",
@@ -2850,7 +3156,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "CANISTER",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "TAG-350-3",
@@ -2859,7 +3166,8 @@ const PRODUCTS = [
     "unit": "FOR 3PCS",
     "category": "CANISTER",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBT-921-L3",
@@ -2868,7 +3176,8 @@ const PRODUCTS = [
     "unit": "FOR 3 PCS",
     "category": "GLASS BAKEWARE",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBT-901-L3",
@@ -2877,7 +3186,8 @@ const PRODUCTS = [
     "unit": "FOR 3PCS",
     "category": "GLASS BAKEWARE",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBT-911-L3",
@@ -2886,7 +3196,8 @@ const PRODUCTS = [
     "unit": "FOR 3 PCS",
     "category": "GLASS BAKEWARE",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB01-2600G",
@@ -2895,7 +3206,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB01-2600E",
@@ -2904,7 +3216,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB01-2600-BE",
@@ -2913,7 +3226,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB02-3600G",
@@ -2922,7 +3236,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB11-3200-B",
@@ -2931,7 +3246,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB11-3200G",
@@ -2940,7 +3256,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB01-3600E",
@@ -2949,7 +3266,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB11-3200-BE",
@@ -2958,7 +3276,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB11-3200-GE",
@@ -2967,7 +3286,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB12-4200-B",
@@ -2976,7 +3296,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB12-4200-G",
@@ -2985,7 +3306,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB12-4200-BE",
@@ -2994,7 +3316,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB12-4200-GE",
@@ -3003,7 +3326,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBB03-L3-G",
@@ -3012,7 +3336,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "DISPENSER",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "In Stock"
   },
   {
     "code": "LXGP001",
@@ -3021,7 +3346,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "FRUIT PLATE",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXGP002",
@@ -3030,7 +3356,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "FRUIT PLATE",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXGP003",
@@ -3039,7 +3366,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "FRUIT PLATE",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXW116",
@@ -3048,7 +3376,8 @@ const PRODUCTS = [
     "unit": "FOR 4PCS",
     "category": "GLASS PLAIN BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXW132-1",
@@ -3057,7 +3386,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "GLASS PLAIN BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB216",
@@ -3066,7 +3396,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS PLAIN BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMB213",
@@ -3075,7 +3406,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "GLASS PLAIN BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXW115",
@@ -3084,7 +3416,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "GLASS PLAIN BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXW113",
@@ -3093,7 +3426,8 @@ const PRODUCTS = [
     "unit": "FOR 4PCS",
     "category": "GLASS PLAIN BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXGW002",
@@ -3102,7 +3436,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS PLAIN BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXW127-2",
@@ -3111,7 +3446,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "GLASS PLAIN BOWL",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "LXW112",
@@ -3120,7 +3456,8 @@ const PRODUCTS = [
     "unit": "FOR 2PCS",
     "category": "GLASS PLAIN BOWL",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "KRF006B-G",
@@ -3129,7 +3466,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS COLORED BOWL",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "KRF008A-B",
@@ -3138,7 +3476,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRF008B-B",
@@ -3147,7 +3486,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRF008C-B",
@@ -3156,7 +3496,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRF008A-G",
@@ -3165,7 +3506,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRF008C-G",
@@ -3174,7 +3516,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRF008A-LN",
@@ -3183,7 +3526,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRF008B-LN",
@@ -3192,7 +3536,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "KRF008C-LN",
@@ -3201,7 +3546,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS COLORED BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMBP02-2500-G",
@@ -3210,7 +3556,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BORO SERVING BOWL",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBP122A-B",
@@ -3219,7 +3566,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BORO SERVING BOWL",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBP122A-G",
@@ -3228,7 +3576,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BORO SERVING BOWL",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBP125",
@@ -3237,7 +3586,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BORO SERVING BOWL",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBP125-B",
@@ -3246,7 +3596,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BORO SERVING BOWL",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBP125-G",
@@ -3255,7 +3606,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BORO SERVING BOWL",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "LXHP19B-30",
@@ -3264,7 +3616,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "FLOWER POT",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "BW602-320",
@@ -3273,7 +3626,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS LUNCH BOX",
     "department": "Glassware",
-    "moq": 24
+    "moq": 24,
+    "status": "In Stock"
   },
   {
     "code": "SMBW602-320",
@@ -3282,7 +3636,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS LUNCH BOX",
     "department": "Glassware",
-    "moq": 24
+    "moq": 24,
+    "status": "In Stock"
   },
   {
     "code": "RE-600",
@@ -3291,7 +3646,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS LUNCH BOX",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "KJG071A",
@@ -3300,7 +3656,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "KJG071B",
@@ -3309,7 +3666,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "KJG072A",
@@ -3318,7 +3676,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "KJG072B",
@@ -3327,7 +3686,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "KJG071A-B",
@@ -3336,7 +3696,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "KJG071B-B",
@@ -3345,7 +3706,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "KJG072A-B",
@@ -3354,7 +3716,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "KJG072B-B",
@@ -3363,7 +3726,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "RE-1000",
@@ -3372,7 +3736,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS LUNCH BOX",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "RE-1500",
@@ -3381,7 +3746,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "GLASS LUNCH BOX",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMH95A-1L-B",
@@ -3390,7 +3756,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMH95A-1L-G",
@@ -3399,7 +3766,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMH95B-1L-B",
@@ -3408,7 +3776,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMH95C-1L-B",
@@ -3417,7 +3786,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMH95A-1.5L-B",
@@ -3426,7 +3796,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMH95A-1.5L-G",
@@ -3435,7 +3806,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMH95B-1.5L-B",
@@ -3444,7 +3816,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMH95B-1.5L-G",
@@ -3453,7 +3826,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656D",
@@ -3462,7 +3836,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656G",
@@ -3471,7 +3846,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656H",
@@ -3480,7 +3856,18 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
+  },
+  {
+    "code": "SMIC656I-",
+    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC\nCOL BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656B-B",
@@ -3489,7 +3876,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656B-G",
@@ -3498,7 +3886,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656C-B",
@@ -3507,7 +3896,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656C-G",
@@ -3516,7 +3906,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656D-G",
@@ -3525,7 +3916,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656D-B",
@@ -3534,7 +3926,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656E-B",
@@ -3543,7 +3936,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656E-G",
@@ -3552,7 +3946,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656G-B",
@@ -3561,7 +3956,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656G-G",
@@ -3570,7 +3966,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656H-B",
@@ -3579,7 +3976,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656H-G",
@@ -3588,7 +3986,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656I",
@@ -3597,7 +3996,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656I-B",
@@ -3606,7 +4006,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656I-G",
@@ -3615,7 +4016,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656J-B",
@@ -3624,7 +4026,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656J-G",
@@ -3633,7 +4036,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMIC656A-B",
@@ -3642,7 +4046,8 @@ const PRODUCTS = [
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "SMP011-L7",
@@ -3651,7 +4056,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "SNACK SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-610",
@@ -3660,7 +4066,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 24
+    "moq": 24,
+    "status": "In Stock"
   },
   {
     "code": "SMP011-L7B",
@@ -3669,7 +4076,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "SNACK SET",
     "department": "Glassware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-613",
@@ -3678,7 +4086,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-614",
@@ -3687,7 +4096,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-608",
@@ -3696,7 +4106,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-601",
@@ -3705,7 +4116,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-606",
@@ -3714,7 +4126,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-607",
@@ -3723,7 +4136,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "SMP051A-L7B",
@@ -3732,7 +4146,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "SNACK SET",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "In Stock"
   },
   {
     "code": "SMP051C-L7G",
@@ -3741,7 +4156,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "SNACK SET",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "In Stock"
   },
   {
     "code": "SMP051B-L7B",
@@ -3750,7 +4166,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "SNACK SET",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "In Stock"
   },
   {
     "code": "SMP051B-L7G",
@@ -3759,7 +4176,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "SNACK SET",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "In Stock"
   },
   {
     "code": "SMP051C-L7B",
@@ -3768,7 +4186,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "SNACK SET",
     "department": "Glassware",
-    "moq": 1
+    "moq": 1,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-720-G",
@@ -3777,7 +4196,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-720-S",
@@ -3786,7 +4206,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-701-S",
@@ -3795,7 +4216,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-703-G",
@@ -3804,7 +4226,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-709-S",
@@ -3813,7 +4236,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-707-G",
@@ -3822,7 +4246,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-705-G",
@@ -3831,7 +4256,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-706-S",
@@ -3840,7 +4266,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-707-S",
@@ -3849,7 +4276,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "EMP-99",
@@ -3858,7 +4286,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP-11",
@@ -3867,7 +4296,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP-54",
@@ -3876,7 +4306,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP-81B",
@@ -3885,7 +4316,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP--81W",
@@ -3894,7 +4326,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP-50",
@@ -3903,7 +4336,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP-41",
@@ -3912,7 +4346,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP-67",
@@ -3921,7 +4356,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP-66",
@@ -3930,7 +4366,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP-70",
@@ -3939,7 +4376,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP-177",
@@ -3948,7 +4386,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP-174",
@@ -3957,7 +4396,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP-114",
@@ -3966,7 +4406,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP-178",
@@ -3975,7 +4416,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "1321-1",
@@ -3984,7 +4426,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "ACRYLIC SIPPER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "1321-2",
@@ -3993,7 +4436,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "ACRYLIC SIPPER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "1321-3",
@@ -4002,7 +4446,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "ACRYLIC SIPPER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "1321-4",
@@ -4011,7 +4456,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "ACRYLIC SIPPER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "1321-5",
@@ -4020,7 +4466,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "ACRYLIC SIPPER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "1321-6",
@@ -4029,7 +4476,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "ACRYLIC SIPPER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "1321-7",
@@ -4038,7 +4486,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "ACRYLIC SIPPER",
     "department": "Kitchenware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "1321-12",
@@ -4047,7 +4496,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "ACRYLIC SIPPER",
     "department": "Kitchenware",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "WDN-3PCS",
@@ -4056,7 +4506,8 @@ const PRODUCTS = [
     "unit": "FOR 3PCS",
     "category": "TRAY",
     "department": "Kitchenware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "WSS",
@@ -4065,7 +4516,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "SPOON",
     "department": "Kitchenware",
-    "moq": 100
+    "moq": 100,
+    "status": "In Stock"
   },
   {
     "code": "EMP-TP48-12",
@@ -4074,7 +4526,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "SALT PEPPER",
     "department": "Kitchenware",
-    "moq": 36
+    "moq": 36,
+    "status": "In Stock"
   },
   {
     "code": "JARA 14",
@@ -4083,7 +4536,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "MISC",
     "department": "Kitchenware",
-    "moq": 100
+    "moq": 100,
+    "status": "In Stock"
   },
   {
     "code": "WSB",
@@ -4092,7 +4546,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "SPOON",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "WSEB",
@@ -4101,7 +4556,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "SPOON",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "EMP-TP48-SET",
@@ -4110,7 +4566,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "SALT PEPPER",
     "department": "Kitchenware",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "GARLIC BLADE",
@@ -4119,7 +4576,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "MISC",
     "department": "Kitchenware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "BOHEMIC-2PC",
@@ -4128,7 +4586,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "CERAMIC BOWL SET",
     "department": "Kitchenware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "CHOPPING BOARD",
@@ -4137,7 +4596,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "MISC",
     "department": "Kitchenware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "FOOD WARMER",
@@ -4146,7 +4606,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "MISC",
     "department": "Kitchenware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "BOHEMIA-4PC",
@@ -4155,7 +4616,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "CERAMIC BOWL SET",
     "department": "Kitchenware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "ANMOL SS KETTLE",
@@ -4164,7 +4626,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "ELECTRIC KETTLE",
     "department": "Kitchenware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "EMP-115",
@@ -4173,7 +4636,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "MULTIPURPOSE STAND",
     "department": "Kitchenware",
-    "moq": 4
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "ANMOL PP CUTLERY",
@@ -4182,7 +4646,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "CUTLERY SET",
     "department": "Kitchenware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "METAL TRAY",
@@ -4191,7 +4656,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "MISC",
     "department": "Kitchenware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "BOHEMIA-6PC",
@@ -4200,7 +4666,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "CERAMIC BOWL SET",
     "department": "Kitchenware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "CHOPPER 2L",
@@ -4209,7 +4676,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "ELECTRIC CHOPPER",
     "department": "Kitchenware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "CHOPPER 3L",
@@ -4218,7 +4686,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "ELECTRIC CHOPPER",
     "department": "Kitchenware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "CHOPPER 4 IN 1",
@@ -4227,7 +4696,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "ELECTRIC CHOPPER",
     "department": "Kitchenware",
-    "moq": 2
+    "moq": 2,
+    "status": "In Stock"
   },
   {
     "code": "PNP-001",
@@ -4236,7 +4706,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "MISC",
     "department": "Kitchenware",
-    "moq": 1
+    "moq": 1,
+    "status": "In Stock"
   },
   {
     "code": "AM-786-5",
@@ -4245,7 +4716,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "DINNER SET",
     "department": "Kitchenware",
-    "moq": 1
+    "moq": 1,
+    "status": "In Stock"
   },
   {
     "code": "AM-786-4",
@@ -4254,7 +4726,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "DINNER SET",
     "department": "Kitchenware",
-    "moq": 1
+    "moq": 1,
+    "status": "In Stock"
   },
   {
     "code": "AM-786-3",
@@ -4263,7 +4736,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "DINNER SET",
     "department": "Kitchenware",
-    "moq": 1
+    "moq": 1,
+    "status": "In Stock"
   },
   {
     "code": "AM-786-2",
@@ -4272,7 +4746,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "DINNER SET",
     "department": "Kitchenware",
-    "moq": 1
+    "moq": 1,
+    "status": "In Stock"
   },
   {
     "code": "AM-786-1",
@@ -4281,7 +4756,8 @@ const PRODUCTS = [
     "unit": "FOR 1 SET",
     "category": "DINNER SET",
     "department": "Kitchenware",
-    "moq": 1
+    "moq": 1,
+    "status": "In Stock"
   },
   {
     "code": "PP-900-281",
@@ -4290,7 +4766,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 100
+    "moq": 100,
+    "status": "In Stock"
   },
   {
     "code": "PP-900-282",
@@ -4299,7 +4776,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 100
+    "moq": 100,
+    "status": "In Stock"
   },
   {
     "code": "PP-900-283",
@@ -4308,7 +4786,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 100
+    "moq": 100,
+    "status": "In Stock"
   },
   {
     "code": "PP-900-284",
@@ -4317,7 +4796,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 100
+    "moq": 100,
+    "status": "In Stock"
   },
   {
     "code": "PP-900-285",
@@ -4326,7 +4806,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 100
+    "moq": 100,
+    "status": "In Stock"
   },
   {
     "code": "PP-900-286",
@@ -4335,7 +4816,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 100
+    "moq": 100,
+    "status": "In Stock"
   },
   {
     "code": "HK-420-2",
@@ -4344,7 +4826,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "DEPKI-PRINTED",
@@ -4353,7 +4836,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "DEPKI-CAPCOLOR",
@@ -4362,7 +4846,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "HK-510ML",
@@ -4371,7 +4856,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "ND-800",
@@ -4380,7 +4866,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "STEEL BOTTLE",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "8723",
@@ -4389,7 +4876,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "8724",
@@ -4398,7 +4886,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "8725",
@@ -4407,7 +4896,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "HK-001",
@@ -4416,7 +4906,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "ND-1000",
@@ -4425,7 +4916,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SML CAP 800",
@@ -4434,7 +4926,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "TEMP CUP",
@@ -4443,7 +4936,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 12
+    "moq": 12,
+    "status": "In Stock"
   },
   {
     "code": "HK-420-9",
@@ -4452,7 +4946,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "STEEL BOTTLE",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "KND-1000",
@@ -4461,7 +4956,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SD-800",
@@ -4470,7 +4966,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "T-800",
@@ -4479,7 +4976,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "HK-900",
@@ -4488,7 +4986,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "7744",
@@ -4497,7 +4996,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "82018",
@@ -4506,7 +5006,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SD-1000",
@@ -4515,7 +5016,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "HK-750",
@@ -4524,7 +5026,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "HK-420-4",
@@ -4533,7 +5036,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "BULLET-500",
@@ -4542,7 +5046,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "C-1000",
@@ -4551,7 +5056,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "HK-005",
@@ -4560,7 +5066,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "ANTLER CUP",
@@ -4569,7 +5076,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "8171",
@@ -4578,7 +5086,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "8193",
@@ -4587,7 +5096,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SP-750",
@@ -4596,7 +5106,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "1200-TUMBLER-BLK",
@@ -4605,7 +5116,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "1200-TUMBLER-MIX",
@@ -4614,7 +5126,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "8173",
@@ -4623,7 +5136,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "K-1000",
@@ -4632,7 +5146,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "8172",
@@ -4641,7 +5156,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "8202",
@@ -4650,7 +5166,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "SP-1000",
@@ -4659,7 +5176,8 @@ const PRODUCTS = [
     "unit": "FOR 1 PCS",
     "category": "STEEL BOTTLE",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "BULLET-750",
@@ -4668,7 +5186,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   },
   {
     "code": "BULLET-1000",
@@ -4677,7 +5196,8 @@ const PRODUCTS = [
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 6
+    "moq": 6,
+    "status": "In Stock"
   }
 ];
 const MASTER_SORT_ORDER = ["JUICE GLASS", "WHISKEY GLASS", "WATER GLASS", "BORO JUICE GLASS", "BORO WATER GLASS", "WINE GLASS", "COLORED GLASS", "SHOT GLASS", "SHOT SET", "BOWL SET", "ICE CREAM BOWL SET", "PLATE SET", "BEER MUG", "TEA MUG", "BORO TEA MUG", "LID MUG", "SAUCER", "CUP SAUCER", "KETTLE SET", "JUG", "JUG SET", "LEMON SET", "SIPPER", "GLASS BOTTLE", "GLASS FRIDGE BOTTLE", "TURTLE", "PUDDING SET", "WOODEN JAR SINGLE", "WOODEN CANDY", "WOODEN 3 PCS", "GLASS JAR", "CANISTER", "GLASS LUNCHBOX", "GLASS BAKEWARE", "DISPENSER", "FRUIT PLATE", "GLASS PLAIN BOWL", "GLASS COLORED BOWL", "BORO SERVING BOWL", "FLOWER POT", "ACRYLIC SIPPER", "TRAY", "OTHER"];
