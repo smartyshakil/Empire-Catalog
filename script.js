@@ -352,11 +352,18 @@ function renderProducts(items) {
         const packingDesc = getDisplayPacking(p);
         const imgSrc = getInitialImagePath(p);
 
+        // Status check for In Stock vs Advance Book
+        const itemStatus = (p.status || 'In Stock').trim();
+        const isAdvBook = itemStatus.toUpperCase().includes('ADV');
+        const stockTagHtml = isAdvBook 
+            ? `<span class="stock-tag" style="background:#fff7ed; color:#c2410c; border:1px solid #ffedd5;"><span class="stock-dot" style="background:#ea580c;"></span> Advance Book</span>`
+            : `<span class="stock-tag"><span class="stock-dot"></span> In Stock</span>`;
+
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
             <div class="card-img-wrapper">
-                <span class="stock-tag"><span class="stock-dot"></span> In Stock</span>
+                ${stockTagHtml}
                 <img src="${imgSrc}" 
                      loading="lazy"
                      data-err-idx="0"
