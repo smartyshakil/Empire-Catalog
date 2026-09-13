@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Empire Glassware - Upcoming Shipments & Advance Bookings</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #ea580c;
+            --bg-light: #f8fafc;
+            --card-border: #e2e8f0;
+            --whatsapp-green: #25D366;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        body { background: var(--bg-light); color: #1e293b; padding-bottom: 100px; overflow-x: hidden; }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--card-border);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .brand-logo { font-size: 1.2rem; font-weight: 800; color: var(--primary); font-family: 'Poppins', sans-serif; }
+        .brand-logo span { color: var(--accent); }
+        
+        .btn-live-catalog {
+            background: #0f172a;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-banner {
+            background: linear-gradient(135deg, #0b1329 0%, #1e1b4b 100%);
+            color: white;
+            padding: 22px 16px;
+            text-align: center;
+            border-bottom: 3px solid var(--accent);
+        }
+        .hero-banner h1 { font-size: 1.4rem; font-weight: 800; font-family: 'Poppins', sans-serif; color: #fdba74; margin-bottom: 4px; }
+        .hero-banner p { font-size: 0.85rem; color: #cbd5e1; }
+
+        .container { max-width: 1300px; margin: 16px auto; padding: 0 14px; display: flex; gap: 18px; }
+        
+        .sidebar {
+            width: 220px;
+            flex-shrink: 0;
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 14px;
+            height: fit-content;
+        }
+        .sidebar h3 { font-size: 0.8rem; font-weight: 800; color: #64748b; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .cat-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 9px 12px;
+            margin-bottom: 5px;
+            border: none;
+            background: transparent;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #334155;
+            cursor: pointer;
+        }
+        .cat-btn.active, .cat-btn:hover { background: #ffedd5; color: #c2410c; font-weight: 700; }
+
+        /* Index Catalog Grid & Card Layout Classes */
+        .product-grid {
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        .card-img-wrapper {
+            width: 100%;
+            height: 160px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+            background: #fff;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .card-img-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .stock-tag {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: #fff7ed;
+            color: #c2410c;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            border: 1px solid #ffedd5;
+            z-index: 2;
+        }
+        .p-code { font-size: 11px; font-weight: 700; color: #0369a1; margin-bottom: 4px; cursor: pointer; }
+        .p-desc { font-size: 12px; font-weight: 600; color: #1e293b; margin-bottom: 8px; line-height: 1.3; }
+        .card-chips-row { display: flex; gap: 6px; margin-bottom: 8px; }
+        .b2b-chip { background: #f1f5f9; color: #475569; font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px; }
+        .b2b-chip.gold { background: #fef3c7; color: #b45309; }
+        .p-price { font-size: 13px; font-weight: 800; color: #0f172a; margin-bottom: 8px; }
+        .p-price span { font-size: 10px; font-weight: 600; color: #64748b; }
+        
+        .card-actions { margin-bottom: 8px; }
+        .btn-detail {
+            width: 100%;
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            color: #334155;
+            padding: 6px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .btn-detail:hover { background: #e2e8f0; }
+
+        .counter-section { border-top: 1px solid #f1f5f9; padding-top: 8px; margin-top: auto; }
+        .counter-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+        .counter-label { font-size: 10px; font-weight: 700; color: #64748b; }
+        .qty-btn { width: 26px; height: 26px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; font-weight: 700; cursor: pointer; }
+        .qty-val { font-size: 12px; font-weight: 700; color: #0f172a; min-width: 20px; text-align: center; }
+
+        /* Sticky Bottom Bar */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-top: 1px solid var(--card-border);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.06);
+            z-index: 100;
+        }
+        .summary-text { font-size: 0.9rem; font-weight: 700; color: var(--primary); }
+        .btn-whatsapp-prebook {
+            background: var(--whatsapp-green);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Modals Styling */
+        .modal-backdrop { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:998; }
+        .modal-box { display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#fff; z-index:999; width:92%; max-width:680px; max-height:90vh; overflow-y:auto; border-radius:16px; padding:22px; box-shadow:0 15px 35px rgba(0,0,0,0.25); }
+
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .sidebar { width: 100%; display: flex; overflow-x: auto; gap: 6px; padding: 10px; }
+            .sidebar h3 { display: none; }
+            .cat-btn { width: auto; white-space: nowrap; font-size: 0.8rem; padding: 7px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-logo">EMPIRE <span>GLASSWARE</span> <small style="font-size: 0.65rem; color: #64748b; font-weight: 700;">UPCOMING SHIPMENTS</small></div>
+        <a href="index.html" class="btn-live-catalog"><i class="fa-solid fa-arrow-left"></i> In-Stock Catalog</a>
+    </header>
+
+    <section class="hero-banner">
+        <h1>⚡ Upcoming Shipments Arriving in 3-4 Days</h1>
+        <p>Advance booking open for incoming models. Tap image to zoom, view details & order on WhatsApp.</p>
+    </section>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Filter Stock</h3>
+            <button class="cat-btn active" onclick="filterUpcomingCategory('All', this)">All Items</button>
+            <button class="cat-btn" onclick="filterUpcomingCategory('Diwali Gifts', this)">Diwali Gift Sets</button>
+            <button class="cat-btn" onclick="filterUpcomingCategory('Barware & Glasses', this)">Barware & Glasses</button>
+        </aside>
+
+        <!-- Main Product Grid -->
+        <main class="product-grid main-catalog-content" id="productGrid"></main>
+    </div>
+
+    <!-- Sticky Bottom Bar -->
+    <footer class="bottom-bar">
+        <div class="summary-text" onclick="openOrderDrawer()" style="cursor:pointer;">
+            🛒 Selected Items: <span id="totalItems">0</span> | Est: <span id="cartEstTotal">Rs. 0</span>
+        </div>
+        <button class="btn-whatsapp-prebook" onclick="sendWhatsAppOrder()">
+            <i class="fa-brands fa-whatsapp fa-xl"></i> Send Advance Booking Inquiry
+        </button>
+    </footer>
+
+    <!-- Modals (Handled natively by script.js) -->
+    <div id="productDetailBackdrop" class="modal-backdrop" onclick="closeProductDetail()"></div>
+    <div id="productDetailModal" class="modal-box">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; border-bottom:1px solid #f1f5f9; padding-bottom:10px;">
+            <div id="pdetailCode" style="font-size:12px; font-weight:700; color:#0369a1; cursor:pointer;" title="Click to copy"></div>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <button onclick="openFlyerModal()" style="background:#0f172a; color:#fff; border:none; padding:5px 12px; border-radius:6px; font-size:11px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:4px;"><i class="fa-solid fa-bolt"></i> Flyer</button>
+                <button onclick="shareCurrentProduct()" style="background:#f1f5f9; color:#334155; border:1px solid #cbd5e1; padding:5px 12px; border-radius:6px; font-size:11px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:4px;"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                <button onclick="closeProductDetail()" style="background:none; border:none; font-size:1.6rem; cursor:pointer; color:#64748b; margin-left:4px;">&times;</button>
+            </div>
+        </div>
+        <div style="text-align:center; margin-bottom:14px; background:#f8fafc; border-radius:12px; padding:12px; border:1px solid #f1f5f9;">
+            <img id="pdetailImg" src="" alt="Product Detail" style="max-height:240px; max-width:100%; object-fit:contain;">
+        </div>
+        <div id="pdetailTitle" style="font-size:15px; font-weight:800; color:#0f172a; margin-bottom:8px; line-height:1.3;"></div>
+        <div id="pdetailPrice" style="font-size:18px; font-weight:800; color:#b91c1c; margin-bottom:14px;"></div>
+        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:8px; margin-bottom:14px;">
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:8px 10px; border-radius:8px;">
+                <div style="font-size:10px; color:#64748b; font-weight:700; text-transform:uppercase;">📦 Packing</div>
+                <div id="pdetailPacking" style="font-size:12px; font-weight:700; color:#1e293b; margin-top:2px;"></div>
+            </div>
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:8px 10px; border-radius:8px;">
+                <div style="font-size:10px; color:#64748b; font-weight:700; text-transform:uppercase;">⏳ Minimum Order</div>
+                <div id="pdetailMoq" style="font-size:12px; font-weight:700; color:#b45309; margin-top:2px;"></div>
+            </div>
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:8px 10px; border-radius:8px;">
+                <div style="font-size:10px; color:#64748b; font-weight:700; text-transform:uppercase;">🟢 Status</div>
+                <div id="pdetailStock" style="font-size:12px; font-weight:700; color:#ea580c; margin-top:2px;"></div>
+            </div>
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:8px 10px; border-radius:8px;">
+                <div style="font-size:10px; color:#64748b; font-weight:700; text-transform:uppercase;">📁 Department</div>
+                <div id="pdetailDept" style="font-size:12px; font-weight:700; color:#0369a1; margin-top:2px;"></div>
+            </div>
+        </div>
+        <div id="pdetailDesc" style="font-size:12px; color:#475569; margin-bottom:16px; line-height:1.4; background:#f8fafc; padding:10px; border-radius:8px; border:1px solid #f1f5f9;"></div>
+        <div style="margin-bottom:18px;">
+            <button id="pdetailAddBtn" style="width:100%; background:#0f172a; color:#fff; border:none; padding:12px; border-radius:10px; font-weight:800; font-size:13px; cursor:pointer; box-shadow:0 4px 12px rgba(15,23,42,0.2);">+ Add Minimum to Order</button>
+        </div>
+        <div style="border-top:1px solid #e2e8f0; padding-top:14px;">
+            <div style="font-size:11px; font-weight:800; color:#64748b; margin-bottom:8px; text-transform:uppercase;">More from this Category:</div>
+            <div id="pdetailSimilarList" style="display:flex; gap:8px; overflow-x:auto; padding-bottom:6px;"></div>
+        </div>
+    </div>
+
+    <!-- Flyer Modal -->
+    <div id="flyerModalBackdrop" class="modal-backdrop" onclick="closeFlyerModal()"></div>
+    <div id="flyerModal" class="modal-box" style="max-width:450px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <div style="font-size:14px; font-weight:800; color:#0f172a;">⚡ Generate Wholesale Flyer</div>
+            <button onclick="closeFlyerModal()" style="background:none; border:none; font-size:1.5rem; cursor:pointer; color:#64748b;">&times;</button>
+        </div>
+        <div style="margin-bottom:10px;">
+            <label style="font-size:11px; font-weight:700; color:#475569; display:block; margin-bottom:4px;">Custom Offer Rate (₹)</label>
+            <input type="number" id="flyerCustomPrice" oninput="onFlyerPriceChange()" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; font-weight:700;">
+            <div id="flyerPriceErr" style="font-size:10px; color:#dc2626; margin-top:3px; display:none;"></div>
+        </div>
+        <div style="margin-bottom:10px;">
+            <label style="font-size:11px; font-weight:700; color:#475569; display:block; margin-bottom:4px;">MOQ Note</label>
+            <input type="text" id="flyerCustomMoq" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px;">
+        </div>
+        <div style="margin-bottom:14px;">
+            <label style="font-size:11px; font-weight:700; color:#475569; display:block; margin-bottom:4px;">Firm / Header Name (Optional)</label>
+            <input type="text" id="flyerCustomFirm" placeholder="Empire Glassware" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px;">
+        </div>
+        <div style="display:flex; gap:8px;">
+            <button onclick="downloadFlyerImage()" style="flex:1; background:#0369a1; color:#fff; border:none; padding:10px; border-radius:8px; font-weight:700; cursor:pointer;">Download Flyer</button>
+            <button onclick="shareFlyerDirect()" style="flex:1; background:#25D366; color:#fff; border:none; padding:10px; border-radius:8px; font-weight:700; cursor:pointer;"><i class="fa-brands fa-whatsapp"></i> Share</button>
+        </div>
+        <canvas id="flyerCanvas" style="display:none;"></canvas>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); z-index:1000; flex-direction:column; align-items:center; justify-content:center;" onclick="closeLightbox()">
+        <div id="lightboxTitle" style="color:#fff; margin-bottom:15px; font-weight:700;"></div>
+        <img id="lightboxImg" style="max-width:90%; max-height:80vh; object-fit:contain;" alt="Zoom View">
+    </div>
+
+    <!-- Data & Script files -->
+    <script src="products_data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        let globalAdvItems = [];
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof PRODUCTS === 'undefined') {
+                console.error("PRODUCTS not found!");
+                return;
+            }
+
+            // Filter only Advance Booking items
+            globalAdvItems = PRODUCTS.filter(p => {
+                const status = (p.status || '').toUpperCase();
+                return status.includes('ADV');
+            });
+
+            renderUpcomingGrid('All');
+            updateCartBar();
+        });
+
+        function renderUpcomingGrid(cat) {
+            let itemsToRender = globalAdvItems;
+            if (cat !== 'All') {
+                itemsToRender = globalAdvItems.filter(p => p.category === cat || (p.tag && p.tag.includes(cat)));
+            }
+
+            // Directly call script.js renderProducts
+            if (typeof renderProducts === 'function') {
+                renderProducts(itemsToRender);
+            }
+        }
+
+        function filterUpcomingCategory(cat, btn) {
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            renderUpcomingGrid(cat);
+        }
+    </script>
+</body>
+</html>
