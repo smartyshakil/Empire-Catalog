@@ -520,6 +520,16 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
+    "code": "SWG2023",
+    "desc": "SHINE MAX WATER GLASS 250 ML 6 PC COL BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6PCS",
+    "category": "WATER GLASS",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "DSKB032-3",
     "desc": "DELI SOGA PREMIUM WATER GLASS 320 ML 6 PC COL BOX 8 SET CTN",
     "price": "260.0",
@@ -1750,6 +1760,16 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
+    "code": "LXZB53",
+    "desc": "LANGXU SKULL BEER MUG 490 ML 2 PC COL BOX 18 SET CTN",
+    "price": "190.0",
+    "unit": "FOR 2PCS",
+    "category": "BEER MUG",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "LXZB02",
     "desc": "LANGXU BEER MUG 2 PC 447 ML-12 SET CTN",
     "price": "200.0",
@@ -1758,6 +1778,16 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 4,
     "status": "In Stock"
+  },
+  {
+    "code": "LXZB19",
+    "desc": "LANGXU BEER MUG 2 PC 666 ML-12 SET CTN",
+    "price": "250.0",
+    "unit": "FOR 2PCS",
+    "category": "BEER MUG",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
   },
   {
     "code": "KRZB406",
@@ -1988,6 +2018,16 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 4,
     "status": "In Stock"
+  },
+  {
+    "code": "KRZB47-1",
+    "desc": "KARBON SQUARE TEA MUG 150 ML COL BOX 16 SET CTN",
+    "price": "166.0",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
   },
   {
     "code": "KRZB143",
