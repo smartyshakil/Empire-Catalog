@@ -352,7 +352,6 @@ function renderProducts(items) {
         const packingDesc = getDisplayPacking(p);
         const imgSrc = getInitialImagePath(p);
 
-        // Status check for In Stock vs Advance Book
         const itemStatus = (p.status || 'In Stock').trim();
         const isAdvBook = itemStatus.toUpperCase().includes('ADV');
         const stockTagHtml = isAdvBook 
@@ -476,7 +475,7 @@ async function openProductDetail(code) {
     document.getElementById("pdetailMoq").innerText = `${minSet} SET`;
     document.getElementById("pdetailDept").innerText = item.department || 'Glassware';
     document.getElementById("pdetailDesc").innerText = item.desc || '';
-// Dynamic Status Update inside Product Detail Modal
+
     const itemStatus = (item.status || 'In Stock').trim();
     const isAdvBook = itemStatus.toUpperCase().includes('ADV');
     const pdetailStockElem = document.getElementById("pdetailStock");
@@ -484,10 +483,10 @@ async function openProductDetail(code) {
     if (pdetailStockElem) {
         if (isAdvBook) {
             pdetailStockElem.innerText = "Advance Book";
-            pdetailStockElem.style.color = "#ea580c"; // Orange color for Advance Book
+            pdetailStockElem.style.color = "#ea580c";
         } else {
             pdetailStockElem.innerText = "In Stock";
-            pdetailStockElem.style.color = "#059669"; // Green color for In Stock
+            pdetailStockElem.style.color = "#059669";
         }
     }
     document.getElementById("pdetailAddBtn").onclick = () => {
@@ -1054,8 +1053,9 @@ function sendWhatsAppOrder() {
     updateCartBar();
     closeOrderDrawer();
 }
+
 // ==========================================
-// 9. PHOTO LIGHTBOX / ZOOM LOGIC (WITH TOUCH SWIPE & AUTO-SLIDE)
+// 9. PHOTO LIGHTBOX / ZOOM LOGIC
 // ==========================================
 let isLightboxOpen = false;
 let currentLightboxImages = [];
@@ -1117,13 +1117,11 @@ function setupLightboxUI(modal, img, titleElem, titleText) {
     if (!navContainer) {
         navContainer = document.createElement('div');
         navContainer.id = 'customLightboxNav';
-        // Buttons ko image ke upar/proper position par laane ke liye styling fix ki hai
         navContainer.style.cssText = "position: relative; display: flex; justify-content: center; gap: 25px; margin-top: 15px; z-index: 1002;";
         navContainer.innerHTML = `
             <button id="lbPrevBtn" style="background:rgba(255,255,255,0.25); color:white; border:1px solid rgba(255,255,255,0.4); padding:10px 20px; border-radius:25px; font-weight:bold; font-size:13px; cursor:pointer;">❮ Prev</button>
             <button id="lbNextBtn" style="background:rgba(255,255,255,0.25); color:white; border:1px solid rgba(255,255,255,0.4); padding:10px 20px; border-radius:25px; font-weight:bold; font-size:13px; cursor:pointer;">Next ❯</button>
         `;
-        // Image ke neeche append karne ke liye modal mein insert karenge
         modal.appendChild(navContainer);
     }
 
@@ -1145,7 +1143,6 @@ function setupLightboxUI(modal, img, titleElem, titleText) {
             resetAutoSlide(img, titleElem, titleText);
         };
 
-        // Touch Swipe Gestures for Mobile
         let touchStartX = 0;
         let touchEndX = 0;
 
@@ -1156,12 +1153,10 @@ function setupLightboxUI(modal, img, titleElem, titleText) {
         modal.ontouchend = (e) => {
             touchEndX = e.changedTouches[0].screenX;
             let diff = touchStartX - touchEndX;
-            if (Math.abs(diff) > 40) { // Min swipe distance
+            if (Math.abs(diff) > 40) {
                 if (diff > 0) {
-                    // Swiped Left -> Next Photo
                     currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxImages.length;
                 } else {
-                    // Swiped Right -> Prev Photo
                     currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length;
                 }
                 updateLightboxView(img, titleElem, titleText);
@@ -1169,7 +1164,6 @@ function setupLightboxUI(modal, img, titleElem, titleText) {
             }
         };
 
-        // Start Auto Slide Every 3 Seconds
         startAutoSlide(img, titleElem, titleText);
 
     } else {
@@ -1259,17 +1253,32 @@ function checkUrlDepartment() {
 }
 
 // ==========================================
-// 11. CLIENT-SIDE PDF CATALOG DOWNLOAD (MULTI-EXTENSION FALLBACK)
+// 11. CLIENT-SIDE PDF CATALOG DOWNLOAD (UPDATED WITH NAME, MOBILE, MARKUP & ROUNDUP)
 // ==========================================
 async function triggerCatalogDownload(dept) {
+    const clientNameInput = document.getElementById('pdfClientName');
+    const clientMobileInput = document.getElementById('pdfClientMobile');
+    const markupInput = document.getElementById('pdfMarkup');
+    const loadingIndicator = document.getElementById('pdfLoadingIndicator');
+
+    const clientName = clientNameInput ? clientNameInput.value.trim() : "Valued Customer";
+    const clientMobile = clientMobileInput ? clientMobileInput.value.trim() : "";
+    const markupVal = markupInput ? parseFloat(markupInput.value) || 0 : 0;
+
+    if (loadingIndicator) loadingIndicator.style.display = 'block';
+    
+    await new Promise(resolve => setTimeout(resolve, 50));
+
     closeCatalogModal();
     
     if (typeof window.jspdf === 'undefined') {
+        if (loadingIndicator) loadingIndicator.style.display = 'none';
         alert("PDF library loading, please try again in a moment.");
         return;
     }
 
     if (typeof PRODUCTS === 'undefined') {
+        if (loadingIndicator) loadingIndicator.style.display = 'none';
         alert("Products data not found!");
         return;
     }
@@ -1285,6 +1294,7 @@ async function triggerCatalogDownload(dept) {
     });
 
     if (filtered.length === 0) {
+        if (loadingIndicator) loadingIndicator.style.display = 'none';
         alert("No items found for department: " + dept);
         return;
     }
@@ -1294,7 +1304,7 @@ async function triggerCatalogDownload(dept) {
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
     
-    let mX = 10, mY = 20;
+    let mX = 10, mY = 24; 
     let cW = 63, cH = 64; 
     let cols = 3, rows = 4;
     let itemsPerPage = cols * rows; 
@@ -1310,7 +1320,6 @@ async function triggerCatalogDownload(dept) {
         }
 
         let basePath = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
-        
         const extensions = ['.jpg', '.JPG', '.jpeg', '.JPEG', '.png', '.PNG'];
 
         for (let ext of extensions) {
@@ -1355,29 +1364,41 @@ async function triggerCatalogDownload(dept) {
 
         if (pos === 0) {
             pdf.setFont("helvetica", "bold");
-            pdf.setFontSize(15);
+            pdf.setFontSize(14);
             pdf.setTextColor(15, 23, 42);
-            pdf.text("EMPIRE GLASSWARE - " + dept.toUpperCase() + " CATALOG", mX, 12);
+            pdf.text("EMPIRE GLASSWARE - " + dept.toUpperCase() + " CATALOG", mX, 10);
             
             pdf.setFont("helvetica", "normal");
-            pdf.setFontSize(8.5);
+            pdf.setFontSize(8);
             pdf.setTextColor(100, 116, 139);
-            pdf.text("Live Wholesale Catalog | Generated on: " + new Date().toLocaleDateString(), mX, 16);
+            pdf.text("Generated on: " + new Date().toLocaleDateString(), mX, 14);
+
+            if (clientName) {
+                pdf.setFont("helvetica", "bold");
+                pdf.setFontSize(9);
+                pdf.setTextColor(185, 28, 28);
+                pdf.text(`Prepared For: ${clientName} ${clientMobile ? '(' + clientMobile + ')' : ''}`, mX, 19);
+            }
         }
 
         let col = pos % cols;
         let row = Math.floor(pos / cols);
         let x = mX + (col * cW);
-        let y = mY + 4 + (row * cH);
+        let y = mY + 2 + (row * cH);
 
         pdf.setDrawColor(215, 219, 221);
         pdf.rect(x, y, cW - 2, cH - 2);
 
-       let item = filtered[i];
+        let item = filtered[i];
         let pCode = String(item.code || item.Product_Code || '').trim();
         
         let baseRawPrice = Number(item.price || item.Price_Num || 0);
-        let pPrice = Math.round(baseRawPrice * getAccessMultiplier());
+        let calculatedPrice = baseRawPrice * getAccessMultiplier();
+        
+        if (markupVal > 0) {
+            calculatedPrice += (calculatedPrice * markupVal / 100);
+        }
+        let pPrice = Math.ceil(calculatedPrice); 
         
         let pUnit = item.unit || item.Price_Unit || '';
         let pDesc = String(item.desc || item.Description || '').trim();
@@ -1414,6 +1435,17 @@ async function triggerCatalogDownload(dept) {
         pdf.text(splitDesc.slice(0, 2), x + 3, y + 52);
     }
 
+    const pageCount = pdf.internal.getNumberOfPages();
+    for (let p = 1; p <= pageCount; p++) {
+        pdf.setPage(p);
+        pdf.setFont("helvetica", "normal");
+        pdf.setFontSize(8);
+        pdf.setTextColor(100, 116, 139);
+        let footerText = `Empire Glassware | Client: ${clientName || 'Valued Buyer'} ${clientMobile ? '| Ph: ' + clientMobile : ''} | Page ${p} of ${pageCount}`;
+        pdf.text(footerText, mX, 292);
+    }
+
+    if (loadingIndicator) loadingIndicator.style.display = 'none';
     pdf.save(`Empire_${dept}_Catalog.pdf`);
     showToast("PDF Downloaded Successfully!");
 }
@@ -1447,7 +1479,7 @@ function installPWA() {
             installBtn.style.display = 'none';
         }
     });
-}
+});
 
 window.addEventListener('appinstalled', (evt) => {
     console.log('PWA was installed successfully');
@@ -1626,6 +1658,7 @@ if ('serviceWorker' in navigator) {
     registration.update();
   });
 }
+
 // ==========================================
 // ADVANCE BOOKING QUICK FILTER FUNCTION
 // ==========================================
@@ -1633,13 +1666,9 @@ function filterAdvanceBookItems() {
     currentSelectedDepartment = "ALL";
     currentSelectedCategory = "ALL";
 
-    // Department tabs active state hata dein
     document.querySelectorAll(".dept-tab-btn").forEach(btn => btn.classList.remove("active"));
-    
-    // Category pills active state reset karein
     document.querySelectorAll(".cat-pill").forEach(p => p.classList.remove("active"));
 
-    // Sirf ADV BOOK items ko filter karein
     const advFiltered = PRODUCTS.filter(p => {
         const status = (p.status || '').toUpperCase();
         return status.includes('ADV');
@@ -1648,7 +1677,6 @@ function filterAdvanceBookItems() {
     renderProducts(advFiltered);
     showToast("Showing Advance Booking Items (Arriving in 3-4 Days)");
 
-    // Smooth scroll to catalog grid
     const mainContent = document.querySelector(".main-catalog-content");
     if (mainContent) {
         const topPos = mainContent.getBoundingClientRect().top + window.pageYOffset - 110;
