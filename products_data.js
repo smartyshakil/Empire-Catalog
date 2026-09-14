@@ -370,6 +370,16 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
+    "code": "LXNX001",
+    "desc": "LANG XU FALOODA GLASS 342 ML 6 PCS COLOR BOX  8 SET CTN",
+    "price": "180.0",
+    "unit": "FOR 2 PCS",
+    "category": "WATER GLASS",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "JS5139-1",
     "desc": "DELI SOGA WATER GLASS 500 ML 6 PC COL BOX 12 SET CTN",
     "price": "190.0",
@@ -910,7 +920,47 @@ const PRODUCTS = [
     "status": "ADV BOOK"
   },
   {
+    "code": "SMV3021-B",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS 350 ML COL BOX 8 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMV3021-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS 350 ML COL BOX 8 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMV3031-B",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS 350 ML COL BOX 8 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SWG0391G-T",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "700.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0391-GL",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
     "price": "700.0",
     "unit": "FOR 6 PCS",
@@ -950,6 +1000,136 @@ const PRODUCTS = [
     "status": "ADV BOOK"
   },
   {
+    "code": "SWG0370B-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0370C-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0372A-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0372B-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0372C-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0393-GE",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0312B-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "900.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0374C-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "900.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0374D-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "900.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0374E-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "900.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0376C-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "925.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0376D-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "925.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0376E-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "925.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SWG0312A-G",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
     "price": "950.0",
@@ -981,6 +1161,16 @@ const PRODUCTS = [
   },
   {
     "code": "SWG0314C-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "950.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0312C-G",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
     "price": "950.0",
     "unit": "FOR 6 PCS",
@@ -1440,6 +1630,36 @@ const PRODUCTS = [
     "status": "ADV BOOK"
   },
   {
+    "code": "LXP104-3",
+    "desc": "LANG XU SERVING PLATE 9.5 X 8 INCHES 1 PC COLOR BOX  24 PCS CTN",
+    "price": "150.0",
+    "unit": "FOR 1 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "LXP104-4",
+    "desc": "LANG XU SERVING PLATE 9.5 X 8 INCHES 1 PC COLOR BOX  24 PCS CTN",
+    "price": "150.0",
+    "unit": "FOR 1 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "LXP108",
+    "desc": "LANG XU SERVING PLATE 11 X 8.5 INCHES 1 PC COLOR BOX  16 PCS CTN",
+    "price": "160.0",
+    "unit": "FOR 1 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SMP501",
     "desc": "SHINEMAX SAUCER 5 INCHES COLOR BOX 12 SET CTN",
     "price": "180.0",
@@ -1670,6 +1890,16 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
+    "code": "LXZB20-1",
+    "desc": "LANGXU BEER MUG 2 PC 290 ML - 24 SET CTN",
+    "price": "140.0",
+    "unit": "FOR 2 PCS",
+    "category": "BEER MUG",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "GCBE-04",
     "desc": "GLACIRA BEER MUG 380 ML 2 PC COL BOX 18 SET CTN",
     "price": "150.0",
@@ -1730,6 +1960,16 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
+    "code": "LXZB02-1",
+    "desc": "LANGXU BEER MUG 1 PC 830 ML - 12 PCS CTN",
+    "price": "170.0",
+    "unit": "FOR 1 PCS",
+    "category": "BEER MUG",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "LXZB15",
     "desc": "LANGXU BEER MUG 2 PC 348 ML-18 SET CTN",
     "price": "180.0",
@@ -1764,6 +2004,16 @@ const PRODUCTS = [
     "desc": "LANGXU SKULL BEER MUG 490 ML 2 PC COL BOX 18 SET CTN",
     "price": "190.0",
     "unit": "FOR 2PCS",
+    "category": "BEER MUG",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "LXZB20",
+    "desc": "LANGXU BEER MUG 2 PC 385 ML - 12 SET CTN",
+    "price": "190.0",
+    "unit": "FOR 2 PCS",
     "category": "BEER MUG",
     "department": "Glassware",
     "moq": 4,
@@ -1848,6 +2098,36 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 4,
     "status": "In Stock"
+  },
+  {
+    "code": "SMTC369A",
+    "desc": "SHINEMAX SMALL TEA MUG 90 ML 6 PCS COLOR BOX 24 SET CTN",
+    "price": "145.0",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTC369B",
+    "desc": "SHINEMAX SMALL TEA MUG 90 ML 6 PCS COLOR BOX 24 SET CTN",
+    "price": "145.0",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTC369C",
+    "desc": "SHINEMAX SMALL TEA MUG 90 ML 6 PCS COLOR BOX 24 SET CTN",
+    "price": "145.0",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
   },
   {
     "code": "KRZB48A",
@@ -2008,6 +2288,16 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 4,
     "status": "In Stock"
+  },
+  {
+    "code": "SMTC257",
+    "desc": "SHINEMAX TEA MUG  110 ML 6 PCS COLOR BOX 16 SET CTN",
+    "price": "160.0",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
   },
   {
     "code": "GCT007",
@@ -3680,6 +3970,16 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
+    "code": "LXYG7116-4",
+    "desc": "LANG XU ASH TRAY 1 PC COLOR BOX 48 PCS CTN",
+    "price": "55.0",
+    "unit": "FOR 1 PCS",
+    "category": "ASH TRAY",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "BW602-320",
     "desc": "HOME FOCUS RECTANGLE BOWL WITH LID 320 ML BULK PACK 48 PCS CTN",
     "price": "70.0",
@@ -3688,6 +3988,16 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 24,
     "status": "In Stock"
+  },
+  {
+    "code": "LXYG7116-3",
+    "desc": "LANG XU ASH TRAY 1 PC COLOR BOX 36 PCS CTN",
+    "price": "90.0",
+    "unit": "FOR 1 PCS",
+    "category": "ASH TRAY",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
   },
   {
     "code": "SMBW602-320",
@@ -4120,6 +4430,16 @@ const PRODUCTS = [
     "status": "ADV BOOK"
   },
   {
+    "code": "SMBJ-616",
+    "desc": "SHINEMAX PREMIUM 2+1 WOODEN STAND GIFT BOX PACK 24 SET CTN",
+    "price": "435.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 24,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SMP011-L7",
     "desc": "SHINEMAX 7 PCS ROUND SNACK SET GIFT BOX PACK 6 SET CTN",
     "price": "475.0",
@@ -4140,6 +4460,16 @@ const PRODUCTS = [
     "status": "ADV BOOK"
   },
   {
+    "code": "SMBJ-611",
+    "desc": "SHINEMAX PREMIUM 2+1 WOODEN STAND GIFT BOX PACK 24 SET CTN",
+    "price": "475.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 24,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SMP011-L7B",
     "desc": "SHINEMAX 7 PCS ROUND SNACK SET GIFT BOX PACK 6 SET CTN",
     "price": "600.0",
@@ -4147,6 +4477,36 @@ const PRODUCTS = [
     "category": "SNACK SET",
     "department": "Glassware",
     "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-713-G",
+    "desc": "SHINEMAX PREMIUM 2+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 12 SET CTN",
+    "price": "675.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-713-G1",
+    "desc": "SHINEMAX PREMIUM 2+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 12 SET CTN",
+    "price": "675.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-713-G2",
+    "desc": "SHINEMAX PREMIUM 2+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 12 SET CTN",
+    "price": "675.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12,
     "status": "ADV BOOK"
   },
   {
@@ -4180,6 +4540,46 @@ const PRODUCTS = [
     "status": "ADV BOOK"
   },
   {
+    "code": "SMBJ-603",
+    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
+    "price": "825.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-604",
+    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-605",
+    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-609",
+    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SMBJ-601",
     "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
     "price": "875.0",
@@ -4201,6 +4601,16 @@ const PRODUCTS = [
   },
   {
     "code": "SMBJ-607",
+    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
+    "price": "900.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-602",
     "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
     "price": "900.0",
     "unit": "FOR 1 SET",
@@ -4260,6 +4670,86 @@ const PRODUCTS = [
     "status": "ADV BOOK"
   },
   {
+    "code": "SMBJ-719-G",
+    "desc": "SHINEMAX PREMIUM 4+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 12 SET CTN",
+    "price": "1025.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-714-G",
+    "desc": "SHINEMAX PREMIUM 4+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 8 SET CTN",
+    "price": "1050.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-714-G1",
+    "desc": "SHINEMAX PREMIUM 4+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 8 SET CTN",
+    "price": "1050.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-714-G2",
+    "desc": "SHINEMAX PREMIUM 4+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 8 SET CTN",
+    "price": "1050.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-719-S",
+    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON TRAY STAND GIFT BOX PACK 12 SET CTN",
+    "price": "1100.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-714-S",
+    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON TRAY STAND GIFT BOX PACK 8 SET CTN",
+    "price": "1125.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-714-S1",
+    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON TRAY STAND GIFT BOX PACK 8 SET CTN",
+    "price": "1125.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-714-S2",
+    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON TRAY STAND GIFT BOX PACK 8 SET CTN",
+    "price": "1125.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SMBJ-720-G",
     "desc": "SHINEMAX PREMIUM 4+1 GOLDEN IRON TRICYCLE STAND GIFT BOX PACK 6 SET CTN",
     "price": "1225.0",
@@ -4267,6 +4757,26 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-708-G",
+    "desc": "SHINEMAX PREMIUM 3+1 GOLDEN PEACOCK TRAY STAND GIFT BOX PACK 8 SET CTN",
+    "price": "1225.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-708-S",
+    "desc": "SHINEMAX PREMIUM 3+1 SILVER IRON PEACOCK TRAY STAND GIFT BOX PACK 8 SET CTN",
+    "price": "1225.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 8,
     "status": "ADV BOOK"
   },
   {
@@ -4280,8 +4790,98 @@ const PRODUCTS = [
     "status": "ADV BOOK"
   },
   {
+    "code": "SMBJ-711-S",
+    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON CURVE HANDLE STAND GIFT BOX PACK 8 SET CTN",
+    "price": "1350.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-715-G",
+    "desc": "SHINEMAX PREMIUM 6+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1400.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-715-G1",
+    "desc": "SHINEMAX PREMIUM 6+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1400.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-715-G2",
+    "desc": "SHINEMAX PREMIUM 6+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1400.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-716-S",
+    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON TRAY STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1450.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SMBJ-701-S",
     "desc": "SHINEMAX PREMIUM 2+1 SILVER IRON 2 HORSE STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1475.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-709-G",
+    "desc": "SHINEMAX PREMIUM 4+1 GOLDEN IRON PEACOCK TRAY STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1475.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-715-S",
+    "desc": "SHINEMAX PREMIUM 6+1 SILVER IRON TRAY STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1475.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-715-S1",
+    "desc": "SHINEMAX PREMIUM 6+1 SILVER IRON TRAY STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1475.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-715-S2",
+    "desc": "SHINEMAX PREMIUM 6+1 SILVER IRON TRAY STAND GIFT BOX PACK 6 SET CTN",
     "price": "1475.0",
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
@@ -4330,6 +4930,16 @@ const PRODUCTS = [
     "status": "ADV BOOK"
   },
   {
+    "code": "SMBJ-705-G",
+    "desc": "SHINEMAX PREMIUM 4+1 GOLDEN IRON 1 BIG HORSE STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1625.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SMBJ-706-S",
     "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON 1 BIG ELEPHANT STAND GIFT BOX PACK 6 SET CTN",
     "price": "1650.0",
@@ -4343,6 +4953,36 @@ const PRODUCTS = [
     "code": "SMBJ-707-S",
     "desc": "SHINEMAX PREMIUM 3+1 SILVER IRON 1 BIG HORSE STAND GIFT BOX PACK 6 SET CTN",
     "price": "1650.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-703-S",
+    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON 2 HORSE STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1675.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-705-S",
+    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON 1 BIG HORSE STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1675.0",
+    "unit": "FOR 1 SET",
+    "category": "GLASS CANDY SET",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBJ-712-S",
+    "desc": "SHINEMAX PREMIUM 6+1 SILVER IRON CURVE HANDLE STAND GIFT BOX PACK 6 SET CTN",
+    "price": "1875.0",
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
