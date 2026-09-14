@@ -1610,6 +1610,16 @@ const PRODUCTS = [
     "status": "ADV BOOK"
   },
   {
+    "code": "SMIC603",
+    "desc": "SHINE MAX ICE CREAM CUP 150 ML 6 PCS COL BOX 12 SET CTN",
+    "price": "270.0",
+    "unit": "FOR 6PCS",
+    "category": "ICE CREAM BOWL SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SMIC656D-B",
     "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
     "price": "330.0",
@@ -2700,6 +2710,16 @@ const PRODUCTS = [
     "status": "ADV BOOK"
   },
   {
+    "code": "YWH-7-B",
+    "desc": "SHINE MAX FISH LEMON SET SMOKE COL - COL BOX 4 SET CTN",
+    "price": "775.0",
+    "unit": "FOR 7 PCS",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SMWH91-L8B",
     "desc": "SHINE MAX LEMON SET WITH BAMBOO TRAY SMOKE 8 PCS SET 6 SET CTN",
     "price": "775.0",
@@ -3778,6 +3798,16 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 4,
     "status": "In Stock"
+  },
+  {
+    "code": "SMB215",
+    "desc": "SHINE MAX SQUARE BOWL 1150 ML 2 PC COL BOX 12 SET CTN",
+    "price": "230.0",
+    "unit": "FOR 2 PCS",
+    "category": "GLASS PLAIN BOWL",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
   },
   {
     "code": "SMB213",
