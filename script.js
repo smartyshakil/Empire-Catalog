@@ -1681,3 +1681,5 @@ function filterAdvanceBookItems() {
         window.scrollTo({ top: Math.max(0, topPos), behavior: 'smooth' });
     }
 }
+```[cite: 4]
+
