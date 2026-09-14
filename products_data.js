@@ -3352,7 +3352,7 @@ const PRODUCTS = [
   {
     "code": "SPS063-L7B",
     "desc": "SHINE MAX 7 PCS LID PUDDING SET COL BOX 6 SET CTN",
-    "price": "575.0",
+    "price": "600.0",
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
