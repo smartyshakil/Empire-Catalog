@@ -1259,17 +1259,32 @@ function checkUrlDepartment() {
 }
 
 // ==========================================
-// 11. CLIENT-SIDE PDF CATALOG DOWNLOAD (MULTI-EXTENSION FALLBACK)
+// 11. CLIENT-SIDE PDF CATALOG DOWNLOAD (WITH CUSTOMER DETAILS, MARKUP & ROUNDUP)
 // ==========================================
 async function triggerCatalogDownload(dept) {
+    const clientNameInput = document.getElementById('pdfClientName');
+    const clientMobileInput = document.getElementById('pdfClientMobile');
+    const markupInput = document.getElementById('pdfMarkup');
+    const loadingIndicator = document.getElementById('pdfLoadingIndicator');
+
+    const clientName = clientNameInput ? clientNameInput.value.trim() : "";
+    const clientMobile = clientMobileInput ? clientMobileInput.value.trim() : "";
+    const markupVal = markupInput ? parseFloat(markupInput.value) || 0 : 0;
+
+    if (loadingIndicator) loadingIndicator.style.display = 'block';
+    
+    await new Promise(resolve => setTimeout(resolve, 50));
+
     closeCatalogModal();
     
     if (typeof window.jspdf === 'undefined') {
+        if (loadingIndicator) loadingIndicator.style.display = 'none';
         alert("PDF library loading, please try again in a moment.");
         return;
     }
 
     if (typeof PRODUCTS === 'undefined') {
+        if (loadingIndicator) loadingIndicator.style.display = 'none';
         alert("Products data not found!");
         return;
     }
@@ -1285,6 +1300,7 @@ async function triggerCatalogDownload(dept) {
     });
 
     if (filtered.length === 0) {
+        if (loadingIndicator) loadingIndicator.style.display = 'none';
         alert("No items found for department: " + dept);
         return;
     }
@@ -1294,12 +1310,12 @@ async function triggerCatalogDownload(dept) {
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
     
-    let mX = 10, mY = 20;
+    let mX = 10, mY = 26; 
     let cW = 63, cH = 64; 
     let cols = 3, rows = 4;
     let itemsPerPage = cols * rows; 
 
-   async function loadImageWithAllExtensions(item) {
+    async function loadImageWithAllExtensions(item) {
         const code = item.code || item.Product_Code || '';
         let deptFolder = "glassware";
         const dept = (item.department || '').toLowerCase();
@@ -1310,7 +1326,6 @@ async function triggerCatalogDownload(dept) {
         }
 
         let basePath = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
-        
         const extensions = ['.jpg', '.JPG', '.jpeg', '.JPEG', '.png', '.PNG'];
 
         for (let ext of extensions) {
@@ -1355,29 +1370,41 @@ async function triggerCatalogDownload(dept) {
 
         if (pos === 0) {
             pdf.setFont("helvetica", "bold");
-            pdf.setFontSize(15);
+            pdf.setFontSize(13);
             pdf.setTextColor(15, 23, 42);
-            pdf.text("EMPIRE GLASSWARE - " + dept.toUpperCase() + " CATALOG", mX, 12);
+            pdf.text("EMPIRE GLASSWARE - " + dept.toUpperCase() + " CATALOG", mX, 9);
             
             pdf.setFont("helvetica", "normal");
-            pdf.setFontSize(8.5);
+            pdf.setFontSize(7.5);
             pdf.setTextColor(100, 116, 139);
-            pdf.text("Live Wholesale Catalog | Generated on: " + new Date().toLocaleDateString(), mX, 16);
+            pdf.text("Live Wholesale Catalog | Generated on: " + new Date().toLocaleDateString(), mX, 13);
+
+            if (clientName) {
+                pdf.setFont("helvetica", "bold");
+                pdf.setFontSize(8.5);
+                pdf.setTextColor(185, 28, 28);
+                pdf.text(`Prepared For: ${clientName} ${clientMobile ? '| Phone: ' + clientMobile : ''}`, mX, 18);
+            }
         }
 
         let col = pos % cols;
         let row = Math.floor(pos / cols);
         let x = mX + (col * cW);
-        let y = mY + 4 + (row * cH);
+        let y = mY + (row * cH);
 
         pdf.setDrawColor(215, 219, 221);
         pdf.rect(x, y, cW - 2, cH - 2);
 
-       let item = filtered[i];
+        let item = filtered[i];
         let pCode = String(item.code || item.Product_Code || '').trim();
         
         let baseRawPrice = Number(item.price || item.Price_Num || 0);
-        let pPrice = Math.round(baseRawPrice * getAccessMultiplier());
+        let calculatedPrice = baseRawPrice * getAccessMultiplier();
+        
+        if (markupVal > 0) {
+            calculatedPrice += (calculatedPrice * markupVal / 100);
+        }
+        let pPrice = Math.ceil(calculatedPrice); // Rounded up, strictly no decimals
         
         let pUnit = item.unit || item.Price_Unit || '';
         let pDesc = String(item.desc || item.Description || '').trim();
@@ -1414,10 +1441,20 @@ async function triggerCatalogDownload(dept) {
         pdf.text(splitDesc.slice(0, 2), x + 3, y + 52);
     }
 
+    const pageCount = pdf.internal.getNumberOfPages();
+    for (let p = 1; p <= pageCount; p++) {
+        pdf.setPage(p);
+        pdf.setFont("helvetica", "normal");
+        pdf.setFontSize(8);
+        pdf.setTextColor(100, 116, 139);
+        let footerText = `Empire Glassware | Client: ${clientName || 'Valued Buyer'} ${clientMobile ? '| Ph: ' + clientMobile : ''} | Page ${p} of ${pageCount}`;
+        pdf.text(footerText, mX, 292);
+    }
+
+    if (loadingIndicator) loadingIndicator.style.display = 'none';
     pdf.save(`Empire_${dept}_Catalog.pdf`);
     showToast("PDF Downloaded Successfully!");
 }
-
 // ==========================================
 // PWA INSTALL BUTTON & iOS BANNER LOGIC
 // ==========================================
