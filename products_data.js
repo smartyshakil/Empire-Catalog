@@ -1732,7 +1732,7 @@ const PRODUCTS = [
   {
     "code": "SMP508A",
     "desc": "SHINEMAX 6 PCS SNACK PLATE 6 INCH COLOR BOX-12 SET IN CTN",
-    "price": "250.0",
+    "price": "260.0",
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -1742,7 +1742,7 @@ const PRODUCTS = [
   {
     "code": "SMP508B",
     "desc": "SHINEMAX 6 PCS SNACK PLATE 6 INCH COLOR BOX-12 SET IN CTN",
-    "price": "250.0",
+    "price": "260.0",
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -1752,7 +1752,7 @@ const PRODUCTS = [
   {
     "code": "SMP508D",
     "desc": "SHINEMAX 6 PCS SNACK PLATE 6 INCH COLOR BOX-12 SET IN CTN",
-    "price": "250.0",
+    "price": "260.0",
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -1762,7 +1762,7 @@ const PRODUCTS = [
   {
     "code": "SMP508E",
     "desc": "SHINEMAX 6 PCS SNACK PLATE 6 INCH COLOR BOX-12 SET IN CTN",
-    "price": "250.0",
+    "price": "260.0",
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -1772,7 +1772,7 @@ const PRODUCTS = [
   {
     "code": "SMP508F",
     "desc": "SHINEMAX 6 PCS SNACK PLATE 6 INCH COLOR BOX-12 SET IN CTN",
-    "price": "250.0",
+    "price": "260.0",
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -1782,7 +1782,7 @@ const PRODUCTS = [
   {
     "code": "SMP508C",
     "desc": "SHINEMAX 6 PCS SNACK PLATE 6 INCH COLOR BOX-12 SET IN CTN",
-    "price": "250.0",
+    "price": "260.0",
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -3200,19 +3200,19 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "SPS033-L7",
-    "desc": "SHINE MAX 7 PCS LID PUDDING SET 3  LEG COL BOX 6 SET CTN",
-    "price": "425.0",
+    "code": "SPS023-L7B",
+    "desc": "SHINEMAX 3 LEG BLACK PUDDING SET-6 SETS IN CARTOON",
+    "price": "500.0",
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "SPS024-L7B",
     "desc": "SHINEMAX 3 LEG BLACK PUDDING SET-6 SETS IN CARTOON",
-    "price": "450.0",
+    "price": "500.0",
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
@@ -3222,7 +3222,17 @@ const PRODUCTS = [
   {
     "code": "SPS025-L7B",
     "desc": "SHINEMAX 3 LEG BLACK PUDDING SET-6 SETS IN CARTOON",
-    "price": "450.0",
+    "price": "500.0",
+    "unit": "FOR 7PCS",
+    "category": "PUDDING SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "In Stock"
+  },
+  {
+    "code": "SPS033-L7",
+    "desc": "SHINE MAX 7 PCS LID PUDDING SET 3  LEG COL BOX 6 SET CTN",
+    "price": "500.0",
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
@@ -3238,6 +3248,26 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 2,
     "status": "In Stock"
+  },
+  {
+    "code": "SPS033-L7B",
+    "desc": "SHINE MAX 7 PCS LID PUDDING SET 3  LEG COL BOX 6 SET CTN",
+    "price": "600.0",
+    "unit": "FOR 7PCS",
+    "category": "PUDDING SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SPS033-L7G",
+    "desc": "SHINE MAX 7 PCS LID PUDDING SET 3  LEG COL BOX 6 SET CTN",
+    "price": "600.0",
+    "unit": "FOR 7PCS",
+    "category": "PUDDING SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
   },
   {
     "code": "GPG4060-2",
