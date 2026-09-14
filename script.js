@@ -87,10 +87,10 @@ function applyAccessCodeFromModal() {
 
 function getAccessMultiplier() {
     const tier = localStorage.getItem("empire_access_tier");
-    if (tier === "50") return 1;         // Flat 50% Less = Base Master Price (1x)
-    if (tier === "45") return 1.1;        // 45% Less on 2x Retail = 1.1x Base Price
-    if (tier === "40") return 1.2;        // 40% Less on 2x Retail = 1.2x Base Price
-    return 2;                             // Standard Retail Mode = 2x Base Price
+    if (tier === "50") return 1;         
+    if (tier === "45") return 1.1;        
+    if (tier === "40") return 1.2;        
+    return 2;                             
 }
 
 function getTierLabel() {
@@ -387,7 +387,6 @@ function renderProducts(items) {
             </div>
             
             <div class="counter-section">
-                <!-- Carton Counter -->
                 <div class="counter-row">
                     <span class="counter-label">CTN</span>
                     <button class="qty-btn" onclick="updateItemQty('${p.code}', 'ctn', -1, ${effectivePrice}, '${itemDept}', '${encodeURIComponent(JSON.stringify(p))}')">-</button>
@@ -395,7 +394,6 @@ function renderProducts(items) {
                     <button class="qty-btn" onclick="updateItemQty('${p.code}', 'ctn', 1, ${effectivePrice}, '${itemDept}', '${encodeURIComponent(JSON.stringify(p))}')">+</button>
                 </div>
 
-                <!-- Set Counter -->
                 <div class="counter-row">
                     <span class="counter-label">SET</span>
                     <button class="qty-btn" onclick="updateItemQty('${p.code}', 'set', -1, ${effectivePrice}, '${itemDept}', '${encodeURIComponent(JSON.stringify(p))}')">-</button>
@@ -1251,8 +1249,9 @@ function checkUrlDepartment() {
         }
     }
 }
+
 // ==========================================
-// 11. CLIENT-SIDE PDF CATALOG DOWNLOAD (FIXED INPUT BINDING)
+// 11. CLIENT-SIDE PDF CATALOG DOWNLOAD (UPDATED WITH NAME, MOBILE, MARKUP & ROUNDUP)
 // ==========================================
 async function triggerCatalogDownload(dept) {
     const clientNameInput = document.getElementById('pdfClientName');
@@ -1394,11 +1393,10 @@ async function triggerCatalogDownload(dept) {
         let baseRawPrice = Number(item.price || item.Price_Num || 0);
         let calculatedPrice = baseRawPrice * getAccessMultiplier();
         
-        // Apply dynamic markup entered by user
         if (markupVal > 0) {
             calculatedPrice += (calculatedPrice * markupVal / 100);
         }
-        let pPrice = Math.ceil(calculatedPrice); // Rounded Up Integer (No Decimals)
+        let pPrice = Math.ceil(calculatedPrice); 
         
         let pUnit = item.unit || item.Price_Unit || '';
         let pDesc = String(item.desc || item.Description || '').trim();
@@ -1449,6 +1447,7 @@ async function triggerCatalogDownload(dept) {
     pdf.save(`Empire_${dept}_Catalog.pdf`);
     showToast("PDF Downloaded Successfully!");
 }
+
 // ==========================================
 // PWA INSTALL BUTTON & iOS BANNER LOGIC
 // ==========================================
