@@ -1260,6 +1260,16 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
+    "code": "SMWH701-L7",
+    "desc": "SHINEMAX SHOT SET / ZAMZAM SET  120ML+30ML  COL BOX 24 SET CTN",
+    "price": "170.0",
+    "unit": "FOR 7 PCS",
+    "category": "SHOT SET",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "KRB013-3",
     "desc": "KARBON BOWL SET 210 ML 6 PCS COLOR BOX 12 SET CTN",
     "price": "145.0",
@@ -1940,6 +1950,16 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
+    "code": "SMJC138-1",
+    "desc": "SHINEMAX BEER MUG 2 PC 400 ML-18 SET CTN",
+    "price": "150.0",
+    "unit": "FOR 2 PCS",
+    "category": "BEER MUG",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "LXZB10",
     "desc": "LANGXU BEER MUG 2 PC 420 ML - 18 SET CTN",
     "price": "160.0",
@@ -2420,6 +2440,16 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
+    "code": "SMTC1601",
+    "desc": "SHINEMAX SUGAR POT WITH LID 280 ML COL BOX 48 SET CTN",
+    "price": "80.0",
+    "unit": "FOR 1 PCS",
+    "category": "LID MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "LXCY006",
     "desc": "LANGXU SUGAR POT WITH LID 385 ML COL BOX 24 SET CTN",
     "price": "110.0",
@@ -2700,6 +2730,16 @@ const PRODUCTS = [
     "status": "ADV BOOK"
   },
   {
+    "code": "YWH-7",
+    "desc": "SHINE MAX FISH LEMON SET CLEAR - COL BOX 4 SET CTN",
+    "price": "675.0",
+    "unit": "FOR 7 PCS",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SMWH97-L7B",
     "desc": "SHINEMAX 7 PCS WATER SET 1700ML+320ML COLOR BOX 6 SET CTN",
     "price": "700.0",
@@ -2738,6 +2778,16 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 2,
     "status": "In Stock"
+  },
+  {
+    "code": "YWH-7-G",
+    "desc": "SHINE MAX FISH LEMON SET GOLD COL - COL BOX 4 SET CTN",
+    "price": "775.0",
+    "unit": "FOR 7 PCS",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
   },
   {
     "code": "SMWH99-L7B",
@@ -3260,6 +3310,46 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
+    "code": "SPS023-L7G",
+    "desc": "SHINEMAX 3 LEG GOLD PUDDING SET-6 SETS IN CARTOON",
+    "price": "500.0",
+    "unit": "FOR 7 PCS",
+    "category": "PUDDING SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SPS024-L7G",
+    "desc": "SHINEMAX 3 LEG GOLD PUDDING SET-6 SETS IN CARTOON",
+    "price": "500.0",
+    "unit": "FOR 7 PCS",
+    "category": "PUDDING SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SPS025-L7G",
+    "desc": "SHINEMAX 3 LEG GOLD PUDDING SET-6 SETS IN CARTOON",
+    "price": "500.0",
+    "unit": "FOR 7 PCS",
+    "category": "PUDDING SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SPS034-L7",
+    "desc": "SHINE MAX 7 PCS LID PUDDING SET 3  LEG COL BOX 6 SET CTN",
+    "price": "500.0",
+    "unit": "FOR 7 PCS",
+    "category": "PUDDING SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SPS063-L7B",
     "desc": "SHINE MAX 7 PCS LID PUDDING SET COL BOX 6 SET CTN",
     "price": "575.0",
@@ -3284,6 +3374,36 @@ const PRODUCTS = [
     "desc": "SHINE MAX 7 PCS LID PUDDING SET 3  LEG COL BOX 6 SET CTN",
     "price": "600.0",
     "unit": "FOR 7PCS",
+    "category": "PUDDING SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SPS034-L7B",
+    "desc": "SHINE MAX 7 PCS LID PUDDING SET 3  LEG COL BOX 6 SET CTN",
+    "price": "600.0",
+    "unit": "FOR 7 PCS",
+    "category": "PUDDING SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SPS035-L7B",
+    "desc": "SHINE MAX 7 PCS LID PUDDING SET 3  LEG COL BOX 6 SET CTN",
+    "price": "600.0",
+    "unit": "FOR 7 PCS",
+    "category": "PUDDING SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SPS035-L7G",
+    "desc": "SHINE MAX 7 PCS LID PUDDING SET 3  LEG COL BOX 6 SET CTN",
+    "price": "600.0",
+    "unit": "FOR 7 PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
     "moq": 2,
@@ -3740,6 +3860,26 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
+    "code": "CTDP714-L8-HA",
+    "desc": "SHINEMAX DISPENSER SET 2800ML+330ML GIFT BOX PACK 4 SET CTN",
+    "price": "2050.0",
+    "unit": "FOR 1 SET",
+    "category": "DISPENSER",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "CTDP714-L8-HS",
+    "desc": "SHINEMAX DISPENSER SET 2800ML+330ML GIFT BOX PACK 4 SET CTN",
+    "price": "2050.0",
+    "unit": "FOR 1 SET",
+    "category": "DISPENSER",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "LXGP001",
     "desc": "LANGXU BUBBLE PLATE - 16 PC CTN",
     "price": "135.0",
@@ -4070,6 +4210,26 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
+    "code": "SMBW601-375",
+    "desc": "SHINE MAX ROUND BOWL WITH LID 375 ML COL BOX 48 PCS CTN",
+    "price": "100.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS LUNCH BOX",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBW603-350",
+    "desc": "SHINE MAX RECTANGLE BOWL WITH LID 350 ML COL BOX 48 PCS CTN",
+    "price": "100.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS LUNCH BOX",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "RE-600",
     "desc": "TAG RECTANGLE BOWL WITH LID 600 ML COLOR BOX 36 PCS CTN",
     "price": "110.0",
@@ -4220,6 +4380,16 @@ const PRODUCTS = [
     "status": "ADV BOOK"
   },
   {
+    "code": "SMIC606",
+    "desc": "SHINE MAX LOTUS ICE CUP 140 ML 6 PC COL BOX 12 SET CTN",
+    "price": "200.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
     "code": "SMH95A-1.5L-B",
     "desc": "SHINEMAX BOROSILICATE KETTLE/KAWA JUG 1.5 LTR COL BOX 24 PCS CTN",
     "price": "220.0",
@@ -4303,6 +4473,36 @@ const PRODUCTS = [
     "code": "SMIC656I-",
     "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC\nCOL BOX 12 SET CTN",
     "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMIC606-B",
+    "desc": "SHINE MAX NEW ICE CUP 140 ML 6 PC COL BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMIC606-G",
+    "desc": "SHINE MAX NEW ICE CUP 140 ML 6 PC COL BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMIC626-B",
+    "desc": "SHINE MAX NEW ICE CUP 140 ML 6 PC COL BOX 12 SET CTN",
+    "price": "280.0",
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
