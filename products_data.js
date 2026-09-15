@@ -1,5 +1,14 @@
 const PRODUCTS = [
   {
+    "code": "KRZB47",
+    "desc": "KARBON SQUARE TEA MUG 190 ML COLOR BOX 12 SET CTN",
+    "price": "175",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 4
+},
+  {
     "code": "KRF008B-G",
     "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
