@@ -454,6 +454,8 @@ async function openProductDetail(code) {
         item = PRODUCTS.find(p => p.code === code);
     }
     if (!item) return;
+updatePageSEO(item);
+    injectProductSchema(item);
 
     currentViewingProduct = item;
 
@@ -1691,4 +1693,61 @@ function filterAdvanceBookItems() {
         const topPos = mainContent.getBoundingClientRect().top + window.pageYOffset - 110;
         window.scrollTo({ top: Math.max(0, topPos), behavior: 'smooth' });
     }
+}
+// ==========================================
+// SAFE SEO & SCHEMA INJECTOR
+// ==========================================
+function updatePageSEO(item) {
+    if (!item) return;
+    const title = `${item.code} - ${item.desc} | Empire Glassware Wholesale`;
+    const description = `Buy ${item.desc} (${item.code}) at wholesale price from Empire Glassware.`;
+    
+    document.title = title;
+
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+        metaDesc = document.createElement('meta');
+        metaDesc.name = 'description';
+        document.head.appendChild(metaDesc);
+    }
+    metaDesc.content = description;
+}
+
+function injectProductSchema(item) {
+    if (!item) return;
+    
+    let existingScript = document.getElementById('dynamic-product-schema');
+    if (existingScript) {
+        existingScript.remove();
+    }
+
+    const multiplier = typeof getAccessMultiplier === 'function' ? getAccessMultiplier() : 2;
+    const price = Math.round(Number(item.price) * multiplier);
+    const imageUrl = `${window.location.origin}/images/${item.department || 'glassware'}/${item.code}.jpg`;
+
+    const schemaData = {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": item.desc,
+        "image": [imageUrl],
+        "description": item.desc,
+        "sku": item.code,
+        "brand": {
+            "@type": "Brand",
+            "name": "Empire Glassware"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": window.location.href,
+            "priceCurrency": "INR",
+            "price": price,
+            "availability": "https://schema.org/InStock"
+        }
+    };
+
+    const script = document.createElement('script');
+    script.id = 'dynamic-product-schema';
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schemaData);
+    document.head.appendChild(script);
 }
