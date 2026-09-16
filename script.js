@@ -445,6 +445,71 @@ function checkImageExists(url) {
     });
 }
 
+// ==========================================
+// SEO HELPER FUNCTIONS (Dynamic Meta Tags & JSON-LD Schema)
+// ==========================================
+function updatePageSEO(item) {
+    if (!item) return;
+    const title = `${item.code} - ${item.desc} | Empire Glassware Wholesale`;
+    const description = `Buy ${item.desc} (${item.code}) at wholesale price from Empire Glassware. ${getDisplayPacking(item)}, MOQ: ${getMinSetLimit(item.price, item.department, item)} sets.`;
+    
+    document.title = title;
+
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+        metaDesc = document.createElement('meta');
+        metaDesc.name = 'description';
+        document.head.appendChild(metaDesc);
+    }
+    metaDesc.content = description;
+
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.content = title;
+
+    let ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.content = description;
+}
+
+function injectProductSchema(item) {
+    if (!item) return;
+    
+    let existingScript = document.getElementById('dynamic-product-schema');
+    if (existingScript) {
+        existingScript.remove();
+    }
+
+    const multiplier = getAccessMultiplier();
+    const price = Math.round(Number(item.price) * multiplier);
+    const imageUrl = `${window.location.origin}/images/${item.department || 'glassware'}/${item.code}.jpg`;
+
+    const schemaData = {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": item.desc,
+        "image": [imageUrl],
+        "description": item.desc,
+        "sku": item.code,
+        "brand": {
+            "@type": "Brand",
+            "name": "Empire Glassware"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": window.location.href,
+            "priceCurrency": "INR",
+            "price": price,
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition"
+        }
+    };
+
+    const script = document.createElement('script');
+    script.id = 'dynamic-product-schema';
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schemaData);
+    document.head.appendChild(script);
+}
+
 async function openProductDetail(code) {
     let item = null;
     if (typeof code === 'object' && code !== null) {
@@ -456,6 +521,10 @@ async function openProductDetail(code) {
     if (!item) return;
 
     currentViewingProduct = item;
+
+    // Trigger Dynamic SEO & Schema Updates
+    updatePageSEO(item);
+    injectProductSchema(item);
 
     const multiplier = getAccessMultiplier();
     const effectivePrice = Math.round(Number(item.price) * multiplier);
@@ -1117,13 +1186,11 @@ function setupLightboxUI(modal, img, titleElem, titleText) {
     if (!navContainer) {
         navContainer = document.createElement('div');
         navContainer.id = 'customLightboxNav';
-        // Buttons ko image ke upar/proper position par laane ke liye styling fix ki hai
         navContainer.style.cssText = "position: relative; display: flex; justify-content: center; gap: 25px; margin-top: 15px; z-index: 1002;";
         navContainer.innerHTML = `
             <button id="lbPrevBtn" style="background:rgba(255,255,255,0.25); color:white; border:1px solid rgba(255,255,255,0.4); padding:10px 20px; border-radius:25px; font-weight:bold; font-size:13px; cursor:pointer;">❮ Prev</button>
             <button id="lbNextBtn" style="background:rgba(255,255,255,0.25); color:white; border:1px solid rgba(255,255,255,0.4); padding:10px 20px; border-radius:25px; font-weight:bold; font-size:13px; cursor:pointer;">Next ❯</button>
         `;
-        // Image ke neeche append karne ke liye modal mein insert karenge
         modal.appendChild(navContainer);
     }
 
@@ -1145,7 +1212,6 @@ function setupLightboxUI(modal, img, titleElem, titleText) {
             resetAutoSlide(img, titleElem, titleText);
         };
 
-        // Touch Swipe Gestures for Mobile
         let touchStartX = 0;
         let touchEndX = 0;
 
@@ -1156,12 +1222,10 @@ function setupLightboxUI(modal, img, titleElem, titleText) {
         modal.ontouchend = (e) => {
             touchEndX = e.changedTouches[0].screenX;
             let diff = touchStartX - touchEndX;
-            if (Math.abs(diff) > 40) { // Min swipe distance
+            if (Math.abs(diff) > 40) {
                 if (diff > 0) {
-                    // Swiped Left -> Next Photo
                     currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxImages.length;
                 } else {
-                    // Swiped Right -> Prev Photo
                     currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length;
                 }
                 updateLightboxView(img, titleElem, titleText);
@@ -1169,7 +1233,6 @@ function setupLightboxUI(modal, img, titleElem, titleText) {
             }
         };
 
-        // Start Auto Slide Every 3 Seconds
         startAutoSlide(img, titleElem, titleText);
 
     } else {
@@ -1484,7 +1547,7 @@ function installPWA() {
             installBtn.style.display = 'none';
         }
     });
-}
+});
 
 window.addEventListener('appinstalled', (evt) => {
     console.log('PWA was installed successfully');
