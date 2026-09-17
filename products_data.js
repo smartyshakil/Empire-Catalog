@@ -1,14 +1,5 @@
 const PRODUCTS = [
   {
-    "code": "KRZB47",
-    "desc": "KARBON SQUARE TEA MUG 190 ML COLOR BOX 12 SET CTN",
-    "price": "175",
-    "unit": "FOR 6 PCS",
-    "category": "TEA MUG",
-    "department": "Glassware",
-    "moq": 4
-},
-  {
     "code": "KRF008B-G",
     "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
@@ -179,16 +170,6 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "WIGC-1",
-    "desc": "GLACIRA WHISKEY GLASS 315 ML 6 PC COL BOX 8 SET CTN",
-    "price": "250.0",
-    "unit": "FOR 6 PCS",
-    "category": "WHISKEY GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
     "code": "WIGC-2",
     "desc": "GLACIRA WHISKEY GLASS 315 ML 6 PC COL BOX 8 SET CTN",
     "price": "250.0",
@@ -251,16 +232,6 @@ const PRODUCTS = [
   {
     "code": "LXZS0610",
     "desc": "LANGXU PLAIN WHISKEY GLASS 350 ML COL BOX-8 SET CTN",
-    "price": "290.0",
-    "unit": "FOR 6PCS",
-    "category": "WHISKEY GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "LXZS0614",
-    "desc": "LANGXU WHISKEY GLASS 240 ML COL BOX 12 SET CTN",
     "price": "290.0",
     "unit": "FOR 6PCS",
     "category": "WHISKEY GLASS",
@@ -369,16 +340,6 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "KRY1007",
-    "desc": "KARBON WATER GLASS 250 ML  6 PCS COL BOX 12 SET CTN",
-    "price": "170.0",
-    "unit": "FOR 6 PCS",
-    "category": "WATER GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
     "code": "LXNX001",
     "desc": "LANG XU FALOODA GLASS 342 ML 6 PCS COLOR BOX  8 SET CTN",
     "price": "180.0",
@@ -392,16 +353,6 @@ const PRODUCTS = [
     "code": "JS5139-1",
     "desc": "DELI SOGA WATER GLASS 500 ML 6 PC COL BOX 12 SET CTN",
     "price": "190.0",
-    "unit": "FOR 6PCS",
-    "category": "WATER GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "JS5139-1B",
-    "desc": "DELI SOGA WATER GLASS 500 ML BLUE 6 PC COL BOX 12 SET CTN",
-    "price": "200.0",
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
@@ -562,26 +513,6 @@ const PRODUCTS = [
     "code": "ES1005",
     "desc": "DELI PREMIUM 320 ML WATER GLASS 6 PCS COL BOX 8 SET CTN",
     "price": "270.0",
-    "unit": "FOR 6PCS",
-    "category": "WATER GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "LXY1007-2",
-    "desc": "LANGXU WATER GLASS FANCY BOTTOM 290ML 6 PC COL BOX 8 SET CTN",
-    "price": "320.0",
-    "unit": "FOR 6PCS",
-    "category": "WATER GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "LXY1007-3",
-    "desc": "LANGXU WATER GLASS FANCY BOTTOM 290ML 6 PC COL BOX 8 SET CTN",
-    "price": "320.0",
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
@@ -836,16 +767,6 @@ const PRODUCTS = [
     "category": "WINE GLASS",
     "department": "Glassware",
     "moq": 2,
-    "status": "In Stock"
-  },
-  {
-    "code": "STY2013-B",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS 270 ML COL BOX 12 SET CTN",
-    "price": "260.0",
-    "unit": "FOR 6PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 4,
     "status": "In Stock"
   },
   {
@@ -1209,16 +1130,6 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "KRY314",
-    "desc": "KARBON SKULL SHOT GLASS 60 ML COL BOX 24 SET CTN",
-    "price": "150.0",
-    "unit": "FOR 6PCS",
-    "category": "SHOT GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
     "code": "KRWH702A-L7",
     "desc": "KARBON SHOT SET / ZAMZAM SET  120ML+45ML  COL BOX 24 SET CTN",
     "price": "135.0",
@@ -1469,47 +1380,7 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "KRB063A-G",
-    "desc": "KARBON DESSERT BOWL 130 ML 6 PC COL BOX-12 SET CTN",
-    "price": "200.0",
-    "unit": "FOR 6PCS",
-    "category": "BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "KRB063B-G",
-    "desc": "KARBON DESSERT BOWL 130 ML 6 PC COL BOX-12 SET CTN",
-    "price": "200.0",
-    "unit": "FOR 6PCS",
-    "category": "BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
     "code": "KRB063C-B",
-    "desc": "KARBON DESSERT BOWL 130 ML 6 PC COL BOX-12 SET CTN",
-    "price": "200.0",
-    "unit": "FOR 6PCS",
-    "category": "BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "KRB063C-G",
-    "desc": "KARBON DESSERT BOWL 130 ML 6 PC COL BOX-12 SET CTN",
-    "price": "200.0",
-    "unit": "FOR 6PCS",
-    "category": "BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "KRB063D-G",
     "desc": "KARBON DESSERT BOWL 130 ML 6 PC COL BOX-12 SET CTN",
     "price": "200.0",
     "unit": "FOR 6PCS",
@@ -1839,26 +1710,6 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "SMP508D-B",
-    "desc": "SHINEMAX 6 PCS SNACK PLATE 6 INCH COLOR BOX-12 SET IN CTN",
-    "price": "320.0",
-    "unit": "FOR 6 PCS",
-    "category": "PLATE SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "SMP508F-B",
-    "desc": "SHINEMAX 6 PCS SNACK PLATE 6 INCH COLOR BOX-12 SET IN CTN",
-    "price": "320.0",
-    "unit": "FOR 6 PCS",
-    "category": "PLATE SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
     "code": "SMP508D-G",
     "desc": "SHINEMAX 6 PCS SNACK PLATE 6 INCH COLOR BOX-12 SET IN CTN",
     "price": "320.0",
@@ -1949,16 +1800,6 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "LXZB27",
-    "desc": "LANGXU BEER MUG 2 PC 314 ML-18 SET CTN",
-    "price": "150.0",
-    "unit": "FOR 2PCS",
-    "category": "BEER MUG",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
     "code": "SMJC138-1",
     "desc": "SHINEMAX BEER MUG 2 PC 400 ML-18 SET CTN",
     "price": "150.0",
@@ -1967,16 +1808,6 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 6,
     "status": "ADV BOOK"
-  },
-  {
-    "code": "LXZB10",
-    "desc": "LANGXU BEER MUG 2 PC 420 ML - 18 SET CTN",
-    "price": "160.0",
-    "unit": "FOR 2PCS",
-    "category": "BEER MUG",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
   },
   {
     "code": "LXZB17-1",
@@ -2377,6 +2208,16 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 4,
     "status": "ADV BOOK"
+  },
+  {
+    "code": "KRZB47",
+    "desc": "KARBON SQUARE TEA MUG 190 ML COLOR BOX 12 SET CTN",
+    "price": "175.0",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "In Stock"
   },
   {
     "code": "LXJ400",
@@ -4019,16 +3860,6 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "KRF006B-G",
-    "desc": "KARBON CAKE & COOKIE BOWL 400 ML COL BOX 36 PCS IN CTN",
-    "price": "110.0",
-    "unit": "FOR 1PCS",
-    "category": "GLASS COLORED BOWL",
-    "department": "Glassware",
-    "moq": 12,
-    "status": "In Stock"
-  },
-  {
     "code": "KRF008A-B",
     "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
@@ -4070,36 +3901,6 @@ const PRODUCTS = [
   },
   {
     "code": "KRF008C-G",
-    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
-    "price": "280.0",
-    "unit": "FOR 1 PCS",
-    "category": "GLASS COLORED BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "KRF008A-LN",
-    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
-    "price": "280.0",
-    "unit": "FOR 1 PCS",
-    "category": "GLASS COLORED BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "KRF008B-LN",
-    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
-    "price": "280.0",
-    "unit": "FOR 1 PCS",
-    "category": "GLASS COLORED BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "KRF008C-LN",
     "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
     "unit": "FOR 1 PCS",
@@ -5846,26 +5647,6 @@ const PRODUCTS = [
     "category": "STEEL BOTTLE",
     "department": "vaccum_bottles",
     "moq": 6,
-    "status": "In Stock"
-  },
-  {
-    "code": "8723",
-    "desc": "STEEL BOTTLE 500 ML PUSH BUTTON COL BOX MIX CHARACTER 50 PCS CTN",
-    "price": "190.0",
-    "unit": "FOR 1PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 12,
-    "status": "In Stock"
-  },
-  {
-    "code": "8724",
-    "desc": "STEEL BOTTLE 500 ML PUSH BUTTON COL BOX MIX CHARACTER 50 PCS CTN",
-    "price": "190.0",
-    "unit": "FOR 1PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 12,
     "status": "In Stock"
   },
   {
