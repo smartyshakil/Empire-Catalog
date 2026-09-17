@@ -5742,7 +5742,7 @@ const PRODUCTS = [
   {
     "code": "HK-900",
     "desc": "STEEL HANDLE  SIPPER 900 ML COLOR BOX 50 PCS CTN",
-    "price": "230.0",
+    "price": "240.0",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
@@ -5893,26 +5893,6 @@ const PRODUCTS = [
     "code": "8173",
     "desc": "STEEL BOTTLE 600 ML COL BOX PUSH BUTTON MIX PRINT 50 PCS CTN",
     "price": "310.0",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 6,
-    "status": "In Stock"
-  },
-  {
-    "code": "K-1000",
-    "desc": "STEEL KETTLE 1000 ML COL BOX MIX PRINT 40 PCS CTN",
-    "price": "310.0",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 6,
-    "status": "In Stock"
-  },
-  {
-    "code": "8172",
-    "desc": "STEEL BOTTLE 800 ML COL BOX MIX PRINT 50 PCS CTN",
-    "price": "320.0",
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
