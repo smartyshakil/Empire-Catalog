@@ -5760,6 +5760,16 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
+    "code": "82018",
+    "desc": "STEEL BOTTLE 500 ML COL BOX MIX PRINT 50 PCS CTN",
+    "price": "240.0",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6,
+    "status": "In Stock"
+  },
+  {
     "code": "SD-1000",
     "desc": "STEEL BOTTLE  1000 ML COL BOX MIX COLOR 50 PCS CTN",
     "price": "245.0",
@@ -5794,16 +5804,6 @@ const PRODUCTS = [
     "desc": "STEEL FLASK 500 ML WITH POUCH COL BOX 50 PCS CTN",
     "price": "260.0",
     "unit": "FOR 1PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 6,
-    "status": "In Stock"
-  },
-  {
-    "code": "82018",
-    "desc": "STEEL BOTTLE 500 ML COL BOX MIX PRINT 50 PCS CTN",
-    "price": "260.0",
-    "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
     "moq": 6,
