@@ -1260,7 +1260,7 @@ function checkUrlDepartment() {
     }
 }
 // ==========================================
-// 11. CLIENT-SIDE PDF CATALOG DOWNLOAD (WITH CUSTOMER DETAILS, MARKUP & ROUNDUP)
+// 11. CLIENT-SIDE PDF CATALOG DOWNLOAD (WITH CUSTOMER DETAILS, MARKUP & ROUNDUP & PROGRESS BAR)
 // ==========================================
 async function triggerCatalogDownload(dept) {
     const clientNameInput = document.getElementById('pdfClientName');
@@ -1272,7 +1272,10 @@ async function triggerCatalogDownload(dept) {
     const clientMobile = clientMobileInput ? clientMobileInput.value.trim() : "";
     const markupVal = markupInput ? parseFloat(markupInput.value) || 0 : 0;
 
-    if (loadingIndicator) loadingIndicator.style.display = 'block';
+    if (loadingIndicator) {
+        loadingIndicator.style.display = 'block';
+        loadingIndicator.innerText = "⏳ Initializing PDF generation...";
+    }
     
     await new Promise(resolve => setTimeout(resolve, 50));
 
@@ -1362,6 +1365,16 @@ async function triggerCatalogDownload(dept) {
     }
 
     for (let i = 0; i < filtered.length; i++) {
+        let percent = Math.round(((i + 1) / filtered.length) * 100);
+        if (loadingIndicator) {
+            loadingIndicator.innerText = `⏳ Generating PDF... Processed ${i + 1} of ${filtered.length} items (${percent}%)`;
+        }
+        
+        // Chota sa pause taaki UI thread freeze na ho aur text properly update ho sake
+        if (i % 3 === 0) {
+            await new Promise(r => setTimeout(r, 4));
+        }
+
         let pageIndex = Math.floor(i / itemsPerPage);
         let pos = i % itemsPerPage;
 
@@ -1409,7 +1422,7 @@ async function triggerCatalogDownload(dept) {
         if (markupVal > 0) {
             calculatedPrice += (calculatedPrice * markupVal / 100);
         }
-        let pPrice = Math.ceil(calculatedPrice); // Rounded up, strictly no decimals
+        let pPrice = Math.ceil(calculatedPrice);
         
         let pUnit = item.unit || item.Price_Unit || '';
         let pDesc = String(item.desc || item.Description || '').trim();
@@ -1444,6 +1457,10 @@ async function triggerCatalogDownload(dept) {
         pdf.setTextColor(40, 55, 71);
         let splitDesc = pdf.splitTextToSize(pDesc, cW - 6);
         pdf.text(splitDesc.slice(0, 2), x + 3, y + 52);
+    }
+
+    if (loadingIndicator) {
+        loadingIndicator.innerText = "⏳ Finalizing PDF download...";
     }
 
     const pageCount = pdf.internal.getNumberOfPages();
