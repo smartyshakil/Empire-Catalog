@@ -1382,11 +1382,17 @@ async function triggerCatalogDownload(dept) {
             pdf.addPage();
         }
 
-        if (pos === 0) {
+       if (pos === 0) {
             pdf.setFont("helvetica", "bold");
             pdf.setFontSize(13);
             pdf.setTextColor(15, 23, 42);
-            pdf.text("EMPIRE GLASSWARE - " + dept.toUpperCase() + " CATALOG", mX, 9);
+            
+            // Agar teeno fields khali hain tabhi Empire Glassware likha hua aayega
+            if (!clientName && !clientMobile && markupVal <= 0) {
+                pdf.text("EMPIRE GLASSWARE - " + dept.toUpperCase() + " CATALOG", mX, 9);
+            } else {
+                pdf.text(dept.toUpperCase() + " CATALOG", mX, 9);
+            }
             
             pdf.setFont("helvetica", "normal");
             pdf.setFontSize(7.5);
@@ -1403,7 +1409,6 @@ async function triggerCatalogDownload(dept) {
                 pdf.text(headerText, mX, 18);
             }
         }
-
         let col = pos % cols;
         let row = Math.floor(pos / cols);
         let x = mX + (col * cW);
