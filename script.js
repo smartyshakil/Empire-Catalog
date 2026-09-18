@@ -1462,10 +1462,19 @@ async function triggerCatalogDownload(dept) {
         pdf.setTextColor(185, 28, 28);
         pdf.text(`Rs. ${pPrice} ${pUnit}`, x + 3, y + 46);
 
-        pdf.setFont("helvetica", "bold");
-        pdf.setFontSize(7);
-        pdf.setTextColor(46, 125, 50);
-        pdf.text("IN STOCK", x + cW - 17, y + 39);
+      let stockStatus = String(item.status || item.Stock || item.stock || 'IN STOCK').trim();
+let isAdvBook = stockStatus.toLowerCase().includes('adv') || stockStatus.toLowerCase().includes('book');
+
+pdf.setFont("helvetica", "bold");
+pdf.setFontSize(7);
+
+if (isAdvBook) {
+    pdf.setTextColor(217, 119, 6);
+    pdf.text("ADV BOOK", x + cW - 20, y + 39);
+} else {
+    pdf.setTextColor(46, 125, 50);
+    pdf.text("IN STOCK", x + cW - 17, y + 39);
+}
 
         pdf.setFont("helvetica", "normal");
         pdf.setFontSize(7.5);
