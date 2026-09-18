@@ -1259,7 +1259,6 @@ function checkUrlDepartment() {
         }
     }
 }
-
 // ==========================================
 // 11. CLIENT-SIDE PDF CATALOG DOWNLOAD (WITH CUSTOMER DETAILS, MARKUP & ROUNDUP)
 // ==========================================
@@ -1381,11 +1380,15 @@ async function triggerCatalogDownload(dept) {
             pdf.setTextColor(100, 116, 139);
             pdf.text("Live Wholesale Catalog | Generated on: " + new Date().toLocaleDateString(), mX, 13);
 
-            if (clientName) {
+            if (clientName || clientMobile || markupVal > 0) {
                 pdf.setFont("helvetica", "bold");
                 pdf.setFontSize(8.5);
                 pdf.setTextColor(185, 28, 28);
-                pdf.text(`Prepared For: ${clientName} ${clientMobile ? '| Phone: ' + clientMobile : ''}`, mX, 18);
+                let headerText = "Prepared For: ";
+                if (clientName) headerText += clientName;
+                if (clientMobile) headerText += ` | Phone: ${clientMobile}`;
+                if (markupVal > 0) headerText += ` | Markup: ${markupVal}%`;
+                pdf.text(headerText, mX, 18);
             }
         }
 
@@ -1449,7 +1452,18 @@ async function triggerCatalogDownload(dept) {
         pdf.setFont("helvetica", "normal");
         pdf.setFontSize(8);
         pdf.setTextColor(100, 116, 139);
-        let footerText = `Empire Glassware | Client: ${clientName || 'Valued Buyer'} ${clientMobile ? '| Ph: ' + clientMobile : ''} | Page ${p} of ${pageCount}`;
+        
+        let footerText = "";
+        if (!clientName && !clientMobile && markupVal <= 0) {
+            footerText = `Empire Glassware | Page ${p} of ${pageCount}`;
+        } else {
+            let details = [];
+            if (clientName) details.push(`Client: ${clientName}`);
+            if (clientMobile) details.push(`Ph: ${clientMobile}`);
+            if (markupVal > 0) details.push(`Markup: ${markupVal}%`);
+            footerText = `${details.join(' | ')} | Page ${p} of ${pageCount}`;
+        }
+        
         pdf.text(footerText, mX, 292);
     }
 
