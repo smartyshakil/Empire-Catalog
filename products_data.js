@@ -1,5 +1,50 @@
 const PRODUCTS = [
   {
+    "code": "STANLEY-500",
+    "desc": "STANLEY LOGO 500  ML SIDE HANDLE OG BOX 50 PCS CTN",
+    "price": "340",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6
+},
+  {
+    "code": "SP-2200",
+    "desc": "SOWA PARIS COLA BOTTLE 2200 ML WITH HANDLE COLOR BOX 25 PCS CTN",
+    "price": "650",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6
+},
+  {
+    "code": "SP-500",
+    "desc": "SOWA PARIS COLA BOTTLE HOT & COLD 500 ML COLOR BOX 60 PCS CTN",
+    "price": "225",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 12
+},
+  {
+    "code": "HK-1000",
+    "desc": "STEEL BOTTLES 1000 ML WHITE BOX PACKING 2 COLORS 40 PCS CTN",
+    "price": "265",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6
+},
+  {
+    "code": "HK-800",
+    "desc": "STEEL BOTTLES WITH STRAW AND PUSH BUTTON COLOR BOX 30 PCS CTN",
+    "price": "280",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6
+},
+  {
     "code": "KRF008B-G",
     "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
     "price": "280.0",
