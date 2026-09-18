@@ -1393,14 +1393,13 @@ async function triggerCatalogDownload(dept) {
             pdf.setTextColor(100, 116, 139);
             pdf.text("Live Wholesale Catalog | Generated on: " + new Date().toLocaleDateString(), mX, 13);
 
-            if (clientName || clientMobile || markupVal > 0) {
+            if (clientName || clientMobile) {
                 pdf.setFont("helvetica", "bold");
                 pdf.setFontSize(8.5);
                 pdf.setTextColor(185, 28, 28);
                 let headerText = "Prepared For: ";
                 if (clientName) headerText += clientName;
                 if (clientMobile) headerText += ` | Phone: ${clientMobile}`;
-                if (markupVal > 0) headerText += ` | Markup: ${markupVal}%`;
                 pdf.text(headerText, mX, 18);
             }
         }
@@ -1477,7 +1476,6 @@ async function triggerCatalogDownload(dept) {
             let details = [];
             if (clientName) details.push(`Client: ${clientName}`);
             if (clientMobile) details.push(`Ph: ${clientMobile}`);
-            if (markupVal > 0) details.push(`Markup: ${markupVal}%`);
             footerText = `${details.join(' | ')} | Page ${p} of ${pageCount}`;
         }
         
