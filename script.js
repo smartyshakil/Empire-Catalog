@@ -1499,7 +1499,7 @@ async function triggerCatalogDownload(dept) {
     }
 
     if (loadingIndicator) loadingIndicator.style.display = 'none';
-    pdf.save(`Empire_${dept}_Catalog.pdf`);
+    pdf.save(`${dept}_Catalog.pdf`);
     showToast("PDF Downloaded Successfully!");
 }
 // ==========================================
