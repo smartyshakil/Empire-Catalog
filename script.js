@@ -1412,7 +1412,7 @@ async function triggerCatalogDownload(dept) {
                 pdf.setFont("helvetica", "bold");
                 pdf.setFontSize(8.5);
                 pdf.setTextColor(185, 28, 28);
-                let headerText = "Prepared For: ";
+                let headerText = "Catalog By: ";
                 if (clientName) headerText += clientName;
                 if (clientMobile) headerText += ` | Phone: ${clientMobile}`;
                 pdf.text(headerText, mX, 18);
@@ -1490,7 +1490,7 @@ async function triggerCatalogDownload(dept) {
             footerText = `Empire Glassware | Page ${p} of ${pageCount}`;
         } else {
             let details = [];
-            if (clientName) details.push(`Client: ${clientName}`);
+            if (clientName) details.push(`Catalog By: ${clientName}`);
             if (clientMobile) details.push(`Ph: ${clientMobile}`);
             footerText = `${details.join(' | ')} | Page ${p} of ${pageCount}`;
         }
