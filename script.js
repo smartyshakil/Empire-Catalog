@@ -1260,7 +1260,7 @@ function checkUrlDepartment() {
     }
 }
 // ==========================================
-// 11. CLIENT-SIDE PDF CATALOG DOWNLOAD (WITH CUSTOMER DETAILS, MARKUP & ROUNDUP & PROGRESS BAR)
+// 11. CLIENT-SIDE PDF CATALOG DOWNLOAD (SUPER-FAST PARALLEL IMAGE FETCHING)
 // ==========================================
 async function triggerCatalogDownload(dept) {
     const clientNameInput = document.getElementById('pdfClientName');
@@ -1274,7 +1274,7 @@ async function triggerCatalogDownload(dept) {
 
     if (loadingIndicator) {
         loadingIndicator.style.display = 'block';
-        loadingIndicator.innerText = "⏳ Initializing PDF generation...";
+        loadingIndicator.innerText = "⏳ Initializing download...";
     }
     
     await new Promise(resolve => setTimeout(resolve, 50));
@@ -1309,7 +1309,7 @@ async function triggerCatalogDownload(dept) {
         return;
     }
 
-    showToast("Resolving paths & generating PDF with images...");
+    showToast("Pre-loading images in parallel, please wait...");
 
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
@@ -1351,7 +1351,7 @@ async function triggerCatalogDownload(dept) {
                     canvas.height = img.naturalHeight || 120;
                     const ctx = canvas.getContext("2d");
                     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                    const dataUri = canvas.toDataURL("image/jpeg", 0.90);
+                    const dataUri = canvas.toDataURL("image/jpeg", 0.95); // Original high quality maintained
                     resolve(dataUri);
                 } catch (e) {
                     resolve(null);
@@ -1364,17 +1364,27 @@ async function triggerCatalogDownload(dept) {
         });
     }
 
-    for (let i = 0; i < filtered.length; i++) {
-        let percent = Math.round(((i + 1) / filtered.length) * 100);
+    // STEP 1: Fetch all images in parallel with live counter
+    let loadedCount = 0;
+    const imagePromises = filtered.map(async (item) => {
+        let dataUri = await loadImageWithAllExtensions(item);
+        loadedCount++;
+        let percent = Math.round((loadedCount / filtered.length) * 100);
         if (loadingIndicator) {
-            loadingIndicator.innerText = `⏳ Generating PDF... Processed ${i + 1} of ${filtered.length} items (${percent}%)`;
+            loadingIndicator.innerText = `⏳ Loading Images: ${loadedCount} of ${filtered.length} (${percent}%)`;
         }
-        
-        // Chota sa pause taaki UI thread freeze na ho aur text properly update ho sake
-        if (i % 3 === 0) {
-            await new Promise(r => setTimeout(r, 4));
-        }
+        return { item, dataUri };
+    });
 
+    // Wait for all images to download concurrently
+    const preparedItems = await Promise.all(imagePromises);
+
+    if (loadingIndicator) {
+        loadingIndicator.innerText = "⏳ Building PDF pages...";
+    }
+
+    // STEP 2: Quickly generate PDF pages using pre-loaded images
+    for (let i = 0; i < preparedItems.length; i++) {
         let pageIndex = Math.floor(i / itemsPerPage);
         let pos = i % itemsPerPage;
 
@@ -1382,12 +1392,11 @@ async function triggerCatalogDownload(dept) {
             pdf.addPage();
         }
 
-       if (pos === 0) {
+        if (pos === 0) {
             pdf.setFont("helvetica", "bold");
             pdf.setFontSize(13);
             pdf.setTextColor(15, 23, 42);
             
-            // Agar teeno fields khali hain tabhi Empire Glassware likha hua aayega
             if (!clientName && !clientMobile && markupVal <= 0) {
                 pdf.text("EMPIRE GLASSWARE - " + dept.toUpperCase() + " CATALOG", mX, 9);
             } else {
@@ -1409,6 +1418,7 @@ async function triggerCatalogDownload(dept) {
                 pdf.text(headerText, mX, 18);
             }
         }
+
         let col = pos % cols;
         let row = Math.floor(pos / cols);
         let x = mX + (col * cW);
@@ -1417,7 +1427,10 @@ async function triggerCatalogDownload(dept) {
         pdf.setDrawColor(215, 219, 221);
         pdf.rect(x, y, cW - 2, cH - 2);
 
-        let item = filtered[i];
+        let currentEntry = preparedItems[i];
+        let item = currentEntry.item;
+        let imgDataUri = currentEntry.dataUri;
+
         let pCode = String(item.code || item.Product_Code || '').trim();
         
         let baseRawPrice = Number(item.price || item.Price_Num || 0);
@@ -1430,8 +1443,6 @@ async function triggerCatalogDownload(dept) {
         
         let pUnit = item.unit || item.Price_Unit || '';
         let pDesc = String(item.desc || item.Description || '').trim();
-
-        let imgDataUri = await loadImageWithAllExtensions(item);
 
         if (imgDataUri) {
             try {
@@ -1464,7 +1475,7 @@ async function triggerCatalogDownload(dept) {
     }
 
     if (loadingIndicator) {
-        loadingIndicator.innerText = "⏳ Finalizing PDF download...";
+        loadingIndicator.innerText = "⏳ Finalizing download...";
     }
 
     const pageCount = pdf.internal.getNumberOfPages();
