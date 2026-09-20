@@ -5958,6 +5958,46 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 4,
     "status": "ADV BOOK"
+  },
+  {
+    "code": "SMIC656F-G",
+    "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMIC656C",
+    "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMIC656F",
+    "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP012",
+    "desc": "SHINEMAX 6 PCS SNACK PLATE 6 INCH COLOR BOX-12 SET IN CTN",
+    "price": "220.0",
+    "unit": "FOR 2 PCS",
+    "category": "SAUCER",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "In Stock"
   }
 ];
 
