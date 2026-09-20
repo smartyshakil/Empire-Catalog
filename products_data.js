@@ -5624,7 +5624,7 @@ const PRODUCTS = [
     "desc": "STEEL SLIM BOTTLE 800 ML COLOR BOX MIX COLOR 50",
     "price": "180.0",
     "unit": "FOR 1 PCS",
-    "category": "STEEL BOTTLE",
+    "category": "BOTTLES",
     "department": "vaccum_bottles",
     "moq": 6,
     "status": "In Stock"
@@ -5684,7 +5684,7 @@ const PRODUCTS = [
     "desc": "STEEL SMALL CAP BOTTLE 800 ML COLOR BOX MIX COLOR 50",
     "price": "210.0",
     "unit": "FOR 1 PCS",
-    "category": "STEEL BOTTLE",
+    "category": "BOTTLES",
     "department": "vaccum_bottles",
     "moq": 6,
     "status": "In Stock"
@@ -5724,7 +5724,7 @@ const PRODUCTS = [
     "desc": "STEEL HANDLE  SIPPER 900 ML COLOR BOX 50 PCS CTN",
     "price": "240.0",
     "unit": "FOR 1PCS",
-    "category": "VACCUM BOTTLE",
+    "category": "BOTTLES",
     "department": "vaccum_bottles",
     "moq": 6,
     "status": "In Stock"
@@ -5904,7 +5904,7 @@ const PRODUCTS = [
     "desc": "SOWA PARIS COLA BOTTLE 1000 ML COLOR BOX 40 PCS CTN",
     "price": "340.0",
     "unit": "FOR 1 PCS",
-    "category": "STEEL BOTTLE",
+    "category": "BOTTLES",
     "department": "vaccum_bottles",
     "moq": 6,
     "status": "In Stock"
