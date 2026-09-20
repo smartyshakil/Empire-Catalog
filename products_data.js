@@ -60,16 +60,6 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "JGGC-06",
-    "desc": "GLACIRA JUICE GLASS 220 ML 6 PC COL BOX 12 SET CTN",
-    "price": "160.0",
-    "unit": "FOR 6 PCS",
-    "category": "JUICE GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
     "code": "JGGC-07",
     "desc": "GLACIRA JUICE GLASS 220 ML 6 PC COL BOX 12 SET CTN",
     "price": "160.0",
@@ -5995,6 +5985,16 @@ const PRODUCTS = [
     "price": "220.0",
     "unit": "FOR 2 PCS",
     "category": "SAUCER",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "In Stock"
+  },
+  {
+    "code": "SP-220-L3",
+    "desc": "SOWA PARIS BOROSILICATE JAR WDN LID 220 ML ROUND 3 PC COL BOX 16 SET CTN",
+    "price": "130.0",
+    "unit": "FOR 3PCS",
+    "category": "WOODEN 3 PCS",
     "department": "Glassware",
     "moq": 4,
     "status": "In Stock"
