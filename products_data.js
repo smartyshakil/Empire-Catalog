@@ -5948,6 +5948,16 @@ const PRODUCTS = [
     "department": "vaccum_bottles",
     "moq": 6,
     "status": "In Stock"
+  },
+  {
+    "code": "SMIC656F-B",
+    "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "330.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
   }
 ];
 
