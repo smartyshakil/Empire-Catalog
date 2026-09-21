@@ -2930,16 +2930,6 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "SMTS701-2",
-    "desc": "SHINE MAX TURTLE SET 1 PC COL BOX 72 SET CTN",
-    "price": "65.0",
-    "unit": "FOR 2 PCS",
-    "category": "TURTLE",
-    "department": "Glassware",
-    "moq": 24,
-    "status": "In Stock"
-  },
-  {
     "code": "KRCB006A",
     "desc": "KARBON CANDY JAR BIG 1 PC COL BOX 12 PCS CTN",
     "price": "180.0",
