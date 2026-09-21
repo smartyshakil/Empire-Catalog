@@ -1340,26 +1340,6 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "KRB063C-B",
-    "desc": "KARBON DESSERT BOWL 130 ML 6 PC COL BOX-12 SET CTN",
-    "price": "200.0",
-    "unit": "FOR 6PCS",
-    "category": "BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "KRB063B-B",
-    "desc": "KARBON DESSERT BOWL 130 ML 6 PC COL BOX-12 SET CTN",
-    "price": "200.0",
-    "unit": "FOR 6PCS",
-    "category": "BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
     "code": "SMB253A",
     "desc": "SHINEMAX DESSERT BOWL 150 ML 6 PCS COLOR BOX 12 SET CTN",
     "price": "210.0",
