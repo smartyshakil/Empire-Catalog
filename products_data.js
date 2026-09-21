@@ -2380,16 +2380,6 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "SMWH88-L7",
-    "desc": "SHINEMAX BOROSILICATE LEMON SET 7 PCS COL BOX 6 SET CTN",
-    "price": "550.0",
-    "unit": "FOR 7PCS",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock"
-  },
-  {
     "code": "SMWH76-L7",
     "desc": "SHINE MAX  7 PCS LEMON SET 1550ML+320ML COL BOX 6 SET CTN",
     "price": "550.0",
