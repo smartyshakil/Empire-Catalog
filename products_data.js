@@ -2680,16 +2680,6 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "SMBC20-L1",
-    "desc": "SHINE MAX GLASS SIPPER WOODEN LID 540 ML COL BOX 48 PC CTN",
-    "price": "110.0",
-    "unit": "FOR 1PCS",
-    "category": "SIPPER",
-    "department": "Glassware",
-    "moq": 12,
-    "status": "In Stock"
-  },
-  {
     "code": "SMBC52-L1",
     "desc": "SHINE MAX GLASS SIPPER 480 ML - COL BOX-48 PCS CTN",
     "price": "110.0",
