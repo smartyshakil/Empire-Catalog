@@ -5020,16 +5020,6 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "EMP-177",
-    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
-    "price": "155.0",
-    "unit": "FOR 1 PCS",
-    "category": "DISPENSER",
-    "department": "Kitchenware",
-    "moq": 12,
-    "status": "In Stock"
-  },
-  {
     "code": "EMP-174",
     "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
     "price": "170.0",
