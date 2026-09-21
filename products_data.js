@@ -1210,36 +1210,6 @@ const PRODUCTS = [
     "status": "In Stock"
   },
   {
-    "code": "KRB066A",
-    "desc": "KARBON BOWL 145 ML 6 PCS SET COLOR BOX 12 SET CTN",
-    "price": "160.0",
-    "unit": "FOR 6PCS",
-    "category": "BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "KRB066B",
-    "desc": "KARBON BOWL 145 ML 6 PCS SET COLOR BOX 12 SET CTN",
-    "price": "160.0",
-    "unit": "FOR 6PCS",
-    "category": "BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
-    "code": "KRB066C",
-    "desc": "KARBON BOWL 145 ML 6 PCS SET COLOR BOX 12 SET CTN",
-    "price": "160.0",
-    "unit": "FOR 6PCS",
-    "category": "BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock"
-  },
-  {
     "code": "SMB407",
     "desc": "SHINE MAX BOWL 160 ML 6 PCS COL BOX 12 SET CTN",
     "price": "185.0",
