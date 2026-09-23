@@ -5908,6 +5908,356 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 4,
     "status": "In Stock"
+  },
+  {
+    "code": "SMTC277",
+    "desc": "SHINEMAX TEA MUG 140ML COLOR BOX PACKING 12 SET IN CTN",
+    "price": "178.0",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP021A-L6",
+    "desc": "SHINEMAX SNACK PLATES 6 PCS GIFT BOX PACKING 8 SET IN CTN",
+    "price": "320.0",
+    "unit": "FOR 6 PCS",
+    "category": "PLATES",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP021B-L6",
+    "desc": "SHINEMAX SNACK PLATES 6 PCS GIFT BOX PACKING 8 SET IN CTN",
+    "price": "320.0",
+    "unit": "FOR 6 PCS",
+    "category": "PLATES",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP021D-L6",
+    "desc": "SHINEMAX SNACK PLATES 6 PCS GIFT BOX PACKING 8 SET IN CTN",
+    "price": "320.0",
+    "unit": "FOR 6 PCS",
+    "category": "PLATES",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "LXY4012",
+    "desc": "LANG XU PLAZA WATER GLASS 6 PCS COLOR BOX PACKING 12 SET CTN",
+    "price": "300.0",
+    "unit": "FOR 6 PCS",
+    "category": "WATER GLASS",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "LXY4008-1",
+    "desc": "LANGXU PLAZA WHISKEY GLASS 260 ML 6 PC COL BOX 12 SET CTN",
+    "price": "300.0",
+    "unit": "FOR 6PCS",
+    "category": "WHISKEY GLASS",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMWB1031-1000",
+    "desc": "SHINEMAX BOROSILICATE GLASS WATER BOTTLE 1000 ML COL BOX 24 PCS CTN",
+    "price": "230.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS BOTTLES",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMWB1036-1000",
+    "desc": "SHINEMAX GLASS BOTTLE PUSH CAP 1000 ML COLOR BOX 30 PCS CTN",
+    "price": "180.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS BOTTLES",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBC20-L1",
+    "desc": "SHINE MAX GLASS SIPPER WOODEN LID 540 ML COL BOX 48 PC CTN",
+    "price": "110.0",
+    "unit": "FOR 1PCS",
+    "category": "SIPPER",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "KJG061A",
+    "desc": "KARBON JUG 500 ML COLOR BOX PACKING 24 SET CTN",
+    "price": "90.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "KJG061B",
+    "desc": "KARBON JUG 500 ML COLOR BOX PACKING 24 SET CTN",
+    "price": "90.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "KJG062A",
+    "desc": "KARBON JUG 500 ML COLOR BOX PACKING 24 SET CTN",
+    "price": "90.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "KJG062B",
+    "desc": "KARBON JUG 500 ML COLOR BOX PACKING 24 SET CTN",
+    "price": "90.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBC18-L1",
+    "desc": "SHINE MAX GLASS SIPPER 380 ML - COL BOX-72 PCS CTN",
+    "price": "100.0",
+    "unit": "FOR 1PCS",
+    "category": "SIPPER",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTC247-2A",
+    "desc": "SHINEMAX SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
+    "price": "130.0",
+    "unit": "FOR 6PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTC247-2B",
+    "desc": "SHINEMAX SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
+    "price": "130.0",
+    "unit": "FOR 6PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTC247-2C",
+    "desc": "SHINEMAX SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
+    "price": "130.0",
+    "unit": "FOR 6PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBB02-3600-BE",
+    "desc": "SHINE MAX DISPENSER PRINTED 3600 ML WITH STAND 12 SET CTN",
+    "price": "750.0",
+    "unit": "FOR 1 PCS",
+    "category": "DISPENSER",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBC47",
+    "desc": "SHINEMAX DOUBLE WALL MILK MUG 400 ML COL BOX 60 PCS CTN",
+    "price": "130.0",
+    "unit": "FOR 1 PCS",
+    "category": "BEER MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP7201A",
+    "desc": "SHINEMAX LADDU PLATE 200 ML COLOR GIFT BOX 12 SET CTN",
+    "price": "230.0",
+    "unit": "FOR 6 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP7201B",
+    "desc": "SHINEMAX LADDU PLATE 200 ML COLOR GIFT BOX 12 SET CTN",
+    "price": "230.0",
+    "unit": "FOR 6 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP7201C",
+    "desc": "SHINEMAX LADDU PLATE 200 ML COLOR GIFT BOX 12 SET CTN",
+    "price": "230.0",
+    "unit": "FOR 6 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP7201D",
+    "desc": "SHINEMAX LADDU PLATE 200 ML COLOR GIFT BOX 12 SET CTN",
+    "price": "230.0",
+    "unit": "FOR 6 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTC237-2",
+    "desc": "SHINE MAX SMALL TEA MUG 93 ML 6 PC COL BOX 24 SET CTN",
+    "price": "145.0",
+    "unit": "FOR 6PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0312A-B",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "950",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0312B-B",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "950",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0312C-B",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "950",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0314A-B",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "950",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0314B-B",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "950",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0314C-B",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "950",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0391-BE",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "700",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0391-BT",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "700",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0393-BE",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "850",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0393-BL",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "850",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SWG0393-BT",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "850",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
   }
 ];
 
