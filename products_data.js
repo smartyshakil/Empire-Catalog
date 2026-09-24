@@ -5924,7 +5924,7 @@ const PRODUCTS = [
     "desc": "SHINEMAX SNACK PLATES 6 PCS GIFT BOX PACKING 8 SET IN CTN",
     "price": "320.0",
     "unit": "FOR 6 PCS",
-    "category": "PLATES",
+    "category": "PLATE SET",
     "department": "Glassware",
     "moq": 4,
     "status": "ADV BOOK"
@@ -5934,7 +5934,7 @@ const PRODUCTS = [
     "desc": "SHINEMAX SNACK PLATES 6 PCS GIFT BOX PACKING 8 SET IN CTN",
     "price": "320.0",
     "unit": "FOR 6 PCS",
-    "category": "PLATES",
+    "category": "PLATE SET",
     "department": "Glassware",
     "moq": 4,
     "status": "ADV BOOK"
@@ -5944,7 +5944,7 @@ const PRODUCTS = [
     "desc": "SHINEMAX SNACK PLATES 6 PCS GIFT BOX PACKING 8 SET IN CTN",
     "price": "320.0",
     "unit": "FOR 6 PCS",
-    "category": "PLATES",
+    "category": "PLATE SET",
     "department": "Glassware",
     "moq": 4,
     "status": "ADV BOOK"
@@ -6152,7 +6152,7 @@ const PRODUCTS = [
   {
     "code": "SWG0312A-B",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "950",
+    "price": "950.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
@@ -6162,7 +6162,7 @@ const PRODUCTS = [
   {
     "code": "SWG0312B-B",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "950",
+    "price": "950.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
@@ -6172,7 +6172,7 @@ const PRODUCTS = [
   {
     "code": "SWG0312C-B",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "950",
+    "price": "950.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
@@ -6182,7 +6182,7 @@ const PRODUCTS = [
   {
     "code": "SWG0314A-B",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "950",
+    "price": "950.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
@@ -6192,7 +6192,7 @@ const PRODUCTS = [
   {
     "code": "SWG0314B-B",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "950",
+    "price": "950.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
@@ -6202,7 +6202,7 @@ const PRODUCTS = [
   {
     "code": "SWG0314C-B",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "950",
+    "price": "950.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
@@ -6212,7 +6212,7 @@ const PRODUCTS = [
   {
     "code": "SWG0391-BE",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "700",
+    "price": "700.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
@@ -6222,7 +6222,7 @@ const PRODUCTS = [
   {
     "code": "SWG0391-BT",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "700",
+    "price": "700.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
@@ -6232,7 +6232,7 @@ const PRODUCTS = [
   {
     "code": "SWG0393-BE",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "850",
+    "price": "850.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
@@ -6242,7 +6242,7 @@ const PRODUCTS = [
   {
     "code": "SWG0393-BL",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "850",
+    "price": "850.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
@@ -6252,11 +6252,331 @@ const PRODUCTS = [
   {
     "code": "SWG0393-BT",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "850",
+    "price": "850.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMBC44",
+    "desc": "SHINEMAX DOUBLE WALL MILK MUG 400 ML COL BOX 60 PCS CTN",
+    "price": "160.0",
+    "unit": "FOR 1PCS",
+    "category": "BEER MUG",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "KRZB345B",
+    "desc": "KARBON SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
+    "price": "145.0",
+    "unit": "FOR 6PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "KRZB345C",
+    "desc": "KARBON SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
+    "price": "145.0",
+    "unit": "FOR 6PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "KRZB345D",
+    "desc": "KARBON SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
+    "price": "145.0",
+    "unit": "FOR 6PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "KRZB345E",
+    "desc": "KARBON SMALL TEA MUG 90ML COLOR BOX-24 SETS IN CTN",
+    "price": "145.0",
+    "unit": "FOR 6PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP021C-L6",
+    "desc": "SHINEMAX SNACK PLATES 6 PCS GIFT BOX PACKING 8 SET IN CTN",
+    "price": "320",
+    "unit": "FOR 6 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMWH74-L7",
+    "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1400ML+320ML GIFT BOX 6 SET CTN",
+    "price": "550",
+    "unit": "FOR 7PCS",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMWH74-L7B",
+    "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1400ML+320ML GIFT BOX 6 SET CTN",
+    "price": "600",
+    "unit": "FOR 7PCS",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMWH75-L7B",
+    "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1400ML+320ML GIFT BOX 6 SET CTN",
+    "price": "700",
+    "unit": "FOR 7PCS",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "LXY4009",
+    "desc": "LANG XU TWISTED JUICE GLASS 190 ML COLOR BOX 12 SET CTN",
+    "price": "210",
+    "unit": "FOR 6 PCS",
+    "category": "JUICE GLASS",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMWH11-L7B",
+    "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1500ML+400ML GIFT BOX 6 SET CTN",
+    "price": "725",
+    "unit": "FOR 7 PCS",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTC283A",
+    "desc": "SHINEMAX SMALL TEA MUG 105 ML COLOR BOX 16 SET CTN",
+    "price": "145",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTC283B",
+    "desc": "SHINEMAX SMALL TEA MUG 105 ML COLOR BOX 16 SET CTN",
+    "price": "145",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTC283C",
+    "desc": "SHINEMAX SMALL TEA MUG 105 ML COLOR BOX 16 SET CTN",
+    "price": "145",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTC286A",
+    "desc": "SHINEMAX SMALL TEA MUG 105 ML COLOR BOX 16 SET CTN",
+    "price": "145",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTC286B",
+    "desc": "SHINEMAX SMALL TEA MUG 105 ML COLOR BOX 16 SET CTN",
+    "price": "145",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTC289",
+    "desc": "SHINEMAX SMALL TEA MUG 82 ML COLOR BOX 16 SET CTN",
+    "price": "145",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 8,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP021A-L7",
+    "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
+    "price": "700",
+    "unit": "FOR 7 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP021B-L7",
+    "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
+    "price": "700",
+    "unit": "FOR 7 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP021C-L7",
+    "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
+    "price": "700",
+    "unit": "FOR 7 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP021D-L7",
+    "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
+    "price": "700",
+    "unit": "FOR 7 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP021A-L7B",
+    "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
+    "price": "825",
+    "unit": "FOR 7 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP021B-L7B",
+    "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
+    "price": "825",
+    "unit": "FOR 7 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP021C-L7B",
+    "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
+    "price": "825",
+    "unit": "FOR 7 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMP021D-L7B",
+    "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
+    "price": "825",
+    "unit": "FOR 7 PCS",
+    "category": "PLATE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMIC632",
+    "desc": "SHINEMAX ICE CREAM BOWL 6 PCS SET 170 ML COLOR BOX 12 SET CTN",
+    "price": "320",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMJC138-2",
+    "desc": "SHINEMAX BEER MUG 400 ML 2 PC COLOR BOX 18 SET CTN",
+    "price": "150",
+    "unit": "FOR 2 PCS",
+    "category": "BEER MUG",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTG373A-L3",
+    "desc": "SHINEMAX CANDY BOWL SET / PICKLE SET GIFT BOX PACK 12 SET CTN",
+    "price": "280",
+    "unit": "FOR 3 PCS",
+    "category": "CANDY BOWL SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTG373B-L3",
+    "desc": "SHINEMAX CANDY BOWL SET / PICKLE SET GIFT BOX PACK 12 SET CTN",
+    "price": "280",
+    "unit": "FOR 3 PCS",
+    "category": "CANDY BOWL SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMTG373C-L3",
+    "desc": "SHINEMAX CANDY BOWL SET / PICKLE SET GIFT BOX PACK 12 SET CTN",
+    "price": "280",
+    "unit": "FOR 3 PCS",
+    "category": "CANDY BOWL SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMB214",
+    "desc": "SHINEMAX SQUARE BOWL 610 ML 2 PC COLOR BOX 18 SET CTN",
+    "price": "150",
+    "unit": "FOR 2 PCS",
+    "category": "GLASS PLAIN BOWL",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMWH65-L8",
+    "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET IN CTN",
+    "price": "1140",
+    "unit": "FOR 1 SET",
+    "category": "KETTLE SET",
+    "department": "Glassware",
+    "moq": 4,
     "status": "ADV BOOK"
   }
 ];
