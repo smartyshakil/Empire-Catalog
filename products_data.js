@@ -6312,7 +6312,7 @@ const PRODUCTS = [
   {
     "code": "SMP021C-L6",
     "desc": "SHINEMAX SNACK PLATES 6 PCS GIFT BOX PACKING 8 SET IN CTN",
-    "price": "320",
+    "price": "320.0",
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -6322,7 +6322,7 @@ const PRODUCTS = [
   {
     "code": "SMWH74-L7",
     "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1400ML+320ML GIFT BOX 6 SET CTN",
-    "price": "550",
+    "price": "550.0",
     "unit": "FOR 7PCS",
     "category": "LEMON SET",
     "department": "Glassware",
@@ -6332,7 +6332,7 @@ const PRODUCTS = [
   {
     "code": "SMWH74-L7B",
     "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1400ML+320ML GIFT BOX 6 SET CTN",
-    "price": "600",
+    "price": "600.0",
     "unit": "FOR 7PCS",
     "category": "LEMON SET",
     "department": "Glassware",
@@ -6342,7 +6342,7 @@ const PRODUCTS = [
   {
     "code": "SMWH75-L7B",
     "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1400ML+320ML GIFT BOX 6 SET CTN",
-    "price": "700",
+    "price": "700.0",
     "unit": "FOR 7PCS",
     "category": "LEMON SET",
     "department": "Glassware",
@@ -6352,7 +6352,7 @@ const PRODUCTS = [
   {
     "code": "LXY4009",
     "desc": "LANG XU TWISTED JUICE GLASS 190 ML COLOR BOX 12 SET CTN",
-    "price": "210",
+    "price": "210.0",
     "unit": "FOR 6 PCS",
     "category": "JUICE GLASS",
     "department": "Glassware",
@@ -6362,7 +6362,7 @@ const PRODUCTS = [
   {
     "code": "SMWH11-L7B",
     "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1500ML+400ML GIFT BOX 6 SET CTN",
-    "price": "725",
+    "price": "725.0",
     "unit": "FOR 7 PCS",
     "category": "LEMON SET",
     "department": "Glassware",
@@ -6372,7 +6372,7 @@ const PRODUCTS = [
   {
     "code": "SMTC283A",
     "desc": "SHINEMAX SMALL TEA MUG 105 ML COLOR BOX 16 SET CTN",
-    "price": "145",
+    "price": "145.0",
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
     "department": "Glassware",
@@ -6382,7 +6382,7 @@ const PRODUCTS = [
   {
     "code": "SMTC283B",
     "desc": "SHINEMAX SMALL TEA MUG 105 ML COLOR BOX 16 SET CTN",
-    "price": "145",
+    "price": "145.0",
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
     "department": "Glassware",
@@ -6392,7 +6392,7 @@ const PRODUCTS = [
   {
     "code": "SMTC283C",
     "desc": "SHINEMAX SMALL TEA MUG 105 ML COLOR BOX 16 SET CTN",
-    "price": "145",
+    "price": "145.0",
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
     "department": "Glassware",
@@ -6402,7 +6402,7 @@ const PRODUCTS = [
   {
     "code": "SMTC286A",
     "desc": "SHINEMAX SMALL TEA MUG 105 ML COLOR BOX 16 SET CTN",
-    "price": "145",
+    "price": "145.0",
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
     "department": "Glassware",
@@ -6412,7 +6412,7 @@ const PRODUCTS = [
   {
     "code": "SMTC286B",
     "desc": "SHINEMAX SMALL TEA MUG 105 ML COLOR BOX 16 SET CTN",
-    "price": "145",
+    "price": "145.0",
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
     "department": "Glassware",
@@ -6422,7 +6422,7 @@ const PRODUCTS = [
   {
     "code": "SMTC289",
     "desc": "SHINEMAX SMALL TEA MUG 82 ML COLOR BOX 16 SET CTN",
-    "price": "145",
+    "price": "145.0",
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
     "department": "Glassware",
@@ -6432,7 +6432,7 @@ const PRODUCTS = [
   {
     "code": "SMP021A-L7",
     "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
-    "price": "700",
+    "price": "700.0",
     "unit": "FOR 7 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -6442,7 +6442,7 @@ const PRODUCTS = [
   {
     "code": "SMP021B-L7",
     "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
-    "price": "700",
+    "price": "700.0",
     "unit": "FOR 7 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -6452,7 +6452,7 @@ const PRODUCTS = [
   {
     "code": "SMP021C-L7",
     "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
-    "price": "700",
+    "price": "700.0",
     "unit": "FOR 7 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -6462,7 +6462,7 @@ const PRODUCTS = [
   {
     "code": "SMP021D-L7",
     "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
-    "price": "700",
+    "price": "700.0",
     "unit": "FOR 7 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -6472,7 +6472,7 @@ const PRODUCTS = [
   {
     "code": "SMP021A-L7B",
     "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
-    "price": "825",
+    "price": "825.0",
     "unit": "FOR 7 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -6482,7 +6482,7 @@ const PRODUCTS = [
   {
     "code": "SMP021B-L7B",
     "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
-    "price": "825",
+    "price": "825.0",
     "unit": "FOR 7 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -6492,7 +6492,7 @@ const PRODUCTS = [
   {
     "code": "SMP021C-L7B",
     "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
-    "price": "825",
+    "price": "825.0",
     "unit": "FOR 7 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -6502,7 +6502,7 @@ const PRODUCTS = [
   {
     "code": "SMP021D-L7B",
     "desc": "SHINEMAX SNACK SET 7 PCS SET GIFT BOX PACK 4 SET CTN",
-    "price": "825",
+    "price": "825.0",
     "unit": "FOR 7 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -6512,7 +6512,7 @@ const PRODUCTS = [
   {
     "code": "SMIC632",
     "desc": "SHINEMAX ICE CREAM BOWL 6 PCS SET 170 ML COLOR BOX 12 SET CTN",
-    "price": "320",
+    "price": "320.0",
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
@@ -6522,7 +6522,7 @@ const PRODUCTS = [
   {
     "code": "SMJC138-2",
     "desc": "SHINEMAX BEER MUG 400 ML 2 PC COLOR BOX 18 SET CTN",
-    "price": "150",
+    "price": "150.0",
     "unit": "FOR 2 PCS",
     "category": "BEER MUG",
     "department": "Glassware",
@@ -6532,7 +6532,7 @@ const PRODUCTS = [
   {
     "code": "SMTG373A-L3",
     "desc": "SHINEMAX CANDY BOWL SET / PICKLE SET GIFT BOX PACK 12 SET CTN",
-    "price": "280",
+    "price": "280.0",
     "unit": "FOR 3 PCS",
     "category": "CANDY BOWL SET",
     "department": "Glassware",
@@ -6542,7 +6542,7 @@ const PRODUCTS = [
   {
     "code": "SMTG373B-L3",
     "desc": "SHINEMAX CANDY BOWL SET / PICKLE SET GIFT BOX PACK 12 SET CTN",
-    "price": "280",
+    "price": "280.0",
     "unit": "FOR 3 PCS",
     "category": "CANDY BOWL SET",
     "department": "Glassware",
@@ -6552,7 +6552,7 @@ const PRODUCTS = [
   {
     "code": "SMTG373C-L3",
     "desc": "SHINEMAX CANDY BOWL SET / PICKLE SET GIFT BOX PACK 12 SET CTN",
-    "price": "280",
+    "price": "280.0",
     "unit": "FOR 3 PCS",
     "category": "CANDY BOWL SET",
     "department": "Glassware",
@@ -6562,7 +6562,7 @@ const PRODUCTS = [
   {
     "code": "SMB214",
     "desc": "SHINEMAX SQUARE BOWL 610 ML 2 PC COLOR BOX 18 SET CTN",
-    "price": "150",
+    "price": "150.0",
     "unit": "FOR 2 PCS",
     "category": "GLASS PLAIN BOWL",
     "department": "Glassware",
@@ -6572,12 +6572,42 @@ const PRODUCTS = [
   {
     "code": "SMWH65-L8",
     "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET IN CTN",
-    "price": "1140",
+    "price": "1140.0",
     "unit": "FOR 1 SET",
     "category": "KETTLE SET",
     "department": "Glassware",
     "moq": 4,
     "status": "ADV BOOK"
+  },
+  {
+    "code": "SMB253B",
+    "desc": "SHINEMAX DESSERT BOWL 150 ML 6 PCS COLOR BOX 12 SET CTN",
+    "price": "210.0",
+    "unit": "FOR 6 PCS",
+    "category": "BOWL SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "In Stock"
+  },
+  {
+    "code": "SMH76-B",
+    "desc": "SHINEMAX SQUARE BOROSILICATE JUG 1500 ML COLOR BOX PACKING 24 PCS CTN",
+    "price": "280.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "In Stock"
+  },
+  {
+    "code": "SMH76-G",
+    "desc": "SHINEMAX SQUARE BOROSILICATE JUG 1500 ML COLOR BOX PACKING 24 PCS CTN",
+    "price": "280.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "In Stock"
   }
 ];
 
