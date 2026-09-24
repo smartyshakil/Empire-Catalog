@@ -6581,8 +6581,8 @@ const PRODUCTS = [
   },
   {
     "code": "SMB253B",
-    "desc": "SHINEMAX DESSERT BOWL 150 ML 6 PCS COLOR BOX 12 SET CTN",
-    "price": "210.0",
+    "desc": "SHINEMAX DESSERT BOWL 150 ML 6 PCS COLOR BOX 12 SET",
+    "price": "210",
     "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
@@ -6591,8 +6591,8 @@ const PRODUCTS = [
   },
   {
     "code": "SMH76-B",
-    "desc": "SHINEMAX SQUARE BOROSILICATE JUG 1500 ML COLOR BOX PACKING 24 PCS CTN",
-    "price": "280.0",
+    "desc": "SHINEMAX SQUARE BOROSILICATE JUG 1500 ML COLOR BOX 24 PCS CTN",
+    "price": "280",
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
@@ -6601,8 +6601,8 @@ const PRODUCTS = [
   },
   {
     "code": "SMH76-G",
-    "desc": "SHINEMAX SQUARE BOROSILICATE JUG 1500 ML COLOR BOX PACKING 24 PCS CTN",
-    "price": "280.0",
+    "desc": "SHINEMAX SQUARE BOROSILICATE JUG 1500 ML COLOR BOX 24 PCS CTN",
+    "price": "280",
     "unit": "FOR 1 PCS",
     "category": "GLASS JUG",
     "department": "Glassware",
