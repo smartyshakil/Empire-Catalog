@@ -7012,212 +7012,212 @@ const PRODUCTS = [
   {
     "code": "KRY403A",
     "desc": "KARBON WINE SHOT GLASS 43 ML 6 PCS COLOR BOX 24 SET CTN",
-    "price": "130",
+    "price": "130.0",
     "unit": "FOR 6 PCS",
     "category": "SHOT GLASS",
     "department": "Glassware",
     "moq": 12,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "KRY403B",
     "desc": "KARBON WINE SHOT GLASS 43 ML 6 PCS COLOR BOX 24 SET CTN",
-    "price": "130",
+    "price": "130.0",
     "unit": "FOR 6 PCS",
     "category": "SHOT GLASS",
     "department": "Glassware",
     "moq": 12,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "KRY403C",
     "desc": "KARBON WINE SHOT GLASS 43 ML 6 PCS COLOR BOX 24 SET CTN",
-    "price": "130",
+    "price": "130.0",
     "unit": "FOR 6 PCS",
     "category": "SHOT GLASS",
     "department": "Glassware",
     "moq": 12,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "KRY403E",
     "desc": "KARBON WINE SHOT GLASS 43 ML 6 PCS COLOR BOX 24 SET CTN",
-    "price": "130",
+    "price": "130.0",
     "unit": "FOR 6 PCS",
     "category": "SHOT GLASS",
     "department": "Glassware",
     "moq": 12,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "KRWB1059-1100",
     "desc": "KARBON FRIDGE BOTTLE 1100 ML WITH HANDLE 1 PC COLOR BOX 30 PCS CTN",
-    "price": "110",
+    "price": "110.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
     "moq": 10,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "KRWB1059-1100-B",
     "desc": "KARBON FRIDGE BOTTLE 1100 ML WITH HANDLE 1 PC COLOR BOX 30 PCS CTN",
-    "price": "130",
+    "price": "130.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
     "moq": 10,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "KRWB1059-1100-G",
     "desc": "KARBON FRIDGE BOTTLE 1100 ML WITH HANDLE 1 PC COLOR BOX 30 PCS CTN",
-    "price": "130",
+    "price": "130.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
     "moq": 10,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "KRWB1049-1100",
     "desc": "KARBON FRIDGE BOTTLE 1100 ML WITH HANDLE 1 PC COLOR BOX 30 PCS CTN",
-    "price": "110",
+    "price": "110.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
     "moq": 10,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "KRWB1049-1100-B",
     "desc": "KARBON FRIDGE BOTTLE 1100 ML WITH HANDLE 1 PC COLOR BOX 30 PCS CTN",
-    "price": "130",
+    "price": "130.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
     "moq": 10,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "KRWB1049-1100-G",
     "desc": "KARBON FRIDGE BOTTLE 1100 ML WITH HANDLE 1 PC COLOR BOX 30 PCS CTN",
-    "price": "130",
+    "price": "130.0",
     "unit": "FOR 1 PCS",
     "category": "GLASS BOTTLE",
     "department": "Glassware",
     "moq": 10,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "SWG0381A-G",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "1250",
+    "price": "1250.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "SWG0383A-G",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "1300",
+    "price": "1300.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "SWG0383B-G",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "1300",
+    "price": "1300.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "SWG0383C-G",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "1300",
+    "price": "1300.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "SWG0383D-G",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "1300",
+    "price": "1300.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "SWG0386B-GL2",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 18 SET CTN",
-    "price": "550",
+    "price": "550.0",
     "unit": "FOR 2 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 18,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "SWG0411A-G",
     "desc": "SHINE MAX COLORED WHISKEY AND BEER GLASS COMBO 2+2 GIFT BOX 6 SET CTN",
-    "price": "1000",
+    "price": "1000.0",
     "unit": "FOR 4 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "SWG0411B-G",
     "desc": "SHINE MAX COLORED WHISKEY AND BEER GLASS COMBO 2+2 GIFT BOX 6 SET CTN",
-    "price": "1000",
+    "price": "1000.0",
     "unit": "FOR 4 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "SWG0412A-G",
     "desc": "SHINE MAX COLORED WHISKEY AND BEER GLASS COMBO 2+2 GIFT BOX 6 SET CTN",
-    "price": "1050",
+    "price": "1050.0",
     "unit": "FOR 4 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "SWG0412B-G",
     "desc": "SHINE MAX COLORED WHISKEY AND BEER GLASS COMBO 2+2 GIFT BOX 6 SET CTN",
-    "price": "1050",
+    "price": "1050.0",
     "unit": "FOR 4 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   },
   {
     "code": "SMBJ-615",
     "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX",
-    "price": "725",
+    "price": "725.0",
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "In Stock"
+    "status": "ADV BOOK"
   }
 ];
 
