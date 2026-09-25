@@ -7258,6 +7258,36 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 4,
     "status": "ADV BOOK"
+  },
+  {
+    "code": "SMIC656A",
+    "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "260",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMIC656B",
+    "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "260",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
+  },
+  {
+    "code": "SMIC656E",
+    "desc": "SHINE MAX ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "260",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
   }
 ];
 
