@@ -7222,7 +7222,7 @@ const PRODUCTS = [
   {
     "code": "TW-1",
     "desc": "DIAMONDS FOOD CONTAINER RECTANGLE 1030+620-350ML COLOR BOX 12 SET CTN",
-    "price": "340",
+    "price": "340.0",
     "unit": "FOR 3 PCS",
     "category": "GLASS LUNCH BOX",
     "department": "Glassware",
@@ -7232,7 +7232,7 @@ const PRODUCTS = [
   {
     "code": "TW-2",
     "desc": "DIAMONDS FOOD CONTAINER ROUND 880+600-325ML COLOR BOX 12 SET CTN",
-    "price": "325",
+    "price": "325.0",
     "unit": "FOR 3 PCS",
     "category": "GLASS LUNCH BOX",
     "department": "Glassware",
@@ -7242,12 +7242,22 @@ const PRODUCTS = [
   {
     "code": "TW-3",
     "desc": "DIAMONDS FOOD CONTAINER SQUARE 800+500-320ML COLOR BOX 12 SET CTN",
-    "price": "335",
+    "price": "335.0",
     "unit": "FOR 3 PCS",
     "category": "GLASS LUNCH BOX",
     "department": "Glassware",
     "moq": 12,
     "status": "In Stock"
+  },
+  {
+    "code": "SMIC656J",
+    "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
+    "price": "260.0",
+    "unit": "FOR 6 PCS",
+    "category": "ICE CREAM BOWL SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "ADV BOOK"
   }
 ];
 
