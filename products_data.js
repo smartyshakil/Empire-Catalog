@@ -337,7 +337,7 @@ const PRODUCTS = [
     "category": "WATER GLASS",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "JS5139-1",
@@ -487,7 +487,7 @@ const PRODUCTS = [
     "category": "WATER GLASS",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "DSKB032-3",
@@ -847,7 +847,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 8,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMV3021-G",
@@ -857,7 +857,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 8,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMV3031-B",
@@ -867,7 +867,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 8,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0391G-T",
@@ -877,7 +877,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0391-GL",
@@ -887,7 +887,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0370A-G",
@@ -907,7 +907,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0393-GL",
@@ -917,7 +917,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0370B-G",
@@ -927,7 +927,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0370C-G",
@@ -937,7 +937,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0372A-G",
@@ -947,7 +947,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0372B-G",
@@ -957,7 +957,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0372C-G",
@@ -967,7 +967,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0393-GE",
@@ -977,17 +977,17 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0312B-G",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "900.0",
+    "price": "950.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0374C-G",
@@ -997,7 +997,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0374D-G",
@@ -1007,7 +1007,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0374E-G",
@@ -1017,7 +1017,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0376C-G",
@@ -1027,7 +1027,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0376D-G",
@@ -1037,7 +1037,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0376E-G",
@@ -1047,7 +1047,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0312A-G",
@@ -1057,7 +1057,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0314A-G",
@@ -1067,7 +1067,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0314B-G",
@@ -1077,7 +1077,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0314C-G",
@@ -1087,7 +1087,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SWG0312C-G",
@@ -1097,7 +1097,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "LXY5003",
@@ -1357,7 +1357,7 @@ const PRODUCTS = [
     "category": "BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMB253A-G",
@@ -1367,7 +1367,7 @@ const PRODUCTS = [
     "category": "BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMB253B-B",
@@ -1377,7 +1377,7 @@ const PRODUCTS = [
     "category": "BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMB253C-B",
@@ -1387,7 +1387,7 @@ const PRODUCTS = [
     "category": "BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMB253C-G",
@@ -1397,7 +1397,7 @@ const PRODUCTS = [
     "category": "BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMIC632-L2B",
@@ -1477,7 +1477,7 @@ const PRODUCTS = [
     "category": "PLATE SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "LXP104-4",
@@ -1487,7 +1487,7 @@ const PRODUCTS = [
     "category": "PLATE SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "LXP108",
@@ -1497,7 +1497,7 @@ const PRODUCTS = [
     "category": "PLATE SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMP501",
@@ -1507,7 +1507,7 @@ const PRODUCTS = [
     "category": "PLATE SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMP509-3",
@@ -1717,7 +1717,7 @@ const PRODUCTS = [
     "category": "BEER MUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "GCBE-04",
@@ -1777,7 +1777,7 @@ const PRODUCTS = [
     "category": "BEER MUG",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "LXZB15",
@@ -1817,7 +1817,7 @@ const PRODUCTS = [
     "category": "BEER MUG",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "LXZB20",
@@ -1827,7 +1827,7 @@ const PRODUCTS = [
     "category": "BEER MUG",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "LXZB02",
@@ -1857,7 +1857,7 @@ const PRODUCTS = [
     "category": "BEER MUG",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "KRZB406",
@@ -1927,7 +1927,7 @@ const PRODUCTS = [
     "category": "TEA MUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMTC369B",
@@ -1937,7 +1937,7 @@ const PRODUCTS = [
     "category": "TEA MUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMTC369C",
@@ -1947,7 +1947,7 @@ const PRODUCTS = [
     "category": "TEA MUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "KRZB48A",
@@ -2117,7 +2117,7 @@ const PRODUCTS = [
     "category": "TEA MUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "GCT007",
@@ -2137,7 +2137,7 @@ const PRODUCTS = [
     "category": "TEA MUG",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "KRZB143",
@@ -3897,7 +3897,7 @@ const PRODUCTS = [
     "category": "ASH TRAY",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "BW602-320",
@@ -3917,7 +3917,7 @@ const PRODUCTS = [
     "category": "ASH TRAY",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBW602-320",
@@ -4377,7 +4377,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 24,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMP011-L7",
@@ -4407,7 +4407,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 24,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMP011-L7B",
@@ -4427,7 +4427,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-713-G1",
@@ -4437,7 +4437,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-713-G2",
@@ -4447,7 +4447,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-613",
@@ -4467,7 +4467,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-608",
@@ -4487,7 +4487,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-604",
@@ -4497,7 +4497,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-605",
@@ -4507,7 +4507,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-609",
@@ -4517,7 +4517,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-601",
@@ -4547,7 +4547,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-602",
@@ -4557,7 +4557,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMP051A-L7B",
@@ -4617,7 +4617,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-714-G",
@@ -4627,7 +4627,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 8,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-714-G1",
@@ -4637,7 +4637,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 8,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-714-G2",
@@ -4647,7 +4647,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 8,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-719-S",
@@ -4657,7 +4657,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-714-S",
@@ -4667,7 +4667,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 8,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-714-S1",
@@ -4677,7 +4677,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 8,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-714-S2",
@@ -4687,7 +4687,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 8,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-720-G",
@@ -4707,7 +4707,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 8,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-708-S",
@@ -4717,7 +4717,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 8,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-720-S",
@@ -4737,7 +4737,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 8,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-715-G",
@@ -4747,7 +4747,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-715-G1",
@@ -4757,7 +4757,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-715-G2",
@@ -4767,7 +4767,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-716-S",
@@ -4777,7 +4777,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-701-S",
@@ -4797,7 +4797,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-715-S",
@@ -4807,7 +4807,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-715-S1",
@@ -4817,7 +4817,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-715-S2",
@@ -4827,7 +4827,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-703-G",
@@ -4847,7 +4847,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-707-G",
@@ -4867,7 +4867,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-706-S",
@@ -4897,7 +4897,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-705-S",
@@ -4907,7 +4907,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "SMBJ-712-S",
@@ -4917,7 +4917,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK"
+    "status": "In Stock"
   },
   {
     "code": "EMP-99",
@@ -7262,7 +7262,7 @@ const PRODUCTS = [
   {
     "code": "SMIC656A",
     "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "260",
+    "price": "260.0",
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
@@ -7272,7 +7272,7 @@ const PRODUCTS = [
   {
     "code": "SMIC656B",
     "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "260",
+    "price": "260.0",
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
@@ -7282,7 +7282,7 @@ const PRODUCTS = [
   {
     "code": "SMIC656E",
     "desc": "SHINE MAX ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "260",
+    "price": "260.0",
     "unit": "FOR 6 PCS",
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
