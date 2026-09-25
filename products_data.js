@@ -7218,6 +7218,36 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 12,
     "status": "ADV BOOK"
+  },
+  {
+    "code": "TW-1",
+    "desc": "DIAMONDS FOOD CONTAINER RECTANGLE 1030+620-350ML COLOR BOX 12 SET CTN",
+    "price": "340",
+    "unit": "FOR 3 PCS",
+    "category": "GLASS LUNCH BOX",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "In Stock"
+  },
+  {
+    "code": "TW-2",
+    "desc": "DIAMONDS FOOD CONTAINER ROUND 880+600-325ML COLOR BOX 12 SET CTN",
+    "price": "325",
+    "unit": "FOR 3 PCS",
+    "category": "GLASS LUNCH BOX",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "In Stock"
+  },
+  {
+    "code": "TW-3",
+    "desc": "DIAMONDS FOOD CONTAINER SQUARE 800+500-320ML COLOR BOX 12 SET CTN",
+    "price": "335",
+    "unit": "FOR 3 PCS",
+    "category": "GLASS LUNCH BOX",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "In Stock"
   }
 ];
 
