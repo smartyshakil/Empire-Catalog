@@ -1749,24 +1749,27 @@ function filterAdvanceBookItems() {
     }
 }
 // ==========================================
-// NEW ARRIVALS QUICK FILTER FUNCTION
+// NEW ARRIVALS QUICK FILTER FUNCTION (Only In Stock)
 // ==========================================
 function filterNewArrivalItems() {
     currentSelectedDepartment = "ALL";
     currentSelectedCategory = "ALL";
 
-    // Department aur category ke active states hata dein
+    // Department aur category के active states hata dein
     document.querySelectorAll(".dept-tab-btn").forEach(btn => btn.classList.remove("active"));
     document.querySelectorAll(".cat-pill").forEach(p => p.classList.remove("active"));
 
-    // Sirf wahi products filter karein jinka new_arrival 'YES' hai
+    // Sirf wahi products filter karein jinka new_arrival 'YES' ho AUR status 'IN STOCK' ho (Adv Book exclude ho)
     const newArrivalFiltered = PRODUCTS.filter(p => {
         const isNew = (p.new_arrival || '').toUpperCase().trim();
-        return isNew === 'YES';
+        const status = (p.status || '').toUpperCase().trim();
+        
+        // Check karein ki New Arrival 'YES' ho aur status mein 'ADV' na ho (yani In Stock ho)
+        return isNew === 'YES' && !status.includes('ADV');
     });
 
     renderProducts(newArrivalFiltered);
-    showToast("Showing Diwali Special New Arrivals!");
+    showToast("Showing In-Stock Diwali New Arrivals!");
 
     // Smooth scroll to catalog grid
     const mainContent = document.querySelector(".main-catalog-content");
