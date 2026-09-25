@@ -1749,6 +1749,33 @@ function filterAdvanceBookItems() {
     }
 }
 // ==========================================
+// NEW ARRIVALS QUICK FILTER FUNCTION
+// ==========================================
+function filterNewArrivalItems() {
+    currentSelectedDepartment = "ALL";
+    currentSelectedCategory = "ALL";
+
+    // Department aur category ke active states hata dein
+    document.querySelectorAll(".dept-tab-btn").forEach(btn => btn.classList.remove("active"));
+    document.querySelectorAll(".cat-pill").forEach(p => p.classList.remove("active"));
+
+    // Sirf wahi products filter karein jinka new_arrival 'YES' hai
+    const newArrivalFiltered = PRODUCTS.filter(p => {
+        const isNew = (p.new_arrival || '').toUpperCase().trim();
+        return isNew === 'YES';
+    });
+
+    renderProducts(newArrivalFiltered);
+    showToast("Showing Diwali Special New Arrivals!");
+
+    // Smooth scroll to catalog grid
+    const mainContent = document.querySelector(".main-catalog-content");
+    if (mainContent) {
+        const topPos = mainContent.getBoundingClientRect().top + window.pageYOffset - 110;
+        window.scrollTo({ top: Math.max(0, topPos), behavior: 'smooth' });
+    }
+}
+// ==========================================
 // SAFE SEO & SCHEMA INJECTOR
 // ==========================================
 function updatePageSEO(item) {
