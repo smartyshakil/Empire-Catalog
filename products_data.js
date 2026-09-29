@@ -876,7 +876,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -887,7 +887,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -898,7 +898,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -909,7 +909,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -920,7 +920,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -976,17 +976,6 @@ const PRODUCTS = [
     "department": "Glassware",
     "moq": 6,
     "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SWG0370A-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "850.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "ADV BOOK",
     "new_arrival": "YES"
   },
   {
@@ -1294,7 +1283,7 @@ const PRODUCTS = [
     "category": "SHOT SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -1481,7 +1470,7 @@ const PRODUCTS = [
     "category": "BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -1580,7 +1569,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -1591,7 +1580,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -1602,7 +1591,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -1613,7 +1602,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -1921,7 +1910,7 @@ const PRODUCTS = [
     "category": "BEER MUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2361,7 +2350,7 @@ const PRODUCTS = [
     "category": "TEA MUG",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2372,7 +2361,7 @@ const PRODUCTS = [
     "category": "TEA MUG",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2471,7 +2460,7 @@ const PRODUCTS = [
     "category": "LID MUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2559,18 +2548,7 @@ const PRODUCTS = [
     "category": "KETTLE SET",
     "department": "Glassware",
     "moq": 1,
-    "status": "ADV BOOK",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH64-L8G",
-    "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET IN CTN",
-    "price": "990.0",
-    "unit": "FOR 1 SET",
-    "category": "KETTLE SET",
-    "department": "Glassware",
-    "moq": 1,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2581,7 +2559,7 @@ const PRODUCTS = [
     "category": "KETTLE SET",
     "department": "Glassware",
     "moq": 1,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2592,7 +2570,7 @@ const PRODUCTS = [
     "category": "KETTLE SET",
     "department": "Glassware",
     "moq": 1,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2625,7 +2603,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2702,7 +2680,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2713,7 +2691,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2724,7 +2702,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2768,7 +2746,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2779,7 +2757,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2790,7 +2768,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2801,7 +2779,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -2834,7 +2812,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2845,7 +2823,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2856,7 +2834,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 1,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2867,7 +2845,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 1,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2878,7 +2856,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 1,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -2889,7 +2867,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 1,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3236,7 +3214,7 @@ const PRODUCTS = [
   {
     "code": "SPS023-L7",
     "desc": "SHINE MAX 3 LEG PUDDING SET COL BOX 6 SET IN CTN",
-    "price": "320.0",
+    "price": "340.0",
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
@@ -3247,7 +3225,7 @@ const PRODUCTS = [
   {
     "code": "SPS024-L7",
     "desc": "SHINE MAX 3 LEG PUDDING SET COL BOX 6 SET IN CTN",
-    "price": "320.0",
+    "price": "340.0",
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
@@ -3258,7 +3236,7 @@ const PRODUCTS = [
   {
     "code": "SPS025-L7",
     "desc": "SHINE MAX 3 LEG PUDDING SET COL BOX 6 SET IN CTN",
-    "price": "320.0",
+    "price": "340.0",
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
@@ -3351,7 +3329,7 @@ const PRODUCTS = [
     "category": "PUDDING SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -3395,7 +3373,7 @@ const PRODUCTS = [
     "category": "PUDDING SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3406,7 +3384,7 @@ const PRODUCTS = [
     "category": "PUDDING SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3417,7 +3395,7 @@ const PRODUCTS = [
     "category": "PUDDING SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3428,7 +3406,7 @@ const PRODUCTS = [
     "category": "PUDDING SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3450,7 +3428,7 @@ const PRODUCTS = [
     "category": "PUDDING SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -3461,7 +3439,7 @@ const PRODUCTS = [
     "category": "PUDDING SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -3472,7 +3450,7 @@ const PRODUCTS = [
     "category": "PUDDING SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3483,7 +3461,7 @@ const PRODUCTS = [
     "category": "PUDDING SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3494,7 +3472,7 @@ const PRODUCTS = [
     "category": "PUDDING SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3857,7 +3835,7 @@ const PRODUCTS = [
     "category": "DISPENSER",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3879,7 +3857,7 @@ const PRODUCTS = [
     "category": "DISPENSER",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3912,7 +3890,7 @@ const PRODUCTS = [
     "category": "DISPENSER",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3923,7 +3901,7 @@ const PRODUCTS = [
     "category": "DISPENSER",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3934,7 +3912,7 @@ const PRODUCTS = [
     "category": "DISPENSER",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3945,7 +3923,7 @@ const PRODUCTS = [
     "category": "DISPENSER",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3956,7 +3934,7 @@ const PRODUCTS = [
     "category": "DISPENSER",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3967,7 +3945,7 @@ const PRODUCTS = [
     "category": "DISPENSER",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -3989,7 +3967,7 @@ const PRODUCTS = [
     "category": "DISPENSER",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4000,7 +3978,7 @@ const PRODUCTS = [
     "category": "DISPENSER",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4077,7 +4055,7 @@ const PRODUCTS = [
     "category": "GLASS PLAIN BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -4312,17 +4290,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SMBW602-320",
-    "desc": "SHINE MAX SQAURE BOWL WITH LID 320 ML COL BOX 48 PCS CTN",
-    "price": "95.0",
-    "unit": "FOR 1PCS",
-    "category": "GLASS LUNCH BOX",
-    "department": "Glassware",
-    "moq": 24,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "SMBW601-375",
     "desc": "SHINE MAX ROUND BOWL WITH LID 375 ML COL BOX 48 PCS CTN",
     "price": "100.0",
@@ -4330,7 +4297,7 @@ const PRODUCTS = [
     "category": "GLASS LUNCH BOX",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4341,7 +4308,7 @@ const PRODUCTS = [
     "category": "GLASS LUNCH BOX",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4356,17 +4323,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "KJG071A",
-    "desc": "KARBON JUG 1000 ML COLOR BOX PACKING 12 SET CTN",
-    "price": "120.0",
-    "unit": "FOR 1 PCS",
-    "category": "GLASS JUG",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "ADV BOOK",
-    "new_arrival": "YES"
-  },
-  {
     "code": "KJG071B",
     "desc": "KARBON JUG 1000 ML COLOR BOX PACKING 12 SET CTN",
     "price": "120.0",
@@ -4374,7 +4330,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4385,7 +4341,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4396,7 +4352,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4407,7 +4363,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4418,7 +4374,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4429,7 +4385,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4440,7 +4396,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4473,7 +4429,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4484,7 +4440,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4495,7 +4451,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4506,7 +4462,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4517,7 +4473,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4528,7 +4484,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4539,7 +4495,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4550,7 +4506,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4561,7 +4517,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4572,7 +4528,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -4583,7 +4539,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4594,18 +4550,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656I-",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC\nCOL BOX 12 SET CTN",
-    "price": "260.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4616,7 +4561,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4627,7 +4572,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4638,7 +4583,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4649,7 +4594,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4660,7 +4605,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4671,7 +4616,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4682,7 +4627,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4693,7 +4638,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4704,7 +4649,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4715,7 +4660,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4726,7 +4671,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4737,7 +4682,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4748,7 +4693,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4759,7 +4704,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4770,7 +4715,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4781,7 +4726,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4792,7 +4737,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4803,7 +4748,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4825,7 +4770,7 @@ const PRODUCTS = [
     "category": "SNACK SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4836,7 +4781,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 24,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4858,7 +4803,7 @@ const PRODUCTS = [
     "category": "SNACK SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4902,7 +4847,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4924,7 +4869,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4979,7 +4924,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -4990,7 +4935,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -5023,7 +4968,7 @@ const PRODUCTS = [
     "category": "SNACK SET",
     "department": "Glassware",
     "moq": 1,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -5034,7 +4979,7 @@ const PRODUCTS = [
     "category": "SNACK SET",
     "department": "Glassware",
     "moq": 1,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -5045,7 +4990,7 @@ const PRODUCTS = [
     "category": "SNACK SET",
     "department": "Glassware",
     "moq": 1,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -5056,7 +5001,7 @@ const PRODUCTS = [
     "category": "SNACK SET",
     "department": "Glassware",
     "moq": 1,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -5067,7 +5012,7 @@ const PRODUCTS = [
     "category": "SNACK SET",
     "department": "Glassware",
     "moq": 1,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -5166,7 +5111,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -5199,7 +5144,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -5265,7 +5210,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -5320,7 +5265,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -5342,7 +5287,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -5364,7 +5309,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -5375,7 +5320,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6442,7 +6387,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -6453,7 +6398,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -6464,7 +6409,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -6475,7 +6420,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -7443,7 +7388,7 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7630,7 +7575,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7982,7 +7927,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -7993,7 +7938,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -8004,7 +7949,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -8015,7 +7960,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   }
 ];
