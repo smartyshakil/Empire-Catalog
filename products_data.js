@@ -3346,7 +3346,7 @@ const PRODUCTS = [
   {
     "code": "SPS023-L7B",
     "desc": "SHINEMAX 3 LEG BLACK PUDDING SET-6 SETS IN CARTOON",
-    "price": "500.0",
+    "price": "475.0",
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
@@ -3357,7 +3357,7 @@ const PRODUCTS = [
   {
     "code": "SPS024-L7B",
     "desc": "SHINEMAX 3 LEG BLACK PUDDING SET-6 SETS IN CARTOON",
-    "price": "500.0",
+    "price": "475.0",
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
@@ -3368,7 +3368,7 @@ const PRODUCTS = [
   {
     "code": "SPS025-L7B",
     "desc": "SHINEMAX 3 LEG BLACK PUDDING SET-6 SETS IN CARTOON",
-    "price": "500.0",
+    "price": "475.0",
     "unit": "FOR 7PCS",
     "category": "PUDDING SET",
     "department": "Glassware",
