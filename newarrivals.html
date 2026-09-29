@@ -75,16 +75,8 @@
             align-items: center;
             gap: 6px;
             border-bottom: 2px solid #f59e0b;
-            animation: flashEffect 1.5s infinite ease-in-out;
         }
 
-        @keyframes flashEffect {
-            0% { opacity: 1; }
-            50% { opacity: 0.6; }
-            100% { opacity: 1; }
-        }
-
-        /* Top Trust Strip */
         .top-trust-bar {
             background: #060b18;
             color: #cbd5e1;
@@ -92,7 +84,6 @@
             font-weight: 600;
             text-align: center;
             padding: 4px 8px;
-            letter-spacing: 0.4px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -100,7 +91,6 @@
         }
         .top-trust-bar span { color: #f59e0b; }
 
-        /* Premium Header */
         header { 
             background: var(--header-bg); 
             color: white; 
@@ -117,7 +107,6 @@
             font-family: 'Poppins', sans-serif;
             font-size: 15px; 
             font-weight: 700; 
-            letter-spacing: 0.5px; 
             color: #ffffff;
         }
         .header-title p { font-size: 10px; color: #94a3b8; font-weight: 500; }
@@ -163,17 +152,68 @@
         }
         .access-badge.wholesale { background: var(--accent-green); color: #ffffff; border-color: var(--accent-green); }
 
-        /* Main Container */
+        /* Catalog Layout with Sidebar */
         .catalog-container {
-            max-width: 1400px;
-            margin: 14px auto;
+            display: flex;
+            gap: 20px;
+            max-width: 1550px;
+            margin: 14px auto 0 auto;
             padding: 0 14px;
+            align-items: flex-start;
+        }
+
+        .sidebar {
+            width: 230px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 70px;
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 14px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--card-shadow);
+            max-height: calc(100vh - 90px);
+            overflow-y: auto;
+        }
+        .sidebar-header {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            padding-left: 4px;
+        }
+        .category-pills-bar {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .cat-pill {
+            padding: 9px 12px;
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: left;
+        }
+        .cat-pill:hover { background: #f1f5f9; border-color: #cbd5e1; }
+        .cat-pill.active {
+            background: var(--primary-dark);
+            color: #ffffff;
+            border-color: var(--primary-dark);
+        }
+
+        .main-catalog-content {
+            flex: 1;
+            min-width: 0;
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
 
-        /* Search Bar */
         .controls-wrapper {
             background: #ffffff;
             border: 1px solid var(--border-color);
@@ -192,7 +232,7 @@
             background: #f8fafc; 
         }
 
-        /* Product Grid & Cards (Same as index.html) */
+        /* Product Grid & Cards */
         .grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
@@ -269,14 +309,136 @@
         .cart-info-total span { color: #b91c1c; }
         .send-btn { background: #25D366; color: white; border: none; padding: 10px 18px; border-radius: 30px; font-weight: 700; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); }
 
-        /* Modals & Drawers */
-        .order-drawer-backdrop, .product-detail-backdrop, .lightbox-modal, .product-detail-modal { display: none; }
-        /* Include standard drawer and modal CSS classes from script structure */
-    </style>
+        /* Toast */
+        .toast { position: fixed; bottom: 75px; left: 50%; transform: translateX(-50%) translateY(30px); background: rgba(15, 23, 42, 0.9); color: white; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; opacity: 0; pointer-events: none; transition: all 0.25s ease; z-index: 150; }
+        .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-messaging-compat.js"></script>
+        /* Lightbox */
+        .lightbox-modal { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15, 23, 42, 0.95); z-index: 1000; justify-content: center; align-items: center; flex-direction: column; }
+        .lightbox-modal img { max-width: 92vw; max-height: 80vh; object-fit: contain; border-radius: 10px; }
+        .lightbox-close { position: absolute; top: 18px; right: 22px; color: white; font-size: 32px; cursor: pointer; z-index: 1001; }
+
+        /* Order Summary Drawer Styles */
+        .order-drawer-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(2px);
+            z-index: 200;
+        }
+        .order-drawer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-radius: 20px 20px 0 0;
+            padding: 20px 16px 24px 16px;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
+            z-index: 201;
+            transform: translateY(100%);
+            transition: transform 0.25s ease-out;
+        }
+        .order-drawer.open { transform: translateY(0); }
+        .drawer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .drawer-header-left { display: flex; align-items: center; gap: 10px; }
+        .drawer-header h3 { font-size: 15px; font-weight: 700; color: var(--primary-dark); }
+        .clear-cart-btn { background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 12px; cursor: pointer; }
+        .drawer-close { font-size: 24px; color: var(--text-muted); cursor: pointer; border: none; background: none; font-weight: bold; }
+        .drawer-items-list { overflow-y: auto; margin: 12px 0; display: flex; flex-direction: column; gap: 8px; max-height: 50vh; }
+        .drawer-item-row { display: flex; justify-content: space-between; align-items: center; background: #f8fafc; border: 1px solid var(--border-color); padding: 8px 12px; border-radius: 10px; }
+        .drawer-footer { padding-top: 12px; border-top: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 12px; }
+        .drawer-total-row { display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 800; color: var(--primary-dark); }
+        .drawer-confirm-btn { background: #25D366; color: white; border: none; padding: 12px; border-radius: 30px; font-weight: 700; font-size: 14px; cursor: pointer; text-align: center; display: flex; justify-content: center; align-items: center; gap: 8px; }
+
+        /* Product Detail Modal Styles */
+        .product-detail-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(3px);
+            z-index: 700;
+        }
+        .product-detail-modal {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: min(92vw, 750px);
+            max-height: 88vh;
+            overflow-y: auto;
+            background: #ffffff;
+            border-radius: 18px;
+            z-index: 701;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+        }
+        .product-detail-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding: 18px;
+        }
+        .product-detail-image-box {
+            background: #f8fafc;
+            border-radius: 12px;
+            min-height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-detail-image-box img { max-width: 100%; max-height: 320px; object-fit: contain; }
+        .product-detail-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 12px 0;
+        }
+        .product-detail-meta-grid div {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px;
+            font-size: 10.5px;
+            color: #64748b;
+        }
+        .product-detail-meta-grid b { display: block; color: #0f172a; font-size: 11.5px; margin-top: 2px; }
+        .product-detail-close-btn {
+            position: absolute;
+            right: 12px;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 0;
+            background: #f1f5f9;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 860px) {
+            .catalog-container { flex-direction: column; gap: 10px; padding: 0 10px; }
+            .sidebar { width: 100%; position: sticky; top: 50px; z-index: 85; padding: 8px 10px; max-height: none; overflow-x: auto; }
+            .category-pills-bar { flex-direction: row; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+            .cat-pill { flex-shrink: 0; width: auto; border-radius: 20px; }
+            .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+            .product-detail-inner { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
@@ -296,19 +458,28 @@
         </div>
         <div class="header-right-actions">
             <a href="index.html" class="header-action-btn main-btn">🏠 Main Catalog</a>
-            <button id="accessBadge" class="access-badge" onclick="promptAccessCode()">
+            <button id="accessBadge" class="access-badge" onclick="promptAccessCode()" title="Wholesale Access">
                 🔑 <span id="tierBtnText">Wholesale Access</span>
             </button>
         </div>
     </header>
 
     <div class="catalog-container">
-        <div class="controls-wrapper">
-            <div class="search-box-container">
-                <input type="text" id="searchInput" placeholder="🔍 Search new arrival code, name..." oninput="renderNewArrivalsGrid()">
+        <!-- Left Sidebar Categories -->
+        <aside class="sidebar">
+            <div class="sidebar-header">📁 Categories</div>
+            <div class="category-pills-bar" id="categoryPillsBar"></div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-catalog-content">
+            <div class="controls-wrapper">
+                <div class="search-box-container">
+                    <input type="text" id="searchInput" placeholder="🔍 Search new arrival code, name..." oninput="filterNewArrivalsGrid()">
+                </div>
             </div>
-        </div>
-        <div class="grid" id="productGrid"></div>
+            <div class="grid" id="productGrid"></div>
+        </main>
     </div>
 
     <!-- Permanent Frozen Trust Bar -->
@@ -341,46 +512,172 @@
         </button>
     </div>
 
-    <!-- Order Summary Drawer & Modals -->
+    <!-- Order Summary Drawer -->
     <div id="drawerBackdrop" class="order-drawer-backdrop" onclick="closeOrderDrawer()"></div>
-    <div id="orderDrawer" class="order-drawer">...</div>
+    <div id="orderDrawer" class="order-drawer">
+        <div class="drawer-header">
+            <div class="drawer-header-left">
+                <h3>📋 Order Summary</h3>
+                <button class="clear-cart-btn" onclick="clearFullCart()">Clear All</button>
+            </div>
+            <button class="drawer-close" onclick="closeOrderDrawer()">&times;</button>
+        </div>
+        <div class="drawer-items-list" id="drawerItemsList"></div>
+        <div class="drawer-footer">
+            <div class="drawer-total-row">
+                <span>Estimated Total:</span>
+                <span id="drawerEstTotal" style="color: #b91c1c;">Rs. 0</span>
+            </div>
+            <button class="drawer-confirm-btn" onclick="sendWhatsAppOrder()">
+                <span>💬 Confirm & Send on WhatsApp</span>
+            </button>
+        </div>
+    </div>
 
     <div id="toast" class="toast">Code Copied!</div>
 
-    <!-- Image Lightbox Modal -->
+    <!-- Lightbox Modal -->
     <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
         <img id="lightboxImg" src="" alt="Full View">
         <div id="lightboxTitle" class="lightbox-title"></div>
     </div>
 
-    <!-- Product Detail Modal (With Flyer & Share) -->
+    <!-- Product Detail Modal -->
     <div id="productDetailBackdrop" class="product-detail-backdrop" onclick="closeProductDetail()"></div>
-    <div id="productDetailModal" class="product-detail-modal">...</div>
+    <div id="productDetailModal" class="product-detail-modal">
+        <button class="product-detail-close-btn" onclick="closeProductDetail()">&times;</button>
+        <div class="product-detail-inner">
+            <div class="product-detail-image-box">
+                <img id="pdetailImg" src="" alt="Product Detail Image">
+            </div>
+            <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 6px;">
+                    <span id="pdetailCode" class="p-code" style="font-size:14px;"></span>
+                    <div style="display: flex; gap: 6px;">
+                        <button onclick="openFlyerModal()" style="background: #0f172a; color: #fbbf24; border: 1px solid #fbbf24; padding: 4px 10px; border-radius: 14px; font-size: 11px; font-weight: 700; cursor: pointer;">🎨 Flyer</button>
+                        <button onclick="shareCurrentProduct()" style="background: #25D366; color: #fff; border: none; padding: 4px 10px; border-radius: 14px; font-size: 11px; font-weight: 700; cursor: pointer;">📲 Share</button>
+                    </div>
+                </div>
+                <h3 id="pdetailTitle" style="font-size:16px; margin:8px 0; color:#0f172a;"></h3>
+                <div id="pdetailPrice" class="p-price" style="font-size:18px;"></div>
+                <div class="product-detail-meta-grid">
+                    <div>📦 Packing<b id="pdetailPacking">—</b></div>
+                    <div>📋 Minimum Order<b id="pdetailMoq">—</b></div>
+                    <div>🟢 Status<b id="pdetailStock">In Stock</b></div>
+                    <div>🏷️ Department<b id="pdetailDept">—</b></div>
+                </div>
+                <p id="pdetailDesc" style="font-size:11.5px; color:#64748b; line-height:1.5; margin-bottom:14px;"></p>
+                <button id="pdetailAddBtn" class="btn-detail" style="width:100%; background:#0f172a; color:#fff; padding:10px; font-size:12px;">+ Add Minimum to Order</button>
+            </div>
+        </div>
+        <div style="border-top: 1px solid #e2e8f0; padding: 14px 18px; background: #f8fafc;">
+            <div style="font-size: 12px; font-weight: 700; color: #0f172a; margin-bottom: 10px;">🔥 More from this Category:</div>
+            <div id="pdetailSimilarList" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px;"></div>
+        </div>
+    </div>
 
+    <!-- Flyer Modal -->
+    <div id="flyerModalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.7); z-index:800;" onclick="closeFlyerModal()"></div>
+    <div id="flyerModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:92%; max-width:440px; background:#ffffff; border-radius:16px; padding:18px; z-index:801;">
+        <h3 style="font-size:15px; font-weight:800; color:#0f172a; margin-bottom:12px;">🎨 Make Custom Client Flyer</h3>
+        <input type="number" id="flyerCustomPrice" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; margin-bottom:8px;" oninput="onFlyerPriceChange()">
+        <input type="text" id="flyerCustomMoq" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; margin-bottom:8px;">
+        <input type="text" id="flyerCustomFirm" placeholder="Firm Name" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; margin-bottom:12px;">
+        <canvas id="flyerCanvas" style="display:none;"></canvas>
+        <div style="display:flex; gap:8px;">
+            <button onclick="downloadFlyerImage()" style="flex:1; background:#0f172a; color:#fff; border:none; padding:10px; border-radius:10px; font-weight:700; cursor:pointer;">📥 Download</button>
+            <button onclick="shareFlyerDirect()" style="flex:1; background:#25D366; color:#fff; border:none; padding:10px; border-radius:10px; font-weight:700; cursor:pointer;">📲 Share</button>
+        </div>
+    </div>
+
+    <!-- Wholesale Access Modal -->
+    <div id="accessModalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.7); z-index:500;" onclick="closeAccessModal()"></div>
+    <div id="accessModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:90%; max-width:380px; background:#ffffff; border-radius:16px; padding:22px 18px; z-index:501; text-align:center;">
+        <button onclick="closeAccessModal()" style="position:absolute; right:12px; top:12px; width:28px; height:28px; border-radius:50%; border:none; background:#f1f5f9; color:#64748b; font-size:18px; font-weight:700; cursor:pointer;">&times;</button>
+        <h3 style="font-size:16px; font-weight:800; color:#0f172a; margin-bottom:6px;">🔑 Wholesale B2B Access</h3>
+        <input type="text" id="accessCodeInput" placeholder="Enter Access Code" style="width:100%; padding:10px; border-radius:10px; border:1.5px solid #cbd5e1; font-size:13px; font-weight:700; text-align:center; text-transform:uppercase; outline:none; margin-bottom:10px;">
+        <button onclick="applyAccessCodeFromModal()" style="width:100%; background:#0f172a; color:#ffffff; border:none; padding:10px; border-radius:10px; font-size:13px; font-weight:700; cursor:pointer;">Apply Code</button>
+    </div>
+
+    <!-- Yahan script.js use kiya hai jo aapka main working script hai -->
     <script src="products_data.js"></script>
     <script src="script.js"></script>
     <script>
-        // Specific custom renderer for newarrivals.html to load only New Arrival In-Stock items
-        function renderNewArrivalsGrid() {
-            const query = document.getElementById("searchInput").value.toLowerCase().trim();
-            if (typeof PRODUCTS === 'undefined') return;
+        let currentNewArrivalCat = "ALL";
 
-            const filtered = PRODUCTS.filter(p => {
+        function getNewArrivalsList() {
+            if (typeof PRODUCTS === 'undefined') return [];
+            return PRODUCTS.filter(p => {
                 const isNew = (p.new_arrival || '').toUpperCase().trim();
                 const status = (p.status || '').toUpperCase().trim();
-                const matchesNew = (isNew === 'YES' && !status.includes('ADV'));
+                return (isNew === 'YES' && !status.includes('ADV'));
+            });
+        }
+
+        function initNewArrivalCategories() {
+            const pillsBar = document.getElementById("categoryPillsBar");
+            if (!pillsBar) return;
+
+            const newArrivals = getNewArrivalsList();
+            const totalCount = newArrivals.length;
+
+            pillsBar.innerHTML = `
+                <div class="cat-pill active" onclick="selectNewArrivalCat('ALL', this)">📁 All Categories (${totalCount})</div>
+            `;
+
+            const categories = [...new Set(newArrivals.map(p => p.category).filter(Boolean))];
+            const sortedCategories = categories.sort((a, b) => {
+                if (typeof MASTER_SORT_ORDER === 'undefined') return 0;
+                let indexA = MASTER_SORT_ORDER.indexOf(a);
+                let indexB = MASTER_SORT_ORDER.indexOf(b);
+                if (indexA === -1) indexA = 999;
+                if (indexB === -1) indexB = 999;
+                return indexA - indexB;
+            });
+
+            sortedCategories.forEach(cat => {
+                const count = newArrivals.filter(p => p.category === cat).length;
+                const pill = document.createElement("div");
+                pill.className = "cat-pill";
+                pill.innerText = `${cat} (${count})`;
+                pill.onclick = () => selectNewArrivalCat(cat, pill);
+                pillsBar.appendChild(pill);
+            });
+        }
+
+        function selectNewArrivalCat(cat, element) {
+            currentNewArrivalCat = cat;
+            document.querySelectorAll(".cat-pill").forEach(p => p.classList.remove("active"));
+            if (element) element.classList.add("active");
+            filterNewArrivalsGrid();
+        }
+
+        function filterNewArrivalsGrid() {
+            const query = (document.getElementById("searchInput")?.value || "").toLowerCase().trim();
+            const newArrivals = getNewArrivalsList();
+
+            const filtered = newArrivals.filter(p => {
+                const matchesCat = (currentNewArrivalCat === "ALL") || (p.category === currentNewArrivalCat);
                 const matchesQuery = p.code.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query);
-                return matchesNew && matchesQuery;
+                return matchesCat && matchesQuery;
             });
 
             renderProducts(filtered);
         }
 
-        document.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener("DOMContentLoaded", () => {
+            updateAccessHeader();
             if (typeof PRODUCTS !== 'undefined') {
-                renderNewArrivalsGrid();
+                initNewArrivalCategories();
+                filterNewArrivalsGrid();
                 updateCartBar();
+            } else {
+                setTimeout(() => {
+                    initNewArrivalCategories();
+                    filterNewArrivalsGrid();
+                    updateCartBar();
+                }, 300);
             }
         });
     </script>
