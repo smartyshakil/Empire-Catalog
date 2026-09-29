@@ -19,9 +19,10 @@ let currentSelectedDepartment = "ALL";
 let currentSelectedCategory = "ALL";
 
 // ==========================================
-// 1. TIERED ACCESS CODE SYSTEM (Secure Instant Obfuscation)
+// 1. TIERED ACCESS CODE SYSTEM (Updated with SHAKIL786)
 // ==========================================
 const _K_MASTER = [69, 77, 80, 73, 82, 69, 50, 48, 50, 54].map(c => String.fromCharCode(c)).join(''); // EMPIRE2026
+const _K_SHAKIL = "SHAKIL786"; // Naya Master Code
 const _K_TIER45 = [69, 77, 80, 73, 82, 69, 52, 53].map(c => String.fromCharCode(c)).join('');         // EMPIRE45
 const _K_TIER40 = [69, 77, 80, 73, 82, 69, 52, 48].map(c => String.fromCharCode(c)).join('');         // EMPIRE40
 
@@ -63,10 +64,10 @@ function applyAccessCodeFromModal() {
 
     const dailyCode = getTodayDailyCode();
 
-    if (userCode === _K_MASTER || userCode === dailyCode) {
+    if (userCode === _K_MASTER || userCode === _K_SHAKIL || userCode === dailyCode) {
         localStorage.setItem("empire_access_tier", "50");
         localStorage.setItem("empire_access_code", userCode);
-        alert("🟢 Wholesale Access Activated!");
+        alert("🟢 Master Wholesale Access Activated (MOQ Bypassed)!");
     } else if (userCode === _K_TIER45) {
         localStorage.setItem("empire_access_tier", "45");
         localStorage.setItem("empire_access_code", userCode);
@@ -84,7 +85,6 @@ function applyAccessCodeFromModal() {
     closeAccessModal();
     location.reload();
 }
-
 function getAccessMultiplier() {
     const tier = localStorage.getItem("empire_access_tier");
     if (tier === "50") return 1;         // Flat 50% Less = Base Master Price (1x)
@@ -118,13 +118,17 @@ function updateAccessHeader() {
 // 2. DYNAMIC MOQ RULES (Price-Based Minimums)
 // ==========================================
 function getMinSetLimit(price, department = 'glassware', productObj = null) {
+    const activeTier = localStorage.getItem("empire_access_tier");
+    if (activeTier === "50") {
+        return 1; // Master code active hone par MOQ bypass
+    }
+
     if (productObj && productObj.moq !== undefined && productObj.moq !== null && !isNaN(productObj.moq)) {
         let val = parseInt(productObj.moq, 10);
         if (val > 0) return val;
     }
 
     const dept = (department || '').toLowerCase();
-
     if (dept.includes('vaccum') || dept.includes('bottle')) {
         if (price < 100) return 100;
         return 12;
@@ -134,7 +138,6 @@ function getMinSetLimit(price, department = 'glassware', productObj = null) {
     if (price <= 399) return 4;
     return 2;
 }
-
 // ==========================================
 // 3. CARTON PACKING RESOLVER & DISPLAY CHIPS
 // ==========================================
