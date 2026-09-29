@@ -1012,40 +1012,7 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SWG0370C-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "850.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SWG0372A-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "850.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SWG0372B-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "850.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SWG0372C-G",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
     "price": "850.0",
     "unit": "FOR 6 PCS",
@@ -1078,17 +1045,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SWG0374C-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "900.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SWG0374D-G",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
     "price": "900.0",
@@ -1100,40 +1056,7 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SWG0374E-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "900.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SWG0376C-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "925.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SWG0376D-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "925.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SWG0376E-G",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
     "price": "925.0",
     "unit": "FOR 6 PCS",
