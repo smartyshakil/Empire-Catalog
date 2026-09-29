@@ -67,7 +67,7 @@ function applyAccessCodeFromModal() {
     if (userCode === _K_MASTER || userCode === _K_SHAKIL || userCode === dailyCode) {
         localStorage.setItem("empire_access_tier", "50");
         localStorage.setItem("empire_access_code", userCode);
-        alert("🟢 Master Wholesale Access Activated (MOQ Bypassed)!");
+        alert("🟢 Master Wholesale Access Activated!");
     } else if (userCode === _K_TIER45) {
         localStorage.setItem("empire_access_tier", "45");
         localStorage.setItem("empire_access_code", userCode);
@@ -117,10 +117,13 @@ function updateAccessHeader() {
 // ==========================================
 // 2. DYNAMIC MOQ RULES (Price-Based Minimums)
 // ==========================================
+// ==========================================
 function getMinSetLimit(price, department = 'glassware', productObj = null) {
-    const activeTier = localStorage.getItem("empire_access_tier");
-    if (activeTier === "50") {
-        return 1; // Master code active hone par MOQ bypass
+    const activeCode = localStorage.getItem("empire_access_code");
+    
+    // Sirf SHAKIL786 code hone par hi MOQ bypass hoga, EMPIRE2026 par standard rules lagenge
+    if (activeCode === "SHAKIL786") {
+        return 1; 
     }
 
     if (productObj && productObj.moq !== undefined && productObj.moq !== null && !isNaN(productObj.moq)) {
@@ -138,7 +141,6 @@ function getMinSetLimit(price, department = 'glassware', productObj = null) {
     if (price <= 399) return 4;
     return 2;
 }
-// ==========================================
 // 3. CARTON PACKING RESOLVER & DISPLAY CHIPS
 // ==========================================
 function getCtnPackingSize(item) {
