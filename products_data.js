@@ -7907,6 +7907,28 @@ const PRODUCTS = [
     "moq": 6,
     "status": "In Stock",
     "new_arrival": "YES"
+  },
+  {
+    "code": "HP-550-1",
+    "desc": "STEEL CANISTER INNER GLASS 550 ML 1 PC COLOR BOX 24 PCS CTN",
+    "price": "110",
+    "unit": "FOR 1 PCS",
+    "category": "CANISTER",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "HP-750-1",
+    "desc": "STEEL CANISTER INNER GLASS 750 ML 1 PC COLOR BOX 24 PCS CTN",
+    "price": "145",
+    "unit": "FOR 1 PCS",
+    "category": "CANISTER",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": "YES"
   }
 ];
 
