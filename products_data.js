@@ -7929,6 +7929,83 @@ const PRODUCTS = [
     "moq": 6,
     "status": "In Stock",
     "new_arrival": "YES"
+  },
+  {
+    "code": "FLASK-2L",
+    "desc": "TRAVEL POT 2000 ML WITH COLOR BOX 15 PCS CTN",
+    "price": "1200",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 2,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "ARROWS-500",
+    "desc": "ARROWS COLA BOTTLE 500 ML COLOR BOX 36 PCS CTN",
+    "price": "190",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 12,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "DESEO-1500",
+    "desc": "DESEO 1500 ML COLA BOTTLE WITH COLOR BOX 20 PCS CTN",
+    "price": "530",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "FLORA-750",
+    "desc": "FLORA 750 ML BOTTLE WITH COLOR BOX 55 PCS CTN",
+    "price": "190",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 12,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "SPORT-500",
+    "desc": "SPORT 500 ML BOTTLE WITH COLOR BOX 36 PCS CTN",
+    "price": "150",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 12,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "MEGA-750",
+    "desc": "MEGASONIC STEEL FLASK 750 ML WITH POUCH COL BOX 24 PCS CTN",
+    "price": "240",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "MEGA-1000",
+    "desc": "MEGASONIC STEEL FLASK 1000 ML WITH POUCH COL BOX 24 PCS CTN",
+    "price": "290",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": "YES"
   }
 ];
 
