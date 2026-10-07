@@ -6376,7 +6376,7 @@ const PRODUCTS = [
     "category": "TEA MUG",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6387,7 +6387,7 @@ const PRODUCTS = [
     "category": "PLATE SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6398,7 +6398,7 @@ const PRODUCTS = [
     "category": "PLATE SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6409,7 +6409,7 @@ const PRODUCTS = [
     "category": "PLATE SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6420,7 +6420,7 @@ const PRODUCTS = [
     "category": "WATER GLASS",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6431,7 +6431,7 @@ const PRODUCTS = [
     "category": "WHISKEY GLASS",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -6442,7 +6442,7 @@ const PRODUCTS = [
     "category": "GLASS BOTTLES",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6453,7 +6453,7 @@ const PRODUCTS = [
     "category": "GLASS BOTTLES",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6464,7 +6464,7 @@ const PRODUCTS = [
     "category": "SIPPER",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -6475,7 +6475,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6486,7 +6486,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6497,7 +6497,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6508,7 +6508,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6519,7 +6519,7 @@ const PRODUCTS = [
     "category": "SIPPER",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6530,7 +6530,7 @@ const PRODUCTS = [
     "category": "TEA MUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -6541,7 +6541,7 @@ const PRODUCTS = [
     "category": "TEA MUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -6552,7 +6552,7 @@ const PRODUCTS = [
     "category": "TEA MUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -6563,7 +6563,7 @@ const PRODUCTS = [
     "category": "DISPENSER",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6574,7 +6574,7 @@ const PRODUCTS = [
     "category": "BEER MUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6585,7 +6585,7 @@ const PRODUCTS = [
     "category": "PLATE SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6596,7 +6596,7 @@ const PRODUCTS = [
     "category": "PLATE SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6607,7 +6607,7 @@ const PRODUCTS = [
     "category": "PLATE SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6618,7 +6618,7 @@ const PRODUCTS = [
     "category": "PLATE SET",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6629,7 +6629,7 @@ const PRODUCTS = [
     "category": "TEA MUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -6640,7 +6640,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6651,7 +6651,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6662,7 +6662,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6673,7 +6673,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6684,7 +6684,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6695,7 +6695,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6706,7 +6706,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6717,7 +6717,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6728,7 +6728,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6739,7 +6739,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6750,7 +6750,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6761,7 +6761,7 @@ const PRODUCTS = [
     "category": "BEER MUG",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -6860,7 +6860,7 @@ const PRODUCTS = [
     "category": "JUICE GLASS",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7124,7 +7124,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7135,7 +7135,7 @@ const PRODUCTS = [
     "category": "GLASS JUG",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7883,6 +7883,28 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "KJG071A",
+    "desc": "KARBON JUG 1000 ML COLOR BOX PACKING 12 SET CTN",
+    "price": "120.0",
+    "unit": "FOR 1 PCS",
+    "category": "GLASS JUG",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "SWG0370A-G",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "850.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
     "status": "In Stock",
     "new_arrival": "YES"
   }
