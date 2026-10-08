@@ -5513,7 +5513,7 @@ const PRODUCTS = [
   {
     "code": "WDN-3PCS",
     "desc": "WOODEN MDF TRAY 3 PCS BRISTLE PACK 4 COLOR MIX IN CTN 12 SET CTN",
-    "price": "285.0",
+    "price": "300.0",
     "unit": "FOR 3PCS",
     "category": "TRAY",
     "department": "Kitchenware",
