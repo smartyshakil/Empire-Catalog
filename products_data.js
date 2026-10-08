@@ -6624,7 +6624,7 @@ const PRODUCTS = [
   {
     "code": "SMTC237-2",
     "desc": "SHINE MAX SMALL TEA MUG 93 ML 6 PC COL BOX 24 SET CTN",
-    "price": "145.0",
+    "price": "135.0",
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
     "department": "Glassware",
@@ -7911,7 +7911,7 @@ const PRODUCTS = [
   {
     "code": "HP-550-1",
     "desc": "STEEL CANISTER INNER GLASS 550 ML 1 PC COLOR BOX 24 PCS CTN",
-    "price": "110",
+    "price": "110.0",
     "unit": "FOR 1 PCS",
     "category": "CANISTER",
     "department": "Glassware",
@@ -7922,7 +7922,7 @@ const PRODUCTS = [
   {
     "code": "HP-750-1",
     "desc": "STEEL CANISTER INNER GLASS 750 ML 1 PC COLOR BOX 24 PCS CTN",
-    "price": "145",
+    "price": "145.0",
     "unit": "FOR 1 PCS",
     "category": "CANISTER",
     "department": "Glassware",
@@ -7933,7 +7933,7 @@ const PRODUCTS = [
   {
     "code": "FLASK-2L",
     "desc": "TRAVEL POT 2000 ML WITH COLOR BOX 15 PCS CTN",
-    "price": "1200",
+    "price": "1200.0",
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
@@ -7944,7 +7944,7 @@ const PRODUCTS = [
   {
     "code": "ARROWS-500",
     "desc": "ARROWS COLA BOTTLE 500 ML COLOR BOX 36 PCS CTN",
-    "price": "190",
+    "price": "190.0",
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
@@ -7955,7 +7955,7 @@ const PRODUCTS = [
   {
     "code": "DESEO-1500",
     "desc": "DESEO 1500 ML COLA BOTTLE WITH COLOR BOX 20 PCS CTN",
-    "price": "530",
+    "price": "530.0",
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
@@ -7966,7 +7966,7 @@ const PRODUCTS = [
   {
     "code": "FLORA-750",
     "desc": "FLORA 750 ML BOTTLE WITH COLOR BOX 55 PCS CTN",
-    "price": "190",
+    "price": "190.0",
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
@@ -7977,7 +7977,7 @@ const PRODUCTS = [
   {
     "code": "SPORT-500",
     "desc": "SPORT 500 ML BOTTLE WITH COLOR BOX 36 PCS CTN",
-    "price": "150",
+    "price": "150.0",
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
@@ -7988,7 +7988,7 @@ const PRODUCTS = [
   {
     "code": "MEGA-750",
     "desc": "MEGASONIC STEEL FLASK 750 ML WITH POUCH COL BOX 24 PCS CTN",
-    "price": "240",
+    "price": "240.0",
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
@@ -7999,7 +7999,7 @@ const PRODUCTS = [
   {
     "code": "MEGA-1000",
     "desc": "MEGASONIC STEEL FLASK 1000 ML WITH POUCH COL BOX 24 PCS CTN",
-    "price": "290",
+    "price": "290.0",
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
