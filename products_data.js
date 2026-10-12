@@ -451,17 +451,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "WAGC-2",
-    "desc": "GLACIRA WATER GLASS 280 ML 6 PC COLOR BOX 8 SET CTN",
-    "price": "220.0",
-    "unit": "FOR 6 PCS",
-    "category": "WATER GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "KRT077",
     "desc": "KARBON WATER GLASS 315 ML 6 PCS COL BOX 8 SET CTN",
     "price": "220.0",
@@ -2497,17 +2486,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "YZH36",
-    "desc": "DELI SOGA 1700 ML JUG WITH LID IN COL BOX 12 PC CTN",
-    "price": "160.0",
-    "unit": "FOR 1PCS",
-    "category": "JUG",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "DSH040B",
     "desc": "DELI SOGA WATER JUG 1.25L COL BOX-12 PC CTN",
     "price": "200.0",
@@ -3498,17 +3476,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "GPG16-1580",
-    "desc": "DELI SOGA SQUARE BAMBOO LID JAR 1580 ML COL BOX 36 PCS CTN",
-    "price": "135.0",
-    "unit": "FOR 1PCS",
-    "category": "WOODEN JAR SINGLE",
-    "department": "Glassware",
-    "moq": 12,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "SMBJ02-500-L2",
     "desc": "SHINE MAX DRYFRUIT SET 500ML*2 WITH WOODEN TRAY 24 SET CTN",
     "price": "425.0",
@@ -3659,17 +3626,6 @@ const PRODUCTS = [
     "category": "GLASS JAR",
     "department": "Glassware",
     "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "TAG-350-1",
-    "desc": "STEEL CANISTER INNER GLASS 325 ML 1 PC COLOR BOX 48 PCS CTN",
-    "price": "75.0",
-    "unit": "FOR 1PCS",
-    "category": "CANISTER",
-    "department": "Glassware",
-    "moq": 24,
     "status": "In Stock",
     "new_arrival": ""
   },
@@ -5379,28 +5335,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "EMP-70",
-    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
-    "price": "125.0",
-    "unit": "FOR 1 PCS",
-    "category": "DISPENSER",
-    "department": "Kitchenware",
-    "moq": 12,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "EMP-174",
-    "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
-    "price": "170.0",
-    "unit": "FOR 1 PCS",
-    "category": "DISPENSER",
-    "department": "Kitchenware",
-    "moq": 12,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "EMP-114",
     "desc": "EMPIRE ACRYLIC SOAP DISPENSER BULK PACK 144 PCS CTN",
     "price": "175.0",
@@ -5907,24 +5841,13 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "DEPKI-PRINTED",
-    "desc": "STEEL BOTTLE 350 ML MIX PRINT COL BOX 120 PCS CTN",
-    "price": "165.0",
-    "unit": "FOR 1PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 12,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "DEPKI-CAPCOLOR",
     "desc": "350ML STEEL BOTTLE CAP COLOR BOX 120 PCS CTN",
-    "price": "165.0",
+    "price": "155.0",
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
-    "moq": 12,
+    "moq": 36,
     "status": "In Stock",
     "new_arrival": "YES"
   },
@@ -6052,7 +5975,7 @@ const PRODUCTS = [
   {
     "code": "HK-900",
     "desc": "STEEL HANDLE  SIPPER 900 ML COLOR BOX 50 PCS CTN",
-    "price": "240.0",
+    "price": "230.0",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
@@ -6257,17 +6180,6 @@ const PRODUCTS = [
     "moq": 6,
     "status": "In Stock",
     "new_arrival": "YES"
-  },
-  {
-    "code": "STANLEY-500",
-    "desc": "STANLEY LOGO 500  ML SIDE HANDLE OG BOX 50 PCS CTN",
-    "price": "340.0",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": ""
   },
   {
     "code": "BULLET-750",
@@ -8006,6 +7918,17 @@ const PRODUCTS = [
     "moq": 6,
     "status": "In Stock",
     "new_arrival": "YES"
+  },
+  {
+    "code": "TAG-350-550-750-1",
+    "desc": "STEEL CANISTER INNER GLASS 325 ML+550ML+750ML 3 PCS COLOR BOX 12 SET CTN",
+    "price": "325.0",
+    "unit": "FOR 3PCS",
+    "category": "CANISTER",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "In Stock",
+    "new_arrival": ""
   }
 ];
 
