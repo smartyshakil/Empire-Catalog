@@ -2453,39 +2453,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "SMWH64-L8B",
-    "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET CTN",
-    "price": "990.0",
-    "unit": "FOR 1 SET",
-    "category": "KETTLE SET",
-    "department": "Glassware",
-    "moq": 1,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH65-L8B",
-    "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET IN CTN",
-    "price": "1190.0",
-    "unit": "FOR 1 SET",
-    "category": "KETTLE SET",
-    "department": "Glassware",
-    "moq": 1,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH65-L8G",
-    "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET IN CTN",
-    "price": "1190.0",
-    "unit": "FOR 1 SET",
-    "category": "KETTLE SET",
-    "department": "Glassware",
-    "moq": 1,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "DSH040B",
     "desc": "DELI SOGA WATER JUG 1.25L COL BOX-12 PC CTN",
     "price": "200.0",
