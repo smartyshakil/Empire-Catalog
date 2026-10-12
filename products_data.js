@@ -2090,17 +2090,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "GCT007",
-    "desc": "GLACIRA TEA MUG 160 ML COL BOX 12 SET CTN",
-    "price": "165.0",
-    "unit": "FOR 6PCS",
-    "category": "TEA MUG",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "KRZB47-1",
     "desc": "KARBON SQUARE TEA MUG 150 ML COL BOX 16 SET CTN",
     "price": "166.0",
@@ -3201,17 +3190,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "GPG4060-2",
-    "desc": "DELI SOGA SQUARE BAMBOO LID JAR 425 ML COL BOX 72 PCS CTN",
-    "price": "60.0",
-    "unit": "FOR 1PCS",
-    "category": "WOODEN JAR SINGLE",
-    "department": "Glassware",
-    "moq": 24,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "SP-520ML",
     "desc": "SOWA PARIS BOROSILICATE JAR WDN LID 520 ML ROUND 1 PC COL BOX 36 PC CTN",
     "price": "90.0",
@@ -3227,17 +3205,6 @@ const PRODUCTS = [
     "desc": "SOWA PARIS BOROSILICATE JAR WDN LID 685 ML ROUND 1 PC COL BOX 36 PC CTN",
     "price": "95.0",
     "unit": "FOR 1 PCS",
-    "category": "WOODEN JAR SINGLE",
-    "department": "Glassware",
-    "moq": 12,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "GPG74-1",
-    "desc": "DELI SOGA BAMBOO LID JAR 550 ML COL BOX 48 PCS CTN",
-    "price": "100.0",
-    "unit": "FOR 1PCS",
     "category": "WOODEN JAR SINGLE",
     "department": "Glassware",
     "moq": 12,
@@ -3298,17 +3265,6 @@ const PRODUCTS = [
     "moq": 12,
     "status": "In Stock",
     "new_arrival": ""
-  },
-  {
-    "code": "SMBJ02-500-L2",
-    "desc": "SHINE MAX DRYFRUIT SET 500ML*2 WITH WOODEN TRAY 24 SET CTN",
-    "price": "425.0",
-    "unit": "FOR 1PCS",
-    "category": "WOODEN CANDY",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
   },
   {
     "code": "SMBJ-542R-L4",
