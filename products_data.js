@@ -385,17 +385,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "LXY1001",
-    "desc": "LANGXU WATER GLASS 230 ML BROWN BOX - 12 SET CTN",
-    "price": "200.0",
-    "unit": "FOR 6PCS",
-    "category": "WATER GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "CNGC-03",
     "desc": "GLACIRA WATER GLASS 310 ML 6 PC COLOR BOX 12 SET CTN",
     "price": "210.0",
@@ -405,17 +394,6 @@ const PRODUCTS = [
     "moq": 4,
     "status": "In Stock",
     "new_arrival": "YES"
-  },
-  {
-    "code": "SMW6021",
-    "desc": "SHINEMAX WATER GLASS 315 ML 6 PCS COL BOX 8 SET CTN",
-    "price": "220.0",
-    "unit": "FOR 6 PCS",
-    "category": "WATER GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
   },
   {
     "code": "SMW6022",
@@ -486,17 +464,6 @@ const PRODUCTS = [
   {
     "code": "STY5010-1",
     "desc": "SHINEMAX WATER GLASS 330 ML COL BOX 12 SET CTN",
-    "price": "230.0",
-    "unit": "FOR 6PCS",
-    "category": "WATER GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "KB047-2",
-    "desc": "DELI WATER GLASS 340 ML 6 PCS KRAFT BOX 8 SET CTN",
     "price": "230.0",
     "unit": "FOR 6PCS",
     "category": "WATER GLASS",
@@ -696,17 +663,6 @@ const PRODUCTS = [
     "code": "SP-320A-L6",
     "desc": "SOWA PARIS BOROSILICATE JUICE GLASS 320 ML SQUARE 6 PC COL BOX 12 SET CTN",
     "price": "230.0",
-    "unit": "FOR 6PCS",
-    "category": "BORO WATER GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMBY11-2",
-    "desc": "SHINEMAX BOROSILICATE WATER GLASS 320 ML COL BOX 12 SET CTN",
-    "price": "240.0",
     "unit": "FOR 6PCS",
     "category": "BORO WATER GLASS",
     "department": "Glassware",
@@ -990,28 +946,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SWG0370B-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "850.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SWG0372B-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "850.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SWG0393-GE",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
     "price": "850.0",
@@ -1026,28 +960,6 @@ const PRODUCTS = [
     "code": "SWG0312B-G",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
     "price": "950.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SWG0374D-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "900.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SWG0376D-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "925.0",
     "unit": "FOR 6 PCS",
     "category": "COLORED GLASS",
     "department": "Glassware",
@@ -1109,17 +1021,6 @@ const PRODUCTS = [
     "moq": 6,
     "status": "In Stock",
     "new_arrival": "YES"
-  },
-  {
-    "code": "LXY5003",
-    "desc": "LANGXU SHOT GLASS 50 ML 6 PC COL BOX 48 SET CTN",
-    "price": "100.0",
-    "unit": "FOR 6PCS",
-    "category": "SHOT GLASS",
-    "department": "Glassware",
-    "moq": 12,
-    "status": "In Stock",
-    "new_arrival": ""
   },
   {
     "code": "STY401",
@@ -1225,17 +1126,6 @@ const PRODUCTS = [
     "desc": "KARBON BOWL SET 210 ML 6 PCS COLOR BOX 12 SET CTN",
     "price": "145.0",
     "unit": "FOR 6PCS",
-    "category": "BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMB407",
-    "desc": "SHINE MAX BOWL 160 ML 6 PCS COL BOX 12 SET CTN",
-    "price": "185.0",
-    "unit": "FOR 6 PCS",
     "category": "BOWL SET",
     "department": "Glassware",
     "moq": 4,
@@ -1705,17 +1595,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "SMP510-3",
-    "desc": "SHINE MAX GLASS DINNER PLATE 2 PC COL BOX 12 SET CTN",
-    "price": "300.0",
-    "unit": "FOR 2 PCS",
-    "category": "PLATE SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "SMP508D-G",
     "desc": "SHINEMAX 6 PCS SNACK PLATE 6 INCH COLOR BOX-12 SET IN CTN",
     "price": "320.0",
@@ -2070,28 +1949,6 @@ const PRODUCTS = [
   {
     "code": "KRZB48C",
     "desc": "KARBON SQUARE TEA MUG 115 ML COL BOX 16 SET CTN",
-    "price": "150.0",
-    "unit": "FOR 6 PCS",
-    "category": "TEA MUG",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "GC003",
-    "desc": "GLACIRA TEA MUG 150 ML COL BOX 12 SET CTN",
-    "price": "150.0",
-    "unit": "FOR 6 PCS",
-    "category": "TEA MUG",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "KRZB78",
-    "desc": "KARBON TEA MUG 150 ML COL BOX 12 SET CTN",
     "price": "150.0",
     "unit": "FOR 6 PCS",
     "category": "TEA MUG",
