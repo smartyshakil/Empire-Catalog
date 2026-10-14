@@ -7047,7 +7047,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7058,7 +7058,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7069,7 +7069,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7267,7 +7267,7 @@ const PRODUCTS = [
     "category": "WHISKEY GLASS",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -7278,7 +7278,7 @@ const PRODUCTS = [
     "category": "SHOT GLASS",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": ""
   },
   {
@@ -7289,7 +7289,7 @@ const PRODUCTS = [
     "category": "SHOT GLASS",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7300,7 +7300,7 @@ const PRODUCTS = [
     "category": "SHOT GLASS",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7311,7 +7311,7 @@ const PRODUCTS = [
     "category": "SHOT GLASS",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7322,7 +7322,7 @@ const PRODUCTS = [
     "category": "GLASS BOTTLE",
     "department": "Glassware",
     "moq": 10,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7333,7 +7333,7 @@ const PRODUCTS = [
     "category": "GLASS BOTTLE",
     "department": "Glassware",
     "moq": 10,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7344,7 +7344,7 @@ const PRODUCTS = [
     "category": "GLASS BOTTLE",
     "department": "Glassware",
     "moq": 10,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7355,7 +7355,7 @@ const PRODUCTS = [
     "category": "GLASS BOTTLE",
     "department": "Glassware",
     "moq": 10,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7366,7 +7366,7 @@ const PRODUCTS = [
     "category": "GLASS BOTTLE",
     "department": "Glassware",
     "moq": 10,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7377,7 +7377,7 @@ const PRODUCTS = [
     "category": "GLASS BOTTLE",
     "department": "Glassware",
     "moq": 10,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7388,7 +7388,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7399,7 +7399,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7421,7 +7421,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7432,7 +7432,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7443,7 +7443,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 18,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7454,7 +7454,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7465,7 +7465,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7476,7 +7476,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7487,7 +7487,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -7498,7 +7498,7 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
