@@ -2398,17 +2398,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SMWH69-L7",
-    "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1800ML+370ML GIFT BOX PACK 8 SET CTN",
-    "price": "600.0",
-    "unit": "FOR 1 SET",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SMWH89-L7B",
     "desc": "SHINE MAX COLORED 7 PCS LEMON SET 1440ML+270ML COL BOX 6 SET CTN",
     "price": "650.0",
@@ -2537,50 +2526,6 @@ const PRODUCTS = [
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH66-L8B",
-    "desc": "SHINEMAX 7 PCS WATER SET WITH REVOLVING STAND 1550ML+320ML COLOR BOX 4 SET IN CTN",
-    "price": "1190.0",
-    "unit": "FOR 1 SET",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 1,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH66-L8G",
-    "desc": "SHINEMAX 7 PCS WATER SET WITH REVOLVING STAND 1550ML+320ML COLOR BOX 4 SET IN CTN",
-    "price": "1190.0",
-    "unit": "FOR 1 SET",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 1,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH67-L8B",
-    "desc": "SHINEMAX 7 PCS WATER SET WITH REVOLVING STAND 1550ML+320ML COLOR BOX 4 SET IN CTN",
-    "price": "1375.0",
-    "unit": "FOR 1 SET",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 1,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH67-L8G",
-    "desc": "SHINEMAX 7 PCS WATER SET WITH REVOLVING STAND 1550ML+320ML COLOR BOX 4 SET IN CTN",
-    "price": "1375.0",
-    "unit": "FOR 1 SET",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 1,
     "status": "In Stock",
     "new_arrival": "YES"
   },
@@ -6783,17 +6728,6 @@ const PRODUCTS = [
     "category": "GLASS PLAIN BOWL",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH65-L8",
-    "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET IN CTN",
-    "price": "1140.0",
-    "unit": "FOR 1 SET",
-    "category": "KETTLE SET",
-    "department": "Glassware",
-    "moq": 4,
     "status": "ADV BOOK",
     "new_arrival": "YES"
   },
