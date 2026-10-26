@@ -6931,13 +6931,13 @@ const PRODUCTS = [
   },
   {
     "code": "SMBC76",
-    "desc": "SHINEMAX BOROSILICATE MILK MUG 250ML WITH HANDLE COLOR BOX 60 PCS CTN",
+    "desc": "SHINEMAX BOROSILICATE MILK MUG 250ML WITH HANDLE COLOR BOX 100 PCS CTN",
     "price": "120.0",
     "unit": "FOR 1 PCS",
     "category": "BEER MUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
