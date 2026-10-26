@@ -6921,7 +6921,7 @@ const PRODUCTS = [
   {
     "code": "CTWS489-L7",
     "desc": "CRYSTO MAX LEMON SET 7 PCS SET GIFT BOX 6 SET CTN",
-    "price": "550.0",
+    "price": "600.0",
     "unit": "FOR 7 PCS",
     "category": "LEMON SET",
     "department": "Glassware",
