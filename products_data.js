@@ -2464,17 +2464,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SMWH97-L7B",
-    "desc": "SHINEMAX 7 PCS WATER SET 1700ML+320ML COLOR BOX 6 SET CTN",
-    "price": "700.0",
-    "unit": "FOR 1 SET",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "YWH-7-B",
     "desc": "SHINE MAX FISH LEMON SET SMOKE COL - COL BOX 4 SET CTN",
     "price": "775.0",
@@ -7643,6 +7632,17 @@ const PRODUCTS = [
     "moq": 4,
     "status": "In Stock",
     "new_arrival": ""
+  },
+  {
+    "code": "SMWH69-L7",
+    "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1800ML+370ML GIFT BOX PACK 8 SET CTN",
+    "price": "600.0",
+    "unit": "FOR 1 SET",
+    "category": "LEMON SET",
+    "department": "Glassware",
+    "moq": 2,
+    "status": "In Stock",
+    "new_arrival": "YES"
   }
 ];
 
