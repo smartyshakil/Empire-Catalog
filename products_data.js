@@ -7643,6 +7643,28 @@ const PRODUCTS = [
     "moq": 2,
     "status": "In Stock",
     "new_arrival": "YES"
+  },
+  {
+    "code": "SMWH65-L8B",
+    "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET IN CTN",
+    "price": "1190.0",
+    "unit": "FOR 1 SET",
+    "category": "KETTLE SET",
+    "department": "Glassware",
+    "moq": 1,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "SMWH65-L8",
+    "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET IN CTN",
+    "price": "1140.0",
+    "unit": "FOR 1 SET",
+    "category": "KETTLE SET",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "In Stock",
+    "new_arrival": "YES"
   }
 ];
 
