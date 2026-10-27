@@ -7665,6 +7665,17 @@ const PRODUCTS = [
     "moq": 4,
     "status": "In Stock",
     "new_arrival": "YES"
+  },
+  {
+    "code": "8171",
+    "desc": "STEEL 2 WAY SIPPER BOTTLE 600 ML COLOR BOX 60 PCS CTN",
+    "price": "290.0",
+    "unit": "FOR 1PCS",
+    "category": "VACCUM BOTTLE",
+    "department": "vaccum_bottles",
+    "moq": 4,
+    "status": "In Stock",
+    "new_arrival": ""
   }
 ];
 
