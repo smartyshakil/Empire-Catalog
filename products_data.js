@@ -5555,17 +5555,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "DEPKI-CAPCOLOR",
-    "desc": "350ML STEEL BOTTLE CAP COLOR BOX 120 PCS CTN",
-    "price": "155.0",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 36,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "HK-510ML",
     "desc": "STEEL BOTTLE COFFEE CUP / SIPPER 510 ML COL BOX 50 PCS CTN",
     "price": "175.0",
