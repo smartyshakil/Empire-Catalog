@@ -44,28 +44,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "JGGC-04",
-    "desc": "GLACIRA JUICE GLASS 220 ML 6 PC COL BOX 12 SET CTN",
-    "price": "160.0",
-    "unit": "FOR 6 PCS",
-    "category": "JUICE GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "JGGC-05",
-    "desc": "GLACIRA JUICE GLASS 220 ML 6 PC COL BOX 12 SET CTN",
-    "price": "160.0",
-    "unit": "FOR 6 PCS",
-    "category": "JUICE GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "JGGC-07",
     "desc": "GLACIRA JUICE GLASS 220 ML 6 PC COL BOX 12 SET CTN",
     "price": "165.0",
