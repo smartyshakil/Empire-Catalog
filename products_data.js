@@ -638,17 +638,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "GCN-01",
-    "desc": "GLACIRA HI BALL COLORED WHISKEY GLASS 380 ML 6 PC COL BOX 8 SET CTN",
-    "price": "310.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "GCN-02",
     "desc": "GLACIRA HI BALL COLORED WHISKEY GLASS 380 ML 6 PC COL BOX 8 SET CTN",
     "price": "310.0",
