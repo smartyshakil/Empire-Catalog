@@ -1,16 +1,5 @@
 const PRODUCTS = [
   {
-    "code": "LXY1511",
-    "desc": "LANGXU WELCOME DRINK GLASS 115ML 6 PC BOX 16 SET CTN",
-    "price": "140.0",
-    "unit": "FOR 6PCS",
-    "category": "JUICE GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "LXY5010",
     "desc": "LANGXU OCTAGONAL JUICE GLASS 184 ML BROWN BOX 12 SET CTN",
     "price": "150.0",
