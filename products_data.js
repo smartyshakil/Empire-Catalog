@@ -1,16 +1,5 @@
 const PRODUCTS = [
   {
-    "code": "KRF008B-G",
-    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
-    "price": "280.0",
-    "unit": "FOR 1 PCS",
-    "category": "GLASS COLORED BOWL",
-    "department": "GLASSWARE",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "EMP210-250",
     "desc": "VALENCIA DOUBLE WALL JUICE GLASS 250 ML BOX PACK 72 PCS CTN",
     "price": "90.0",
@@ -3692,61 +3681,6 @@ const PRODUCTS = [
     "category": "GLASS PLAIN BOWL",
     "department": "Glassware",
     "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "KRF008A-B",
-    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
-    "price": "280.0",
-    "unit": "FOR 1 PCS",
-    "category": "GLASS COLORED BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "KRF008B-B",
-    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
-    "price": "280.0",
-    "unit": "FOR 1 PCS",
-    "category": "GLASS COLORED BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "KRF008C-B",
-    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
-    "price": "280.0",
-    "unit": "FOR 1 PCS",
-    "category": "GLASS COLORED BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "KRF008A-G",
-    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
-    "price": "280.0",
-    "unit": "FOR 1 PCS",
-    "category": "GLASS COLORED BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "KRF008C-G",
-    "desc": "KARBON STAND FRUIT BOWL 10 INCHES COL BOX 12 SET CTN",
-    "price": "280.0",
-    "unit": "FOR 1 PCS",
-    "category": "GLASS COLORED BOWL",
-    "department": "Glassware",
-    "moq": 4,
     "status": "In Stock",
     "new_arrival": ""
   },
