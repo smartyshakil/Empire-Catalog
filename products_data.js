@@ -1210,28 +1210,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "SMIC656D-B",
-    "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMIC656D-G",
-    "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "LXP104-3",
     "desc": "LANG XU SERVING PLATE 9.5 X 8 INCHES 1 PC COLOR BOX  24 PCS CTN",
     "price": "150.0",
@@ -1969,17 +1947,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "GCBR08",
-    "desc": "GLACIRA BOROSILICATE TEA MUG 140ML 6 PC COL BOX 24 SET CTN",
-    "price": "130.0",
-    "unit": "FOR 6PCS",
-    "category": "BORO TEA MUG",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "SMBC14",
     "desc": "SHINE MAX BOROSILICATE TEA MUG 220ML 6 PC COL BOX 24 SET CTN",
     "price": "220.0",
@@ -2020,28 +1987,6 @@ const PRODUCTS = [
     "category": "LID MUG",
     "department": "Glassware",
     "moq": 12,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "KRCF027-L12",
-    "desc": "KARBON FISH CUP SAUCER 220 ML COLOR BOX 8 SET CTN",
-    "price": "290.0",
-    "unit": "FOR 12PCS",
-    "category": "CUP SAUCER",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "CF241-L12",
-    "desc": "GREEN APPLE FISH CUP SAUCER COL BOX 8 SET CTN",
-    "price": "300.0",
-    "unit": "FOR 12PCS",
-    "category": "CUP SAUCER",
-    "department": "Glassware",
-    "moq": 4,
     "status": "In Stock",
     "new_arrival": ""
   },
@@ -3861,171 +3806,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SMIC656B-B",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656B-G",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656C-B",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656C-G",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656E-B",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656E-G",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656G-B",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656G-G",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656H-B",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656H-G",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656I-B",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656I-G",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656J-B",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656J-G",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMIC656A-B",
-    "desc": "SHINE MAX NEW ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SMBJ-616",
     "desc": "SHINEMAX PREMIUM 2+1 WOODEN STAND GIFT BOX PACK 24 SET CTN",
     "price": "435.0",
@@ -5595,28 +5375,6 @@ const PRODUCTS = [
     "category": "BOTTLES",
     "department": "vaccum_bottles",
     "moq": 6,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMIC656F-B",
-    "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMIC656F-G",
-    "desc": "SHINE MAX FISH ICE CUP 180 ML 6 PC COL BOX 12 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
     "status": "In Stock",
     "new_arrival": ""
   },
