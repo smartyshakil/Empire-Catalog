@@ -66,17 +66,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "ES5163-2A",
-    "desc": "GREEN APPLE WHISKEY GLASS 330 ML 6 PC COL BOX 12 SET CTN",
-    "price": "200.0",
-    "unit": "FOR 6PCS",
-    "category": "WHISKEY GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "WIGC-2",
     "desc": "GLACIRA WHISKEY GLASS 315 ML 6 PC COL BOX 8 SET CTN",
     "price": "250.0",
