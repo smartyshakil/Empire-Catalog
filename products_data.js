@@ -22,17 +22,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "LXY5004",
-    "desc": "LANGXU JUICE GLASS 248 ML BROWN BOX-12 SET CTN",
-    "price": "175.0",
-    "unit": "FOR 6PCS",
-    "category": "JUICE GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "LXY4008",
     "desc": "LANGXU SQUARE PLAZA JUICE GLASS 170 ML COLOR BOX 12 SET CTN",
     "price": "175.0",
