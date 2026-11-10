@@ -44,17 +44,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "LXY5014",
-    "desc": "LANGXU JUICE GLASS 180 ML COLOR BOX 12 SET CTN",
-    "price": "210.0",
-    "unit": "FOR 6PCS",
-    "category": "JUICE GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "STY721",
     "desc": "SHINE MAX FISH GLASS 195 ML 6 PC COL BOX 12 SET CTN",
     "price": "225.0",
