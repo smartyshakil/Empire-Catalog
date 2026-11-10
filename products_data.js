@@ -264,17 +264,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "JS5139-1",
-    "desc": "DELI SOGA WATER GLASS 500 ML 6 PC COL BOX 12 SET CTN",
-    "price": "190.0",
-    "unit": "FOR 6PCS",
-    "category": "WATER GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "CNGC-03",
     "desc": "GLACIRA WATER GLASS 310 ML 6 PC COLOR BOX 12 SET CTN",
     "price": "210.0",
