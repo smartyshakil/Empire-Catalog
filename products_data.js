@@ -1177,28 +1177,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SMIC632-L2B",
-    "desc": "SHINE MAX 170 ML ICE CUP 2 PCS COL BOX-36 SET CTN",
-    "price": "130.0",
-    "unit": "FOR 2PCS",
-    "category": "ICE CREAM BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMIC616",
-    "desc": "SHINE MAX FISH ICE CUP 140 ML 6 PC COL BOX 12 SET CTN",
-    "price": "210.0",
-    "unit": "FOR 6 PCS",
-    "category": "ICE CREAM BOWL SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "SMIC626",
     "desc": "SHINE MAX NEW ICE CUP 140 ML 6 PC COL BOX 12 SET CTN",
     "price": "220.0",
@@ -1331,17 +1309,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "KRP120",
-    "desc": "KARBON SNACK PLATES 350ML 6 PCS COL BOX 12 SET CTN",
-    "price": "220.0",
-    "unit": "FOR 6PCS",
-    "category": "PLATE SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "KRS7201",
     "desc": "KARBON LADDU PLATE 200 ML COL BOX 12 SET CTN",
     "price": "230.0",
@@ -1433,28 +1400,6 @@ const PRODUCTS = [
     "code": "SMP510-1",
     "desc": "SHINE MAX GLASS QUARTER PLATE 6 PC COL BOX 12 SET CTN",
     "price": "300.0",
-    "unit": "FOR 6 PCS",
-    "category": "PLATE SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMP508D-G",
-    "desc": "SHINEMAX 6 PCS SNACK PLATE 6 INCH COLOR BOX-12 SET IN CTN",
-    "price": "320.0",
-    "unit": "FOR 6 PCS",
-    "category": "PLATE SET",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMP508F-G",
-    "desc": "SHINEMAX 6 PCS SNACK PLATE 6 INCH COLOR BOX-12 SET IN CTN",
-    "price": "320.0",
     "unit": "FOR 6 PCS",
     "category": "PLATE SET",
     "department": "Glassware",
@@ -1718,17 +1663,6 @@ const PRODUCTS = [
   {
     "code": "KRZB164",
     "desc": "KARBON TEA MUG 110 ML COL BOX 16 SET CTN",
-    "price": "140.0",
-    "unit": "FOR 6PCS",
-    "category": "TEA MUG",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMTC213-1",
-    "desc": "SHINE MAX TEA MUG 150 ML 6 PCS COL BOX 12 SET CTN",
     "price": "140.0",
     "unit": "FOR 6PCS",
     "category": "TEA MUG",
@@ -2770,50 +2704,6 @@ const PRODUCTS = [
     "moq": 4,
     "status": "In Stock",
     "new_arrival": "YES"
-  },
-  {
-    "code": "KRPS021-L7",
-    "desc": "KARBON NEW 7 PCS PUDING SET COL BOX - 6 SET CTN",
-    "price": "400.0",
-    "unit": "FOR 7PCS",
-    "category": "PUDDING SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "KRPS031-L7",
-    "desc": "KARBON NEW 7 PCS PUDING SET COL BOX - 6 SET CTN",
-    "price": "400.0",
-    "unit": "FOR 7PCS",
-    "category": "PUDDING SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "KRPS041-L7",
-    "desc": "KARBON NEW 7 PCS PUDING SET COL BOX - 6 SET CTN",
-    "price": "400.0",
-    "unit": "FOR 7PCS",
-    "category": "PUDDING SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "KRPS031-L7G",
-    "desc": "KARBON PUDDING SET 7 PCS COL BOX 6 SET IN CTN",
-    "price": "400.0",
-    "unit": "FOR 7PCS",
-    "category": "PUDDING SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
   },
   {
     "code": "SPS023-L7B",
@@ -6442,7 +6332,7 @@ const PRODUCTS = [
     "category": "ICE CREAM BOWL",
     "department": "Glassware",
     "moq": 4,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
