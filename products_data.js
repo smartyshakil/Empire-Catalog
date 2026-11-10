@@ -275,28 +275,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SMW6022",
-    "desc": "SHINEMAX WATER GLASS 315 ML 6 PCS COL BOX 8 SET CTN",
-    "price": "220.0",
-    "unit": "FOR 6 PCS",
-    "category": "WATER GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMW6031",
-    "desc": "SHINEMAX WATER GLASS 315 ML 6 PCS COL BOX 8 SET CTN",
-    "price": "220.0",
-    "unit": "FOR 6 PCS",
-    "category": "WATER GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "WAGC-1",
     "desc": "GLACIRA WATER GLASS 280 ML 6 PC COLOR BOX 8 SET CTN",
     "price": "220.0",
