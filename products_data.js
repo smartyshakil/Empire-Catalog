@@ -277,7 +277,7 @@ const PRODUCTS = [
   {
     "code": "WAGC-1",
     "desc": "GLACIRA WATER GLASS 280 ML 6 PC COLOR BOX 8 SET CTN",
-    "price": "220.0",
+    "price": "240.0",
     "unit": "FOR 6 PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
@@ -7133,6 +7133,28 @@ const PRODUCTS = [
     "price": "165.0",
     "unit": "FOR 6 PCS",
     "category": "JUICE GLASS",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "WAGC-2",
+    "desc": "GLACIRA WATER GLASS 280 ML 6 PC COLOR BOX 8 SET CTN",
+    "price": "240.0",
+    "unit": "FOR 6 PCS",
+    "category": "WATER GLASS",
+    "department": "Glassware",
+    "moq": 4,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "WAGC-3",
+    "desc": "GLACIRA WATER GLASS 280 ML 6 PC COLOR BOX 8 SET CTN",
+    "price": "240.0",
+    "unit": "FOR 6 PCS",
+    "category": "WATER GLASS",
     "department": "Glassware",
     "moq": 4,
     "status": "In Stock",
