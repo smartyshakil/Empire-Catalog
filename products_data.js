@@ -1,16 +1,5 @@
 const PRODUCTS = [
   {
-    "code": "EMP210-250",
-    "desc": "VALENCIA DOUBLE WALL JUICE GLASS 250 ML BOX PACK 72 PCS CTN",
-    "price": "90.0",
-    "unit": "FOR 1 PCS",
-    "category": "JUICE GLASS",
-    "department": "Glassware",
-    "moq": 12,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "LXY1511",
     "desc": "LANGXU WELCOME DRINK GLASS 115ML 6 PC BOX 16 SET CTN",
     "price": "140.0",
