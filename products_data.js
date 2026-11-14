@@ -7082,6 +7082,17 @@ const PRODUCTS = [
     "moq": 4,
     "status": "In Stock",
     "new_arrival": "YES"
+  },
+  {
+    "code": "K-1000",
+    "desc": "STEEL KETTLE WITH STRAINER 1000 ML WITH COLOR BOX 40 PCS CTN",
+    "price": "325.0",
+    "unit": "FOR 1PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": ""
   }
 ];
 
