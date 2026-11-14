@@ -1868,3 +1868,39 @@ function injectProductSchema(item) {
     script.text = JSON.stringify(schemaData);
     document.head.appendChild(script);
 }
+// ==========================================
+// COMING SOON / STAY TUNED POPUP MODAL
+// ==========================================
+function showComingSoonModal() {
+    let existingModal = document.getElementById('comingSoonModalOverlay');
+    if (existingModal) {
+        existingModal.style.display = 'flex';
+        return;
+    }
+
+    const overlay = document.createElement('div');
+    overlay.id = 'comingSoonModalOverlay';
+    overlay.style.cssText = "position: fixed; inset: 0; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px;";
+
+    overlay.innerHTML = `
+        <div style="background: #ffffff; width: 100%; max-width: 400px; border-radius: 20px; padding: 30px 20px; text-align: center; box-shadow: 0 25px 50px rgba(0,0,0,0.3);">
+            <div style="font-size: 45px; margin-bottom: 10px;">🚀</div>
+            <h2 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">Coming Soon!</h2>
+            <p style="font-size: 13px; color: #64748b; line-height: 1.5; margin-bottom: 20px;">
+                Exciting new glassware & crockery collections are on the way. <b>Stay Tuned!</b>
+            </p>
+            <button onclick="closeComingSoonModal()" style="width: 100%; background: #0f172a; color: #ffffff; border: none; padding: 12px; border-radius: 12px; font-size: 13px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 12px rgba(15,23,42,0.2);">
+                ⬅️ Back to Main Catalog
+            </button>
+        </div>
+    `;
+
+    document.body.appendChild(overlay);
+}
+
+function closeComingSoonModal() {
+    const modal = document.getElementById('comingSoonModalOverlay');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
