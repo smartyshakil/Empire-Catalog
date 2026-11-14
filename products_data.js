@@ -110,17 +110,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "LXZS0609",
-    "desc": "LANGXU WHISKEY GLASS 285 ML COL BOX 12 SET CTN",
-    "price": "280.0",
-    "unit": "FOR 6PCS",
-    "category": "WHISKEY GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "LXZS0613-1",
     "desc": "LANGXU WHISKEY GLASS 390 ML COL BOX-8 SET CTN",
     "price": "280.0",
@@ -462,17 +451,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "SMBY21-1-E",
-    "desc": "SHINE MAX 260ML BOROSILICATE SQUARE GLASS COL BOX 12 SET CTN",
-    "price": "310.0",
-    "unit": "FOR 6PCS",
-    "category": "BORO JUICE GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "SMBY21-1-G",
     "desc": "SHINEMAX BOROSILICATE SQUARE JUICE GLASS 270 ML COL BOX 12 SET CTN",
     "price": "320.0",
@@ -480,28 +458,6 @@ const PRODUCTS = [
     "category": "BORO JUICE GLASS",
     "department": "Glassware",
     "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMBY21-1-BE",
-    "desc": "SHINE MAX 260ML BOROSILICATE SQUARE GLASS COL BOX 12 SET CTN",
-    "price": "400.0",
-    "unit": "FOR 6PCS",
-    "category": "BORO JUICE GLASS",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMBY21-1-GE",
-    "desc": "SHINE MAX 260ML BOROSILICATE SQUARE GLASS COL BOX 12 SET CTN",
-    "price": "400.0",
-    "unit": "FOR 6PCS",
-    "category": "BORO JUICE GLASS",
-    "department": "Glassware",
-    "moq": 2,
     "status": "In Stock",
     "new_arrival": ""
   },
@@ -660,51 +616,7 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SMV3013-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS 350 ML COL BOX 8 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 1 SET",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMV3022-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS 350 ML COL BOX 8 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMV3022-B",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS 350 ML COL BOX 8 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SMV3032-B",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS 350 ML COL BOX 8 SET CTN",
-    "price": "330.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMV3013-B",
     "desc": "SHINE MAX COLORED WHISKEY GLASS 350 ML COL BOX 8 SET CTN",
     "price": "330.0",
     "unit": "FOR 6 PCS",
@@ -744,28 +656,6 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 8,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SWG0391G-T",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "700.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SWG0391-GL",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "700.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
     "status": "In Stock",
     "new_arrival": "YES"
   },
@@ -2035,127 +1925,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "SMWH76-L7",
-    "desc": "SHINE MAX  7 PCS LEMON SET 1550ML+320ML COL BOX 6 SET CTN",
-    "price": "550.0",
-    "unit": "FOR 1 SET",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH89-L7G",
-    "desc": "SHINE MAX COLORED 7 PCS LEMON SET COL BOX 6 SET CTN",
-    "price": "600.0",
-    "unit": "FOR 7PCS",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMWH88A-L7G",
-    "desc": "SHINEMAX BOROSILICATE LEMON SET 7 PCS COL BOX 6 SET CTN",
-    "price": "600.0",
-    "unit": "FOR 7PCS",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMWH73-L7G",
-    "desc": "SHINE MAX COLORED 7 PCS LEMON SET COL BOX 6 SET CTN",
-    "price": "600.0",
-    "unit": "FOR 7PCS",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMWH74-L7G",
-    "desc": "SHINE MAX COLORED 7 PCS LEMON SET COL BOX 6 SET CTN",
-    "price": "600.0",
-    "unit": "FOR 7PCS",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "GCLS-01",
-    "desc": "GLACIRA COLORED 7 PCS LEMON SET COL BOX 6 SET CTN",
-    "price": "600.0",
-    "unit": "FOR 7PCS",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMWH88-L7-",
-    "desc": "SHINE MAX 7 PCS LEMON SET 1900ML+320ML COL BOX 6 SET CTN",
-    "price": "600.0",
-    "unit": "FOR 1 SET",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH75-L7",
-    "desc": "SHINEMAX LEMON SET 1500ML+320ML COLOR BOX PACK 6 SET CTN",
-    "price": "600.0",
-    "unit": "FOR 1 SET",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH89-L7B",
-    "desc": "SHINE MAX COLORED 7 PCS LEMON SET 1440ML+270ML COL BOX 6 SET CTN",
-    "price": "650.0",
-    "unit": "FOR 1 SET",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH76-L7B",
-    "desc": "SHINE MAX COLORED 7 PCS LEMON SET COL BOX 6 SET CTN",
-    "price": "675.0",
-    "unit": "FOR 7PCS",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "SMWH82-L7B",
-    "desc": "SHINE MAX COLORED 7 PCS LEMON SET COL BOX 6 SET CTN",
-    "price": "675.0",
-    "unit": "FOR 7PCS",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "SMWH91-L8",
     "desc": "SHINE MAX LEMON SET WITH BAMBOO TRAY CLEAR 8 PCS SET 6 SET CTN",
     "price": "675.0",
@@ -2165,17 +1934,6 @@ const PRODUCTS = [
     "moq": 2,
     "status": "In Stock",
     "new_arrival": ""
-  },
-  {
-    "code": "SMWH88-L7B",
-    "desc": "SHINE MAX COLORED 7 PCS LEMON SET 1900ML+320ML COL BOX 6 SET CTN",
-    "price": "675.0",
-    "unit": "FOR 1 SET",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
   },
   {
     "code": "YWH-7",
@@ -2226,17 +1984,6 @@ const PRODUCTS = [
     "desc": "SHINE MAX FISH LEMON SET GOLD COL - COL BOX 4 SET CTN",
     "price": "775.0",
     "unit": "FOR 7 PCS",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH99-L7B",
-    "desc": "SHINE MAX COLORED 7 PCS LEMON SET COL 1450ML+280ML BOX 6 SET CTN",
-    "price": "950.0",
-    "unit": "FOR 1 SET",
     "category": "LEMON SET",
     "department": "Glassware",
     "moq": 2,
@@ -2838,17 +2585,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "SMBJ05-1050",
-    "desc": "SHINE MAX BOROSILICATE JAR WITH WOODEN LID 1050 ML 36 PC CTN",
-    "price": "110.0",
-    "unit": "FOR 1PCS",
-    "category": "WOODEN JAR SINGLE",
-    "department": "Glassware",
-    "moq": 12,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "GPG74-2",
     "desc": "DELI SOGA BAMBOO LID JAR 750 ML COL BOX 36 PCS CTN",
     "price": "115.0",
@@ -2882,22 +2618,11 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "SMBJ-542R-L4",
-    "desc": "SHINE MAX DRYFRUIT SET 500ML*4 WITH WOODEN TRAY 16 SET CTN",
-    "price": "800.0",
-    "unit": "FOR 1PCS",
-    "category": "WOODEN CANDY",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "SMBJ-614-L4",
     "desc": "SHINE MAX DRYFRUIT SET 500ML*4 WITH METAL STAND 8SET CTN",
     "price": "950.0",
     "unit": "FOR 1PCS",
-    "category": "WOODEN CANDY",
+    "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 2,
     "status": "In Stock",
@@ -2908,7 +2633,7 @@ const PRODUCTS = [
     "desc": "SHINE MAX DRYFRUIT SET 500ML*4 WITH METAL REVOLVING STAND 8SET CTN",
     "price": "1100.0",
     "unit": "FOR 1PCS",
-    "category": "WOODEN CANDY",
+    "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 1,
     "status": "In Stock",
@@ -3027,19 +2752,8 @@ const PRODUCTS = [
   {
     "code": "TAG-350-2",
     "desc": "STEEL CANISTER INNER GLASS 325 ML 2 PC COLOR BOX 24 SET CTN",
-    "price": "140.0",
+    "price": "145.0",
     "unit": "FOR 2PCS",
-    "category": "CANISTER",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "TAG-350-3",
-    "desc": "STEEL CANISTER INNER GLASS 325 ML 3 PC COLOR BOX 24 SET CTN",
-    "price": "210.0",
-    "unit": "FOR 3PCS",
     "category": "CANISTER",
     "department": "Glassware",
     "moq": 4,
@@ -3171,50 +2885,6 @@ const PRODUCTS = [
     "code": "SMBB11-3200-GE",
     "desc": "SHINE MAX SQUARE DISPENSER PRINTED 3200 ML WITH STAND 16 SET CTN",
     "price": "775.0",
-    "unit": "FOR 1 PCS",
-    "category": "DISPENSER",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBB12-4200-B",
-    "desc": "SHINE MAX SQUARE DISPENSER PLAIN 4200 ML WITH STAND 12 SET CTN",
-    "price": "775.0",
-    "unit": "FOR 1 PCS",
-    "category": "DISPENSER",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBB12-4200-G",
-    "desc": "SHINE MAX SQUARE DISPENSER PLAIN 4200 ML WITH STAND 12 SET CTN",
-    "price": "775.0",
-    "unit": "FOR 1 PCS",
-    "category": "DISPENSER",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBB12-4200-BE",
-    "desc": "SHINE MAX SQUARE DISPENSER PRINTED 4200 ML WITH STAND 12 SET CTN",
-    "price": "850.0",
-    "unit": "FOR 1 PCS",
-    "category": "DISPENSER",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBB12-4200-GE",
-    "desc": "SHINE MAX SQUARE DISPENSER PRINTED 4200 ML WITH STAND 12 SET CTN",
-    "price": "850.0",
     "unit": "FOR 1 PCS",
     "category": "DISPENSER",
     "department": "Glassware",
@@ -5346,17 +5016,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "SP-220-L3",
-    "desc": "SOWA PARIS BOROSILICATE JAR WDN LID 220 ML ROUND 3 PC COL BOX 16 SET CTN",
-    "price": "130.0",
-    "unit": "FOR 3PCS",
-    "category": "WOODEN 3 PCS",
-    "department": "Glassware",
-    "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SMTC277",
     "desc": "SHINEMAX TEA MUG 140ML COLOR BOX PACKING 12 SET IN CTN",
     "price": "178.0",
@@ -5687,28 +5346,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SWG0391-BE",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "700.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SWG0391-BT",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "700.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SWG0393-BE",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
     "price": "850.0",
@@ -5819,28 +5456,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SMWH74-L7B",
-    "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1400ML+320ML GIFT BOX 6 SET CTN",
-    "price": "600.0",
-    "unit": "FOR 7PCS",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH75-L7B",
-    "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1400ML+320ML GIFT BOX 6 SET CTN",
-    "price": "700.0",
-    "unit": "FOR 7PCS",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "LXY4009",
     "desc": "LANG XU TWISTED JUICE GLASS 190 ML COLOR BOX 12 SET CTN",
     "price": "210.0",
@@ -5848,17 +5463,6 @@ const PRODUCTS = [
     "category": "JUICE GLASS",
     "department": "Glassware",
     "moq": 4,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMWH11-L7B",
-    "desc": "SHINEMAX BOROSILICATE 7 PCS LEMON SET 1500ML+400ML GIFT BOX 6 SET CTN",
-    "price": "725.0",
-    "unit": "FOR 7 PCS",
-    "category": "LEMON SET",
-    "department": "Glassware",
-    "moq": 2,
     "status": "In Stock",
     "new_arrival": "YES"
   },
@@ -6358,17 +5962,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SWG0382D-G",
-    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
-    "price": "1300.0",
-    "unit": "FOR 6 PCS",
-    "category": "COLORED GLASS",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SWG0383E-G",
     "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
     "price": "1300.0",
@@ -6596,17 +6189,6 @@ const PRODUCTS = [
     "category": "SHOT GLASS",
     "department": "Glassware",
     "moq": 12,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "KRWB1059-1100",
-    "desc": "KARBON FRIDGE BOTTLE 1100 ML WITH HANDLE 1 PC COLOR BOX 30 PCS CTN",
-    "price": "110.0",
-    "unit": "FOR 1 PCS",
-    "category": "GLASS BOTTLE",
-    "department": "Glassware",
-    "moq": 10,
     "status": "In Stock",
     "new_arrival": "YES"
   },
@@ -6996,17 +6578,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SMWH65-L8B",
-    "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET IN CTN",
-    "price": "1190.0",
-    "unit": "FOR 1 SET",
-    "category": "KETTLE SET",
-    "department": "Glassware",
-    "moq": 1,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SMWH65-L8",
     "desc": "SHINEMAX 7 PCS KETTLE SET WITH REVOLVING STAND 1000ML+130ML COLOR BOX 4 SET IN CTN",
     "price": "1140.0",
@@ -7093,6 +6664,17 @@ const PRODUCTS = [
     "moq": 6,
     "status": "In Stock",
     "new_arrival": ""
+  },
+  {
+    "code": "SWG0391-BT",
+    "desc": "SHINE MAX COLORED WHISKEY GLASS GIFT BOX 6 SET CTN",
+    "price": "700.0",
+    "unit": "FOR 6 PCS",
+    "category": "COLORED GLASS",
+    "department": "Glassware",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": "YES"
   }
 ];
 
