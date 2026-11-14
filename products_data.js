@@ -6675,6 +6675,17 @@ const PRODUCTS = [
     "moq": 6,
     "status": "In Stock",
     "new_arrival": "YES"
+  },
+  {
+    "code": "8201",
+    "desc": "STEEL BOTTLE 600 ML COL BOX MIX PRINT 50 PCS CTN",
+    "price": "240.0",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": "YES"
   }
 ];
 
