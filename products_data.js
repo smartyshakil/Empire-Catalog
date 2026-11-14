@@ -4972,39 +4972,6 @@ const PRODUCTS = [
     "new_arrival": ""
   },
   {
-    "code": "EMP150",
-    "desc": "JMAX STEEL SINGL WALL BOTTLE 1000 ML COLOR BOX 60 PCS CTN",
-    "price": "105.0",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 60,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "EMP300",
-    "desc": "JMAX STEEL SINGL WALL BOTTLE 1000 ML COLOR BOX 60 PCS CTN",
-    "price": "105.0",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 60,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "EMP450",
-    "desc": "JMAX STEEL SINGL WALL BOTTLE 1000 ML COLOR BOX 60 PCS CTN",
-    "price": "105.0",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 60,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "HK-420-2",
     "desc": "STEEL POCKET BOTTLE 300 ML COL BOX 100 PCS CTN",
     "price": "152.0",
@@ -5104,17 +5071,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "KND-1000",
-    "desc": "STEEL BOTTLE  1000 ML COL BOX MIX COLOR 50 PCS CTN",
-    "price": "215.0",
-    "unit": "FOR 1PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
     "code": "SD-800",
     "desc": "STEEL BOTTLE  800 ML COL BOX MIX COLOR 50 PCS CTN",
     "price": "215.0",
@@ -5195,28 +5151,6 @@ const PRODUCTS = [
     "code": "HK-420-4",
     "desc": "STEEL BOTTLE 600 ML PUSH BUTTON COL BOX DISNEY CHARACTER 50 PCS CTN",
     "price": "260.0",
-    "unit": "FOR 1PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "BULLET-500",
-    "desc": "STEEL FLASK 500 ML WITH POUCH COL BOX 50 PCS CTN",
-    "price": "260.0",
-    "unit": "FOR 1PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": ""
-  },
-  {
-    "code": "C-1000",
-    "desc": "STEEL COLA BOTTLE WITHOUT LOGO 1000 ML WHITE BOX 30 PCS CTN",
-    "price": "265.0",
     "unit": "FOR 1PCS",
     "category": "BOTTLES",
     "department": "vaccum_bottles",
@@ -6970,17 +6904,6 @@ const PRODUCTS = [
     "category": "CANISTER",
     "department": "Glassware",
     "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "FLASK-2L",
-    "desc": "TRAVEL POT 2000 ML WITH COLOR BOX 15 PCS CTN",
-    "price": "1200.0",
-    "unit": "FOR 1 PCS",
-    "category": "BOTTLES",
-    "department": "vaccum_bottles",
-    "moq": 2,
     "status": "In Stock",
     "new_arrival": "YES"
   },
