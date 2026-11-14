@@ -255,11 +255,11 @@ const PRODUCTS = [
   {
     "code": "LXNX001",
     "desc": "LANG XU FALOODA GLASS 342 ML 6 PCS COLOR BOX  8 SET CTN",
-    "price": "180.0",
-    "unit": "FOR 2 PCS",
+    "price": "540.0",
+    "unit": "FOR 6 PCS",
     "category": "WATER GLASS",
     "department": "Glassware",
-    "moq": 12,
+    "moq": 2,
     "status": "In Stock",
     "new_arrival": "YES"
   },
