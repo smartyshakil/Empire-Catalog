@@ -1004,7 +1004,8 @@ function filterProducts() {
         
         return matchesDept && matchesCat && matchesQuery;
     });
-    // 🌟 MASTER_SORT_ORDER ke hisab se default sorting yahan apply hogi
+    // 🌟 1st Priority: MASTER_SORT_ORDER ke hisab se category-wise grouping
+    // 🌟 2nd Priority: Har category ke andar Price: Low to High sorting
     filtered.sort((a, b) => {
         let catA = (a.category || '').trim();
         let catB = (b.category || '').trim();
@@ -1015,20 +1016,26 @@ function filterProducts() {
         if (indexA === -1) indexA = 999;
         if (indexB === -1) indexB = 999;
 
-        // Pehle category MASTER_SORT_ORDER ke sequence se sort hogi
+        // Agar alag-alag categories hain, toh MASTER_SORT_ORDER ke sequence se lagengi
         if (indexA !== indexB) {
             return indexA - indexB;
         }
 
-        // Agar same category ke items hain, toh unhe code ke hisab se proper sequence mein rakhenge
+        // Agar same category hai, toh price ke hisab se Low to High sort hongi
+        const multiplier = getAccessMultiplier();
+        let priceA = Math.round(Number(a.price) * multiplier);
+        let priceB = Math.round(Number(b.price) * multiplier);
+
+        if (priceA !== priceB) {
+            return priceA - priceB;
+        }
+
+        // Agar price bhi same hai, toh item code ke hisab se arrange ho jayengi
         return (a.code || '').localeCompare(b.code || '');
     });
 
-    // Agar user ne dropdown se Price Low/High select kiya hai, toh usko priority milegi
-
-    if (sortVal === "PRICE_LOW") {
-        filtered.sort((a, b) => Number(a.price) - Number(b.price));
-    } else if (sortVal === "PRICE_HIGH") {
+    // Agar user ne upar dropdown se manually koi aur sort select kiya hai, toh usko override mil jayegi
+    if (sortVal === "PRICE_HIGH") {
         filtered.sort((a, b) => Number(b.price) - Number(a.price));
     }
 
