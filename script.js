@@ -1004,6 +1004,27 @@ function filterProducts() {
         
         return matchesDept && matchesCat && matchesQuery;
     });
+    // 🌟 MASTER_SORT_ORDER ke hisab se default sorting yahan apply hogi
+    filtered.sort((a, b) => {
+        let catA = (a.category || '').trim();
+        let catB = (b.category || '').trim();
+
+        let indexA = MASTER_SORT_ORDER.indexOf(catA);
+        let indexB = MASTER_SORT_ORDER.indexOf(catB);
+
+        if (indexA === -1) indexA = 999;
+        if (indexB === -1) indexB = 999;
+
+        // Pehle category MASTER_SORT_ORDER ke sequence se sort hogi
+        if (indexA !== indexB) {
+            return indexA - indexB;
+        }
+
+        // Agar same category ke items hain, toh unhe code ke hisab se proper sequence mein rakhenge
+        return (a.code || '').localeCompare(b.code || '');
+    });
+
+    // Agar user ne dropdown se Price Low/High select kiya hai, toh usko priority milegi
 
     if (sortVal === "PRICE_LOW") {
         filtered.sort((a, b) => Number(a.price) - Number(b.price));
