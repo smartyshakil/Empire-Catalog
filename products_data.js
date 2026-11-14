@@ -5925,7 +5925,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -5969,7 +5969,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
@@ -6277,7 +6277,7 @@ const PRODUCTS = [
     "category": "COLORED GLASS",
     "department": "Glassware",
     "moq": 6,
-    "status": "ADV BOOK",
+    "status": "In Stock",
     "new_arrival": "YES"
   },
   {
