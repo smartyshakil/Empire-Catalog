@@ -6697,7 +6697,7 @@ const PRODUCTS = [
     "moq": 6,
     "status": "In Stock",
     "new_arrival": ""
-  }
+  },
   {
     "code": "8184",
     "desc": "STEEL BOTTLE CAP ATTACHED BOTTLE 800 ML COL BOX 50 PCS CTN",
@@ -6759,7 +6759,11 @@ const PRODUCTS = [
     "price": "470",
     "unit": "FOR 1 PCS",
     "category": "BOTTLES",
-  }
+    "department": "vaccum_bottles",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": ""
+  },
 ];
 
 const MASTER_SORT_ORDER = ["JUICE GLASS", "WHISKEY GLASS", "WATER GLASS", "BORO JUICE GLASS", "BORO WATER GLASS", "WINE GLASS", "COLORED GLASS", "SHOT GLASS", "SHOT SET", "BOWL SET", "ICE CREAM BOWL SET", "PLATE SET", "BEER MUG", "TEA MUG", "BORO TEA MUG", "LID MUG", "SAUCER", "CUP SAUCER", "KETTLE SET", "JUG", "JUG SET", "LEMON SET", "SIPPER", "GLASS BOTTLE", "GLASS FRIDGE BOTTLE", "TURTLE", "PUDDING SET", "WOODEN JAR SINGLE", "WOODEN CANDY", "WOODEN 3 PCS", "GLASS JAR", "CANISTER", "GLASS LUNCHBOX", "GLASS BAKEWARE", "DISPENSER", "FRUIT PLATE", "GLASS PLAIN BOWL", "GLASS COLORED BOWL", "BORO SERVING BOWL", "FLOWER POT", "ACRYLIC SIPPER", "TRAY", "OTHER"];
