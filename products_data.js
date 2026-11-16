@@ -3608,17 +3608,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SMBJ-604",
-    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
-    "price": "850",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 12,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SMBJ-605",
     "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
     "price": "850",
@@ -3633,50 +3622,6 @@ const PRODUCTS = [
     "code": "SMBJ-609",
     "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
     "price": "850",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 12,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-601",
-    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
-    "price": "875",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 12,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-606",
-    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
-    "price": "900",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 12,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-607",
-    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
-    "price": "900",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 12,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-602",
-    "desc": "SHINEMAX PREMIUM 4+1 WOODEN STAND GIFT BOX PACK 12 SET CTN",
-    "price": "900",
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
@@ -3736,17 +3681,6 @@ const PRODUCTS = [
     "category": "SNACK SET",
     "department": "Glassware",
     "moq": 1,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-719-G",
-    "desc": "SHINEMAX PREMIUM 4+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 12 SET CTN",
-    "price": "1025",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 12,
     "status": "In Stock",
     "new_arrival": "YES"
   },
@@ -3839,17 +3773,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SMBJ-708-G",
-    "desc": "SHINEMAX PREMIUM 3+1 GOLDEN PEACOCK TRAY STAND GIFT BOX PACK 8 SET CTN",
-    "price": "1225",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 8,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SMBJ-708-S",
     "desc": "SHINEMAX PREMIUM 3+1 SILVER IRON PEACOCK TRAY STAND GIFT BOX PACK 8 SET CTN",
     "price": "1225",
@@ -3857,61 +3780,6 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 8,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-720-S",
-    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON TRICYCLE STAND GIFT BOX PACK 6 SET CTN",
-    "price": "1275",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-711-S",
-    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON CURVE HANDLE STAND GIFT BOX PACK 8 SET CTN",
-    "price": "1350",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 8,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-715-G",
-    "desc": "SHINEMAX PREMIUM 6+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 6 SET CTN",
-    "price": "1400",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-715-G1",
-    "desc": "SHINEMAX PREMIUM 6+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 6 SET CTN",
-    "price": "1400",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-715-G2",
-    "desc": "SHINEMAX PREMIUM 6+1 GOLDEN IRON TRAY STAND GIFT BOX PACK 6 SET CTN",
-    "price": "1400",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 6,
     "status": "In Stock",
     "new_arrival": "YES"
   },
@@ -3949,64 +3817,9 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SMBJ-715-S",
-    "desc": "SHINEMAX PREMIUM 6+1 SILVER IRON TRAY STAND GIFT BOX PACK 6 SET CTN",
-    "price": "1475",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-715-S1",
-    "desc": "SHINEMAX PREMIUM 6+1 SILVER IRON TRAY STAND GIFT BOX PACK 6 SET CTN",
-    "price": "1475",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-715-S2",
-    "desc": "SHINEMAX PREMIUM 6+1 SILVER IRON TRAY STAND GIFT BOX PACK 6 SET CTN",
-    "price": "1475",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SMBJ-703-G",
     "desc": "SHINEMAX PREMIUM 4+1 GOLDEN IRON 2 HORSE STAND GIFT BOX PACK 6 SET CTN",
     "price": "1525",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-709-S",
-    "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON PEACOCK TRAY STAND GIFT BOX PACK 6 SET CTN",
-    "price": "1525",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-707-G",
-    "desc": "SHINEMAX PREMIUM 3+1 GOLDEN IRON 1 BIG HORSE STAND GIFT BOX PACK 6 SET CTN",
-    "price": "1600",
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
@@ -4037,17 +3850,6 @@ const PRODUCTS = [
     "new_arrival": "YES"
   },
   {
-    "code": "SMBJ-707-S",
-    "desc": "SHINEMAX PREMIUM 3+1 SILVER IRON 1 BIG HORSE STAND GIFT BOX PACK 6 SET CTN",
-    "price": "1650",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
     "code": "SMBJ-703-S",
     "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON 2 HORSE STAND GIFT BOX PACK 6 SET CTN",
     "price": "1675",
@@ -4062,17 +3864,6 @@ const PRODUCTS = [
     "code": "SMBJ-705-S",
     "desc": "SHINEMAX PREMIUM 4+1 SILVER IRON 1 BIG HORSE STAND GIFT BOX PACK 6 SET CTN",
     "price": "1675",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-712-S",
-    "desc": "SHINEMAX PREMIUM 6+1 SILVER IRON CURVE HANDLE STAND GIFT BOX PACK 6 SET CTN",
-    "price": "1875",
     "unit": "FOR 1 SET",
     "category": "GLASS CANDY SET",
     "department": "Glassware",
@@ -6123,17 +5914,6 @@ const PRODUCTS = [
     "category": "GLASS CANDY SET",
     "department": "Glassware",
     "moq": 6,
-    "status": "In Stock",
-    "new_arrival": "YES"
-  },
-  {
-    "code": "SMBJ-711-G",
-    "desc": "SHINEMAX PREMIUM 4+1 GOLDEN IRON CURVE HANDLE STAND",
-    "price": "1275",
-    "unit": "FOR 1 SET",
-    "category": "GLASS CANDY SET",
-    "department": "Glassware",
-    "moq": 8,
     "status": "In Stock",
     "new_arrival": "YES"
   },
