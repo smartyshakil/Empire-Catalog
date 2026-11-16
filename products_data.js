@@ -6698,6 +6698,68 @@ const PRODUCTS = [
     "status": "In Stock",
     "new_arrival": ""
   }
+  {
+    "code": "8184",
+    "desc": "STEEL BOTTLE CAP ATTACHED BOTTLE 800 ML COL BOX 50 PCS CTN",
+    "price": "250",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": ""
+  },
+  {
+    "code": "ANIMAL",
+    "desc": "STEEL BOTTLE ANIMAL HEAD BOTTLE 500 ML COL BOX 50 PCS CTN",
+    "price": "320",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": ""
+  },
+  {
+    "code": "HK-555",
+    "desc": "STEEL TUMBLER 900 ML COLOR BOX PACKING 50 PCS CTN",
+    "price": "290",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": ""
+  },
+  {
+    "code": "HK-556",
+    "desc": "STEEL VACCUM SIPPER WITH STRAW 1100 ML WITH COLOR BOX 40 PCS CTN",
+    "price": "430",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": ""
+  },
+  {
+    "code": "HK-558",
+    "desc": "STEEL VACCUM RING BOTTLE 500 ML WITH COLOR BOX 50 PCS CTN",
+    "price": "280",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+    "department": "vaccum_bottles",
+    "moq": 6,
+    "status": "In Stock",
+    "new_arrival": ""
+  },
+  {
+    "code": "HK-561",
+    "desc": "STEEL SIPPER WITH HANDLE 800 ML COLOR BOX 40 PCS CTN",
+    "price": "470",
+    "unit": "FOR 1 PCS",
+    "category": "BOTTLES",
+  }
 ];
 
 const MASTER_SORT_ORDER = ["JUICE GLASS", "WHISKEY GLASS", "WATER GLASS", "BORO JUICE GLASS", "BORO WATER GLASS", "WINE GLASS", "COLORED GLASS", "SHOT GLASS", "SHOT SET", "BOWL SET", "ICE CREAM BOWL SET", "PLATE SET", "BEER MUG", "TEA MUG", "BORO TEA MUG", "LID MUG", "SAUCER", "CUP SAUCER", "KETTLE SET", "JUG", "JUG SET", "LEMON SET", "SIPPER", "GLASS BOTTLE", "GLASS FRIDGE BOTTLE", "TURTLE", "PUDDING SET", "WOODEN JAR SINGLE", "WOODEN CANDY", "WOODEN 3 PCS", "GLASS JAR", "CANISTER", "GLASS LUNCHBOX", "GLASS BAKEWARE", "DISPENSER", "FRUIT PLATE", "GLASS PLAIN BOWL", "GLASS COLORED BOWL", "BORO SERVING BOWL", "FLOWER POT", "ACRYLIC SIPPER", "TRAY", "OTHER"];
