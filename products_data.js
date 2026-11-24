@@ -1850,7 +1850,7 @@ const PRODUCTS = [
   {
     "code": "SMTC1601",
     "desc": "SHINEMAX SUGAR POT WITH LID 280 ML COL BOX 48 SET CTN",
-    "price": "80",
+    "price": "75",
     "unit": "FOR 1 PCS",
     "category": "LID MUG",
     "department": "Glassware",
