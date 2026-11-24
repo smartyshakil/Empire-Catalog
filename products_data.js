@@ -6554,6 +6554,61 @@ const PRODUCTS = [
     "moq": 6,
     "status": "In Stock",
     "new_arrival": ""
+  },
+  {
+    "code": "GC-119",
+    "desc": "GLACIRA TEA MUG 120 ML 6 PCS COL BOX 24 SET CTN",
+    "price": "130",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "GC-120",
+    "desc": "GLACIRA TEA MUG 120 ML 6 PCS COL BOX 24 SET CTN",
+    "price": "130",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "In Stock",
+    "new_arrival": ""
+  },
+  {
+    "code": "GC-121",
+    "desc": "GLACIRA TEA MUG 120 ML 6 PCS COL BOX 24 SET CTN",
+    "price": "130",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "In Stock",
+    "new_arrival": "YES"
+  },
+  {
+    "code": "GC-122",
+    "desc": "GLACIRA TEA MUG 120 ML 6 PCS COL BOX 24 SET CTN",
+    "price": "130",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "In Stock",
+    "new_arrival": ""
+  },
+  {
+    "code": "GC-123",
+    "desc": "GLACIRA TEA MUG 120 ML 6 PCS COL BOX 24 SET CTN",
+    "price": "130",
+    "unit": "FOR 6 PCS",
+    "category": "TEA MUG",
+    "department": "Glassware",
+    "moq": 12,
+    "status": "In Stock",
+    "new_arrival": ""
   }
 ];
 
